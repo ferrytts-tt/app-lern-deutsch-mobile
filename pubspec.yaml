@@ -30,7 +30,6 @@ dependencies:
 
   # Audio & Voix
   flutter_tts: ^4.2.3
-  record: ^5.2.1
   just_audio: ^0.9.46
   permission_handler: ^11.4.0
 
