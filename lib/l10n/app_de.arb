@@ -1,0 +1,95 @@
+{
+  "@@locale": "de",
+  "appName": "Deutsch Fast",
+  "appSubtitle": "Schnell Deutsch lernen",
+
+  "navHome": "Start",
+  "navLibrary": "Sätze",
+  "navProgress": "Fortschritt",
+  "navSettings": "Einstellungen",
+
+  "onboardingSkip": "Überspringen",
+  "onboardingNext": "Weiter",
+  "onboardingStart": "Loslegen",
+  "onboardingTitle1": "Lerne wie ein Kind, nicht wie in der Schule.",
+  "onboardingSubtitle1": "Keine trockene Grammatik. Nur echte, lebendige Sätze zur richtigen Zeit wiederholt.",
+  "onboardingTitle2": "1000 nützliche Sätze zum Verstehen und Sprechen.",
+  "onboardingSubtitle2": "Jeden Tag ein paar Minuten. Kein Druck, keine Strafen, keine verlorenen Leben.",
+  "onboardingTitle3": "Hören, laut nachsprechen, angstfrei Fortschritte machen.",
+  "onboardingSubtitle3": "Shadowing trainiert deinen Akzent und dein Muskelgedächtnis für Deutsch.",
+  "onboardingDailyPhrases": "Neue Sätze pro Tag",
+  "onboardingDailyMinutes": "Zeit pro Tag",
+  "onboardingStartLevel": "Dein Startniveau",
+  "onboardingLevelBeginner": "Kompletter Anfänger",
+  "onboardingLevelBasics": "Ich kenne bereits ein paar Wörter",
+
+  "homeGreeting": "Hallo!",
+  "homeStreakDays": "{count} Tage",
+  "@homeStreakDays": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "homeStreakBroken": "Wir machen einfach weiter, ganz normal 🙂",
+  "homeSessionCardTitle": "Heutige Lektion",
+  "homeSessionStats": "{reviews} Wiederholungen · {newCount} neu · ~{minutes} Min.",
+  "@homeSessionStats": {
+    "placeholders": {
+      "reviews": { "type": "int" },
+      "newCount": { "type": "int" },
+      "minutes": { "type": "int" }
+    }
+  },
+  "homeStartSession": "Lektion starten",
+  "homeProgressTitle": "Gesamtfortschritt",
+  "homeProgressPhrases": "{learned} / {total} Sätze",
+  "@homeProgressPhrases": {
+    "placeholders": {
+      "learned": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "homePhraseOfTheDay": "Satz des Tages",
+  "homeCurrentPhase": "Aktuelle Phase: Hören / Sätze / Sprechen",
+
+  "sessionClose": "Schließen",
+  "sessionListenNormal": "Normal",
+  "sessionListenSlow": "Langsam",
+  "sessionShadowingTitle": "Du bist dran! 🎤",
+  "sessionShadowingHelp": "Sprich im gleichen Rhythmus nach. Es muss nicht perfekt sein.",
+  "sessionNext": "Weiter",
+  "sessionSuccess": "Super!",
+  "sessionGentleCorrection": "Fast! Hier ist der richtige Satz:",
+
+  "libraryTitle": "Meine Sätze",
+  "librarySearchPlaceholder": "Nach Satz oder Wort suchen...",
+  "libraryFilterAll": "Alle",
+  "libraryFilterNew": "Neu",
+  "libraryFilterInProgress": "In Bearbeitung",
+  "libraryFilterMastered": "Gemeistert",
+  "libraryFilterWatchlist": "Merkliste",
+  "libraryUnlockAnyway": "Trotzdem freischalten",
+
+  "progressTitle": "Mein Fortschritt",
+  "progressPhrasesLearned": "Gelernte Sätze",
+  "progressSessionsCompleted": "Abgeschlossene Lektionen",
+  "progressShadowingsDone": "Shadowing-Übungen",
+  "progressListeningTime": "Hörzeit",
+  "progressActivity30Days": "Aktivität (30 Tage)",
+  "progressDistribution": "Verteilung",
+  "progressMilestones": "Meilensteine",
+
+  "settingsTitle": "Einstellungen",
+  "settingsGeneral": "Allgemein",
+  "settingsAudio": "Audio & Stimme",
+  "settingsDailyReminder": "Tägliche Erinnerung",
+  "settingsTheme": "Design",
+  "settingsThemeLight": "Hell",
+  "settingsThemeDark": "Dunkel",
+  "settingsThemeSystem": "System",
+  "settingsBackup": "Sichern & Wiederherstellen",
+  "settingsExport": "Fortschritt exportieren (JSON)",
+  "settingsImport": "Sicherung wiederherstellen",
+  "settingsReset": "Fortschritt zurücksetzen",
+  "settingsAbout": "Über Deutsch Fast"
+}

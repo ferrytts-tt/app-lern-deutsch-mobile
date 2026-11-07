@@ -1,0 +1,99 @@
+{
+  "lot_id": 21,
+  "type": "dialogue",
+  "title_de": "Zwischen den Stühlen",
+  "title_ar": "تردد وحيرة في الاختيار",
+  "title_fr": "Un cœur qui balance",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Ich bin echt zwiegespalten: Der Job ist gut, aber der Weg ist so weit.",
+      "ar": "أنا محتار / ممزق بين رأيين.",
+      "fr": "Je suis partagé.",
+      "debut_ms": 0,
+      "fin_ms": 5064,
+      "phrase_id": "phrase_201"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Weit gefehlt! So war das überhaupt nicht gemeint.",
+      "ar": "بل أنت مخطئ تماماً! / الأمر بخلاف ذلك تماماً!",
+      "fr": "Pas du tout ! Tu te trompes complètement.",
+      "debut_ms": 5064,
+      "fin_ms": 9816,
+      "phrase_id": "phrase_202"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab total Muffensausen vor dem Gespräch morgen.",
+      "ar": "أنا خائف / عندي رهبة.",
+      "fr": "J'ai la trouille.",
+      "debut_ms": 9816,
+      "fin_ms": 13512,
+      "phrase_id": "phrase_203"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mit 40 lern ich noch Deutsch, man lernt eben nie aus.",
+      "ar": "المرء لا يتوقف أبداً عن التعلم.",
+      "fr": "On apprend à tout âge.",
+      "debut_ms": 13512,
+      "fin_ms": 17760,
+      "phrase_id": "phrase_204"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Streiten bringt uns nicht weiter, lass uns eine Lösung suchen.",
+      "ar": "هذا لا يقدّمنا إلى الأمام / لا فائدة منه.",
+      "fr": "Ça ne nous fait pas avancer.",
+      "debut_ms": 17760,
+      "fin_ms": 22224,
+      "phrase_id": "phrase_205"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Du hast den Job bekommen? Das haut mich um!",
+      "ar": "هذا أذهلني! / صدمني بشكل إيجابي!",
+      "fr": "Ça me bluffe !",
+      "debut_ms": 22224,
+      "fin_ms": 26520,
+      "phrase_id": "phrase_206"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ist halt so, so ist das nun mal.",
+      "ar": "هكذا هي الأمور / هذا هو الواقع.",
+      "fr": "C'est comme ça, que veux-tu.",
+      "debut_ms": 26520,
+      "fin_ms": 29592,
+      "phrase_id": "phrase_207"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Die Prüfung ist nicht ohne, du musst viel lernen.",
+      "ar": "هذا ليس سهلاً / ليس بالأمر الهيّن.",
+      "fr": "Ce n'est pas rien, c'est assez costaud.",
+      "debut_ms": 29592,
+      "fin_ms": 33552,
+      "phrase_id": "phrase_208"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Die Geschichte geht mir zu nahe, ich muss kurz raus.",
+      "ar": "هذا يمسّني بعمق / يؤثر فيّ كثيراً.",
+      "fr": "Ça me touche trop.",
+      "debut_ms": 33552,
+      "fin_ms": 37416,
+      "phrase_id": "phrase_209"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Dass er immer das letzte Wort haben muss, geht mir gegen den Strich.",
+      "ar": "هذا يزعجني / يخالف طبعي.",
+      "fr": "Ça me hérisse.",
+      "debut_ms": 37416,
+      "fin_ms": 42000,
+      "phrase_id": "phrase_210"
+    }
+  ]
+}

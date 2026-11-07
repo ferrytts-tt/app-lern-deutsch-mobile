@@ -1,0 +1,99 @@
+{
+  "lot_id": 26,
+  "type": "dialogue",
+  "title_de": "Nerven und Bammel",
+  "title_ar": "توتر وقلق يومي",
+  "title_fr": "Peur bleue et nerfs à vif",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Dieser Lärm geht mir echt auf die Nerven.",
+      "ar": "هذا يستفز أعصابي / يزعجني.",
+      "fr": "Ça me tape sur les nerfs.",
+      "debut_ms": 0,
+      "fin_ms": 2976,
+      "phrase_id": "phrase_251"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich geh lieber auf Nummer sicher und nehm den früheren Zug.",
+      "ar": "أفضّل أن آخذ احتياطي / أن ألعبها بأمان.",
+      "fr": "Je préfère ne pas prendre de risque.",
+      "debut_ms": 2976,
+      "fin_ms": 7008,
+      "phrase_id": "phrase_252"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Die Lösung ist nicht das Gelbe vom Ei.",
+      "ar": "هذا ليس الحل الأفضل / ليس مثالياً.",
+      "fr": "Ce n'est pas terrible, ce n'est pas la panacée.",
+      "debut_ms": 7008,
+      "fin_ms": 9984,
+      "phrase_id": "phrase_253"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich bin heute so schusselig, ich hab schon wieder den Schlüssel vergessen.",
+      "ar": "شارد الذهن / كثير النسيان.",
+      "fr": "étourdi, tête en l'air",
+      "debut_ms": 9984,
+      "fin_ms": 14616,
+      "phrase_id": "phrase_254"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab Bammel vor dem Zahnarzt.",
+      "ar": "أخاف من ... (خوف خفيف).",
+      "fr": "J'appréhende ...",
+      "debut_ms": 14616,
+      "fin_ms": 17304,
+      "phrase_id": "phrase_255"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Er ist ein echter Tausendsassa: Er kann alles.",
+      "ar": "متعدد المواهب / يعرف كل شيء.",
+      "fr": "touche-à-tout talentueux",
+      "debut_ms": 17304,
+      "fin_ms": 21216,
+      "phrase_id": "phrase_256"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Sorry, ich hab das voll verpeilt.",
+      "ar": "نسيتُ ذلك تماماً / لم أنتبه إليه.",
+      "fr": "J'ai complètement zappé ça.",
+      "debut_ms": 21216,
+      "fin_ms": 24168,
+      "phrase_id": "phrase_257"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mein Chef ist total pingelig bei Kleinigkeiten.",
+      "ar": "مدقق بشكل مزعج في التفاصيل.",
+      "fr": "pointilleux",
+      "debut_ms": 24168,
+      "fin_ms": 28104,
+      "phrase_id": "phrase_258"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Das Essen war grottenschlecht.",
+      "ar": "سيئ للغاية.",
+      "fr": "vraiment nul",
+      "debut_ms": 28104,
+      "fin_ms": 30600,
+      "phrase_id": "phrase_259"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Bist du bekloppt? Das kannst du doch nicht machen!",
+      "ar": "هل جننت؟",
+      "fr": "Tu es dingue ?",
+      "debut_ms": 30600,
+      "fin_ms": 34896,
+      "phrase_id": "phrase_260"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "lot_id": 5,
+  "type": "dialogue",
+  "title_de": "Im gemütlichen Café",
+  "title_ar": "في المقهى اللطيف",
+  "title_fr": "Au café du coin",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Ich nehm 'nen Kaffee.",
+      "ar": "سآخذ قهوة",
+      "fr": "Je vais prendre un café.",
+      "debut_ms": 0,
+      "fin_ms": 2064,
+      "phrase_id": "phrase_041"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Zahlen, bitte!",
+      "ar": "الحساب من فضلك",
+      "fr": "L'addition, s'il vous plaît !",
+      "debut_ms": 2064,
+      "fin_ms": 4104,
+      "phrase_id": "phrase_042"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Zusammen oder getrennt?",
+      "ar": "الدفع مشترك أم منفصل؟",
+      "fr": "Ensemble ou séparément ?",
+      "debut_ms": 4104,
+      "fin_ms": 6432,
+      "phrase_id": "phrase_043"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Stimmt so!",
+      "ar": "الباقي لك (بقشيش)",
+      "fr": "Gardez la monnaie !",
+      "debut_ms": 6432,
+      "fin_ms": 8304,
+      "phrase_id": "phrase_044"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Haben Sie 'ne Tüte?",
+      "ar": "عندكم كيس؟",
+      "fr": "Vous avez un sachet ?",
+      "debut_ms": 8304,
+      "fin_ms": 10440,
+      "phrase_id": "phrase_045"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das ist mir echt zu happig.",
+      "ar": "هذا غالٍ عليّ",
+      "fr": "C'est un peu trop salé pour moi.",
+      "debut_ms": 10440,
+      "fin_ms": 12912,
+      "phrase_id": "phrase_046"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Haben Sie das auch 'ne Nummer größer?",
+      "ar": "عندكم هذا بمقاس أكبر؟",
+      "fr": "Vous avez la taille au-dessus ?",
+      "debut_ms": 12912,
+      "fin_ms": 15792,
+      "phrase_id": "phrase_047"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich schau nur mal.",
+      "ar": "أتفرج فقط",
+      "fr": "Je regarde juste, merci.",
+      "debut_ms": 15792,
+      "fin_ms": 17664,
+      "phrase_id": "phrase_048"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Das schmeckt mega lecker.",
+      "ar": "طعمه لذيذ جداً",
+      "fr": "C'est trop bon !",
+      "debut_ms": 17664,
+      "fin_ms": 19920,
+      "phrase_id": "phrase_049"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich bin pappsatt.",
+      "ar": "شبعت تماماً",
+      "fr": "Je suis complètement calé !",
+      "debut_ms": 19920,
+      "fin_ms": 21912,
+      "phrase_id": "phrase_050"
+    }
+  ]
+}

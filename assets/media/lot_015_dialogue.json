@@ -1,0 +1,99 @@
+{
+  "lot_id": 15,
+  "type": "dialogue",
+  "title_de": "Fit bleiben nach der Arbeit",
+  "title_ar": "اللياقة البدنية بعد العمل",
+  "title_fr": "Garder la forme après le boulot",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Hast du zuletzt was Gutes geguckt?",
+      "ar": "هل شاهدت شيئاً جيداً مؤخراً؟",
+      "fr": "Tu as vu quelque chose de bien dernièrement ?",
+      "debut_ms": 0,
+      "fin_ms": 2928,
+      "phrase_id": "phrase_141"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich war gestern ewig wach.",
+      "ar": "سهرت طويلاً أمس.",
+      "fr": "Je suis resté éveillé très tard hier.",
+      "debut_ms": 2928,
+      "fin_ms": 5448,
+      "phrase_id": "phrase_142"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Morgen wird ausgeschlafen!",
+      "ar": "غداً سأنام حتى أشبع.",
+      "fr": "Demain, je fais la grasse matinée !",
+      "debut_ms": 5448,
+      "fin_ms": 7968,
+      "phrase_id": "phrase_143"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hab das Spiel verpasst.",
+      "ar": "فاتتني المباراة.",
+      "fr": "J'ai raté le match.",
+      "debut_ms": 7968,
+      "fin_ms": 10368,
+      "phrase_id": "phrase_144"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Wir sehn uns beim Training.",
+      "ar": "نلتقي في التمرين.",
+      "fr": "On se voit à l'entraînement.",
+      "debut_ms": 10368,
+      "fin_ms": 12912,
+      "phrase_id": "phrase_145"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das ist doch nicht dein Ernst!",
+      "ar": "لا يمكن أن تكون جاداً!",
+      "fr": "Tu n'es pas sérieux !",
+      "debut_ms": 12912,
+      "fin_ms": 15312,
+      "phrase_id": "phrase_146"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Du willst mich wohl veräppeln!",
+      "ar": "أنت تمزح معي!",
+      "fr": "Tu te moques de moi !",
+      "debut_ms": 15312,
+      "fin_ms": 17808,
+      "phrase_id": "phrase_147"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das war 'n Missverständnis.",
+      "ar": "كان هذا سوء فهم.",
+      "fr": "C'était un malentendu.",
+      "debut_ms": 17808,
+      "fin_ms": 20376,
+      "phrase_id": "phrase_148"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Hab mich wohl verhört.",
+      "ar": "يبدو أنني أخطأت السمع.",
+      "fr": "J'ai dû mal entendre.",
+      "debut_ms": 20376,
+      "fin_ms": 22512,
+      "phrase_id": "phrase_149"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das darf doch nicht wahr sein!",
+      "ar": "لا يعقل أن يكون هذا صحيحاً!",
+      "fr": "Ce n'est pas possible !",
+      "debut_ms": 22512,
+      "fin_ms": 24888,
+      "phrase_id": "phrase_150"
+    }
+  ]
+}

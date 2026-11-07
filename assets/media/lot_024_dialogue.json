@@ -1,0 +1,99 @@
+{
+  "lot_id": 24,
+  "type": "dialogue",
+  "title_de": "Grenzen setzen",
+  "title_ar": "وضع حد للأمور",
+  "title_fr": "Mettre les points sur les i",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Jetzt reicht's! Schluss damit!",
+      "ar": "كفى! توقف عن هذا!",
+      "fr": "Ça suffit !",
+      "debut_ms": 0,
+      "fin_ms": 3720,
+      "phrase_id": "phrase_231"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Weit und breit ist kein Supermarkt.",
+      "ar": "في كل المحيط / على مدى النظر.",
+      "fr": "à des kilomètres à la ronde",
+      "debut_ms": 3720,
+      "fin_ms": 6936,
+      "phrase_id": "phrase_232"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Stört dich das? – Nicht im Geringsten!",
+      "ar": "إطلاقاً! لا أبداً.",
+      "fr": "Pas le moins du monde !",
+      "debut_ms": 6936,
+      "fin_ms": 10968,
+      "phrase_id": "phrase_233"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das war voll daneben, tut mir leid.",
+      "ar": "هذا خطأ تماماً / غير مناسب إطلاقاً.",
+      "fr": "Complètement à côté de la plaque !",
+      "debut_ms": 10968,
+      "fin_ms": 14160,
+      "phrase_id": "phrase_234"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich habe vergeblich versucht, dich anzurufen.",
+      "ar": "عبثاً / بلا جدوى.",
+      "fr": "en vain",
+      "debut_ms": 14160,
+      "fin_ms": 17688,
+      "phrase_id": "phrase_235"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Genieß das Hier und Jetzt und mach dir keinen Stress.",
+      "ar": "اللحظة الراهنة.",
+      "fr": "l'instant présent",
+      "debut_ms": 17688,
+      "fin_ms": 21672,
+      "phrase_id": "phrase_236"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Die Frage war ziemlich taktlos.",
+      "ar": "قليل اللباقة / فظّ.",
+      "fr": "indélicat",
+      "debut_ms": 21672,
+      "fin_ms": 24384,
+      "phrase_id": "phrase_237"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Es liegt auf der Hand, dass wir mehr Zeit brauchen.",
+      "ar": "من الواضح أنّ ...",
+      "fr": "Il est évident que ...",
+      "debut_ms": 24384,
+      "fin_ms": 28224,
+      "phrase_id": "phrase_238"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Die Mieten in München sind unerschwinglich.",
+      "ar": "باهظ لا يمكن تحمّل ثمنه.",
+      "fr": "inabordable",
+      "debut_ms": 28224,
+      "fin_ms": 31224,
+      "phrase_id": "phrase_239"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mein ganzes Geld ist futsch!",
+      "ar": "ضاع / راح / انتهى.",
+      "fr": "foutu, parti en fumée",
+      "debut_ms": 31224,
+      "fin_ms": 33768,
+      "phrase_id": "phrase_240"
+    }
+  ]
+}

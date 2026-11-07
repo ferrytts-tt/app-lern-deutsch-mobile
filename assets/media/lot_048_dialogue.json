@@ -1,0 +1,99 @@
+{
+  "lot_id": 48,
+  "type": "dialogue",
+  "title_de": "Telefonate und Sprachnachrichten",
+  "title_ar": "مكالمات ورسائل صوتية",
+  "title_fr": "Conversations téléphoniques et messages vocaux",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Rufen Sie später nochmal an.",
+      "ar": "اتصل مرة أخرى لاحقاً من فضلك.",
+      "fr": "Rappelez plus tard, s'il vous plaît.",
+      "debut_ms": 0,
+      "fin_ms": 2712,
+      "phrase_id": "phrase_471"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Es ist besetzt.",
+      "ar": "الخط مشغول.",
+      "fr": "La ligne est occupée.",
+      "debut_ms": 2712,
+      "fin_ms": 4704,
+      "phrase_id": "phrase_472"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Können Sie bitte lauter sprechen?",
+      "ar": "هل تتكلم بصوت أعلى من فضلك؟",
+      "fr": "Vous pouvez parler plus fort, s'il vous plaît ?",
+      "debut_ms": 4704,
+      "fin_ms": 7392,
+      "phrase_id": "phrase_473"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Können Sie das kurz buchstabieren?",
+      "ar": "هل تهجّئ هذا من فضلك؟",
+      "fr": "Vous pouvez l'épeler, s'il vous plaît ?",
+      "debut_ms": 7392,
+      "fin_ms": 10368,
+      "phrase_id": "phrase_474"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Wie ist Ihre Nummer?",
+      "ar": "ما رقم هاتفك؟",
+      "fr": "Quel est votre numéro de téléphone ?",
+      "debut_ms": 10368,
+      "fin_ms": 12576,
+      "phrase_id": "phrase_475"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hinterlassen Sie eine Nachricht nach dem Signalton.",
+      "ar": "اترك رسالة بعد الإشارة.",
+      "fr": "Laissez un message après le bip.",
+      "debut_ms": 12576,
+      "fin_ms": 16560,
+      "phrase_id": "phrase_476"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich schick dir 'ne Sprachnachricht.",
+      "ar": "سأرسل لك رسالة صوتية.",
+      "fr": "Je t'envoie un message vocal.",
+      "debut_ms": 16560,
+      "fin_ms": 19128,
+      "phrase_id": "phrase_477"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Du bist auf stumm.",
+      "ar": "صوتك مكتوم.",
+      "fr": "Tu es en sourdine.",
+      "debut_ms": 19128,
+      "fin_ms": 21120,
+      "phrase_id": "phrase_478"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Hören Sie mich?",
+      "ar": "هل تسمعني؟",
+      "fr": "Vous m'entendez ?",
+      "debut_ms": 21120,
+      "fin_ms": 22992,
+      "phrase_id": "phrase_479"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich ruf wegen der Wohnungsanzeige an.",
+      "ar": "أتصل بخصوص إعلان الشقة.",
+      "fr": "J'appelle au sujet de l'annonce de l'appartement.",
+      "debut_ms": 22992,
+      "fin_ms": 26208,
+      "phrase_id": "phrase_480"
+    }
+  ]
+}

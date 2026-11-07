@@ -1,0 +1,99 @@
+{
+  "lot_id": 38,
+  "type": "dialogue",
+  "title_de": "Klausuren und Unistress",
+  "title_ar": "امتحانات ودراسة مكثفة",
+  "title_fr": "Examens, révisions et cours séchés",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Morgen schreib ich 'ne Klausur.",
+      "ar": "غداً عندي امتحان كتابي.",
+      "fr": "Demain j'ai un contrôle.",
+      "debut_ms": 0,
+      "fin_ms": 2616,
+      "phrase_id": "phrase_371"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab gar nicht gelernt.",
+      "ar": "لم أذاكر إطلاقاً.",
+      "fr": "Je n'ai pas du tout révisé.",
+      "debut_ms": 2616,
+      "fin_ms": 4992,
+      "phrase_id": "phrase_372"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Die Klausur war ein Witz.",
+      "ar": "كان الامتحان سهلاً جداً.",
+      "fr": "L'examen était fastoche.",
+      "debut_ms": 4992,
+      "fin_ms": 7416,
+      "phrase_id": "phrase_373"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich bin durchgerasselt.",
+      "ar": "رسبت.",
+      "fr": "J'ai raté l'examen.",
+      "debut_ms": 7416,
+      "fin_ms": 9672,
+      "phrase_id": "phrase_374"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab's bestanden!",
+      "ar": "نجحت!",
+      "fr": "Je l'ai réussi !",
+      "debut_ms": 9672,
+      "fin_ms": 11880,
+      "phrase_id": "phrase_375"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wann ist Abgabe?",
+      "ar": "متى موعد التسليم؟",
+      "fr": "C'est pour quand le rendu ?",
+      "debut_ms": 11880,
+      "fin_ms": 14016,
+      "phrase_id": "phrase_376"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Kannst du mir mal deine Mitschrift schicken?",
+      "ar": "هل ترسل لي ملاحظاتك؟",
+      "fr": "Tu peux m'envoyer tes notes ?",
+      "debut_ms": 14016,
+      "fin_ms": 17088,
+      "phrase_id": "phrase_377"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab die Vorlesung geschwänzt.",
+      "ar": "تغيبت عن المحاضرة عمداً.",
+      "fr": "J'ai séché le cours.",
+      "debut_ms": 17088,
+      "fin_ms": 19776,
+      "phrase_id": "phrase_378"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Der Lehrer erklärt das voll schlecht.",
+      "ar": "المعلم يشرح بشكل سيئ جداً.",
+      "fr": "Le prof explique super mal.",
+      "debut_ms": 19776,
+      "fin_ms": 22632,
+      "phrase_id": "phrase_379"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich peil die Aufgabe nicht.",
+      "ar": "لا أفهم التمرين.",
+      "fr": "Je capte rien à l'exercice.",
+      "debut_ms": 22632,
+      "fin_ms": 25104,
+      "phrase_id": "phrase_380"
+    }
+  ]
+}

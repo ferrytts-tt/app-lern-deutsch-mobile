@@ -1,0 +1,99 @@
+{
+  "lot_id": 35,
+  "type": "dialogue",
+  "title_de": "Familienfeier und Herzlichkeit",
+  "title_ar": "أعياد العائلة والمودة",
+  "title_fr": "Fêtes de famille et tendresse",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Das kommt gar nicht in Frage!",
+      "ar": "هذا مستحيل، لن أسمح به!",
+      "fr": "Hors de question !",
+      "debut_ms": 0,
+      "fin_ms": 2640,
+      "phrase_id": "phrase_341"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Dafür bist du noch zu klein.",
+      "ar": "أنت صغير على هذا.",
+      "fr": "Tu es encore trop petit pour ça.",
+      "debut_ms": 2640,
+      "fin_ms": 5136,
+      "phrase_id": "phrase_342"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Hab dich lieb!",
+      "ar": "أحبك.",
+      "fr": "Je t'aime.",
+      "debut_ms": 5136,
+      "fin_ms": 7008,
+      "phrase_id": "phrase_343"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Danke fürs Kochen, war lecker!",
+      "ar": "شكراً على الطبخ، كان لذيذاً.",
+      "fr": "Merci d'avoir cuisiné, c'était bon.",
+      "debut_ms": 7008,
+      "fin_ms": 9960,
+      "phrase_id": "phrase_344"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Wer war das?",
+      "ar": "من فعل هذا؟",
+      "fr": "C'est qui ?",
+      "debut_ms": 9960,
+      "fin_ms": 11832,
+      "phrase_id": "phrase_345"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Morgen hat Papa Geburtstag.",
+      "ar": "غداً عيد ميلاد بابا.",
+      "fr": "C'est l'anniversaire de papa demain.",
+      "debut_ms": 11832,
+      "fin_ms": 14640,
+      "phrase_id": "phrase_346"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Alles Liebe zum Geburtstag!",
+      "ar": "عيد ميلاد سعيد!",
+      "fr": "Joyeux anniversaire !",
+      "debut_ms": 14640,
+      "fin_ms": 17256,
+      "phrase_id": "phrase_347"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mach schnell, wir kommen sonst zu spät!",
+      "ar": "أسرع وإلا تأخرنا!",
+      "fr": "Dépêche-toi, on va être en retard !",
+      "debut_ms": 17256,
+      "fin_ms": 20568,
+      "phrase_id": "phrase_348"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Schatz, hilfst du mir mal?",
+      "ar": "حبيبي، هل تساعدني؟",
+      "fr": "Chéri, tu m'aides ?",
+      "debut_ms": 20568,
+      "fin_ms": 23112,
+      "phrase_id": "phrase_349"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Heut essen wir alle zusammen.",
+      "ar": "اليوم نأكل جميعاً معاً.",
+      "fr": "Aujourd'hui on mange tous ensemble.",
+      "debut_ms": 23112,
+      "fin_ms": 25656,
+      "phrase_id": "phrase_350"
+    }
+  ]
+}

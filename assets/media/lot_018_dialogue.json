@@ -1,0 +1,99 @@
+{
+  "lot_id": 18,
+  "type": "dialogue",
+  "title_de": "Ein harter Arbeitstag",
+  "title_ar": "يوم عمل شاق",
+  "title_fr": "Une rude journée de travail",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Das war echt ein anstrengender Tag.",
+      "ar": "كان يوماً متعباً فعلاً.",
+      "fr": "Ça a été une journée vraiment épuisante.",
+      "debut_ms": 0,
+      "fin_ms": 2856,
+      "phrase_id": "phrase_171"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Auf der Arbeit ist grad echt viel los.",
+      "ar": "العمل مزدحم جداً الآن.",
+      "fr": "Il y a beaucoup de boulot en ce moment.",
+      "debut_ms": 2856,
+      "fin_ms": 6168,
+      "phrase_id": "phrase_172"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich brauch dringend Urlaub.",
+      "ar": "أحتاج إجازة بشكل عاجل.",
+      "fr": "J'ai vraiment besoin de vacances.",
+      "debut_ms": 6168,
+      "fin_ms": 8592,
+      "phrase_id": "phrase_173"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wann machst du Feierabend?",
+      "ar": "متى ينتهي دوامك؟",
+      "fr": "Tu finis à quelle heure ?",
+      "debut_ms": 8592,
+      "fin_ms": 11016,
+      "phrase_id": "phrase_174"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Hab dich nicht verstanden.",
+      "ar": "لم أفهمك.",
+      "fr": "Je ne t'ai pas compris.",
+      "debut_ms": 11016,
+      "fin_ms": 13368,
+      "phrase_id": "phrase_175"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Darf ich mal kurz durch?",
+      "ar": "عفواً، هل تسمح لي بالمرور؟",
+      "fr": "Pardon, je peux passer ?",
+      "debut_ms": 13368,
+      "fin_ms": 15624,
+      "phrase_id": "phrase_176"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Kein Ding!",
+      "ar": "لا مشكلة!",
+      "fr": "Pas de souci !",
+      "debut_ms": 15624,
+      "fin_ms": 17496,
+      "phrase_id": "phrase_177"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Immer gerne!",
+      "ar": "على الرحب والسعة!",
+      "fr": "Avec plaisir !",
+      "debut_ms": 17496,
+      "fin_ms": 19368,
+      "phrase_id": "phrase_178"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Danke dir für deine Hilfe, echt nett!",
+      "ar": "شكراً لك على مساعدتك، لطف منك!",
+      "fr": "Merci pour ton aide, c'est vraiment gentil !",
+      "debut_ms": 19368,
+      "fin_ms": 22608,
+      "phrase_id": "phrase_179"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Schönen Tag noch!",
+      "ar": "أتمنى لك يوماً جميلاً!",
+      "fr": "Bonne journée !",
+      "debut_ms": 22608,
+      "fin_ms": 24696,
+      "phrase_id": "phrase_180"
+    }
+  ]
+}

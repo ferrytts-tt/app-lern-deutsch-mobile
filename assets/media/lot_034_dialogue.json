@@ -1,0 +1,99 @@
+{
+  "lot_id": 34,
+  "type": "dialogue",
+  "title_de": "Familienleben und Geschwister",
+  "title_ar": "حياة العائلة والإخوة",
+  "title_fr": "Vie de famille et chamailleries",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Mach die Musik mal leiser!",
+      "ar": "خفّض صوت الموسيقى!",
+      "fr": "Baisse la musique !",
+      "debut_ms": 0,
+      "fin_ms": 2496,
+      "phrase_id": "phrase_331"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hat jemand mein Handy gesehen?",
+      "ar": "هل رأى أحد هاتفي؟",
+      "fr": "Quelqu'un a vu mon portable ?",
+      "debut_ms": 2496,
+      "fin_ms": 5352,
+      "phrase_id": "phrase_332"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich geh jetzt pennen.",
+      "ar": "سأذهب لأنام.",
+      "fr": "Je vais pioncer.",
+      "debut_ms": 5352,
+      "fin_ms": 7440,
+      "phrase_id": "phrase_333"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Schlaf schön!",
+      "ar": "نم جيداً!",
+      "fr": "Dors bien !",
+      "debut_ms": 7440,
+      "fin_ms": 9312,
+      "phrase_id": "phrase_334"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Wann kommst du heim?",
+      "ar": "متى ستعود إلى البيت؟",
+      "fr": "Tu rentres quand ?",
+      "debut_ms": 9312,
+      "fin_ms": 11448,
+      "phrase_id": "phrase_335"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Fahr vorsichtig, ja?",
+      "ar": "قُد بحذر!",
+      "fr": "Conduis prudemment !",
+      "debut_ms": 11448,
+      "fin_ms": 13944,
+      "phrase_id": "phrase_336"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Hast du schon was gegessen?",
+      "ar": "هل أكلت شيئاً؟",
+      "fr": "Tu as déjà mangé quelque chose ?",
+      "debut_ms": 13944,
+      "fin_ms": 16368,
+      "phrase_id": "phrase_337"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wir fahren zu Oma und Opa.",
+      "ar": "سنذهب إلى جدتي وجدي.",
+      "fr": "On va chez mamie et papi.",
+      "debut_ms": 16368,
+      "fin_ms": 19248,
+      "phrase_id": "phrase_338"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Mein kleiner Bruder nervt voll.",
+      "ar": "أخي الصغير يزعجني كثيراً.",
+      "fr": "Mon petit frère est insupportable.",
+      "debut_ms": 19248,
+      "fin_ms": 22032,
+      "phrase_id": "phrase_339"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hört auf zu streiten!",
+      "ar": "كفّوا عن الشجار!",
+      "fr": "Arrêtez de vous disputer !",
+      "debut_ms": 22032,
+      "fin_ms": 24264,
+      "phrase_id": "phrase_340"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "lot_id": 19,
+  "type": "dialogue",
+  "title_de": "Der tägliche Rhythmus",
+  "title_ar": "روتين الحياة اليومية",
+  "title_fr": "Le rythme de tous les jours",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Bis nachher!",
+      "ar": "نلتقي لاحقاً!",
+      "fr": "À tout à l'heure !",
+      "debut_ms": 0,
+      "fin_ms": 1872,
+      "phrase_id": "phrase_181"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hä? Was hast du gesagt?",
+      "ar": "ماذا؟ ماذا قلت؟",
+      "fr": "Hein ? Qu'est-ce que tu as dit ?",
+      "debut_ms": 1872,
+      "fin_ms": 5112,
+      "phrase_id": "phrase_182"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab's eilig.",
+      "ar": "أنا مستعجل.",
+      "fr": "Je suis pressé.",
+      "debut_ms": 5112,
+      "fin_ms": 7056,
+      "phrase_id": "phrase_183"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Sekunde!",
+      "ar": "لحظة!",
+      "fr": "Une seconde !",
+      "debut_ms": 7056,
+      "fin_ms": 8928,
+      "phrase_id": "phrase_184"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Bin gleich fertig.",
+      "ar": "سأنتهي بعد قليل.",
+      "fr": "J'ai bientôt fini.",
+      "debut_ms": 8928,
+      "fin_ms": 10992,
+      "phrase_id": "phrase_185"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Warte mal kurz auf mich.",
+      "ar": "انتظرني لحظة.",
+      "fr": "Attends-moi un instant.",
+      "debut_ms": 10992,
+      "fin_ms": 13344,
+      "phrase_id": "phrase_186"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab Kohldampf.",
+      "ar": "أنا جائع جداً.",
+      "fr": "J'ai une faim de loup.",
+      "debut_ms": 13344,
+      "fin_ms": 15288,
+      "phrase_id": "phrase_187"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich verdurste gleich!",
+      "ar": "سأموت من العطش!",
+      "fr": "Je meurs de soif !",
+      "debut_ms": 15288,
+      "fin_ms": 17424,
+      "phrase_id": "phrase_188"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hätt Lust auf Pizza.",
+      "ar": "أشتهي بيتزا.",
+      "fr": "J'ai envie de pizza.",
+      "debut_ms": 17424,
+      "fin_ms": 19752,
+      "phrase_id": "phrase_189"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Willst du was trinken?",
+      "ar": "هل تريد شيئاً تشربه؟",
+      "fr": "Tu veux boire quelque chose ?",
+      "debut_ms": 19752,
+      "fin_ms": 21936,
+      "phrase_id": "phrase_190"
+    }
+  ]
+}

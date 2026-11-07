@@ -1,0 +1,99 @@
+{
+  "lot_id": 27,
+  "type": "dialogue",
+  "title_de": "Meinungen und Daumen drücken",
+  "title_ar": "آراء متبادلة وتمنيات التوفيق",
+  "title_fr": "Points de vue et encouragements",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Ob der Film gut ist? Ansichtssache.",
+      "ar": "هذا يعتمد على وجهة النظر.",
+      "fr": "C'est une question de point de vue.",
+      "debut_ms": 0,
+      "fin_ms": 4056,
+      "phrase_id": "phrase_261"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das Projekt liegt mir echt am Herzen.",
+      "ar": "هذا يهمني كثيراً / قريب إلى قلبي.",
+      "fr": "Ça me tient à cœur.",
+      "debut_ms": 4056,
+      "fin_ms": 7296,
+      "phrase_id": "phrase_262"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Hundert Euro? Das ist nur ein Tropfen auf den heißen Stein.",
+      "ar": "لا يكفي إطلاقاً (قطرة على حجر ساخن).",
+      "fr": "C'est une goutte d'eau dans la mer.",
+      "debut_ms": 7296,
+      "fin_ms": 12216,
+      "phrase_id": "phrase_263"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Erzähl, ich bin ganz Ohr!",
+      "ar": "أنا كلي آذان، أستمع إليك.",
+      "fr": "Je suis tout ouïe.",
+      "debut_ms": 12216,
+      "fin_ms": 15048,
+      "phrase_id": "phrase_264"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Warum er gekündigt hat, ist mir ein Rätsel.",
+      "ar": "هذا لغز بالنسبة لي.",
+      "fr": "C'est un mystère pour moi.",
+      "debut_ms": 15048,
+      "fin_ms": 18624,
+      "phrase_id": "phrase_265"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Pizza mit Ananas? Geschmackssache!",
+      "ar": "مسألة ذوق.",
+      "fr": "C'est une question de goût.",
+      "debut_ms": 18624,
+      "fin_ms": 22728,
+      "phrase_id": "phrase_266"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Morgen ist deine Prüfung? Ich drück dir die Daumen!",
+      "ar": "أتمنى لك التوفيق.",
+      "fr": "Je croise les doigts pour toi.",
+      "debut_ms": 22728,
+      "fin_ms": 27360,
+      "phrase_id": "phrase_267"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hals- und Beinbruch für heute Abend!",
+      "ar": "بالتوفيق! (قبل امتحان أو عرض)",
+      "fr": "Bonne chance !",
+      "debut_ms": 27360,
+      "fin_ms": 30648,
+      "phrase_id": "phrase_268"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Die Arbeit ist mir über den Kopf gewachsen.",
+      "ar": "الأمر أكبر مني / لم أعد أتحكم فيه.",
+      "fr": "Ça me dépasse.",
+      "debut_ms": 30648,
+      "fin_ms": 33768,
+      "phrase_id": "phrase_269"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Kein Unfall? Da hab ich Schwein gehabt!",
+      "ar": "كنت محظوظاً.",
+      "fr": "J'ai eu de la chance.",
+      "debut_ms": 33768,
+      "fin_ms": 37776,
+      "phrase_id": "phrase_270"
+    }
+  ]
+}

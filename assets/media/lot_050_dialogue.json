@@ -1,0 +1,99 @@
+{
+  "lot_id": 50,
+  "type": "dialogue",
+  "title_de": "Verloren, Hilfe und Notfälle",
+  "title_ar": "فقدان الأغراض وطلب النجدة والطوارئ",
+  "title_fr": "Objets perdus, secours et urgences",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab mein Portemonnaie verloren.",
+      "ar": "أضعت محفظتي.",
+      "fr": "J'ai perdu mon portefeuille.",
+      "debut_ms": 0,
+      "fin_ms": 2616,
+      "phrase_id": "phrase_491"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wo ist denn das Fundbüro?",
+      "ar": "أين مكتب المفقودات؟",
+      "fr": "Où est le bureau des objets trouvés ?",
+      "debut_ms": 2616,
+      "fin_ms": 5136,
+      "phrase_id": "phrase_492"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Rufen Sie die Polizei!",
+      "ar": "اتصلوا بالشرطة!",
+      "fr": "Appelez la police !",
+      "debut_ms": 5136,
+      "fin_ms": 7488,
+      "phrase_id": "phrase_493"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ruft einen Krankenwagen!",
+      "ar": "اتصلوا بالإسعاف!",
+      "fr": "Appelez une ambulance !",
+      "debut_ms": 7488,
+      "fin_ms": 9984,
+      "phrase_id": "phrase_494"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Die 112!",
+      "ar": "رقم الطوارئ هو 112.",
+      "fr": "Le numéro d'urgence est le 112.",
+      "debut_ms": 9984,
+      "fin_ms": 12168,
+      "phrase_id": "phrase_495"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mir wurde das Handy geklaut.",
+      "ar": "سُرق هاتفي.",
+      "fr": "On m'a volé mon portable.",
+      "debut_ms": 12168,
+      "fin_ms": 14928,
+      "phrase_id": "phrase_496"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Vorsicht, Taschendiebe!",
+      "ar": "احذروا من النشّالين!",
+      "fr": "Attention aux pickpockets !",
+      "debut_ms": 14928,
+      "fin_ms": 17568,
+      "phrase_id": "phrase_497"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wo geht's zum Notausgang?",
+      "ar": "أين مخرج الطوارئ؟",
+      "fr": "Où est la sortie de secours ?",
+      "debut_ms": 17568,
+      "fin_ms": 20280,
+      "phrase_id": "phrase_498"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich brauch Hilfe.",
+      "ar": "أحتاج مساعدة.",
+      "fr": "J'ai besoin d'aide.",
+      "debut_ms": 20280,
+      "fin_ms": 22296,
+      "phrase_id": "phrase_499"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab meinen Ausweis verloren.",
+      "ar": "أضعت بطاقة هويتي.",
+      "fr": "J'ai perdu ma pièce d'identité.",
+      "debut_ms": 22296,
+      "fin_ms": 25176,
+      "phrase_id": "phrase_500"
+    }
+  ]
+}

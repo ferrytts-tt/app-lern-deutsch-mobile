@@ -1,0 +1,99 @@
+{
+  "lot_id": 22,
+  "type": "dialogue",
+  "title_de": "Ein gewagter Plan",
+  "title_ar": "خطة غامضة ومفاجئة",
+  "title_fr": "Un plan qui laisse perplexe",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Wie das funktionieren soll, ist mir schleierhaft.",
+      "ar": "هذا غامض بالنسبة لي / لا أفهمه.",
+      "fr": "Ça m'échappe complètement.",
+      "debut_ms": 0,
+      "fin_ms": 3576,
+      "phrase_id": "phrase_211"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Du sprichst mir aus der Seele, genau das denke ich auch.",
+      "ar": "كلامك يعبّر عمّا في نفسي تماماً.",
+      "fr": "Tu me enlèves les mots de la bouche.",
+      "debut_ms": 3576,
+      "fin_ms": 7728,
+      "phrase_id": "phrase_212"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Für den Job nehm ich den langen Arbeitsweg in Kauf.",
+      "ar": "أن تقبل بشيء سلبي مقابل تحقيق هدف.",
+      "fr": "accepter un inconvénient pour atteindre un but",
+      "debut_ms": 7728,
+      "fin_ms": 11280,
+      "phrase_id": "phrase_213"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab's mir anders überlegt, ich komm doch nicht mit.",
+      "ar": "غيّرتُ رأيي.",
+      "fr": "J'ai changé d'avis.",
+      "debut_ms": 11280,
+      "fin_ms": 15144,
+      "phrase_id": "phrase_214"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Würde es dir was ausmachen, das Fenster zuzumachen?",
+      "ar": "هل تمانع أن ...؟",
+      "fr": "Ça te dérangerait de ... ?",
+      "debut_ms": 15144,
+      "fin_ms": 19368,
+      "phrase_id": "phrase_215"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wenn es nach mir ginge, würden wir morgen schon fahren.",
+      "ar": "لو كان الأمر بيدي ...",
+      "fr": "Si ça ne tenait qu'à moi, ...",
+      "debut_ms": 19368,
+      "fin_ms": 23400,
+      "phrase_id": "phrase_216"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Dein Anruf kommt wie gerufen, ich brauch grad Hilfe.",
+      "ar": "جاء في الوقت المناسب تماماً.",
+      "fr": "tomber à pic",
+      "debut_ms": 23400,
+      "fin_ms": 27456,
+      "phrase_id": "phrase_217"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Bei ihm ist der Groschen endlich gefallen.",
+      "ar": "فهم أخيراً (بعد تأخر).",
+      "fr": "Le déclic s'est fait.",
+      "debut_ms": 27456,
+      "fin_ms": 30840,
+      "phrase_id": "phrase_218"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Das Ende ist schon absehbar.",
+      "ar": "متوقَّع / يمكن توقعه.",
+      "fr": "prévisible",
+      "debut_ms": 30840,
+      "fin_ms": 33384,
+      "phrase_id": "phrase_219"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Pass auf, das kann nach hinten losgehen.",
+      "ar": "قد ينقلب هذا ضدك / تأتي النتيجة عكسية.",
+      "fr": "Ça peut se retourner contre toi.",
+      "debut_ms": 33384,
+      "fin_ms": 36936,
+      "phrase_id": "phrase_220"
+    }
+  ]
+}

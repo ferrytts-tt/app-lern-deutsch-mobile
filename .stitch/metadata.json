@@ -1,0 +1,58 @@
+{
+  "projectId": "15088049692319025477",
+  "title": "Deutsch Fast",
+  "designSystem": {
+    "assetId": "bfad56726fa44d1d9084d9cc8e83a490",
+    "displayName": "Deutsch Fast",
+    "primaryColor": "#2FA866",
+    "secondaryColor": "#2F80ED",
+    "tertiaryColor": "#FFC83D",
+    "backgroundColor": "#F7FAF8",
+    "headingFont": "Poppins",
+    "bodyFont": "Nunito"
+  },
+  "screens": [
+    {
+      "id": "fe364e739065446895ee5db619d3174a",
+      "sourceScreen": "projects/15088049692319025477/screens/fe364e739065446895ee5db619d3174a",
+      "title": "Deutsch Fast - Splash Screen",
+      "deviceType": "MOBILE",
+      "localScreenshot": ".stitch/designs/splash.png"
+    },
+    {
+      "id": "4bc3d380d9c042529aa3e73016df2fb2",
+      "sourceScreen": "projects/15088049692319025477/screens/4bc3d380d9c042529aa3e73016df2fb2",
+      "title": "Deutsch Fast - Onboarding 1/3",
+      "deviceType": "MOBILE",
+      "localScreenshot": ".stitch/designs/onboarding.png"
+    },
+    {
+      "id": "93c47e998f5f46668516120d0149affa",
+      "sourceScreen": "projects/15088049692319025477/screens/93c47e998f5f46668516120d0149affa",
+      "title": "Deutsch Fast - Accueil",
+      "deviceType": "MOBILE",
+      "localScreenshot": ".stitch/designs/home.png"
+    },
+    {
+      "id": "c87a2138f6864d5ca525ec6f7c931872",
+      "sourceScreen": "projects/15088049692319025477/screens/c87a2138f6864d5ca525ec6f7c931872",
+      "title": "Deutsch Fast - Séance Phrase",
+      "deviceType": "MOBILE",
+      "localScreenshot": ".stitch/designs/session.png"
+    },
+    {
+      "id": "a7b89a698bca47a2888f11afd243445c",
+      "sourceScreen": "projects/15088049692319025477/screens/a7b89a698bca47a2888f11afd243445c",
+      "title": "Deutsch Fast - Mes Phrases",
+      "deviceType": "MOBILE",
+      "localScreenshot": ".stitch/designs/library.png"
+    },
+    {
+      "id": "25a0e3f02eda48098e55a93295143b1d",
+      "sourceScreen": "projects/15088049692319025477/screens/25a0e3f02eda48098e55a93295143b1d",
+      "title": "Deutsch Fast - Progrès",
+      "deviceType": "MOBILE",
+      "localScreenshot": ".stitch/designs/progress.png"
+    }
+  ]
+}

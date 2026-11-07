@@ -1,0 +1,99 @@
+{
+  "lot_id": 45,
+  "type": "dialogue",
+  "title_de": "Check-in und Sicherheitskontrolle",
+  "title_ar": "التسجيل والتفتيش الأمني في المطار",
+  "title_fr": "Enregistrement et contrôle de sécurité",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Hier, meine Bordkarte.",
+      "ar": "هذه بطاقة صعودي.",
+      "fr": "Voici ma carte d'embarquement.",
+      "debut_ms": 0,
+      "fin_ms": 2592,
+      "phrase_id": "phrase_441"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "An welchem Gate geht mein Flug?",
+      "ar": "من أي بوابة تنطلق رحلتي؟",
+      "fr": "De quelle porte part mon vol ?",
+      "debut_ms": 2592,
+      "fin_ms": 5208,
+      "phrase_id": "phrase_442"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Das Boarding hat begonnen.",
+      "ar": "بدأ الصعود إلى الطائرة للرحلة LH 400.",
+      "fr": "L'embarquement du vol LH 400 a commencé.",
+      "debut_ms": 5208,
+      "fin_ms": 7536,
+      "phrase_id": "phrase_443"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Letzter Aufruf für Flug LH 400.",
+      "ar": "النداء الأخير للرحلة LH 400.",
+      "fr": "Dernier appel pour le vol LH 400.",
+      "debut_ms": 7536,
+      "fin_ms": 11280,
+      "phrase_id": "phrase_444"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Flüssigkeiten bitte in den durchsichtigen Beutel.",
+      "ar": "ضع السوائل في كيس شفاف من فضلك.",
+      "fr": "Mettez vos liquides dans un sac transparent.",
+      "debut_ms": 11280,
+      "fin_ms": 14856,
+      "phrase_id": "phrase_445"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Gürtel und Jacke bitte in die Wanne.",
+      "ar": "ضع الحزام والسترة في الصندوق.",
+      "fr": "Mettez ceinture et veste dans le bac.",
+      "debut_ms": 14856,
+      "fin_ms": 17832,
+      "phrase_id": "phrase_446"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Laptop bitte extra in die Wanne.",
+      "ar": "ضع الحاسوب المحمول منفصلاً في الصندوق.",
+      "fr": "Mettez l'ordinateur portable à part dans le bac.",
+      "debut_ms": 17832,
+      "fin_ms": 20616,
+      "phrase_id": "phrase_447"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Was zu verzollen?",
+      "ar": "هل لديك شيء تصرّح عنه للجمارك؟",
+      "fr": "Avez-vous quelque chose à déclarer ?",
+      "debut_ms": 20616,
+      "fin_ms": 22800,
+      "phrase_id": "phrase_448"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Wie lange bleiben Sie?",
+      "ar": "كم ستبقى في ألمانيا؟",
+      "fr": "Combien de temps restez-vous en Allemagne ?",
+      "debut_ms": 22800,
+      "fin_ms": 25032,
+      "phrase_id": "phrase_449"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Und der Zweck Ihrer Reise?",
+      "ar": "ما هدف زيارتك؟",
+      "fr": "Quel est le motif de votre voyage ?",
+      "debut_ms": 25032,
+      "fin_ms": 27480,
+      "phrase_id": "phrase_450"
+    }
+  ]
+}

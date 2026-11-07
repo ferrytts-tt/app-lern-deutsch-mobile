@@ -1,0 +1,99 @@
+{
+  "lot_id": 41,
+  "type": "dialogue",
+  "title_de": "Am Bahnhof und im Zug",
+  "title_ar": "في محطة القطار وعلى متنه",
+  "title_fr": "À la gare et dans le train",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Von welchem Gleis fährt der nach Hamburg?",
+      "ar": "من أي رصيف يغادر القطار إلى هامبورغ؟",
+      "fr": "De quelle voie part le train pour Hambourg ?",
+      "debut_ms": 0,
+      "fin_ms": 3264,
+      "phrase_id": "phrase_401"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Einmal Köln, einfach.",
+      "ar": "تذكرة إلى كولن، ذهاب فقط.",
+      "fr": "Un aller simple pour Cologne, s'il vous plaît.",
+      "debut_ms": 3264,
+      "fin_ms": 5880,
+      "phrase_id": "phrase_402"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Einmal Berlin, hin und zurück.",
+      "ar": "تذكرة إلى برلين، ذهاب وإياب.",
+      "fr": "Un aller-retour pour Berlin, s'il vous plaît.",
+      "debut_ms": 5880,
+      "fin_ms": 8712,
+      "phrase_id": "phrase_403"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Der Zug fällt heute aus.",
+      "ar": "القطار ملغى.",
+      "fr": "Le train est supprimé.",
+      "debut_ms": 8712,
+      "fin_ms": 11232,
+      "phrase_id": "phrase_404"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Der hat zehn Minuten Verspätung.",
+      "ar": "القطار متأخر عشر دقائق.",
+      "fr": "Le train a dix minutes de retard.",
+      "debut_ms": 11232,
+      "fin_ms": 13944,
+      "phrase_id": "phrase_405"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Vorsicht, ein Zug fährt durch!",
+      "ar": "انتبه، قطار يمر دون توقف!",
+      "fr": "Attention, un train passe sans s'arrêter !",
+      "debut_ms": 13944,
+      "fin_ms": 17040,
+      "phrase_id": "phrase_406"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Zurückbleiben, bitte!",
+      "ar": "ابقوا إلى الخلف من فضلكم!",
+      "fr": "Reculez, s'il vous plaît !",
+      "debut_ms": 17040,
+      "fin_ms": 19512,
+      "phrase_id": "phrase_407"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Einsteigen, bitte!",
+      "ar": "اصعدوا من فضلكم، الأبواب ستُغلق.",
+      "fr": "Montez, les portes vont se fermer.",
+      "debut_ms": 19512,
+      "fin_ms": 21936,
+      "phrase_id": "phrase_408"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Dieser Zug endet hier. Bitte alle aussteigen.",
+      "ar": "هذا القطار ينتهي هنا. انزلوا جميعاً.",
+      "fr": "Ce train termine ici. Tout le monde descend.",
+      "debut_ms": 21936,
+      "fin_ms": 26376,
+      "phrase_id": "phrase_409"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Nächster Halt: Frankfurt Hauptbahnhof.",
+      "ar": "المحطة التالية: فرانكفورت المحطة الرئيسية.",
+      "fr": "Prochain arrêt : Francfort gare centrale.",
+      "debut_ms": 26376,
+      "fin_ms": 29928,
+      "phrase_id": "phrase_410"
+    }
+  ]
+}

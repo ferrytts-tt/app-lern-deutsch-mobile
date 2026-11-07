@@ -1,0 +1,99 @@
+{
+  "lot_id": 6,
+  "type": "dialogue",
+  "title_de": "Auf dem Bürgeramt",
+  "title_ar": "في مكتب الإدارة والمواعيد",
+  "title_fr": "Au bureau des formalités",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Ich bräuchte 'nen Termin.",
+      "ar": "أريد حجز موعد",
+      "fr": "Il me faudrait un rendez-vous.",
+      "debut_ms": 0,
+      "fin_ms": 2256,
+      "phrase_id": "phrase_051"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich muss den Termin leider canceln.",
+      "ar": "للأسف لازم ألغي الموعد",
+      "fr": "Je dois malheureusement annuler le rendez-vous.",
+      "debut_ms": 2256,
+      "fin_ms": 5352,
+      "phrase_id": "phrase_052"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ist meine Mail bei Ihnen angekommen?",
+      "ar": "هل وصلكم بريدي؟",
+      "fr": "Vous avez bien reçu mon e-mail ?",
+      "debut_ms": 5352,
+      "fin_ms": 8376,
+      "phrase_id": "phrase_053"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wo muss ich da unterschreiben?",
+      "ar": "أين أوقّع؟",
+      "fr": "Je signe où là ?",
+      "debut_ms": 8376,
+      "fin_ms": 10824,
+      "phrase_id": "phrase_054"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich blick bei dem Formular nicht durch.",
+      "ar": "لا أفهم هذه الاستمارة",
+      "fr": "J'y comprends rien à ce formulaire.",
+      "debut_ms": 10824,
+      "fin_ms": 13632,
+      "phrase_id": "phrase_055"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mir fehlt noch 'n Papier.",
+      "ar": "ينقصني مستند",
+      "fr": "Il me manque encore un papier.",
+      "debut_ms": 13632,
+      "fin_ms": 16104,
+      "phrase_id": "phrase_056"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Wie lang dauert das so?",
+      "ar": "كم يستغرق هذا تقريباً؟",
+      "fr": "Ça va prendre combien de temps à peu près ?",
+      "debut_ms": 16104,
+      "fin_ms": 18336,
+      "phrase_id": "phrase_057"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Da bin ich nicht zuständig.",
+      "ar": "هذا ليس من اختصاصي",
+      "fr": "Ce n'est pas de mon ressort.",
+      "debut_ms": 18336,
+      "fin_ms": 20856,
+      "phrase_id": "phrase_058"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich warte schon ewig.",
+      "ar": "أنتظر منذ زمن طويل",
+      "fr": "Ça fait une éternité que j'attends.",
+      "debut_ms": 20856,
+      "fin_ms": 23040,
+      "phrase_id": "phrase_059"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Sorry, kannst du das nochmal sagen?",
+      "ar": "آسف، تعيد هذا؟",
+      "fr": "Pardon, tu peux répéter ça ?",
+      "debut_ms": 23040,
+      "fin_ms": 26184,
+      "phrase_id": "phrase_060"
+    }
+  ]
+}

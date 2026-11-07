@@ -1,0 +1,99 @@
+{
+  "lot_id": 16,
+  "type": "dialogue",
+  "title_de": "Aufgebrachte Reaktionen",
+  "title_ar": "انفعالات يومية",
+  "title_fr": "Coups de gueule du quotidien",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Mir platzt gleich der Kragen!",
+      "ar": "سأنفجر غضباً بعد قليل!",
+      "fr": "Je vais exploser de colère !",
+      "debut_ms": 0,
+      "fin_ms": 2664,
+      "phrase_id": "phrase_151"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab keinen Bock mehr auf Streit.",
+      "ar": "لم أعد أرغب في الشجار.",
+      "fr": "Je n'ai plus envie de me disputer.",
+      "debut_ms": 2664,
+      "fin_ms": 5496,
+      "phrase_id": "phrase_152"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "War nicht so gemeint.",
+      "ar": "لم أقصد ذلك.",
+      "fr": "Je ne le pensais pas comme ça.",
+      "debut_ms": 5496,
+      "fin_ms": 7584,
+      "phrase_id": "phrase_153"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Reg dich mal ab.",
+      "ar": "اهدأ.",
+      "fr": "Calme-toi.",
+      "debut_ms": 7584,
+      "fin_ms": 9576,
+      "phrase_id": "phrase_154"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Schwamm drüber!",
+      "ar": "لننسَ الأمر.",
+      "fr": "On passe l'éponge.",
+      "debut_ms": 9576,
+      "fin_ms": 11448,
+      "phrase_id": "phrase_155"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Du hast mir echt gefehlt.",
+      "ar": "اشتقت لك فعلاً.",
+      "fr": "Tu m'as vraiment manqué.",
+      "debut_ms": 11448,
+      "fin_ms": 13968,
+      "phrase_id": "phrase_156"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Seh ich genauso.",
+      "ar": "أراه كذلك تماماً.",
+      "fr": "Je vois ça pareil.",
+      "debut_ms": 13968,
+      "fin_ms": 16008,
+      "phrase_id": "phrase_157"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Weiß nicht so recht.",
+      "ar": "لست متأكداً تماماً.",
+      "fr": "Je ne sais pas trop.",
+      "debut_ms": 16008,
+      "fin_ms": 18120,
+      "phrase_id": "phrase_158"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Kommt drauf an.",
+      "ar": "هذا يعتمد.",
+      "fr": "Ça dépend.",
+      "debut_ms": 18120,
+      "fin_ms": 19992,
+      "phrase_id": "phrase_159"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wie du meinst.",
+      "ar": "كما تريد.",
+      "fr": "Comme tu veux.",
+      "debut_ms": 19992,
+      "fin_ms": 21888,
+      "phrase_id": "phrase_160"
+    }
+  ]
+}

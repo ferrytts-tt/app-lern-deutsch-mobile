@@ -1,0 +1,99 @@
+{
+  "lot_id": 10,
+  "type": "dialogue",
+  "title_de": "Diskussion über das Wochenende",
+  "title_ar": "نقاش حول عطلة الأسبوع",
+  "title_fr": "Débat animé sur le week-end",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Das überzeugt mich jetzt nicht so.",
+      "ar": "هذا لا يقنعني كثيراً",
+      "fr": "Ça ne me convainc pas trop.",
+      "debut_ms": 0,
+      "fin_ms": 2856,
+      "phrase_id": "phrase_091"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Seh ich anders.",
+      "ar": "أراه بشكل مختلف",
+      "fr": "Je vois pas les choses comme ça.",
+      "debut_ms": 2856,
+      "fin_ms": 4800,
+      "phrase_id": "phrase_092"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Da ist was dran.",
+      "ar": "فيه شيء من الصحة",
+      "fr": "Y a du vrai là-dedans.",
+      "debut_ms": 4800,
+      "fin_ms": 6840,
+      "phrase_id": "phrase_093"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hab ich mir schon gedacht.",
+      "ar": "توقعت ذلك فعلاً",
+      "fr": "Je m'en doutais bien.",
+      "debut_ms": 6840,
+      "fin_ms": 9096,
+      "phrase_id": "phrase_094"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Jetzt übertreib mal nicht.",
+      "ar": "لا تبالغ الآن",
+      "fr": "N'exagère pas non plus !",
+      "debut_ms": 9096,
+      "fin_ms": 11592,
+      "phrase_id": "phrase_095"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Voll schade, ey.",
+      "ar": "يا للأسف!",
+      "fr": "Trop dommage, franchement !",
+      "debut_ms": 11592,
+      "fin_ms": 13824,
+      "phrase_id": "phrase_096"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Damit hätte ich nie gerechnet!",
+      "ar": "ما توقعت هذا أبداً!",
+      "fr": "Je m'attendais vraiment pas à ça !",
+      "debut_ms": 13824,
+      "fin_ms": 16464,
+      "phrase_id": "phrase_097"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wie meinst du das jetzt?",
+      "ar": "ماذا تقصد بذلك؟",
+      "fr": "Tu veux dire quoi par là ?",
+      "debut_ms": 16464,
+      "fin_ms": 18816,
+      "phrase_id": "phrase_098"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Da hab ich ja nochmal Glück gehabt.",
+      "ar": "كنت محظوظاً هذه المرة",
+      "fr": "J'ai eu un sacré coup de bol là !",
+      "debut_ms": 18816,
+      "fin_ms": 21528,
+      "phrase_id": "phrase_099"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das bringt doch nichts.",
+      "ar": "لا فائدة من هذا",
+      "fr": "Ça sert à rien de toute façon.",
+      "debut_ms": 21528,
+      "fin_ms": 23664,
+      "phrase_id": "phrase_100"
+    }
+  ]
+}

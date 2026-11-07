@@ -1,0 +1,99 @@
+{
+  "lot_id": 25,
+  "type": "dialogue",
+  "title_de": "Bildhafte Sprache im Gespräch",
+  "title_ar": "تعابير تصويرية معبرة",
+  "title_fr": "Images et métaphores allemandes",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Das rote Kleid ist mir sofort ins Auge gefallen.",
+      "ar": "لفت نظري.",
+      "fr": "sauter aux yeux",
+      "debut_ms": 0,
+      "fin_ms": 3720,
+      "phrase_id": "phrase_241"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Seit dem Urlaub seh ich die Stadt mit anderen Augen.",
+      "ar": "ينظر إلى الأمر من زاوية مختلفة.",
+      "fr": "voir quelque chose d'un autre œil",
+      "debut_ms": 3720,
+      "fin_ms": 7728,
+      "phrase_id": "phrase_242"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Als ich das hörte, bin ich aus allen Wolken gefallen.",
+      "ar": "تفاجأ جداً (صُدم بخبر غير متوقع).",
+      "fr": "tomber des nues",
+      "debut_ms": 7728,
+      "fin_ms": 11640,
+      "phrase_id": "phrase_243"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mach dich nicht zum Affen!",
+      "ar": "يجعل من نفسه أضحوكة.",
+      "fr": "se ridiculiser",
+      "debut_ms": 11640,
+      "fin_ms": 13920,
+      "phrase_id": "phrase_244"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Lange Rede, kurzer Sinn: Wir müssen umziehen.",
+      "ar": "خلاصة القول / باختصار.",
+      "fr": "Bref, pour faire court",
+      "debut_ms": 13920,
+      "fin_ms": 17736,
+      "phrase_id": "phrase_245"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Du kannst mir nicht den Mund verbieten!",
+      "ar": "يمنع شخصاً من التعبير عن رأيه.",
+      "fr": "interdire à quelqu'un de parler",
+      "debut_ms": 17736,
+      "fin_ms": 20568,
+      "phrase_id": "phrase_246"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Mal nicht gleich den Teufel an die Wand, es wird schon gutgehen.",
+      "ar": "يتشاءم ويتوقع الأسوأ.",
+      "fr": "voir tout en noir",
+      "debut_ms": 20568,
+      "fin_ms": 24912,
+      "phrase_id": "phrase_247"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Lass uns Nägel mit Köpfen machen und das heute klären.",
+      "ar": "علينا أن نحسم الأمر بجدية وننجزه.",
+      "fr": "Il faut faire les choses sérieusement et conclure.",
+      "debut_ms": 24912,
+      "fin_ms": 29064,
+      "phrase_id": "phrase_248"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich dachte, er kommt. Pustekuchen!",
+      "ar": "طلع كلام فاضي! / أبداً، لم يحدث ما توقعت!",
+      "fr": "Tu parles ! Mon œil !",
+      "debut_ms": 29064,
+      "fin_ms": 33264,
+      "phrase_id": "phrase_249"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mit dem neuen Plan läuft alles wie am Schnürchen.",
+      "ar": "كل شيء يسير بسلاسة تامة.",
+      "fr": "Tout roule comme sur des roulettes.",
+      "debut_ms": 33264,
+      "fin_ms": 36816,
+      "phrase_id": "phrase_250"
+    }
+  ]
+}

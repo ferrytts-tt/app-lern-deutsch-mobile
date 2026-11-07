@@ -1,0 +1,99 @@
+{
+  "lot_id": 4,
+  "type": "dialogue",
+  "title_de": "Gefühlschaos vor dem Auftritt",
+  "title_ar": "مشاعر متضاربة قبل العرض",
+  "title_fr": "Tourbillon d'émotions avant le direct",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Ich bin total aufgeregt.",
+      "ar": "أنا متحمس/متوتر جداً",
+      "fr": "Je suis super excité / hyper tendu.",
+      "debut_ms": 0,
+      "fin_ms": 2424,
+      "phrase_id": "phrase_031"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab die Nase gestrichen voll!",
+      "ar": "طفح الكيل عندي",
+      "fr": "J'en ai ras-le-bol !",
+      "debut_ms": 2424,
+      "fin_ms": 5112,
+      "phrase_id": "phrase_032"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Das macht mich echt sauer.",
+      "ar": "هذا يغضبني",
+      "fr": "Ça me fout les nerfs / Ça m'énerve trop.",
+      "debut_ms": 5112,
+      "fin_ms": 7464,
+      "phrase_id": "phrase_033"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab richtig Muffensausen vor der Prüfung.",
+      "ar": "أنا خائف من الامتحان",
+      "fr": "J'ai trop la trouille de l'examen.",
+      "debut_ms": 7464,
+      "fin_ms": 10872,
+      "phrase_id": "phrase_034"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich bin mega happy.",
+      "ar": "أنا سعيد جداً",
+      "fr": "Je suis trop content !",
+      "debut_ms": 10872,
+      "fin_ms": 12912,
+      "phrase_id": "phrase_035"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mir geht's nicht so gut.",
+      "ar": "لست على ما يرام",
+      "fr": "Je ne me sens pas très bien.",
+      "debut_ms": 12912,
+      "fin_ms": 15216,
+      "phrase_id": "phrase_036"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Tut mir echt leid.",
+      "ar": "آسف حقاً",
+      "fr": "Vraiment désolé.",
+      "debut_ms": 15216,
+      "fin_ms": 17256,
+      "phrase_id": "phrase_037"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mach dir keinen Kopf!",
+      "ar": "لا تشغل بالك",
+      "fr": "Ne te prends pas la tête !",
+      "debut_ms": 17256,
+      "fin_ms": 19488,
+      "phrase_id": "phrase_038"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Das ist mir voll peinlich.",
+      "ar": "أشعر بإحراج شديد",
+      "fr": "J'ai trop honte / La honte !",
+      "debut_ms": 19488,
+      "fin_ms": 21888,
+      "phrase_id": "phrase_039"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Bin echt stolz auf dich!",
+      "ar": "فخور بك فعلاً",
+      "fr": "Vraiment fier de toi !",
+      "debut_ms": 21888,
+      "fin_ms": 24216,
+      "phrase_id": "phrase_040"
+    }
+  ]
+}

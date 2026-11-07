@@ -1,0 +1,99 @@
+{
+  "lot_id": 12,
+  "type": "dialogue",
+  "title_de": "Wichtige Aussprache",
+  "title_ar": "توضيح هام بين صديقين",
+  "title_fr": "Explication franche",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Hörst du mir mal kurz zu?",
+      "ar": "هل تسمعني لحظة؟",
+      "fr": "Tu m'écoutes un instant ?",
+      "debut_ms": 0,
+      "fin_ms": 2496,
+      "phrase_id": "phrase_111"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Fällt mir nicht leicht, das zu sagen.",
+      "ar": "ليس من السهل عليّ أن أقول هذا.",
+      "fr": "Ce n'est pas facile pour moi de le dire.",
+      "debut_ms": 2496,
+      "fin_ms": 5640,
+      "phrase_id": "phrase_112"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich will das nicht vor allen anderen besprechen.",
+      "ar": "لا أريد أن أناقش هذا أمام الآخرين.",
+      "fr": "Je ne veux pas en parler devant les autres.",
+      "debut_ms": 5640,
+      "fin_ms": 8904,
+      "phrase_id": "phrase_113"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Versprich mir, dass du's keinem erzählst.",
+      "ar": "عدني أنك لن تخبر أحداً.",
+      "fr": "Promets-moi que tu ne le diras à personne.",
+      "debut_ms": 8904,
+      "fin_ms": 12576,
+      "phrase_id": "phrase_114"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Lass uns das in Ruhe besprechen.",
+      "ar": "لنتحدث عن هذا بهدوء.",
+      "fr": "Parlons-en au calme.",
+      "debut_ms": 12576,
+      "fin_ms": 15384,
+      "phrase_id": "phrase_115"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich ruf sonntags immer meine Mama an.",
+      "ar": "أتصل بأمي كل يوم أحد.",
+      "fr": "J'appelle ma mère tous les dimanches.",
+      "debut_ms": 15384,
+      "fin_ms": 18504,
+      "phrase_id": "phrase_116"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Meine Eltern wohnen ziemlich weit weg.",
+      "ar": "أهلي يسكنون بعيداً جداً.",
+      "fr": "Mes parents habitent très loin.",
+      "debut_ms": 18504,
+      "fin_ms": 21504,
+      "phrase_id": "phrase_117"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Haste Geschwister?",
+      "ar": "هل عندك إخوة وأخوات؟",
+      "fr": "Tu as des frères et sœurs ?",
+      "debut_ms": 21504,
+      "fin_ms": 23592,
+      "phrase_id": "phrase_118"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich muss noch schnell aufräumen.",
+      "ar": "لازم أرتب قليلاً قبل ذلك.",
+      "fr": "Je dois encore ranger rapidement.",
+      "debut_ms": 23592,
+      "fin_ms": 26160,
+      "phrase_id": "phrase_119"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wer kocht heut Abend?",
+      "ar": "من سيطبخ الليلة؟",
+      "fr": "Qui fait à manger ce soir ?",
+      "debut_ms": 26160,
+      "fin_ms": 28440,
+      "phrase_id": "phrase_120"
+    }
+  ]
+}

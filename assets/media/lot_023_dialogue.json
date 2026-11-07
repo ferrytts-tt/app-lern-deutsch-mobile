@@ -1,0 +1,99 @@
+{
+  "lot_id": 23,
+  "type": "dialogue",
+  "title_de": "Redensarten im Alltag",
+  "title_ar": "أمثال وتعبيرات شعبية",
+  "title_fr": "Expressions courantes et sagesses",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Dieses Restaurant? Einmal und nie wieder!",
+      "ar": "مرة واحدة ولن أكررها أبداً!",
+      "fr": "Une fois et plus jamais !",
+      "debut_ms": 0,
+      "fin_ms": 4176,
+      "phrase_id": "phrase_221"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Er hat sage und schreibe zehn Stunden gewartet.",
+      "ar": "(للتأكيد على رقم مدهش) حقاً وفعلاً.",
+      "fr": "pas moins de",
+      "debut_ms": 4176,
+      "fin_ms": 7872,
+      "phrase_id": "phrase_222"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich muss wohl oder übel zu Hause bleiben.",
+      "ar": "شئت أم أبيت / مضطراً.",
+      "fr": "bon gré mal gré",
+      "debut_ms": 7872,
+      "fin_ms": 11112,
+      "phrase_id": "phrase_223"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das mach ich nie und nimmer!",
+      "ar": "مستحيل! أبداً أبداً!",
+      "fr": "Jamais de la vie !",
+      "debut_ms": 11112,
+      "fin_ms": 13656,
+      "phrase_id": "phrase_224"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Danke für deine Hilfe! – Ach, nicht der Rede wert.",
+      "ar": "لا داعي للشكر / لا يستحق الذكر.",
+      "fr": "Ça ne vaut pas la peine d'en parler, de rien.",
+      "debut_ms": 13656,
+      "fin_ms": 18360,
+      "phrase_id": "phrase_225"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Bleib dran, steter Tropfen höhlt den Stein.",
+      "ar": "المثابرة تحقق النجاح (قطرة بعد قطرة تحفر الحجر).",
+      "fr": "Petit à petit, l'oiseau fait son nid.",
+      "debut_ms": 18360,
+      "fin_ms": 22056,
+      "phrase_id": "phrase_226"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ob das klappt, bleibt abzuwarten.",
+      "ar": "هذا ما سنراه لاحقاً / علينا الانتظار.",
+      "fr": "Reste à voir.",
+      "debut_ms": 22056,
+      "fin_ms": 25104,
+      "phrase_id": "phrase_227"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Seine Antwort wirft Fragen auf.",
+      "ar": "هذا يثير تساؤلات.",
+      "fr": "Ça soulève des questions.",
+      "debut_ms": 25104,
+      "fin_ms": 28008,
+      "phrase_id": "phrase_228"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab die Prüfung mit Ach und Krach bestanden.",
+      "ar": "بالكاد / بصعوبة بالغة.",
+      "fr": "de justesse, à grand-peine",
+      "debut_ms": 28008,
+      "fin_ms": 31440,
+      "phrase_id": "phrase_229"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das Essen war im Nu weg.",
+      "ar": "في لمح البصر.",
+      "fr": "en un rien de temps",
+      "debut_ms": 31440,
+      "fin_ms": 33792,
+      "phrase_id": "phrase_230"
+    }
+  ]
+}

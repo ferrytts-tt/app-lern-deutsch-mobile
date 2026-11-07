@@ -1,0 +1,99 @@
+{
+  "lot_id": 33,
+  "type": "dialogue",
+  "title_de": "Komplimente und Familienalltag",
+  "title_ar": "مجاملات وأجواء عائلية",
+  "title_fr": "Compliments et ambiance à la maison",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Das hast du stark gemacht!",
+      "ar": "أحسنت، عمل قوي!",
+      "fr": "Bien joué !",
+      "debut_ms": 0,
+      "fin_ms": 2376,
+      "phrase_id": "phrase_321"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Du siehst heute echt gut aus.",
+      "ar": "تبدو رائعاً اليوم.",
+      "fr": "Tu es vraiment bien aujourd'hui.",
+      "debut_ms": 2376,
+      "fin_ms": 5064,
+      "phrase_id": "phrase_322"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich bin voll neidisch auf dich.",
+      "ar": "أغار منك كثيراً.",
+      "fr": "Je suis trop jaloux de toi.",
+      "debut_ms": 5064,
+      "fin_ms": 7560,
+      "phrase_id": "phrase_323"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Stimmt gar nicht!",
+      "ar": "هذا غير صحيح!",
+      "fr": "C'est faux !",
+      "debut_ms": 7560,
+      "fin_ms": 9528,
+      "phrase_id": "phrase_324"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich schwör's!",
+      "ar": "أقسم لك!",
+      "fr": "Je te jure !",
+      "debut_ms": 9528,
+      "fin_ms": 11400,
+      "phrase_id": "phrase_325"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mama, wann gibt's Essen?",
+      "ar": "ماما، متى الأكل؟",
+      "fr": "Maman, c'est quand qu'on mange ?",
+      "debut_ms": 11400,
+      "fin_ms": 14184,
+      "phrase_id": "phrase_326"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Essen ist fertig!",
+      "ar": "الأكل جاهز!",
+      "fr": "À table !",
+      "debut_ms": 14184,
+      "fin_ms": 16320,
+      "phrase_id": "phrase_327"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Kommt ihr essen?",
+      "ar": "هل تأتون لتأكلوا؟",
+      "fr": "Vous venez manger ?",
+      "debut_ms": 16320,
+      "fin_ms": 18264,
+      "phrase_id": "phrase_328"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Hast du deine Hausaufgaben schon gemacht?",
+      "ar": "هل أنجزت واجباتك؟",
+      "fr": "Tu as fait tes devoirs ?",
+      "debut_ms": 18264,
+      "fin_ms": 21576,
+      "phrase_id": "phrase_329"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Räum mal dein Zimmer auf!",
+      "ar": "رتّب غرفتك!",
+      "fr": "Range ta chambre !",
+      "debut_ms": 21576,
+      "fin_ms": 24000,
+      "phrase_id": "phrase_330"
+    }
+  ]
+}

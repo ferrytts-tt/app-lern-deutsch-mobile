@@ -1,0 +1,99 @@
+{
+  "lot_id": 29,
+  "type": "dialogue",
+  "title_de": "Kluge Ratschläge im Leben",
+  "title_ar": "حكم ونصائح حكيمة",
+  "title_fr": "Sagesses et conseils avisés",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Geh jeden Tag spazieren: Wer rastet, der rostet.",
+      "ar": "من يتوقف يصدأ.",
+      "fr": "Qui s'arrête, rouille.",
+      "debut_ms": 0,
+      "fin_ms": 4104,
+      "phrase_id": "phrase_281"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich bin mit meinem Latein am Ende, ich weiß nicht weiter.",
+      "ar": "نفدت حيلتي / لا أعرف ماذا أفعل.",
+      "fr": "Je ne sais plus quoi faire.",
+      "debut_ms": 4104,
+      "fin_ms": 8304,
+      "phrase_id": "phrase_282"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich sitz zwischen zwei Stühlen, beide Seiten wollen was von mir.",
+      "ar": "أنا بين نارين / في موقف صعب بين طرفين.",
+      "fr": "Je suis pris entre deux feux.",
+      "debut_ms": 8304,
+      "fin_ms": 12744,
+      "phrase_id": "phrase_283"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Die ganze Mühe hat sich gelohnt.",
+      "ar": "كان الأمر يستحق.",
+      "fr": "Ça en valait la peine.",
+      "debut_ms": 12744,
+      "fin_ms": 15624,
+      "phrase_id": "phrase_284"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Sorry, ich hab den Faden verloren. Was wollte ich sagen?",
+      "ar": "فقدت خيط الكلام.",
+      "fr": "J'ai perdu le fil.",
+      "debut_ms": 15624,
+      "fin_ms": 20928,
+      "phrase_id": "phrase_285"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Beeil dich, Zeit ist Geld!",
+      "ar": "الوقت من ذهب.",
+      "fr": "Le temps, c'est de l'argent.",
+      "debut_ms": 20928,
+      "fin_ms": 23904,
+      "phrase_id": "phrase_286"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Du hast verschlafen? Ist kein Beinbruch.",
+      "ar": "ليست مصيبة / ليس بالأمر الخطير.",
+      "fr": "Ce n'est pas dramatique.",
+      "debut_ms": 23904,
+      "fin_ms": 28008,
+      "phrase_id": "phrase_287"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Dein Anruf war super, mir fällt ein Stein vom Herzen.",
+      "ar": "ارتحتُ كثيراً (كأن حملاً ثقيلاً زال).",
+      "fr": "Je suis soulagé, quel poids en moins.",
+      "debut_ms": 28008,
+      "fin_ms": 32304,
+      "phrase_id": "phrase_288"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Für die Idee bin ich total Feuer und Flamme.",
+      "ar": "أنا متحمس جداً لهذا.",
+      "fr": "J'en suis très enthousiaste.",
+      "debut_ms": 32304,
+      "fin_ms": 35592,
+      "phrase_id": "phrase_289"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ein neues Handy? Das kann ich mir grad nicht leisten.",
+      "ar": "لا أستطيع تحمّل تكلفة ذلك.",
+      "fr": "Je ne peux pas me le permettre.",
+      "debut_ms": 35592,
+      "fin_ms": 40464,
+      "phrase_id": "phrase_290"
+    }
+  ]
+}

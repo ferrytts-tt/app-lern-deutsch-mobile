@@ -1,0 +1,95 @@
+{
+  "@@locale": "ro",
+  "appName": "Deutsch Fast",
+  "appSubtitle": "Învață germana rapid",
+
+  "navHome": "Acasă",
+  "navLibrary": "Expresii",
+  "navProgress": "Progres",
+  "navSettings": "Setări",
+
+  "onboardingSkip": "Omite",
+  "onboardingNext": "Următorul",
+  "onboardingStart": "Începe acum",
+  "onboardingTitle1": "Învață ca un copil, nu ca la școală.",
+  "onboardingSubtitle1": "Fără reguli gramaticale plictisitoare. Doar expresii complete și reale, repetate la momentul oportun.",
+  "onboardingTitle2": "1000 de expresii utile pentru a înțelege și vorbi.",
+  "onboardingSubtitle2": "Câteva minute în fiecare zi. Zero stres, zero pedepse, zero inimi pierdute.",
+  "onboardingTitle3": "Ascultă, repetă cu voce tare, progresează fără teamă.",
+  "onboardingSubtitle3": "Metoda shadowing îți antrenează accentul și memoria musculară a limbii germane.",
+  "onboardingDailyPhrases": "Expresii noi pe zi",
+  "onboardingDailyMinutes": "Timp alocat pe zi",
+  "onboardingStartLevel": "Nivelul tău de pornire",
+  "onboardingLevelBeginner": "Sunt începător absolut",
+  "onboardingLevelBasics": "Cunosc deja câteva cuvinte",
+
+  "homeGreeting": "Hallo!",
+  "homeStreakDays": "{count} zile",
+  "@homeStreakDays": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "homeStreakBroken": "Reluăm, este complet normal 🙂",
+  "homeSessionCardTitle": "Sesiunea de azi",
+  "homeSessionStats": "{reviews} recapitulări · {newCount} noi · ~{minutes} min",
+  "@homeSessionStats": {
+    "placeholders": {
+      "reviews": { "type": "int" },
+      "newCount": { "type": "int" },
+      "minutes": { "type": "int" }
+    }
+  },
+  "homeStartSession": "Începe sesiunea",
+  "homeProgressTitle": "Progres general",
+  "homeProgressPhrases": "{learned} / {total} expresii",
+  "@homeProgressPhrases": {
+    "placeholders": {
+      "learned": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "homePhraseOfTheDay": "Expresia zilei",
+  "homeCurrentPhase": "Faza actuală: Ascultare / Expresii / Vorbire",
+
+  "sessionClose": "Închide",
+  "sessionListenNormal": "Normal",
+  "sessionListenSlow": "Lent",
+  "sessionShadowingTitle": "E rândul tău! 🎤",
+  "sessionShadowingHelp": "Repetă cu același ritm. Nu trebuie să fie perfect.",
+  "sessionNext": "Următorul",
+  "sessionSuccess": "Bravo!",
+  "sessionGentleCorrection": "Aproape! Iată expresia corectă:",
+
+  "libraryTitle": "Expresiile mele",
+  "librarySearchPlaceholder": "Caută o expresie sau un cuvânt...",
+  "libraryFilterAll": "Toate",
+  "libraryFilterNew": "Noi",
+  "libraryFilterInProgress": "În curs",
+  "libraryFilterMastered": "Stăpânite",
+  "libraryFilterWatchlist": "De urmărit",
+  "libraryUnlockAnyway": "Deblochează oricum",
+
+  "progressTitle": "Progresul meu",
+  "progressPhrasesLearned": "Expresii învățate",
+  "progressSessionsCompleted": "Sesiuni finalizate",
+  "progressShadowingsDone": "Exerciții de shadowing",
+  "progressListeningTime": "Timp de ascultare",
+  "progressActivity30Days": "Activitate (30 de zile)",
+  "progressDistribution": "Distribuție",
+  "progressMilestones": "Repere",
+
+  "settingsTitle": "Setări",
+  "settingsGeneral": "General",
+  "settingsAudio": "Audio & Voce",
+  "settingsDailyReminder": "Memento zilnic",
+  "settingsTheme": "Temă",
+  "settingsThemeLight": "Luminoasă",
+  "settingsThemeDark": "Întunecată",
+  "settingsThemeSystem": "Sistem",
+  "settingsBackup": "Copie de rezervă și restaurare",
+  "settingsExport": "Exportă progresul (JSON)",
+  "settingsImport": "Restaurează o copie",
+  "settingsReset": "Resetează progresul",
+  "settingsAbout": "Despre Deutsch Fast"
+}

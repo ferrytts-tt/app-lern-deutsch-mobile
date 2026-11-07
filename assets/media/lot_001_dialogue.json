@@ -1,0 +1,99 @@
+{
+  "lot_id": 1,
+  "type": "dialogue",
+  "title_de": "Zufälliges Treffen im Regen",
+  "title_ar": "لقاء بالصدفة تحت المطر",
+  "title_fr": "Rencontre fortuite sous la pluie",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Hallo Katja! Na, wie läuft's?",
+      "ar": "أهلاً كاتيا! طيب، كيف الأحوال؟",
+      "fr": "Salut Katja ! Alors, comment ça roule ?",
+      "debut_ms": 0,
+      "fin_ms": 4128,
+      "phrase_id": "phrase_001"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mensch, lange nicht gesehen!",
+      "ar": "يا رجل، من زمان ما شفتك!",
+      "fr": "Ça fait un bail qu'on s'est pas vus !",
+      "debut_ms": 4128,
+      "fin_ms": 6960,
+      "phrase_id": "phrase_002"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Schön, dich mal wieder zu sehen!",
+      "ar": "حلو أشوفك مرة ثانية!",
+      "fr": "Ça fait plaisir de te revoir !",
+      "debut_ms": 6960,
+      "fin_ms": 9912,
+      "phrase_id": "phrase_006"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Was gibt's Neues?",
+      "ar": "شو الجديد؟",
+      "fr": "Quoi de neuf ?",
+      "debut_ms": 9912,
+      "fin_ms": 12000,
+      "phrase_id": "phrase_003"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Nicht viel. Na, wie war's am Wochenende?",
+      "ar": "ليس الكثير. كيف كانت عطلة نهاية الأسبوع؟",
+      "fr": "Pas grand-chose. Alors, c'était comment ton week-end ?",
+      "debut_ms": 12000,
+      "fin_ms": 16440,
+      "phrase_id": "phrase_005"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ganz ruhig. Aber das Wetter ist heute echt mies.",
+      "ar": "هادئة تماماً. لكن الجو اليوم سيئ جداً.",
+      "fr": "Très calme. Mais le temps est vraiment pourri aujourd'hui.",
+      "debut_ms": 16440,
+      "fin_ms": 20976,
+      "phrase_id": "phrase_007"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Stimmt, es schüttet wie aus Eimern!",
+      "ar": "صحيح، المطر ينهمر بغزارة!",
+      "fr": "C'est vrai, il pleut des cordes !",
+      "debut_ms": 20976,
+      "fin_ms": 24168,
+      "phrase_id": "phrase_008"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Hast du mal die Uhrzeit?",
+      "ar": "تعرفين كم الساعة؟",
+      "fr": "T'aurais l'heure s'il te plaît ?",
+      "debut_ms": 24168,
+      "fin_ms": 26496,
+      "phrase_id": "phrase_009"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Schon Viertel nach zwei. Ich muss los!",
+      "ar": "الثانية والربع بالفعل. لازم أمشي الآن!",
+      "fr": "Déjà deux heures et quart. Faut que j'y aille !",
+      "debut_ms": 26496,
+      "fin_ms": 30504,
+      "phrase_id": "phrase_004"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Alles klar, mach's gut, bis bald!",
+      "ar": "تمام، مع السلامة، اعتنِ بنفسك، إلى اللقاء قريباً!",
+      "fr": "D'accord, prends soin de toi, à bientôt !",
+      "debut_ms": 30504,
+      "fin_ms": 33888,
+      "phrase_id": "phrase_010"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "lot_id": 43,
+  "type": "dialogue",
+  "title_de": "Unterwegs mit U-Bahn und Bus",
+  "title_ar": "في المترو والحافلة",
+  "title_fr": "En déplacement en métro et bus",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Welche Linie fährt zum Alex?",
+      "ar": "أي خط يذهب إلى ألكسندربلاتز؟",
+      "fr": "Quelle ligne va à Alexanderplatz ?",
+      "debut_ms": 0,
+      "fin_ms": 2808,
+      "phrase_id": "phrase_421"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wie viele Haltestellen noch?",
+      "ar": "كم محطة باقية؟",
+      "fr": "Il reste combien d'arrêts ?",
+      "debut_ms": 2808,
+      "fin_ms": 5256,
+      "phrase_id": "phrase_422"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Sagen Sie mir Bescheid, wenn wir da sind?",
+      "ar": "هل تخبرني عندما نصل؟",
+      "fr": "Pouvez-vous me prévenir quand on arrive ?",
+      "debut_ms": 5256,
+      "fin_ms": 8592,
+      "phrase_id": "phrase_423"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Entschuldigung, ich muss hier raus!",
+      "ar": "عفواً، لازم أنزل هنا!",
+      "fr": "Pardon, je dois descendre ici !",
+      "debut_ms": 8592,
+      "fin_ms": 11712,
+      "phrase_id": "phrase_424"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ist das die nächste Haltestelle?",
+      "ar": "هل هذه هي المحطة التالية؟",
+      "fr": "Est-ce que c'est le prochain arrêt ?",
+      "debut_ms": 11712,
+      "fin_ms": 14400,
+      "phrase_id": "phrase_425"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Umsteigen zur U2.",
+      "ar": "إمكانية التبديل إلى الخط U2.",
+      "fr": "Correspondance avec la ligne U2.",
+      "debut_ms": 14400,
+      "fin_ms": 16680,
+      "phrase_id": "phrase_426"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Bitte hinten einsteigen.",
+      "ar": "اصعدوا من الباب الخلفي من فضلكم.",
+      "fr": "Montez par l'arrière, s'il vous plaît.",
+      "debut_ms": 16680,
+      "fin_ms": 19104,
+      "phrase_id": "phrase_427"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ausstieg links.",
+      "ar": "النزول من الجهة اليسرى باتجاه السير.",
+      "fr": "Sortie à gauche dans le sens de la marche.",
+      "debut_ms": 19104,
+      "fin_ms": 21072,
+      "phrase_id": "phrase_428"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Der Aufzug ist kaputt.",
+      "ar": "المصعد معطل.",
+      "fr": "L'ascenseur est en panne.",
+      "debut_ms": 21072,
+      "fin_ms": 23424,
+      "phrase_id": "phrase_429"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Die Rolltreppe ist kaputt.",
+      "ar": "السلم الكهربائي لا يعمل.",
+      "fr": "L'escalator ne marche pas.",
+      "debut_ms": 23424,
+      "fin_ms": 26016,
+      "phrase_id": "phrase_430"
+    }
+  ]
+}

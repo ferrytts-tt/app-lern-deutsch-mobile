@@ -1,0 +1,99 @@
+{
+  "lot_id": 7,
+  "type": "dialogue",
+  "title_de": "Krank im Bett",
+  "title_ar": "مريض في الفراش",
+  "title_fr": "Coup de froid au lit",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Mir brummt der Schädel.",
+      "ar": "رأسي يطنّ من الألم",
+      "fr": "J'ai un mal de crâne pas possible.",
+      "debut_ms": 0,
+      "fin_ms": 2232,
+      "phrase_id": "phrase_061"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab mir was eingefangen.",
+      "ar": "أصبت بعدوى (برد أو فيروس)",
+      "fr": "J'ai attrapé un coup de froid.",
+      "debut_ms": 2232,
+      "fin_ms": 4752,
+      "phrase_id": "phrase_062"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Mir ist total schlecht.",
+      "ar": "أشعر بغثيان شديد",
+      "fr": "J'ai vraiment la nausée.",
+      "debut_ms": 4752,
+      "fin_ms": 7080,
+      "phrase_id": "phrase_063"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab kaum ein Auge zugetan.",
+      "ar": "بالكاد نمت",
+      "fr": "J'ai presque pas fermé l'œil de la nuit.",
+      "debut_ms": 7080,
+      "fin_ms": 10056,
+      "phrase_id": "phrase_064"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab mir wehgetan.",
+      "ar": "آذيت نفسي",
+      "fr": "Je me suis fait mal.",
+      "debut_ms": 10056,
+      "fin_ms": 12240,
+      "phrase_id": "phrase_065"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich brauch 'n Rezept.",
+      "ar": "أحتاج وصفة طبية",
+      "fr": "Il me faut une ordonnance.",
+      "debut_ms": 12240,
+      "fin_ms": 14496,
+      "phrase_id": "phrase_066"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich muss mich mal hinlegen.",
+      "ar": "لازم أستلقي قليلاً",
+      "fr": "Faut que j'aille m'allonger un peu.",
+      "debut_ms": 14496,
+      "fin_ms": 16896,
+      "phrase_id": "phrase_067"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Gute Besserung! Werd schnell wieder fit!",
+      "ar": "شفاك الله! أتمنى لك تعافياً سريعاً",
+      "fr": "Bon rétablissement ! Remets-toi vite sur pied !",
+      "debut_ms": 16896,
+      "fin_ms": 21072,
+      "phrase_id": "phrase_068"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich bin völlig durch.",
+      "ar": "أنا منهك تماماً",
+      "fr": "Je suis complètement au bout du rouleau.",
+      "debut_ms": 21072,
+      "fin_ms": 23136,
+      "phrase_id": "phrase_069"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Au, das tut echt weh!",
+      "ar": "آه، هذا يؤلم فعلاً!",
+      "fr": "Aïe, ça fait super mal !",
+      "debut_ms": 23136,
+      "fin_ms": 25680,
+      "phrase_id": "phrase_070"
+    }
+  ]
+}

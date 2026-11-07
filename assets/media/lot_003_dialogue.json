@@ -1,0 +1,126 @@
+{
+  "lot_id": 3,
+  "type": "dialogue",
+  "title_de": "Kinoabend mit Freunden",
+  "title_ar": "سهرة سينما مع الأصدقاء",
+  "title_fr": "Soirée ciné entre amis",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Katja! Hast du Bock auf Kino?",
+      "ar": "كاتيا! عندك رغبة نروح السينما؟",
+      "fr": "Katja ! Ça te dit un ciné ?",
+      "debut_ms": 0,
+      "fin_ms": 3792,
+      "phrase_id": "phrase_021"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Eigentlich nicht so, ich bleib heut lieber daheim.",
+      "ar": "في الحقيقة ليس كثيراً، أفضّل أن أبقى في البيت اليوم.",
+      "fr": "Pas vraiment, je préfère rester chez moi aujourd'hui.",
+      "debut_ms": 3792,
+      "fin_ms": 7584,
+      "phrase_id": "phrase_027"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Das meinst du jetzt nicht ernst, oder? Der Film ist genial!",
+      "ar": "ما تقصدين هذا فعلاً، صح؟ الفيلم رائع جداً!",
+      "fr": "Tu déconnes là, j'espère ? Le film est génial !",
+      "debut_ms": 7584,
+      "fin_ms": 12960,
+      "phrase_id": "phrase_026"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Na gut... aber die Kinokarten sind ganz schön teuer.",
+      "ar": "حسناً... لكن تذاكر السينما باهظة الثمن.",
+      "fr": "Bon d'accord... mais les places de ciné sont super chères.",
+      "debut_ms": 12960,
+      "fin_ms": 17256,
+      "phrase_id": null
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Keine Sorge, geht auf mich!",
+      "ar": "لا تقلقي، عليّ الحساب!",
+      "fr": "T'inquiète, c'est pour moi !",
+      "debut_ms": 17256,
+      "fin_ms": 20040,
+      "phrase_id": "phrase_029"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Echt? Danke! Tust du mir mal 'nen Gefallen und reservierst Plätze?",
+      "ar": "حقاً؟ شكراً! تعمل لي معروفاً وتحجز مقاعد؟",
+      "fr": "Vraiment ? Merci ! Tu peux me rendre un service et réserver des places ?",
+      "debut_ms": 20040,
+      "fin_ms": 26544,
+      "phrase_id": "phrase_028"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Klar, schon erledigt! Kommst du mit zum Eingang?",
+      "ar": "بالتأكيد، تم بالفعل! هل تأتين معي إلى المدخل؟",
+      "fr": "Bien sûr, c'est fait ! Tu viens avec moi vers l'entrée ?",
+      "debut_ms": 26544,
+      "fin_ms": 31368,
+      "phrase_id": "phrase_025"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ja, sofort! Aber ich bin ein bisschen spät dran.",
+      "ar": "نعم، فوراً! لكني متأخرة قليلاً.",
+      "fr": "Oui, tout de suite ! Mais je suis un peu à la bourre.",
+      "debut_ms": 31368,
+      "fin_ms": 36336,
+      "phrase_id": "phrase_023"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Kein Problem, nimm dir Zeit, ich warte hier.",
+      "ar": "لا مشكلة، خذي وقتك، سأنتظر هنا.",
+      "fr": "Pas de souci, prends ton temps, j'attends ici.",
+      "debut_ms": 36336,
+      "fin_ms": 40104,
+      "phrase_id": null
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich sehe dich schon da vorne! Bin gleich da!",
+      "ar": "أراك هناك في الأمام! أنا قادمة بعد قليل!",
+      "fr": "Je te vois là-bas devant ! J'arrive tout de suite !",
+      "debut_ms": 40104,
+      "fin_ms": 44232,
+      "phrase_id": "phrase_022"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Was für ein toller Film! Das war ein mega Abend!",
+      "ar": "يا له من فيلم رائع! كانت أمسية رائعة جداً!",
+      "fr": "Quel film incroyable ! C'était une soirée trop géniale !",
+      "debut_ms": 44232,
+      "fin_ms": 48960,
+      "phrase_id": "phrase_024"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Fand ich auch! Wir telefonieren später, ja?",
+      "ar": "رأيي من رأيك! نتكلم بالهاتف لاحقاً، اتفقنا؟",
+      "fr": "Carrément ! On s'appelle plus tard, ça marche ?",
+      "debut_ms": 48960,
+      "fin_ms": 53640,
+      "phrase_id": "phrase_030"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Abgemacht! Schlaf gut, Katja!",
+      "ar": "اتفقنا! نوماً هنيئاً يا كاتيا!",
+      "fr": "Ça marche ! Dors bien, Katja !",
+      "debut_ms": 53640,
+      "fin_ms": 57696,
+      "phrase_id": null
+    }
+  ]
+}

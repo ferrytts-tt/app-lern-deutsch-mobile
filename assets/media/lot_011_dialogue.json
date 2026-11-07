@@ -1,0 +1,99 @@
+{
+  "lot_id": 11,
+  "type": "dialogue",
+  "title_de": "Unter vier Augen",
+  "title_ar": "حديث على انفراد",
+  "title_fr": "Entre quatre yeux",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Kann ich dich mal unter vier Augen sprechen?",
+      "ar": "أريد أن أتحدث معك على انفراد.",
+      "fr": "Je voudrais te parler en tête-à-tête.",
+      "debut_ms": 0,
+      "fin_ms": 3168,
+      "phrase_id": "phrase_101"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hast du mal kurz Zeit zum Reden?",
+      "ar": "هل عندك وقت قصير لنتحدث؟",
+      "fr": "Tu as un moment pour qu'on parle ?",
+      "debut_ms": 3168,
+      "fin_ms": 6000,
+      "phrase_id": "phrase_102"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Können wir das unter uns klären?",
+      "ar": "هل نحل هذا بيننا فقط؟",
+      "fr": "On peut régler ça entre nous ?",
+      "debut_ms": 6000,
+      "fin_ms": 8664,
+      "phrase_id": "phrase_103"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Bleibt unter uns, ja?",
+      "ar": "هذا يبقى بيننا.",
+      "fr": "Ça reste entre nous.",
+      "debut_ms": 8664,
+      "fin_ms": 11112,
+      "phrase_id": "phrase_104"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich muss dir was Wichtiges sagen.",
+      "ar": "لازم أقول لك شيئاً مهماً.",
+      "fr": "Je dois te dire quelque chose d'important.",
+      "debut_ms": 11112,
+      "fin_ms": 13800,
+      "phrase_id": "phrase_105"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich will ehrlich zu dir sein.",
+      "ar": "أريد أن أكون صريحاً معك.",
+      "fr": "Je veux être honnête avec toi.",
+      "debut_ms": 13800,
+      "fin_ms": 16176,
+      "phrase_id": "phrase_106"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Darf ich dich was Persönliches fragen?",
+      "ar": "هل يمكنني أن أسألك سؤالاً شخصياً؟",
+      "fr": "Je peux te poser une question personnelle ?",
+      "debut_ms": 16176,
+      "fin_ms": 19224,
+      "phrase_id": "phrase_107"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wir müssen dringend reden.",
+      "ar": "لازم نتكلم بشكل عاجل.",
+      "fr": "Il faut qu'on parle, c'est urgent.",
+      "debut_ms": 19224,
+      "fin_ms": 21600,
+      "phrase_id": "phrase_108"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Es ist was Persönliches.",
+      "ar": "الأمر شخصي.",
+      "fr": "C'est quelque chose de personnel.",
+      "debut_ms": 21600,
+      "fin_ms": 23880,
+      "phrase_id": "phrase_109"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich bräuchte mal deinen Rat.",
+      "ar": "أحتاج نصيحتك.",
+      "fr": "J'aurais besoin de ton avis.",
+      "debut_ms": 23880,
+      "fin_ms": 26376,
+      "phrase_id": "phrase_110"
+    }
+  ]
+}

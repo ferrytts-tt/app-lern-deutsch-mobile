@@ -1,0 +1,95 @@
+{
+  "@@locale": "hi",
+  "appName": "Deutsch Fast",
+  "appSubtitle": "जर्मन जल्दी सीखें",
+
+  "navHome": "होम",
+  "navLibrary": "वाक्य",
+  "navProgress": "प्रगति",
+  "navSettings": "सेटिंग्स",
+
+  "onboardingSkip": "छोड़ें",
+  "onboardingNext": "आगे",
+  "onboardingStart": "शुरू करें",
+  "onboardingTitle1": "एक बच्चे की तरह सीखें, स्कूल की तरह नहीं।",
+  "onboardingSubtitle1": "कोई उबाऊ नियम नहीं। केवल पूरे और वास्तविक वाक्य, सही समय पर दोहराए गए।",
+  "onboardingTitle2": "समझने और बोलने के लिए 1000 व्यावहारिक वाक्य।",
+  "onboardingSubtitle2": "हर दिन कुछ मिनट। बिना किसी तनाव या सजा के।",
+  "onboardingTitle3": "सुनें, ज़ोर से दोहराएं, बिना डर के आगे बढ़ें।",
+  "onboardingSubtitle3": "शैडोइंग तकनीक आपके जर्मन उच्चारण और मांसपेशियों की याददाश्त को प्रशिक्षित करती है।",
+  "onboardingDailyPhrases": "प्रति दिन नए वाक्य",
+  "onboardingDailyMinutes": "प्रति दिन समय",
+  "onboardingStartLevel": "आपका प्रारंभिक स्तर",
+  "onboardingLevelBeginner": "बिल्कुल शुरुआत",
+  "onboardingLevelBasics": "मुझे कुछ बुनियादी शब्द आते हैं",
+
+  "homeGreeting": "Hallo!",
+  "homeStreakDays": "{count} दिन",
+  "@homeStreakDays": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "homeStreakBroken": "फिर से शुरू करते हैं, यह बिल्कुल सामान्य है 🙂",
+  "homeSessionCardTitle": "आज का सत्र",
+  "homeSessionStats": "{reviews} समीक्षाएं · {newCount} नए · ~{minutes} मिनट",
+  "@homeSessionStats": {
+    "placeholders": {
+      "reviews": { "type": "int" },
+      "newCount": { "type": "int" },
+      "minutes": { "type": "int" }
+    }
+  },
+  "homeStartSession": "सत्र शुरू करें",
+  "homeProgressTitle": "समग्र प्रगति",
+  "homeProgressPhrases": "{learned} / {total} वाक्य",
+  "@homeProgressPhrases": {
+    "placeholders": {
+      "learned": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "homePhraseOfTheDay": "आज का वाक्य",
+  "homeCurrentPhase": "वर्तमान चरण: सुनना / वाक्य / बोलना",
+
+  "sessionClose": "बंद करें",
+  "sessionListenNormal": "सामान्य",
+  "sessionListenSlow": "धीमा",
+  "sessionShadowingTitle": "अब आपकी बारी! 🎤",
+  "sessionShadowingHelp": "उसी लय में दोहराएं। एकदम सही होना ज़रूरी नहीं है।",
+  "sessionNext": "आगे",
+  "sessionSuccess": "बहुत बढ़िया!",
+  "sessionGentleCorrection": "लगभग सही! यह सही वाक्य है:",
+
+  "libraryTitle": "मेरे वाक्य",
+  "librarySearchPlaceholder": "वाक्य या शब्द खोजें...",
+  "libraryFilterAll": "सभी",
+  "libraryFilterNew": "नए",
+  "libraryFilterInProgress": "जारी है",
+  "libraryFilterMastered": "महारत हासिल",
+  "libraryFilterWatchlist": "निगरानी में",
+  "libraryUnlockAnyway": "फिर भी अनलॉक करें",
+
+  "progressTitle": "मेरी प्रगति",
+  "progressPhrasesLearned": "सीखे गए वाक्य",
+  "progressSessionsCompleted": "पूरे किए गए सत्र",
+  "progressShadowingsDone": "शैडोइंग अभ्यास",
+  "progressListeningTime": "सुनने का समय",
+  "progressActivity30Days": "गतिविधि (30 दिन)",
+  "progressDistribution": "वितरण",
+  "progressMilestones": "मील के पत्थर",
+
+  "settingsTitle": "सेटिंग्स",
+  "settingsGeneral": "सामान्य",
+  "settingsAudio": "ऑडियो और आवाज़",
+  "settingsDailyReminder": "दैनिक अनुस्मारक",
+  "settingsTheme": "थीम",
+  "settingsThemeLight": "लाइट",
+  "settingsThemeDark": "डार्क",
+  "settingsThemeSystem": "सिस्टम",
+  "settingsBackup": "बैकअप और रीस्टोर",
+  "settingsExport": "प्रगति निर्यात करें (JSON)",
+  "settingsImport": "बैकअप रीस्टोर करें",
+  "settingsReset": "प्रगति रीसेट करें",
+  "settingsAbout": "Deutsch Fast के बारे में"
+}

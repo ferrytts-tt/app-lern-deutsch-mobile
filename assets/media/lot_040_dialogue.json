@@ -1,0 +1,99 @@
+{
+  "lot_id": 40,
+  "type": "dialogue",
+  "title_de": "Social Media und Haushalt",
+  "title_ar": "شبكات التواصل وشؤون المنزل",
+  "title_fr": "Réseaux sociaux et vie quotidienne",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Er hat mich geghostet.",
+      "ar": "اختفى ولم يعد يرد علي.",
+      "fr": "Il m'a ghosté.",
+      "debut_ms": 0,
+      "fin_ms": 2208,
+      "phrase_id": "phrase_391"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mein Handy hat den Geist aufgegeben.",
+      "ar": "هاتفي تعطل نهائياً.",
+      "fr": "Mon portable a rendu l'âme.",
+      "debut_ms": 2208,
+      "fin_ms": 5328,
+      "phrase_id": "phrase_392"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich häng mein Handy kurz an die Steckdose.",
+      "ar": "أشحن هاتفي.",
+      "fr": "Je mets mon portable à charger.",
+      "debut_ms": 5328,
+      "fin_ms": 8544,
+      "phrase_id": "phrase_393"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich scroll nur bisschen durch Insta.",
+      "ar": "أتصفح إنستغرام قليلاً.",
+      "fr": "Je scrolle un peu sur Insta.",
+      "debut_ms": 8544,
+      "fin_ms": 11280,
+      "phrase_id": "phrase_394"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Hab ich gestern gepostet.",
+      "ar": "نشرته أمس.",
+      "fr": "Je l'ai posté hier.",
+      "debut_ms": 11280,
+      "fin_ms": 13704,
+      "phrase_id": "phrase_395"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mach mal das Licht aus!",
+      "ar": "أطفئ الضوء.",
+      "fr": "Éteins la lumière.",
+      "debut_ms": 13704,
+      "fin_ms": 16056,
+      "phrase_id": "phrase_396"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Machst du mal das Fenster auf?",
+      "ar": "افتح النافذة من فضلك.",
+      "fr": "Tu ouvres la fenêtre ?",
+      "debut_ms": 16056,
+      "fin_ms": 18648,
+      "phrase_id": "phrase_397"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Die Waschmaschine ist durch.",
+      "ar": "الغسالة انتهت.",
+      "fr": "La machine à laver a fini.",
+      "debut_ms": 18648,
+      "fin_ms": 21216,
+      "phrase_id": "phrase_398"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Wer spült heut ab?",
+      "ar": "من يغسل الصحون اليوم؟",
+      "fr": "Qui fait la vaisselle aujourd'hui ?",
+      "debut_ms": 21216,
+      "fin_ms": 23352,
+      "phrase_id": "phrase_399"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich bring kurz den Müll runter.",
+      "ar": "سأنزل القمامة.",
+      "fr": "Je descends la poubelle.",
+      "debut_ms": 23352,
+      "fin_ms": 25872,
+      "phrase_id": "phrase_400"
+    }
+  ]
+}

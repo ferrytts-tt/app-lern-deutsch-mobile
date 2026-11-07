@@ -1,0 +1,99 @@
+{
+  "lot_id": 42,
+  "type": "dialogue",
+  "title_de": "Bahnsteig und Anschlüsse",
+  "title_ar": "على رصيف المحطة والتبديل بين القطارات",
+  "title_fr": "Sur le quai et correspondances",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Bitte achten Sie auf die Lücke zwischen Zug und Bahnsteig.",
+      "ar": "انتبهوا إلى الفجوة بين القطار والرصيف.",
+      "fr": "Attention à l'espace entre le train et le quai.",
+      "debut_ms": 0,
+      "fin_ms": 3840,
+      "phrase_id": "phrase_411"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Fahrkartenkontrolle! Die Fahrkarten bitte.",
+      "ar": "مراقبة التذاكر! تذاكركم من فضلكم.",
+      "fr": "Contrôle des billets ! Vos billets, s'il vous plaît.",
+      "debut_ms": 3840,
+      "fin_ms": 8256,
+      "phrase_id": "phrase_412"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab das Deutschlandticket auf dem Handy.",
+      "ar": "عندي تذكرة ألمانيا على هاتفي.",
+      "fr": "J'ai le Deutschlandticket sur mon portable.",
+      "debut_ms": 8256,
+      "fin_ms": 11352,
+      "phrase_id": "phrase_413"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hab vergessen, mein Ticket zu stempeln.",
+      "ar": "نسيت أن أختم تذكرتي.",
+      "fr": "J'ai oublié de valider mon billet.",
+      "debut_ms": 11352,
+      "fin_ms": 14880,
+      "phrase_id": "phrase_414"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Fährt der nach Leipzig?",
+      "ar": "هل يذهب هذا القطار إلى لايبزيغ؟",
+      "fr": "Ce train va à Leipzig ?",
+      "debut_ms": 14880,
+      "fin_ms": 17232,
+      "phrase_id": "phrase_415"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Muss ich umsteigen?",
+      "ar": "هل يجب أن أغيّر القطار؟",
+      "fr": "Est-ce que je dois changer ?",
+      "debut_ms": 17232,
+      "fin_ms": 19272,
+      "phrase_id": "phrase_416"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Wegen technischen Störungen an der Strecke kommt es zu Verspätungen.",
+      "ar": "بسبب أعطال تقنية على الخط توجد تأخيرات لعدة دقائق.",
+      "fr": "À cause de problèmes techniques sur la voie, il y a des retards de plusieurs minutes.",
+      "debut_ms": 19272,
+      "fin_ms": 23832,
+      "phrase_id": "phrase_417"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wann geht der nächste nach München?",
+      "ar": "متى يغادر القطار التالي إلى ميونخ؟",
+      "fr": "Quand part le prochain train pour Munich ?",
+      "debut_ms": 23832,
+      "fin_ms": 26616,
+      "phrase_id": "phrase_418"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab hier reserviert.",
+      "ar": "عندي حجز مقعد.",
+      "fr": "J'ai une réservation de place.",
+      "debut_ms": 26616,
+      "fin_ms": 28800,
+      "phrase_id": "phrase_419"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich glaub, das ist mein Platz.",
+      "ar": "أظن أن هذا مقعدي.",
+      "fr": "Je crois que c'est ma place.",
+      "debut_ms": 28800,
+      "fin_ms": 31656,
+      "phrase_id": "phrase_420"
+    }
+  ]
+}

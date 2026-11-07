@@ -1,0 +1,99 @@
+{
+  "lot_id": 31,
+  "type": "dialogue",
+  "title_de": "Jugendsprache und coole Sprüche",
+  "title_ar": "لغة الشباب وعبارات رائجة",
+  "title_fr": "Langage des jeunes et expressions branchées",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Das ist der Hammer!",
+      "ar": "هذا رائع جداً!",
+      "fr": "C'est génial !",
+      "debut_ms": 0,
+      "fin_ms": 1944,
+      "phrase_id": "phrase_301"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das feier ich total.",
+      "ar": "يعجبني هذا جداً.",
+      "fr": "J'adore ça.",
+      "debut_ms": 1944,
+      "fin_ms": 4200,
+      "phrase_id": "phrase_302"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Du hast doch 'nen Knall!",
+      "ar": "أنت مجنون!",
+      "fr": "Tu es complètement taré !",
+      "debut_ms": 4200,
+      "fin_ms": 6504,
+      "phrase_id": "phrase_303"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hab ich nicht gecheckt.",
+      "ar": "ما فهمت هذا.",
+      "fr": "Je n'ai pas capté.",
+      "debut_ms": 6504,
+      "fin_ms": 8736,
+      "phrase_id": "phrase_304"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Checkst du das?",
+      "ar": "هل تفهم هذا؟",
+      "fr": "Tu captes ?",
+      "debut_ms": 8736,
+      "fin_ms": 10608,
+      "phrase_id": "phrase_305"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das ist so cringe.",
+      "ar": "هذا محرج ومزعج جداً.",
+      "fr": "C'est tellement gênant.",
+      "debut_ms": 10608,
+      "fin_ms": 12744,
+      "phrase_id": "phrase_306"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Das ist wild!",
+      "ar": "هذا جنوني!",
+      "fr": "C'est dingue !",
+      "debut_ms": 12744,
+      "fin_ms": 14616,
+      "phrase_id": "phrase_307"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich bin total geflasht.",
+      "ar": "أنا مذهول تماماً.",
+      "fr": "Je suis complètement bluffé.",
+      "debut_ms": 14616,
+      "fin_ms": 17160,
+      "phrase_id": "phrase_308"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Alter, echt jetzt?",
+      "ar": "يا رجل، بجد؟",
+      "fr": "Mec, sérieux ?",
+      "debut_ms": 17160,
+      "fin_ms": 19536,
+      "phrase_id": "phrase_309"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Chill mal, Alter.",
+      "ar": "اهدأ وارتح.",
+      "fr": "Relax, détends-toi.",
+      "debut_ms": 19536,
+      "fin_ms": 21816,
+      "phrase_id": "phrase_310"
+    }
+  ]
+}

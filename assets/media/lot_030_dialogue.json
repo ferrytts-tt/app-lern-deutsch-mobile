@@ -1,0 +1,99 @@
+{
+  "lot_id": 30,
+  "type": "dialogue",
+  "title_de": "Ende gut, alles gut!",
+  "title_ar": "نهاية سعيدة والحمد لله",
+  "title_fr": "Tout est bien qui finit bien !",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab den Zug gerade noch geschafft.",
+      "ar": "لحقتُ في اللحظة الأخيرة.",
+      "fr": "Je l'ai eu de justesse.",
+      "debut_ms": 0,
+      "fin_ms": 2808,
+      "phrase_id": "phrase_291"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Danke! – Keine Ursache!",
+      "ar": "لا شكر على واجب!",
+      "fr": "De rien !",
+      "debut_ms": 2808,
+      "fin_ms": 6336,
+      "phrase_id": "phrase_292"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich bin echt gespannt, wie es weitergeht.",
+      "ar": "أنا متشوق لمعرفة ما سيحدث.",
+      "fr": "J'ai hâte de voir la suite.",
+      "debut_ms": 6336,
+      "fin_ms": 9600,
+      "phrase_id": "phrase_293"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mit ihm zu streiten ist Zeitverschwendung.",
+      "ar": "هذا مضيعة للوقت.",
+      "fr": "C'est une perte de temps.",
+      "debut_ms": 9600,
+      "fin_ms": 12888,
+      "phrase_id": "phrase_294"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Jetzt ist mir ein Licht aufgegangen!",
+      "ar": "فهمتُ الآن فجأة.",
+      "fr": "Ça y est, j'ai compris !",
+      "debut_ms": 12888,
+      "fin_ms": 15936,
+      "phrase_id": "phrase_295"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Eure Probleme sind nicht mein Bier.",
+      "ar": "هذا ليس من شأني.",
+      "fr": "Ce n'est pas mon problème.",
+      "debut_ms": 15936,
+      "fin_ms": 18816,
+      "phrase_id": "phrase_296"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Der Streit ist Schnee von gestern.",
+      "ar": "هذا أمر قديم انتهى.",
+      "fr": "C'est de l'histoire ancienne.",
+      "debut_ms": 18816,
+      "fin_ms": 21624,
+      "phrase_id": "phrase_297"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Schon wieder zu spät? Das sieht ihm ähnlich.",
+      "ar": "هذا يشبهه تماماً / من طبعه.",
+      "fr": "Ça lui ressemble bien.",
+      "debut_ms": 21624,
+      "fin_ms": 25872,
+      "phrase_id": "phrase_298"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Er hat es doch noch geschafft: Ende gut, alles gut!",
+      "ar": "الأمور بخواتيمها.",
+      "fr": "Tout est bien qui finit bien.",
+      "debut_ms": 25872,
+      "fin_ms": 29808,
+      "phrase_id": "phrase_299"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Für dich ist das doch ein Kinderspiel.",
+      "ar": "هذا سهل جداً.",
+      "fr": "C'est un jeu d'enfant.",
+      "debut_ms": 29808,
+      "fin_ms": 32760,
+      "phrase_id": "phrase_300"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "@@locale": "en",
+  "appName": "Deutsch Fast",
+  "appSubtitle": "Learn German quickly",
+
+  "navHome": "Home",
+  "navLibrary": "Phrases",
+  "navProgress": "Progress",
+  "navSettings": "Settings",
+
+  "onboardingSkip": "Skip",
+  "onboardingNext": "Next",
+  "onboardingStart": "Get Started",
+  "onboardingTitle1": "Learn like a child, not like in school.",
+  "onboardingSubtitle1": "No boring grammar rules. Just full, real phrases repeated at the perfect moment.",
+  "onboardingTitle2": "1000 practical phrases to understand and speak.",
+  "onboardingSubtitle2": "A few minutes every day. Zero pressure, zero punishment, zero life loss.",
+  "onboardingTitle3": "Listen, repeat out loud, improve without fear.",
+  "onboardingSubtitle3": "Shadowing trains your accent and German muscle memory.",
+  "onboardingDailyPhrases": "New phrases per day",
+  "onboardingDailyMinutes": "Time per day",
+  "onboardingStartLevel": "Your starting level",
+  "onboardingLevelBeginner": "Complete beginner",
+  "onboardingLevelBasics": "I know a few basic words",
+
+  "homeGreeting": "Hallo!",
+  "homeStreakDays": "{count} days",
+  "@homeStreakDays": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "homeStreakBroken": "Let's pick it back up, totally normal 🙂",
+  "homeSessionCardTitle": "Today's Session",
+  "homeSessionStats": "{reviews} reviews · {newCount} new · ~{minutes} min",
+  "@homeSessionStats": {
+    "placeholders": {
+      "reviews": { "type": "int" },
+      "newCount": { "type": "int" },
+      "minutes": { "type": "int" }
+    }
+  },
+  "homeStartSession": "Start Session",
+  "homeProgressTitle": "Overall Progress",
+  "homeProgressPhrases": "{learned} / {total} phrases",
+  "@homeProgressPhrases": {
+    "placeholders": {
+      "learned": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "homePhraseOfTheDay": "Phrase of the day",
+  "homeCurrentPhase": "Current phase: Listening / Phrases / Speaking",
+
+  "sessionClose": "Close",
+  "sessionListenNormal": "Normal",
+  "sessionListenSlow": "Slow",
+  "sessionShadowingTitle": "Your turn! 🎤",
+  "sessionShadowingHelp": "Repeat with the same rhythm. No need to be perfect.",
+  "sessionNext": "Next",
+  "sessionSuccess": "Well done!",
+  "sessionGentleCorrection": "Almost! Here is the right phrase:",
+
+  "libraryTitle": "My Phrases",
+  "librarySearchPlaceholder": "Search a phrase or word...",
+  "libraryFilterAll": "All",
+  "libraryFilterNew": "New",
+  "libraryFilterInProgress": "In Progress",
+  "libraryFilterMastered": "Mastered",
+  "libraryFilterWatchlist": "Watchlist",
+  "libraryUnlockAnyway": "Unlock anyway",
+
+  "progressTitle": "My Progress",
+  "progressPhrasesLearned": "Phrases learned",
+  "progressSessionsCompleted": "Sessions completed",
+  "progressShadowingsDone": "Shadowings done",
+  "progressListeningTime": "Listening time",
+  "progressActivity30Days": "Activity (30 days)",
+  "progressDistribution": "Distribution",
+  "progressMilestones": "Milestones",
+
+  "settingsTitle": "Settings",
+  "settingsGeneral": "General",
+  "settingsAudio": "Audio & Voice",
+  "settingsDailyReminder": "Daily Reminder",
+  "settingsTheme": "Theme",
+  "settingsThemeLight": "Light",
+  "settingsThemeDark": "Dark",
+  "settingsThemeSystem": "System",
+  "settingsBackup": "Backup & Restore",
+  "settingsExport": "Export progress (JSON)",
+  "settingsImport": "Restore backup",
+  "settingsReset": "Reset progress",
+  "settingsAbout": "About Deutsch Fast"
+}

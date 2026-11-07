@@ -1,0 +1,95 @@
+{
+  "@@locale": "ru",
+  "appName": "Deutsch Fast",
+  "appSubtitle": "Учите немецкий быстро",
+
+  "navHome": "Главная",
+  "navLibrary": "Фразы",
+  "navProgress": "Прогресс",
+  "navSettings": "Настройки",
+
+  "onboardingSkip": "Пропустить",
+  "onboardingNext": "Далее",
+  "onboardingStart": "Начать",
+  "onboardingTitle1": "Учитесь как ребенок, а не как в школе.",
+  "onboardingSubtitle1": "Никаких скучных правил. Только живые и полные фразы, повторяемые в нужный момент.",
+  "onboardingTitle2": "1000 полезных фраз для понимания и речи.",
+  "onboardingSubtitle2": "Несколько минут каждый день. Без давления, без наказаний и без потери жизней.",
+  "onboardingTitle3": "Слушайте, повторяйте вслух, развивайтесь без страха.",
+  "onboardingSubtitle3": "Техника shadowing тренирует ваш акцент и мышечную память немецкого языка.",
+  "onboardingDailyPhrases": "Новых фраз в день",
+  "onboardingDailyMinutes": "Время в день",
+  "onboardingStartLevel": "Ваш начальный уровень",
+  "onboardingLevelBeginner": "Абсолютный новичок",
+  "onboardingLevelBasics": "Знаю несколько базовых слов",
+
+  "homeGreeting": "Hallo!",
+  "homeStreakDays": "{count} дн.",
+  "@homeStreakDays": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "homeStreakBroken": "Продолжаем, это абсолютно нормально 🙂",
+  "homeSessionCardTitle": "Сегодняшняя сессия",
+  "homeSessionStats": "{reviews} повторений · {newCount} новых · ~{minutes} мин",
+  "@homeSessionStats": {
+    "placeholders": {
+      "reviews": { "type": "int" },
+      "newCount": { "type": "int" },
+      "minutes": { "type": "int" }
+    }
+  },
+  "homeStartSession": "Начать занятие",
+  "homeProgressTitle": "Общий прогресс",
+  "homeProgressPhrases": "{learned} / {total} фраз",
+  "@homeProgressPhrases": {
+    "placeholders": {
+      "learned": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "homePhraseOfTheDay": "Фраза дня",
+  "homeCurrentPhase": "Текущий этап: Аудирование / Фразы / Разговор",
+
+  "sessionClose": "Закрыть",
+  "sessionListenNormal": "Обычно",
+  "sessionListenSlow": "Медленно",
+  "sessionShadowingTitle": "Ваша очередь! 🎤",
+  "sessionShadowingHelp": "Повторяйте с тем же ритмом. Идеальность не требуется.",
+  "sessionNext": "Далее",
+  "sessionSuccess": "Отлично!",
+  "sessionGentleCorrection": "Почти! Вот правильная фраза:",
+
+  "libraryTitle": "Мои фразы",
+  "librarySearchPlaceholder": "Искать фразу или слово...",
+  "libraryFilterAll": "Все",
+  "libraryFilterNew": "Новые",
+  "libraryFilterInProgress": "В процессе",
+  "libraryFilterMastered": "Освоено",
+  "libraryFilterWatchlist": "Внимание",
+  "libraryUnlockAnyway": "Все равно разблокировать",
+
+  "progressTitle": "Мой прогресс",
+  "progressPhrasesLearned": "Изучено фраз",
+  "progressSessionsCompleted": "Завершено занятий",
+  "progressShadowingsDone": "Упражнений на повторение",
+  "progressListeningTime": "Время прослушивания",
+  "progressActivity30Days": "Активность (30 дней)",
+  "progressDistribution": "Распределение",
+  "progressMilestones": "Достижения",
+
+  "settingsTitle": "Настройки",
+  "settingsGeneral": "Общие",
+  "settingsAudio": "Аудио и голос",
+  "settingsDailyReminder": "Ежедневное напоминание",
+  "settingsTheme": "Тема",
+  "settingsThemeLight": "Светлая",
+  "settingsThemeDark": "Темная",
+  "settingsThemeSystem": "Системная",
+  "settingsBackup": "Резервное копирование и восстановление",
+  "settingsExport": "Экспорт прогресса (JSON)",
+  "settingsImport": "Восстановить из копии",
+  "settingsReset": "Сбросить прогресс",
+  "settingsAbout": "О приложении Deutsch Fast"
+}

@@ -1,0 +1,99 @@
+{
+  "lot_id": 49,
+  "type": "dialogue",
+  "title_de": "Nach dem Weg fragen",
+  "title_ar": "السؤال عن الطريق في المدينة",
+  "title_fr": "Demander son chemin dans la rue",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Wo ist hier die nächste U-Bahn?",
+      "ar": "عفواً، أين أقرب محطة مترو؟",
+      "fr": "Pardon, où est la station de métro la plus proche ?",
+      "debut_ms": 0,
+      "fin_ms": 2616,
+      "phrase_id": "phrase_481"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Immer geradeaus.",
+      "ar": "اذهب دائماً إلى الأمام.",
+      "fr": "Allez toujours tout droit.",
+      "debut_ms": 2616,
+      "fin_ms": 4800,
+      "phrase_id": "phrase_482"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "An der Ampel links.",
+      "ar": "عند إشارة المرور إلى اليسار.",
+      "fr": "Au feu, à gauche.",
+      "debut_ms": 4800,
+      "fin_ms": 6792,
+      "phrase_id": "phrase_483"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Dann die zweite rechts.",
+      "ar": "ثم الشارع الثاني إلى اليمين.",
+      "fr": "Puis la deuxième rue à droite.",
+      "debut_ms": 6792,
+      "fin_ms": 9048,
+      "phrase_id": "phrase_484"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ist nicht weit, fünf Minuten zu Fuß.",
+      "ar": "ليس بعيداً، خمس دقائق مشياً.",
+      "fr": "Ce n'est pas loin, cinq minutes à pied.",
+      "debut_ms": 9048,
+      "fin_ms": 12192,
+      "phrase_id": "phrase_485"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich bin nicht von hier.",
+      "ar": "لست من هنا.",
+      "fr": "Je ne suis pas d'ici.",
+      "debut_ms": 12192,
+      "fin_ms": 14280,
+      "phrase_id": "phrase_486"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Zeigen Sie mir das mal auf der Karte?",
+      "ar": "هل تريني هذا على الخريطة؟",
+      "fr": "Vous pouvez me le montrer sur la carte ?",
+      "debut_ms": 14280,
+      "fin_ms": 17328,
+      "phrase_id": "phrase_487"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Gibt's hier 'ne Apotheke in der Nähe?",
+      "ar": "هل توجد صيدلية قريبة من هنا؟",
+      "fr": "Y a-t-il une pharmacie près d'ici ?",
+      "debut_ms": 17328,
+      "fin_ms": 20352,
+      "phrase_id": "phrase_488"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Wo ist hier 'ne Toilette?",
+      "ar": "أين أقرب مرحاض؟",
+      "fr": "Où sont les toilettes les plus proches ?",
+      "debut_ms": 20352,
+      "fin_ms": 22800,
+      "phrase_id": "phrase_489"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab mich total verlaufen.",
+      "ar": "لقد ضللت الطريق.",
+      "fr": "Je me suis perdu.",
+      "debut_ms": 22800,
+      "fin_ms": 25440,
+      "phrase_id": "phrase_490"
+    }
+  ]
+}

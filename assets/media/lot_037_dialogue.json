@@ -1,0 +1,99 @@
+{
+  "lot_id": 37,
+  "type": "dialogue",
+  "title_de": "Verspätungen und Pizza-Pause",
+  "title_ar": "تأخيرات ومشاركة بيتزا",
+  "title_fr": "Galères de transport et pause pizza",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Sorry, bin spät, der Bus kam nicht.",
+      "ar": "آسف على التأخر، الحافلة لم تأتِ.",
+      "fr": "Désolé du retard, le bus n'est pas venu.",
+      "debut_ms": 0,
+      "fin_ms": 3480,
+      "phrase_id": "phrase_361"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Lass uns was essen gehen, ich hab Hunger.",
+      "ar": "هيا نأكل، أنا جائع.",
+      "fr": "Allons manger, j'ai faim.",
+      "debut_ms": 3480,
+      "fin_ms": 6840,
+      "phrase_id": "phrase_362"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Teilen wir uns 'ne Pizza?",
+      "ar": "نتقاسم بيتزا؟",
+      "fr": "On partage une pizza ?",
+      "debut_ms": 6840,
+      "fin_ms": 9264,
+      "phrase_id": "phrase_363"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Kannst du mir kurz was leihen?",
+      "ar": "هل تقرضني مبلغاً صغيراً؟",
+      "fr": "Tu peux me prêter un peu d'argent ?",
+      "debut_ms": 9264,
+      "fin_ms": 11904,
+      "phrase_id": "phrase_364"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich geb's dir morgen zurück.",
+      "ar": "سأعيده لك غداً.",
+      "fr": "Je te le rends demain.",
+      "debut_ms": 11904,
+      "fin_ms": 14256,
+      "phrase_id": "phrase_365"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das ist mein bester Kumpel.",
+      "ar": "هذا أعز صديق لي.",
+      "fr": "C'est mon meilleur pote.",
+      "debut_ms": 14256,
+      "fin_ms": 16872,
+      "phrase_id": "phrase_366"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Wir hatten so viel Spaß!",
+      "ar": "استمتعنا كثيراً!",
+      "fr": "On s'est tellement amusés !",
+      "debut_ms": 16872,
+      "fin_ms": 19344,
+      "phrase_id": "phrase_367"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mit euch ist es immer so lustig!",
+      "ar": "معكم كل شيء ممتع!",
+      "fr": "Avec vous, c'est toujours trop drôle !",
+      "debut_ms": 19344,
+      "fin_ms": 22248,
+      "phrase_id": "phrase_368"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Gib mir kurz Bescheid, ja?",
+      "ar": "أخبرني من فضلك.",
+      "fr": "Tiens-moi au courant.",
+      "debut_ms": 22248,
+      "fin_ms": 24936,
+      "phrase_id": "phrase_369"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Bin schon unterwegs!",
+      "ar": "أنا في الطريق.",
+      "fr": "Je suis déjà en route.",
+      "debut_ms": 24936,
+      "fin_ms": 27144,
+      "phrase_id": "phrase_370"
+    }
+  ]
+}

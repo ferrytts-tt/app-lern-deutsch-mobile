@@ -1,0 +1,99 @@
+{
+  "lot_id": 17,
+  "type": "dialogue",
+  "title_de": "Bürokratie im Unternehmen",
+  "title_ar": "إجراءات إدارية في العمل",
+  "title_fr": "Formalités administratives au bureau",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hätte da mal 'ne Frage zur Rechnung.",
+      "ar": "عندي سؤال عن الفاتورة.",
+      "fr": "J'aurais une question sur la facture.",
+      "debut_ms": 0,
+      "fin_ms": 2952,
+      "phrase_id": "phrase_161"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich bin neu hier in der Stadt.",
+      "ar": "أنا جديد في المدينة.",
+      "fr": "Je suis nouveau en ville.",
+      "debut_ms": 2952,
+      "fin_ms": 5496,
+      "phrase_id": "phrase_162"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Können Sie mir da weiterhelfen?",
+      "ar": "هل يمكنكم مساعدتي في هذا؟",
+      "fr": "Pourriez-vous m'aider là-dessus ?",
+      "debut_ms": 5496,
+      "fin_ms": 8184,
+      "phrase_id": "phrase_163"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Bei mir ist nichts angekommen.",
+      "ar": "لم يصلني شيء.",
+      "fr": "Je n'ai rien reçu.",
+      "debut_ms": 8184,
+      "fin_ms": 10872,
+      "phrase_id": "phrase_164"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Schick mir das bitte per Mail.",
+      "ar": "أرسل لي هذا بالبريد الإلكتروني.",
+      "fr": "Envoie-moi ça par mail, s'il te plaît.",
+      "debut_ms": 10872,
+      "fin_ms": 13344,
+      "phrase_id": "phrase_165"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Bei uns ist grad voll der Stress.",
+      "ar": "عندنا ضغط كبير الآن.",
+      "fr": "On est en plein stress en ce moment.",
+      "debut_ms": 13344,
+      "fin_ms": 16248,
+      "phrase_id": "phrase_166"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich bin heute im Homeoffice.",
+      "ar": "أعمل اليوم من البيت.",
+      "fr": "Je travaille de chez moi aujourd'hui.",
+      "debut_ms": 16248,
+      "fin_ms": 18744,
+      "phrase_id": "phrase_167"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab gleich ein Meeting.",
+      "ar": "عندي اجتماع بعد قليل.",
+      "fr": "J'ai une réunion dans un instant.",
+      "debut_ms": 18744,
+      "fin_ms": 21144,
+      "phrase_id": "phrase_168"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich mach heut früher Schluss.",
+      "ar": "سأنهي عملي مبكراً اليوم.",
+      "fr": "Je finis plus tôt aujourd'hui.",
+      "debut_ms": 21144,
+      "fin_ms": 23472,
+      "phrase_id": "phrase_169"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Gehen wir zusammen Mittag essen?",
+      "ar": "هل نتناول الغداء معاً؟",
+      "fr": "On va déjeuner ensemble ?",
+      "debut_ms": 23472,
+      "fin_ms": 26232,
+      "phrase_id": "phrase_170"
+    }
+  ]
+}

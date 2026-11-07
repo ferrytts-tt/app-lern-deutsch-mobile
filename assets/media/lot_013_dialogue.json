@@ -1,0 +1,99 @@
+{
+  "lot_id": 13,
+  "type": "dialogue",
+  "title_de": "Hausarbeit und Einkäufe",
+  "title_ar": "أشغال البيت والتبضع",
+  "title_fr": "Ménage et corvées à la maison",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Wir müssen noch einkaufen.",
+      "ar": "لازم نتسوق قبل ذلك.",
+      "fr": "Il faut encore faire les courses.",
+      "debut_ms": 0,
+      "fin_ms": 2496,
+      "phrase_id": "phrase_121"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mach mal die Tür zu.",
+      "ar": "أغلق الباب من فضلك.",
+      "fr": "Ferme la porte, s'il te plaît.",
+      "debut_ms": 2496,
+      "fin_ms": 4704,
+      "phrase_id": "phrase_122"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab mich ausgesperrt.",
+      "ar": "أغلقت الباب وبقيت خارجه.",
+      "fr": "Je me suis enfermé dehors.",
+      "debut_ms": 4704,
+      "fin_ms": 7032,
+      "phrase_id": "phrase_123"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Die Nachbarn sind echt laut.",
+      "ar": "الجيران صوتهم عالٍ جداً.",
+      "fr": "Les voisins sont vraiment bruyants.",
+      "debut_ms": 7032,
+      "fin_ms": 9696,
+      "phrase_id": "phrase_124"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Es zieht hier ganz schön.",
+      "ar": "هنا تيار هواء.",
+      "fr": "Il y a un courant d'air ici.",
+      "debut_ms": 9696,
+      "fin_ms": 11928,
+      "phrase_id": "phrase_125"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Was kostet das?",
+      "ar": "كم سعر هذا؟",
+      "fr": "Combien ça coûte ?",
+      "debut_ms": 11928,
+      "fin_ms": 13944,
+      "phrase_id": "phrase_126"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Das ist grad im Angebot.",
+      "ar": "هذا عليه عرض الآن.",
+      "fr": "C'est en promotion en ce moment.",
+      "debut_ms": 13944,
+      "fin_ms": 16344,
+      "phrase_id": "phrase_127"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Geht Karte?",
+      "ar": "هل يمكن الدفع بالبطاقة؟",
+      "fr": "Je peux payer par carte ?",
+      "debut_ms": 16344,
+      "fin_ms": 18216,
+      "phrase_id": "phrase_128"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab kein Bargeld dabei.",
+      "ar": "ما معي نقود.",
+      "fr": "Je n'ai pas d'espèces sur moi.",
+      "debut_ms": 18216,
+      "fin_ms": 20736,
+      "phrase_id": "phrase_129"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das ist ein echtes Schnäppchen!",
+      "ar": "هذه صفقة رابحة!",
+      "fr": "C'est une super affaire !",
+      "debut_ms": 20736,
+      "fin_ms": 23328,
+      "phrase_id": "phrase_130"
+    }
+  ]
+}

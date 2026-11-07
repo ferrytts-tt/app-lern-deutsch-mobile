@@ -1,0 +1,95 @@
+{
+  "@@locale": "tr",
+  "appName": "Deutsch Fast",
+  "appSubtitle": "Almancayı hızla öğrenin",
+
+  "navHome": "Ana Sayfa",
+  "navLibrary": "Cümleler",
+  "navProgress": "İlerleme",
+  "navSettings": "Ayarlar",
+
+  "onboardingSkip": "Geç",
+  "onboardingNext": "İleri",
+  "onboardingStart": "Başla",
+  "onboardingTitle1": "Okul gibi değil, bir çocuk gibi öğrenin.",
+  "onboardingSubtitle1": "Sıkıcı kurallar yok. Yalnızca tam ve canlı cümleler, tam doğru zamanda tekrarlanır.",
+  "onboardingTitle2": "Anlamak ve konuşmak için 1000 pratik cümle.",
+  "onboardingSubtitle2": "Her gün birkaç dakika. Baskı yok, ceza yok, can kaybetmek yok.",
+  "onboardingTitle3": "Dinleyin, yüksek sesle tekrarlayın, korkusuzca ilerleyin.",
+  "onboardingSubtitle3": "Gölgeleme (shadowing) tekniği Almanca telaffuzunuzu ve kas hafızanızı geliştirir.",
+  "onboardingDailyPhrases": "Günlük yeni cümleler",
+  "onboardingDailyMinutes": "Günlük süre",
+  "onboardingStartLevel": "Başlangıç seviyeniz",
+  "onboardingLevelBeginner": "Tamamen yeni başlayanım",
+  "onboardingLevelBasics": "Birkaç temel kelime biliyorum",
+
+  "homeGreeting": "Hallo!",
+  "homeStreakDays": "{count} gün",
+  "@homeStreakDays": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "homeStreakBroken": "Kaldığımız yerden devam, bu gayet doğal 🙂",
+  "homeSessionCardTitle": "Günün Oturumu",
+  "homeSessionStats": "{reviews} tekrar · {newCount} yeni · ~{minutes} dk",
+  "@homeSessionStats": {
+    "placeholders": {
+      "reviews": { "type": "int" },
+      "newCount": { "type": "int" },
+      "minutes": { "type": "int" }
+    }
+  },
+  "homeStartSession": "Oturumu Başlat",
+  "homeProgressTitle": "Genel İlerleme",
+  "homeProgressPhrases": "{learned} / {total} cümle",
+  "@homeProgressPhrases": {
+    "placeholders": {
+      "learned": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "homePhraseOfTheDay": "Günün cümlesi",
+  "homeCurrentPhase": "Mevcut aşama: Dinleme / Cümleler / Konuşma",
+
+  "sessionClose": "Kapat",
+  "sessionListenNormal": "Normal",
+  "sessionListenSlow": "Yavaş",
+  "sessionShadowingTitle": "Sıra sende! 🎤",
+  "sessionShadowingHelp": "Aynı ritimle tekrar et. Mükemmel olmak zorunda değilsin.",
+  "sessionNext": "İleri",
+  "sessionSuccess": "Harika!",
+  "sessionGentleCorrection": "Neredeyse! İşte doğru cümle:",
+
+  "libraryTitle": "Cümlelerim",
+  "librarySearchPlaceholder": "Bir cümle veya kelime ara...",
+  "libraryFilterAll": "Tümü",
+  "libraryFilterNew": "Yeni",
+  "libraryFilterInProgress": "Devam Edenler",
+  "libraryFilterMastered": "Öğrenilenler",
+  "libraryFilterWatchlist": "İzleme Listesi",
+  "libraryUnlockAnyway": "Yine de kilidi aç",
+
+  "progressTitle": "İlerlemem",
+  "progressPhrasesLearned": "Öğrenilen cümleler",
+  "progressSessionsCompleted": "Tamamlanan oturumlar",
+  "progressShadowingsDone": "Yapılan gölgeleme alıştırmaları",
+  "progressListeningTime": "Dinleme süresi",
+  "progressActivity30Days": "Aktivite (30 gün)",
+  "progressDistribution": "Dağılım",
+  "progressMilestones": "Kilometre Taşları",
+
+  "settingsTitle": "Ayarlar",
+  "settingsGeneral": "Genel",
+  "settingsAudio": "Ses ve Konuşma",
+  "settingsDailyReminder": "Günlük Hatırlatıcı",
+  "settingsTheme": "Tema",
+  "settingsThemeLight": "Açık",
+  "settingsThemeDark": "Koyu",
+  "settingsThemeSystem": "Sistem",
+  "settingsBackup": "Yedekleme ve Geri Yükleme",
+  "settingsExport": "İlerlemeyi Dışa Aktar (JSON)",
+  "settingsImport": "Yedeği Geri Yükle",
+  "settingsReset": "İlerlemeyi Sıfırla",
+  "settingsAbout": "Deutsch Fast Hakkında"
+}

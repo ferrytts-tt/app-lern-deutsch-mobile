@@ -1,0 +1,99 @@
+{
+  "lot_id": 47,
+  "type": "dialogue",
+  "title_de": "Taxifahrt und Telefonanrufe",
+  "title_ar": "رحلة التاكسي والاتصال الهاتفي",
+  "title_fr": "Course en taxi et premiers coups de fil",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Mit Taxameter, bitte.",
+      "ar": "شغّل العداد من فضلك.",
+      "fr": "Allumez le compteur, s'il vous plaît.",
+      "debut_ms": 0,
+      "fin_ms": 2640,
+      "phrase_id": "phrase_461"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Nehmen Sie auch Karte?",
+      "ar": "هل تقبلون البطاقة؟",
+      "fr": "Vous prenez la carte ?",
+      "debut_ms": 2640,
+      "fin_ms": 4896,
+      "phrase_id": "phrase_462"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Eine Quittung, bitte.",
+      "ar": "هل تعطيني إيصالاً من فضلك؟",
+      "fr": "Vous pouvez me donner un reçu, s'il vous plaît ?",
+      "debut_ms": 4896,
+      "fin_ms": 7320,
+      "phrase_id": "phrase_463"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wo gibt's hier Taxis?",
+      "ar": "أين أجد سيارة أجرة؟",
+      "fr": "Où trouver un taxi ?",
+      "debut_ms": 7320,
+      "fin_ms": 9720,
+      "phrase_id": "phrase_464"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Sind Sie frei?",
+      "ar": "هل أنت متاح؟",
+      "fr": "Vous êtes libre ?",
+      "debut_ms": 9720,
+      "fin_ms": 11592,
+      "phrase_id": "phrase_465"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hallo, hier Müller.",
+      "ar": "مرحباً، معك مولر.",
+      "fr": "Allô, ici Müller.",
+      "debut_ms": 11592,
+      "fin_ms": 13944,
+      "phrase_id": "phrase_466"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ist Frau Schmidt da?",
+      "ar": "هل يمكنني التحدث مع السيدة شميدت؟",
+      "fr": "Puis-je parler à Madame Schmidt ?",
+      "debut_ms": 13944,
+      "fin_ms": 16008,
+      "phrase_id": "phrase_467"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Moment, ich verbinde.",
+      "ar": "لحظة، سأحوّلك.",
+      "fr": "Un instant, je vous passe la communication.",
+      "debut_ms": 16008,
+      "fin_ms": 18576,
+      "phrase_id": "phrase_468"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Sie sind falsch verbunden.",
+      "ar": "لقد اتصلت بالرقم الخطأ.",
+      "fr": "Vous vous êtes trompé de numéro.",
+      "debut_ms": 18576,
+      "fin_ms": 21024,
+      "phrase_id": "phrase_469"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Soll ich was ausrichten?",
+      "ar": "هل أبلغه شيئاً؟",
+      "fr": "Je peux lui transmettre un message ?",
+      "debut_ms": 21024,
+      "fin_ms": 23376,
+      "phrase_id": "phrase_470"
+    }
+  ]
+}

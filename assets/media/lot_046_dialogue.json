@@ -1,0 +1,99 @@
+{
+  "lot_id": 46,
+  "type": "dialogue",
+  "title_de": "Gepäckausgabe und Taxi",
+  "title_ar": "استلام الحقائب وسيارة الأجرة",
+  "title_fr": "Récupération des bagages et taxi",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Wo kommt das Gepäck?",
+      "ar": "أين سير الحقائب؟",
+      "fr": "Où est le tapis à bagages ?",
+      "debut_ms": 0,
+      "fin_ms": 2184,
+      "phrase_id": "phrase_451"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mein Koffer ist nicht da.",
+      "ar": "لم تصل حقيبتي.",
+      "fr": "Ma valise n'est pas arrivée.",
+      "debut_ms": 2184,
+      "fin_ms": 4560,
+      "phrase_id": "phrase_452"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Mein Flug hat Verspätung.",
+      "ar": "رحلتي متأخرة.",
+      "fr": "Mon vol a du retard.",
+      "debut_ms": 4560,
+      "fin_ms": 7080,
+      "phrase_id": "phrase_453"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Der Flug fällt aus.",
+      "ar": "ألغيت رحلتك للأسف.",
+      "fr": "Votre vol a malheureusement été annulé.",
+      "debut_ms": 7080,
+      "fin_ms": 9336,
+      "phrase_id": "phrase_454"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab meinen Anschlussflug verpasst.",
+      "ar": "فاتتني رحلة الربط.",
+      "fr": "J'ai raté ma correspondance.",
+      "debut_ms": 9336,
+      "fin_ms": 12168,
+      "phrase_id": "phrase_455"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Zum Hauptbahnhof, bitte.",
+      "ar": "إلى المحطة الرئيسية من فضلك.",
+      "fr": "À la gare centrale, s'il vous plaît.",
+      "debut_ms": 12168,
+      "fin_ms": 14952,
+      "phrase_id": "phrase_456"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Zum Flughafen, Terminal 2.",
+      "ar": "إلى المطار، المبنى 2 من فضلك.",
+      "fr": "À l'aéroport, terminal 2, s'il vous plaît.",
+      "debut_ms": 14952,
+      "fin_ms": 18096,
+      "phrase_id": "phrase_457"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Was kostet das ungefähr?",
+      "ar": "كم تكلفة الرحلة تقريباً؟",
+      "fr": "Ça coûte combien environ ?",
+      "debut_ms": 18096,
+      "fin_ms": 20712,
+      "phrase_id": "phrase_458"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Wie lange brauchen wir?",
+      "ar": "كم تستغرق الرحلة؟",
+      "fr": "Combien de temps dure le trajet ?",
+      "debut_ms": 20712,
+      "fin_ms": 23016,
+      "phrase_id": "phrase_459"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hier bitte anhalten.",
+      "ar": "هل تتوقف هنا من فضلك؟",
+      "fr": "Vous pouvez vous arrêter ici, s'il vous plaît ?",
+      "debut_ms": 23016,
+      "fin_ms": 25416,
+      "phrase_id": "phrase_460"
+    }
+  ]
+}

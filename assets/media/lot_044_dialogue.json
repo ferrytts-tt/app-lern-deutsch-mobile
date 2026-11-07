@@ -1,0 +1,99 @@
+{
+  "lot_id": 44,
+  "type": "dialogue",
+  "title_de": "Fahrkarten und Abflugvorbereitung",
+  "title_ar": "التذاكر والتوجه إلى المطار",
+  "title_fr": "Tickets urbains et départ pour l'aéroport",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Eine Tageskarte, bitte.",
+      "ar": "أريد تذكرة ليوم كامل.",
+      "fr": "Un ticket journée, s'il vous plaît.",
+      "debut_ms": 0,
+      "fin_ms": 2808,
+      "phrase_id": "phrase_431"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich glaub, ich sitz im falschen Zug.",
+      "ar": "أظن أنني في القطار الخطأ.",
+      "fr": "Je crois que je suis dans le mauvais train.",
+      "debut_ms": 2808,
+      "fin_ms": 6000,
+      "phrase_id": "phrase_432"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Bar oder Karte?",
+      "ar": "هل تدفع نقداً أم بالبطاقة؟",
+      "fr": "Vous payez en espèces ou par carte ?",
+      "debut_ms": 6000,
+      "fin_ms": 8112,
+      "phrase_id": "phrase_433"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wie heißt die Haltestelle hier?",
+      "ar": "ما اسم هذه المحطة؟",
+      "fr": "Comment s'appelle cet arrêt ?",
+      "debut_ms": 8112,
+      "fin_ms": 10824,
+      "phrase_id": "phrase_434"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Haben Sie Kleingeld?",
+      "ar": "هل عندك فكة؟",
+      "fr": "Vous avez de la monnaie ?",
+      "debut_ms": 10824,
+      "fin_ms": 13056,
+      "phrase_id": "phrase_435"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wo ist denn der Check-in?",
+      "ar": "أين مكتب تسجيل الوصول؟",
+      "fr": "Où est le comptoir d'enregistrement ?",
+      "debut_ms": 13056,
+      "fin_ms": 15360,
+      "phrase_id": "phrase_436"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Reisepass, bitte.",
+      "ar": "جواز سفرك من فضلك.",
+      "fr": "Votre passeport, s'il vous plaît.",
+      "debut_ms": 15360,
+      "fin_ms": 17760,
+      "phrase_id": "phrase_437"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wollen Sie Gepäck aufgeben?",
+      "ar": "هل تريد تسليم حقيبة؟",
+      "fr": "Vous voulez enregistrer un bagage ?",
+      "debut_ms": 17760,
+      "fin_ms": 20280,
+      "phrase_id": "phrase_438"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab nur Handgepäck.",
+      "ar": "ليس معي سوى حقيبة يد.",
+      "fr": "J'ai seulement un bagage à main.",
+      "debut_ms": 20280,
+      "fin_ms": 22392,
+      "phrase_id": "phrase_439"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Der Koffer ist zu schwer.",
+      "ar": "حقيبتك ثقيلة جداً.",
+      "fr": "Votre valise est trop lourde.",
+      "debut_ms": 22392,
+      "fin_ms": 24744,
+      "phrase_id": "phrase_440"
+    }
+  ]
+}

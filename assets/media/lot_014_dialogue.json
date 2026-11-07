@@ -1,0 +1,99 @@
+{
+  "lot_id": 14,
+  "type": "dialogue",
+  "title_de": "Finanzen am Monatsende",
+  "title_ar": "نهاية الشهر والميزانية",
+  "title_fr": "Fin de mois difficile",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Bei mir ist das Geld gerade knapp.",
+      "ar": "وضعي المالي ضيق الآن.",
+      "fr": "Je suis un peu juste en ce moment.",
+      "debut_ms": 0,
+      "fin_ms": 2880,
+      "phrase_id": "phrase_131"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Geht da noch was am Preis?",
+      "ar": "هل يمكن تخفيض السعر؟",
+      "fr": "On peut négocier le prix ?",
+      "debut_ms": 2880,
+      "fin_ms": 5208,
+      "phrase_id": "phrase_132"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich würd das gern umtauschen.",
+      "ar": "أريد استبدال هذا.",
+      "fr": "Je voudrais échanger ça.",
+      "debut_ms": 5208,
+      "fin_ms": 7680,
+      "phrase_id": "phrase_133"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab den Bon verloren.",
+      "ar": "أضعت إيصال الشراء.",
+      "fr": "J'ai perdu le ticket de caisse.",
+      "debut_ms": 7680,
+      "fin_ms": 10176,
+      "phrase_id": "phrase_134"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich bin total pleite.",
+      "ar": "أنا مفلس تماماً.",
+      "fr": "Je suis complètement fauché.",
+      "debut_ms": 10176,
+      "fin_ms": 12480,
+      "phrase_id": "phrase_135"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wollen wir 'ne Runde spazieren gehen?",
+      "ar": "هل نذهب في نزهة؟",
+      "fr": "On va faire un tour à pied ?",
+      "debut_ms": 12480,
+      "fin_ms": 15552,
+      "phrase_id": "phrase_136"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich geh zweimal die Woche ins Gym.",
+      "ar": "أذهب إلى النادي الرياضي مرتين في الأسبوع.",
+      "fr": "Je vais à la salle deux fois par semaine.",
+      "debut_ms": 15552,
+      "fin_ms": 18384,
+      "phrase_id": "phrase_137"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab voll Muskelkater.",
+      "ar": "عضلاتي تؤلمني بعد التمرين.",
+      "fr": "J'ai des courbatures.",
+      "debut_ms": 18384,
+      "fin_ms": 20856,
+      "phrase_id": "phrase_138"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Lass uns mal was unternehmen.",
+      "ar": "هيا نفعل شيئاً معاً.",
+      "fr": "Faisons quelque chose ensemble.",
+      "debut_ms": 20856,
+      "fin_ms": 23496,
+      "phrase_id": "phrase_139"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich guck grad 'ne Serie.",
+      "ar": "أشاهد مسلسلاً الآن.",
+      "fr": "Je regarde une série en ce moment.",
+      "debut_ms": 23496,
+      "fin_ms": 25968,
+      "phrase_id": "phrase_140"
+    }
+  ]
+}

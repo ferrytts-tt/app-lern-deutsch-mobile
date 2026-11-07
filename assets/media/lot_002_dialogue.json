@@ -1,0 +1,117 @@
+{
+  "lot_id": 2,
+  "type": "dialogue",
+  "title_de": "Stress im Büro",
+  "title_ar": "ضغط في العمل",
+  "title_fr": "Coup de chaud au bureau",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Katja! Hast du mal kurz Zeit?",
+      "ar": "كاتيا! هل عندك وقت قصير؟",
+      "fr": "Katja ! T'as deux minutes ?",
+      "debut_ms": 0,
+      "fin_ms": 3840,
+      "phrase_id": "phrase_015"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Eigentlich nicht, ich hab heute echt viel um die Ohren.",
+      "ar": "في الحقيقة لا، عندي اليوم أشغال كثيرة جداً.",
+      "fr": "Pas vraiment, j'en ai par-dessus la tête aujourd'hui.",
+      "debut_ms": 3840,
+      "fin_ms": 7920,
+      "phrase_id": "phrase_011"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Pass auf: Können wir den Termin schieben?",
+      "ar": "اسمعي: هل نؤجل الموعد؟",
+      "fr": "Écoute : on peut décaler le rendez-vous ?",
+      "debut_ms": 7920,
+      "fin_ms": 11184,
+      "phrase_id": "phrase_012"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Gute Idee! Der Chef hat heute voll schlechte Laune.",
+      "ar": "فكرة ممتازة! مزاج المدير سيئ جداً اليوم.",
+      "fr": "Bonne idée ! Le patron est d'une humeur massacrante aujourd'hui.",
+      "debut_ms": 11184,
+      "fin_ms": 16224,
+      "phrase_id": "phrase_017"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Stimmt. Und gestern warst du auch nicht da?",
+      "ar": "صحيح. وبالأمس لم تكوني هنا أيضاً؟",
+      "fr": "C'est vrai. Et hier tu n'étais pas là non plus ?",
+      "debut_ms": 16224,
+      "fin_ms": 20400,
+      "phrase_id": null
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Genau, ich hab mich krankgemeldet.",
+      "ar": "بالضبط، بلّغت عن مرضي.",
+      "fr": "Exact, je me suis mise en arrêt maladie.",
+      "debut_ms": 20400,
+      "fin_ms": 23640,
+      "phrase_id": "phrase_016"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Verstehe. Und das Projekt? Das schaff ich bis morgen nicht.",
+      "ar": "أفهمك. وماذا عن المشروع؟ لن أنجز هذا قبل الغد.",
+      "fr": "Je comprends. Et le projet ? J'y arriverai jamais d'ici demain.",
+      "debut_ms": 23640,
+      "fin_ms": 29472,
+      "phrase_id": "phrase_014"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich helfe dir dabei, das habe ich dir doch versprochen!",
+      "ar": "سأساعدك في ذلك، لقد وعدتك بذلك!",
+      "fr": "Je vais t'aider pour ça, je te l'avais promis !",
+      "debut_ms": 29472,
+      "fin_ms": 33240,
+      "phrase_id": null
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ach, hab ich total vergessen, sorry!",
+      "ar": "أوه، نسيت تماماً، آسف!",
+      "fr": "Ah, j'ai complètement zappé, désolé !",
+      "debut_ms": 33240,
+      "fin_ms": 36552,
+      "phrase_id": "phrase_018"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Kein Problem, das klären wir später.",
+      "ar": "لا مشكلة، نتكلم عن هذا ونحسمه لاحقاً.",
+      "fr": "Pas de problème, on règle ça plus tard.",
+      "debut_ms": 36552,
+      "fin_ms": 40032,
+      "phrase_id": "phrase_019"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Danke dir, du hast mir echt den Tag gerettet!",
+      "ar": "شكراً لكِ، أنقذتِ يومي بالفعل!",
+      "fr": "Merci à toi, tu m'as vraiment sauvé la mise !",
+      "debut_ms": 40032,
+      "fin_ms": 43632,
+      "phrase_id": "phrase_020"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Gern geschehen! Ich mach gleich Feierabend.",
+      "ar": "على الرحب والسعة! سأنهي دوامي بعد قليل.",
+      "fr": "De rien ! Je débauche bientôt.",
+      "debut_ms": 43632,
+      "fin_ms": 48000,
+      "phrase_id": "phrase_013"
+    }
+  ]
+}

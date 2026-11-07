@@ -1,0 +1,99 @@
+{
+  "lot_id": 39,
+  "type": "dialogue",
+  "title_de": "Gruppenarbeit und WLAN-Probleme",
+  "title_ar": "عمل جماعي ومشاكل الواي فاي",
+  "title_fr": "Projet de groupe et caprices du Wi-Fi",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Heute fällt die Schule aus!",
+      "ar": "لا مدرسة اليوم!",
+      "fr": "Pas d'école aujourd'hui !",
+      "debut_ms": 0,
+      "fin_ms": 2496,
+      "phrase_id": "phrase_381"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wir müssen 'ne Gruppenarbeit machen.",
+      "ar": "علينا عمل مشروع جماعي.",
+      "fr": "On doit faire un travail de groupe.",
+      "debut_ms": 2496,
+      "fin_ms": 5304,
+      "phrase_id": "phrase_382"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich sitz grad an meiner Hausarbeit.",
+      "ar": "أعمل الآن على بحثي.",
+      "fr": "Je suis en plein dans mon devoir.",
+      "debut_ms": 5304,
+      "fin_ms": 8208,
+      "phrase_id": "phrase_383"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich pauk für die Prüfung.",
+      "ar": "أذاكر بجد للامتحان.",
+      "fr": "Je bachote pour l'examen.",
+      "debut_ms": 8208,
+      "fin_ms": 10632,
+      "phrase_id": "phrase_384"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Was hast du für 'ne Note?",
+      "ar": "كم علامتك؟",
+      "fr": "T'as eu combien ?",
+      "debut_ms": 10632,
+      "fin_ms": 13104,
+      "phrase_id": "phrase_385"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Mein WLAN spinnt.",
+      "ar": "الواي فاي عندي معطل.",
+      "fr": "Mon wifi déconne.",
+      "debut_ms": 13104,
+      "fin_ms": 15240,
+      "phrase_id": "phrase_386"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Gibst du mir das WLAN-Passwort?",
+      "ar": "هل تعطيني كلمة سر الواي فاي؟",
+      "fr": "Tu me donnes le mot de passe du wifi ?",
+      "debut_ms": 15240,
+      "fin_ms": 18048,
+      "phrase_id": "phrase_387"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab 'n Foto geknipst.",
+      "ar": "التقطت صورة.",
+      "fr": "J'ai pris une photo.",
+      "debut_ms": 18048,
+      "fin_ms": 20712,
+      "phrase_id": "phrase_388"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Schick mir mal das Foto.",
+      "ar": "أرسل لي الصورة.",
+      "fr": "Envoie-moi la photo.",
+      "debut_ms": 20712,
+      "fin_ms": 23064,
+      "phrase_id": "phrase_389"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hast du meine Nachricht schon gelesen?",
+      "ar": "هل قرأت رسالتي؟",
+      "fr": "Tu as lu mon message ?",
+      "debut_ms": 23064,
+      "fin_ms": 25896,
+      "phrase_id": "phrase_390"
+    }
+  ]
+}

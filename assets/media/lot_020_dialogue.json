@@ -1,0 +1,99 @@
+{
+  "lot_id": 20,
+  "type": "dialogue",
+  "title_de": "Kaffee und Kuchen geht auf mich",
+  "title_ar": "حسابك علي اليوم",
+  "title_fr": "C'est ma tournée !",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Ich lad dich ein.",
+      "ar": "أنت ضيفي (أنا أدفع).",
+      "fr": "C'est moi qui t'invite.",
+      "debut_ms": 0,
+      "fin_ms": 1920,
+      "phrase_id": "phrase_191"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Prost!",
+      "ar": "في صحتك!",
+      "fr": "Santé !",
+      "debut_ms": 1920,
+      "fin_ms": 3792,
+      "phrase_id": "phrase_192"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich muss los, sonst verpass ich den Bus.",
+      "ar": "لازم أذهب وإلا فاتتني الحافلة.",
+      "fr": "Je dois y aller, sinon je rate le bus.",
+      "debut_ms": 3792,
+      "fin_ms": 7104,
+      "phrase_id": "phrase_193"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab Heimweh.",
+      "ar": "أشتاق إلى وطني.",
+      "fr": "Le pays me manque.",
+      "debut_ms": 7104,
+      "fin_ms": 8976,
+      "phrase_id": "phrase_194"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Meine Familie fehlt mir.",
+      "ar": "أشتاق إلى عائلتي.",
+      "fr": "Ma famille me manque.",
+      "debut_ms": 8976,
+      "fin_ms": 11520,
+      "phrase_id": "phrase_195"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich lern grad Deutsch.",
+      "ar": "أتعلم الألمانية الآن.",
+      "fr": "J'apprends l'allemand en ce moment.",
+      "debut_ms": 11520,
+      "fin_ms": 13728,
+      "phrase_id": "phrase_196"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Kannst du bitte etwas langsamer reden?",
+      "ar": "هل تتكلم أبطأ من فضلك؟",
+      "fr": "Tu peux parler un peu plus lentement ?",
+      "debut_ms": 13728,
+      "fin_ms": 16848,
+      "phrase_id": "phrase_197"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich versteh nicht alles, aber ich geb mir Mühe.",
+      "ar": "لا أفهم كل شيء لكني أبذل جهدي.",
+      "fr": "Je ne comprends pas tout, mais je fais de mon mieux.",
+      "debut_ms": 16848,
+      "fin_ms": 20568,
+      "phrase_id": "phrase_198"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Wie heißt das auf Deutsch?",
+      "ar": "كيف يقال هذا بالألمانية؟",
+      "fr": "Comment on dit ça en allemand ?",
+      "debut_ms": 20568,
+      "fin_ms": 22944,
+      "phrase_id": "phrase_199"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Guter Tipp, danke dir!",
+      "ar": "نصيحة ممتازة، شكراً!",
+      "fr": "Bon conseil, merci !",
+      "debut_ms": 22944,
+      "fin_ms": 25584,
+      "phrase_id": "phrase_200"
+    }
+  ]
+}

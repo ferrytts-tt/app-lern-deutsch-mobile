@@ -1,0 +1,99 @@
+{
+  "lot_id": 32,
+  "type": "dialogue",
+  "title_de": "Erschöpfung und Spontanes",
+  "title_ar": "إرهاق وردود فعل عفوية",
+  "title_fr": "Coups de fatigue et réactions vives",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Das ist so öde.",
+      "ar": "هذا ممل جداً.",
+      "fr": "C'est tellement ennuyeux.",
+      "debut_ms": 0,
+      "fin_ms": 2040,
+      "phrase_id": "phrase_311"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich bin komplett im Eimer.",
+      "ar": "أنا منهك تماماً.",
+      "fr": "Je suis complètement lessivé.",
+      "debut_ms": 2040,
+      "fin_ms": 4608,
+      "phrase_id": "phrase_312"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Mir doch egal, was die denken.",
+      "ar": "ما يهمني ما يظنون.",
+      "fr": "Je me fiche de ce qu'ils pensent.",
+      "debut_ms": 4608,
+      "fin_ms": 7560,
+      "phrase_id": "phrase_313"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Hab grad voll keinen Kopf dafür.",
+      "ar": "ما عندي طاقة ذهنية لهذا الآن.",
+      "fr": "Là, j'ai pas la tête à ça.",
+      "debut_ms": 7560,
+      "fin_ms": 10488,
+      "phrase_id": "phrase_314"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab mich totgelacht.",
+      "ar": "ضحكت حتى الموت.",
+      "fr": "J'étais mort de rire.",
+      "debut_ms": 10488,
+      "fin_ms": 12720,
+      "phrase_id": "phrase_315"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Halt mal kurz die Klappe.",
+      "ar": "اسكت قليلاً.",
+      "fr": "Ferme-la deux secondes.",
+      "debut_ms": 12720,
+      "fin_ms": 15168,
+      "phrase_id": "phrase_316"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Echt jetzt?",
+      "ar": "بجد؟",
+      "fr": "Sérieux ?",
+      "debut_ms": 15168,
+      "fin_ms": 17040,
+      "phrase_id": "phrase_317"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich kann's kaum abwarten!",
+      "ar": "لا أطيق الانتظار!",
+      "fr": "J'ai trop hâte !",
+      "debut_ms": 17040,
+      "fin_ms": 19584,
+      "phrase_id": "phrase_318"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Das war ein Flop.",
+      "ar": "كان فاشلاً.",
+      "fr": "C'était un flop.",
+      "debut_ms": 19584,
+      "fin_ms": 21576,
+      "phrase_id": "phrase_319"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Von Technik hab ich null Ahnung.",
+      "ar": "ما عندي أي فكرة عن التقنية.",
+      "fr": "Je n'y connais rien en technique.",
+      "debut_ms": 21576,
+      "fin_ms": 24432,
+      "phrase_id": "phrase_320"
+    }
+  ]
+}

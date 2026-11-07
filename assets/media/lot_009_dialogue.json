@@ -1,0 +1,99 @@
+{
+  "lot_id": 9,
+  "type": "dialogue",
+  "title_de": "Chaos am Hauptbahnhof",
+  "title_ar": "فوضى في محطة القطار",
+  "title_fr": "Pagaille à la gare centrale",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Der Zug hat mal wieder Verspätung.",
+      "ar": "القطار متأخر مرة أخرى",
+      "fr": "Le train est encore en retard...",
+      "debut_ms": 0,
+      "fin_ms": 2784,
+      "phrase_id": "phrase_081"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich hab meinen Bus knapp verpasst.",
+      "ar": "فاتتني الحافلة بدقيقة",
+      "fr": "J'ai loupé mon bus de justesse.",
+      "debut_ms": 2784,
+      "fin_ms": 5664,
+      "phrase_id": "phrase_082"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Is' hier noch frei?",
+      "ar": "هل المقعد هنا فارغ؟",
+      "fr": "C'est libre ici ?",
+      "debut_ms": 5664,
+      "fin_ms": 7776,
+      "phrase_id": "phrase_083"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wie komm ich am besten zum Bahnhof?",
+      "ar": "ما أفضل طريق للمحطة؟",
+      "fr": "C'est quoi le meilleur chemin pour la gare ?",
+      "debut_ms": 7776,
+      "fin_ms": 10728,
+      "phrase_id": "phrase_084"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich steck im Stau fest.",
+      "ar": "أنا عالق في الازدحام",
+      "fr": "Je suis coincé dans les bouchons.",
+      "debut_ms": 10728,
+      "fin_ms": 13008,
+      "phrase_id": "phrase_085"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich muss hier raus.",
+      "ar": "لازم أنزل هنا",
+      "fr": "Faut que je descende là.",
+      "debut_ms": 13008,
+      "fin_ms": 14976,
+      "phrase_id": "phrase_086"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Kannst du mich heimfahren?",
+      "ar": "توصلني للبيت؟",
+      "fr": "Tu peux me déposer chez moi ?",
+      "debut_ms": 14976,
+      "fin_ms": 17328,
+      "phrase_id": "phrase_087"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wo krieg ich 'n Ticket her?",
+      "ar": "من أين أحصل على تذكرة؟",
+      "fr": "Où est-ce que je peux choper un ticket ?",
+      "debut_ms": 17328,
+      "fin_ms": 19896,
+      "phrase_id": "phrase_088"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hab den Anschluss nicht gekriegt.",
+      "ar": "فاتني القطار التالي (الوصل)",
+      "fr": "J'ai raté ma correspondance.",
+      "debut_ms": 19896,
+      "fin_ms": 22632,
+      "phrase_id": "phrase_089"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Das dauert ja ewig!",
+      "ar": "هذا يأخذ وقتاً طويلاً!",
+      "fr": "Mais ça prend une éternité !",
+      "debut_ms": 22632,
+      "fin_ms": 24912,
+      "phrase_id": "phrase_090"
+    }
+  ]
+}

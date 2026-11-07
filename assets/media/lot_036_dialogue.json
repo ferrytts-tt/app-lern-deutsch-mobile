@@ -1,0 +1,99 @@
+{
+  "lot_id": 36,
+  "type": "dialogue",
+  "title_de": "Treffen mit Freunden",
+  "title_ar": "لقاءات وطلعات مع الأصدقاء",
+  "title_fr": "Sorties et retrouvailles entre amis",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Was geht ab?",
+      "ar": "ما الأخبار؟ ماذا يحدث؟",
+      "fr": "Quoi de neuf ?",
+      "debut_ms": 0,
+      "fin_ms": 1872,
+      "phrase_id": "phrase_351"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Man sieht sich!",
+      "ar": "نلتقي قريباً!",
+      "fr": "On se voit !",
+      "debut_ms": 1872,
+      "fin_ms": 3744,
+      "phrase_id": "phrase_352"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Bist du heut Abend am Start?",
+      "ar": "هل ستكون معنا الليلة؟",
+      "fr": "Tu es de la partie ce soir ?",
+      "debut_ms": 3744,
+      "fin_ms": 6360,
+      "phrase_id": "phrase_353"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich bin dabei!",
+      "ar": "أنا معكم!",
+      "fr": "Je suis partant !",
+      "debut_ms": 6360,
+      "fin_ms": 8232,
+      "phrase_id": "phrase_354"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Um acht am Bahnhof?",
+      "ar": "الساعة الثامنة عند المحطة؟",
+      "fr": "À huit heures à la gare ?",
+      "debut_ms": 8232,
+      "fin_ms": 10440,
+      "phrase_id": "phrase_355"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Wer kommt noch alles?",
+      "ar": "من سيأتي أيضاً؟",
+      "fr": "Qui d'autre vient ?",
+      "debut_ms": 10440,
+      "fin_ms": 12576,
+      "phrase_id": "phrase_356"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich hol dich ab.",
+      "ar": "سآتي لآخذك.",
+      "fr": "Je passe te chercher.",
+      "debut_ms": 12576,
+      "fin_ms": 14448,
+      "phrase_id": "phrase_357"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Ich bring was zu trinken mit.",
+      "ar": "سأحضر شيئاً للشرب.",
+      "fr": "J'apporte à boire.",
+      "debut_ms": 14448,
+      "fin_ms": 17088,
+      "phrase_id": "phrase_358"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Das war so nicht ausgemacht!",
+      "ar": "لم نتفق على هذا هكذا!",
+      "fr": "Ce n'était pas prévu comme ça !",
+      "debut_ms": 17088,
+      "fin_ms": 19584,
+      "phrase_id": "phrase_359"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Du hast mich sitzen lassen!",
+      "ar": "تركتني أنتظر ولم تأتِ!",
+      "fr": "Tu m'as posé un lapin !",
+      "debut_ms": 19584,
+      "fin_ms": 22008,
+      "phrase_id": "phrase_360"
+    }
+  ]
+}

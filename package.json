@@ -1,0 +1,11 @@
+{
+  "name": "app-lern-deutsch-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Flutter Web runner scripts",
+  "scripts": {
+    "dev": "flutter run -d chrome --web-port=5000",
+    "dev:headless": "flutter run -d web-server --web-port=5000",
+    "build": "flutter build web"
+  }
+}

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Hoppla! - Une erreur ? Hoppla ! Tu l'apprends pour de bon. Apprentissage accéléré de l'allemand par phrases et répétition espacée.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Hoppla!">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Hoppla! - Tu l'apprends pour de bon.</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Native German Audio Player (Studio Quality Authentic German Voice) -->
+  <script>
+    window.__germanAudio = null;
+    window.__currentAudioPlayId = 0;
+    window.__voiceTimer = null;
+
+    window.stopGermanAudio = function() {
+      window.__currentAudioPlayId++;
+      if (window.__voiceTimer) {
+        clearTimeout(window.__voiceTimer);
+        window.__voiceTimer = null;
+      }
+      try {
+        if (window.__germanAudio) {
+          window.__germanAudio.onplay = null;
+          window.__germanAudio.onended = null;
+          window.__germanAudio.onerror = null;
+          window.__germanAudio.pause();
+          window.__germanAudio.removeAttribute('src');
+          window.__germanAudio.load();
+          window.__germanAudio = null;
+        }
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.onvoiceschanged = null;
+          window.speechSynthesis.cancel();
+        }
+      } catch (e) {
+        console.warn('Erreur lors de stopGermanAudio :', e);
+      }
+    };
+
+    window.playGermanAudio = function(text, rate, phraseId, voiceGender) {
+      window.stopGermanAudio();
+      var thisPlayId = window.__currentAudioPlayId;
+
+      return new Promise(function(resolve) {
+        try {
+          var clean = (text || '').replace(/[#*_]/g, '').trim();
+          if (!clean) {
+            resolve(true);
+            return;
+          }
+
+          var speed = Number(rate) || 1.0;
+          var gender = (voiceGender === 'female') ? 'female' : 'male';
+
+          // 1. Si phraseId est spécifié, jouer le fichier studio local pré-enregistré (Conrad Homme ou Katja Femme)
+          if (phraseId && typeof phraseId === 'string' && phraseId.indexOf('phrase_') === 0) {
+            var studioUrl = 'audio/' + gender + '/' + phraseId + '.mp3';
+            var audio = new Audio();
+            audio.preload = 'auto';
+            audio.src = studioUrl;
+            audio.playbackRate = speed;
+            window.__germanAudio = audio;
+
+            var didPlay = false;
+
+            audio.onplay = function() {
+              didPlay = true;
+            };
+
+            audio.onended = function() {
+              if (thisPlayId !== window.__currentAudioPlayId) {
+                resolve(true);
+                return;
+              }
+              window.__germanAudio = null;
+              resolve(true);
+            };
+
+            audio.onerror = function() {
+              if (thisPlayId !== window.__currentAudioPlayId || didPlay) {
+                resolve(false);
+                return;
+              }
+              // Repli transparent sur la synthèse vocale native
+              speakGermanWebSpeechOnly(clean, speed, thisPlayId, gender).then(resolve);
+            };
+
+            audio.play().then(function() {
+              didPlay = true;
+              audio.onerror = null;
+            }).catch(function(err) {
+              if (thisPlayId !== window.__currentAudioPlayId || didPlay) {
+                resolve(false);
+                return;
+              }
+              if (err && (err.name === 'AbortError' || (err.message && err.message.indexOf('interrupted') !== -1))) {
+                resolve(false);
+                return;
+              }
+              speakGermanWebSpeechOnly(clean, speed, thisPlayId, gender).then(resolve);
+            });
+            return;
+          }
+
+          // 2. Pour le texte libre ou dynamique : synthèse vocale native avec voix du genre sélectionné
+          speakGermanWebSpeechOnly(clean, speed, thisPlayId, gender).then(resolve);
+        } catch (e) {
+          console.error('[Native German Audio] Erreur :', e);
+          if (thisPlayId === window.__currentAudioPlayId) {
+            speakGermanWebSpeechOnly(text, rate, thisPlayId, voiceGender).then(resolve);
+          } else {
+            resolve(false);
+          }
+        }
+      });
+    };
+
+    // Synthèse vocale de secours STRICTEMENT ALLEMANDE (Homme Conrad ou Femme Katja)
+    function speakGermanWebSpeechOnly(text, rate, playId, voiceGender) {
+      return new Promise(function(resolve) {
+        if (!('speechSynthesis' in window)) {
+          resolve(false);
+          return;
+        }
+        if (playId && playId !== window.__currentAudioPlayId) {
+          resolve(false);
+          return;
+        }
+        window.speechSynthesis.cancel();
+
+        function trySpeak() {
+          if (playId && playId !== window.__currentAudioPlayId) {
+            resolve(false);
+            return;
+          }
+          var voices = window.speechSynthesis.getVoices();
+          var germanVoice = null;
+          var isFemale = (voiceGender === 'female');
+
+          // 1. Chercher d'abord la voix native allemande correspondant au genre souhaité
+          for (var i = 0; i < voices.length; i++) {
+            var v = voices[i];
+            var lang = (v.lang || '').toLowerCase();
+            var name = (v.name || '').toLowerCase();
+            if (lang.indexOf('de') === 0 || name.indexOf('german') !== -1 || name.indexOf('deutsch') !== -1) {
+              if (isFemale) {
+                if (name.indexOf('katja') !== -1 || name.indexOf('amala') !== -1 || name.indexOf('hedda') !== -1 || name.indexOf('marlene') !== -1 || name.indexOf('female') !== -1 || name.indexOf('weiblich') !== -1) {
+                  germanVoice = v;
+                  break;
+                }
+              } else {
+                if (name.indexOf('conrad') !== -1 || name.indexOf('killian') !== -1 || name.indexOf('stefan') !== -1 || name.indexOf('florian') !== -1 || name.indexOf('male') !== -1 || name.indexOf('männlich') !== -1) {
+                  germanVoice = v;
+                  break;
+                }
+              }
+            }
+          }
+
+          // 2. Si non trouvée, chercher les voix naturelles (studio/natural)
+          if (!germanVoice) {
+            for (var j = 0; j < voices.length; j++) {
+              var v2 = voices[j];
+              var l2 = (v2.lang || '').toLowerCase();
+              var n2 = (v2.name || '').toLowerCase();
+              if (l2.indexOf('de') === 0 || n2.indexOf('german') !== -1 || n2.indexOf('deutsch') !== -1) {
+                if (n2.indexOf('natural') !== -1 || n2.indexOf('online') !== -1 || n2.indexOf('google') !== -1) {
+                  germanVoice = v2;
+                  break;
+                }
+              }
+            }
+          }
+
+          // 3. Fallback sur n'importe quelle voix allemande locale
+          if (!germanVoice) {
+            for (var k = 0; k < voices.length; k++) {
+              var v3 = voices[k];
+              var l3 = (v3.lang || '').toLowerCase();
+              var n3 = (v3.name || '').toLowerCase();
+              if (l3.indexOf('de') === 0 || n3.indexOf('deutsch') !== -1) {
+                germanVoice = v3;
+                break;
+              }
+            }
+          }
+
+          if (!germanVoice) {
+            console.error('[Native German TTS] Aucune voix allemande installée.');
+            resolve(false);
+            return;
+          }
+
+          var utterance = new SpeechSynthesisUtterance(text);
+          utterance.voice = germanVoice;
+          utterance.lang = germanVoice.lang || 'de-DE';
+          utterance.rate = Number(rate) || 0.95;
+          utterance.pitch = isFemale ? 1.05 : 0.92; // Timbre naturel différencié
+          utterance.volume = 1.0;
+
+          utterance.onend = function() { resolve(true); };
+          utterance.onerror = function() { resolve(false); };
+
+          if (playId !== window.__currentAudioPlayId) {
+            resolve(false);
+            return;
+          }
+          if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
+            window.speechSynthesis.cancel();
+          }
+          setTimeout(function() {
+            if (playId !== window.__currentAudioPlayId) {
+              resolve(false);
+              return;
+            }
+            window.speechSynthesis.speak(utterance);
+          }, 35);
+        }
+
+        if (window.speechSynthesis.getVoices().length > 0) {
+          trySpeak();
+        } else {
+          window.__voiceTimer = setTimeout(function() {
+            window.__voiceTimer = null;
+            if (playId === window.__currentAudioPlayId) trySpeak();
+          }, 250);
+          window.speechSynthesis.onvoiceschanged = function() {
+            if (window.__voiceTimer) {
+              clearTimeout(window.__voiceTimer);
+              window.__voiceTimer = null;
+            }
+            window.speechSynthesis.onvoiceschanged = null;
+            if (playId === window.__currentAudioPlayId) trySpeak();
+          };
+        }
+      });
+    }
+
+    // ── Effets sonores Web Audio API natifs ────────────────────────────────
+    window.playSuccessChime = function() {
+      try {
+        var AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        var ctx = new AudioCtx();
+        if (ctx.state === 'suspended') ctx.resume();
+        var notes = [523.25, 659.25, 783.99, 1046.50]; // Do, Mi, Sol, Do aigu (C5, E5, G5, C6)
+        notes.forEach(function(freq, index) {
+          var osc = ctx.createOscillator();
+          var gain = ctx.createGain();
+          osc.type = 'triangle';
+          var startTime = ctx.currentTime + index * 0.08;
+          osc.frequency.setValueAtTime(freq, startTime);
+          gain.gain.setValueAtTime(0.25, startTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.32);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(startTime);
+          osc.stop(startTime + 0.35);
+        });
+      } catch (e) {
+        console.warn('playSuccessChime error:', e);
+      }
+    };
+
+    window.playFailureChime = function() {
+      try {
+        var AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        var ctx = new AudioCtx();
+        if (ctx.state === 'suspended') ctx.resume();
+        var notes = [329.63, 261.63]; // Mi bémol -> Do (Eb4 -> C4)
+        notes.forEach(function(freq, index) {
+          var osc = ctx.createOscillator();
+          var gain = ctx.createGain();
+          osc.type = 'sine';
+          var startTime = ctx.currentTime + index * 0.16;
+          osc.frequency.setValueAtTime(freq, startTime);
+          gain.gain.setValueAtTime(0.24, startTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.38);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(startTime);
+          osc.stop(startTime + 0.42);
+        });
+      } catch (e) {
+        console.warn('playFailureChime error:', e);
+      }
+    };
+
+    // ── Reconnaissance vocale allemande (Web Speech API) ──────────────────
+    var __activeSpeechRecognition = null;
+
+    window.isSpeechRecognitionAvailable = function() {
+      return ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window);
+    };
+
+    window.startGermanSpeechRecognition = function(onResult, onError, onEnd) {
+      try {
+        var SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SpeechRec) {
+          console.warn('[SpeechRecognition] Non supporté dans ce navigateur.');
+          if (onError) onError('not_supported');
+          return false;
+        }
+
+        if (__activeSpeechRecognition) {
+          try { __activeSpeechRecognition.abort(); } catch (_) {}
+          __activeSpeechRecognition = null;
+        }
+
+        var recognition = new SpeechRec();
+        recognition.lang = 'de-DE';
+        recognition.continuous = true;
+        recognition.interimResults = true;
+        recognition.maxAlternatives = 1;
+
+        var finalResult = '';
+
+        recognition.onresult = function(event) {
+          var interim = '';
+          for (var i = event.resultIndex; i < event.results.length; ++i) {
+            if (event.results[i].isFinal) {
+              finalResult += ' ' + event.results[i][0].transcript;
+            } else {
+              interim += event.results[i][0].transcript;
+            }
+          }
+          var text = (finalResult || interim || '').trim();
+          console.log('[SpeechRecognition] Entendu :', text);
+          if (onResult && text) {
+            var isFinal = event.results[event.results.length - 1].isFinal;
+            onResult(text, isFinal);
+          }
+        };
+
+        recognition.onerror = function(event) {
+          console.warn('[SpeechRecognition] Erreur:', event.error);
+          if (onError) onError(event.error || 'speech_error');
+        };
+
+        recognition.onend = function() {
+          console.log('[SpeechRecognition] Fin d\'écoute, résultat :', finalResult);
+          if (onEnd) onEnd(finalResult.trim());
+          __activeSpeechRecognition = null;
+        };
+
+        __activeSpeechRecognition = recognition;
+
+        try {
+          recognition.start();
+          console.log('[SpeechRecognition] Écoute démarrée avec succès (de-DE)');
+        } catch (startErr) {
+          console.warn('[SpeechRecognition] startErr:', startErr);
+          if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ audio: true }).then(function(stream) {
+              stream.getTracks().forEach(function(t) { t.stop(); });
+              recognition.start();
+            }).catch(function(e) {
+              if (onError) onError('permission_denied');
+            });
+          } else {
+            if (onError) onError(startErr.toString());
+            return false;
+          }
+        }
+
+        return true;
+      } catch (e) {
+        console.error('startGermanSpeechRecognition exception:', e);
+        if (onError) onError(e.toString());
+        return false;
+      }
+    };
+
+    window.stopGermanSpeechRecognition = function() {
+      if (__activeSpeechRecognition) {
+        try {
+          __activeSpeechRecognition.stop();
+        } catch (_) {}
+        __activeSpeechRecognition = null;
+      }
+    };
+  </script>
+</head>
+<body>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

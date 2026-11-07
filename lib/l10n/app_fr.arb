@@ -1,0 +1,95 @@
+{
+  "@@locale": "fr",
+  "appName": "Deutsch Fast",
+  "appSubtitle": "Apprends l'allemand rapidement",
+
+  "navHome": "Accueil",
+  "navLibrary": "Phrases",
+  "navProgress": "Progrès",
+  "navSettings": "Réglages",
+
+  "onboardingSkip": "Passer",
+  "onboardingNext": "Suivant",
+  "onboardingStart": "Commencer",
+  "onboardingTitle1": "Apprends comme un enfant, pas comme à l'école.",
+  "onboardingSubtitle1": "Pas de règles rébarbatives. Juste des phrases complètes et vivantes, répétées au bon moment.",
+  "onboardingTitle2": "1000 phrases utiles pour comprendre et parler.",
+  "onboardingSubtitle2": "Chaque jour quelques minutes. Zéro pression, zéro punition, zéro perte de vie.",
+  "onboardingTitle3": "Écoute, répète à voix haute, progresse sans peur.",
+  "onboardingSubtitle3": "Le shadowing entraîne votre accent et votre mémoire musculaire de l'allemand.",
+  "onboardingDailyPhrases": "Nouvelles phrases par jour",
+  "onboardingDailyMinutes": "Temps par jour",
+  "onboardingStartLevel": "Ton niveau de départ",
+  "onboardingLevelBeginner": "Je débute totalement",
+  "onboardingLevelBasics": "Je connais déjà quelques mots",
+
+  "homeGreeting": "Hallo !",
+  "homeStreakDays": "{count} jours",
+  "@homeStreakDays": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "homeStreakBroken": "On reprend, c'est normal 🙂",
+  "homeSessionCardTitle": "Séance du jour",
+  "homeSessionStats": "{reviews} révisions · {newCount} nouvelles · ~{minutes} min",
+  "@homeSessionStats": {
+    "placeholders": {
+      "reviews": { "type": "int" },
+      "newCount": { "type": "int" },
+      "minutes": { "type": "int" }
+    }
+  },
+  "homeStartSession": "Commencer la séance",
+  "homeProgressTitle": "Progression globale",
+  "homeProgressPhrases": "{learned} / {total} phrases",
+  "@homeProgressPhrases": {
+    "placeholders": {
+      "learned": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "homePhraseOfTheDay": "Phrase du jour",
+  "homeCurrentPhase": "Phase actuelle : Écoute / Phrases / Parole",
+
+  "sessionClose": "Fermer",
+  "sessionListenNormal": "Normal",
+  "sessionListenSlow": "Lent",
+  "sessionShadowingTitle": "À toi de jouer ! 🎤",
+  "sessionShadowingHelp": "Répète avec le même rythme. Pas besoin d'être parfait.",
+  "sessionNext": "Suivant",
+  "sessionSuccess": "Bien !",
+  "sessionGentleCorrection": "Presque ! Voilà la bonne phrase :",
+
+  "libraryTitle": "Mes Phrases",
+  "librarySearchPlaceholder": "Rechercher une phrase ou un mot...",
+  "libraryFilterAll": "Toutes",
+  "libraryFilterNew": "Nouvelles",
+  "libraryFilterInProgress": "En cours",
+  "libraryFilterMastered": "Maîtrisées",
+  "libraryFilterWatchlist": "À surveiller",
+  "libraryUnlockAnyway": "Débloquer quand même",
+
+  "progressTitle": "Mes Progrès",
+  "progressPhrasesLearned": "Phrases apprises",
+  "progressSessionsCompleted": "Séances complétées",
+  "progressShadowingsDone": "Shadowings réalisés",
+  "progressListeningTime": "Temps d'écoute",
+  "progressActivity30Days": "Activité (30 jours)",
+  "progressDistribution": "Répartition",
+  "progressMilestones": "Jalons",
+
+  "settingsTitle": "Réglages",
+  "settingsGeneral": "Général",
+  "settingsAudio": "Audio & Voix",
+  "settingsDailyReminder": "Rappel quotidien",
+  "settingsTheme": "Thème",
+  "settingsThemeLight": "Clair",
+  "settingsThemeDark": "Sombre",
+  "settingsThemeSystem": "Système",
+  "settingsBackup": "Sauvegarde & Restauration",
+  "settingsExport": "Exporter la progression (JSON)",
+  "settingsImport": "Restaurer une sauvegarde",
+  "settingsReset": "Réinitialiser la progression",
+  "settingsAbout": "À propos de Deutsch Fast"
+}

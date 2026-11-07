@@ -1,0 +1,95 @@
+{
+  "@@locale": "ar",
+  "appName": "Deutsch Fast",
+  "appSubtitle": "تعلم الألمانية بسرعة",
+
+  "navHome": "الرئيسية",
+  "navLibrary": "الجمل",
+  "navProgress": "التقدم",
+  "navSettings": "الإعدادات",
+
+  "onboardingSkip": "تخطي",
+  "onboardingNext": "التالي",
+  "onboardingStart": "ابدأ الآن",
+  "onboardingTitle1": "تعلم مثل الأطفال، وليس مثل المدرسة.",
+  "onboardingSubtitle1": "لا قواعد مملة. فقط جمل كاملة وحية، تتكرر في اللحظة المناسبة تماماً.",
+  "onboardingTitle2": "1000 جملة عملية للفهم والتحدث.",
+  "onboardingSubtitle2": "بضع دقائق كل يوم. بدون ضغط، بدون عقاب، وبدون خسارة قلوب.",
+  "onboardingTitle3": "استمع، كرر بصوت عالٍ، وتقدم دون خوف.",
+  "onboardingSubtitle3": "تقنية المحاكاة (Shadowing) تدرب نبرتك وذاكرتك العضلية للألمانية.",
+  "onboardingDailyPhrases": "جمل جديدة كل يوم",
+  "onboardingDailyMinutes": "الوقت يومياً",
+  "onboardingStartLevel": "مستواك الحالي",
+  "onboardingLevelBeginner": "مبتدئ تماماً",
+  "onboardingLevelBasics": "أعرف بعض الكلمات البسيطة",
+
+  "homeGreeting": "Hallo!",
+  "homeStreakDays": "{count} أيام",
+  "@homeStreakDays": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "homeStreakBroken": "سنواصل من جديد، هذا أمر طبيعي 🙂",
+  "homeSessionCardTitle": "جلسة اليوم",
+  "homeSessionStats": "{reviews} مراجعة · {newCount} جديدة · ~{minutes} دقيقة",
+  "@homeSessionStats": {
+    "placeholders": {
+      "reviews": { "type": "int" },
+      "newCount": { "type": "int" },
+      "minutes": { "type": "int" }
+    }
+  },
+  "homeStartSession": "بدء الجلسة",
+  "homeProgressTitle": "التقدم الإجمالي",
+  "homeProgressPhrases": "{learned} / {total} جملة",
+  "@homeProgressPhrases": {
+    "placeholders": {
+      "learned": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "homePhraseOfTheDay": "جملة اليوم",
+  "homeCurrentPhase": "المرحلة الحالية: استماع / جمل / محادثة",
+
+  "sessionClose": "إغلاق",
+  "sessionListenNormal": "عادي",
+  "sessionListenSlow": "بطيء",
+  "sessionShadowingTitle": "دورك الآن! 🎤",
+  "sessionShadowingHelp": "كرر بنفس الإيقاع. ليس من الضروري أن تكون مثالياً.",
+  "sessionNext": "التالي",
+  "sessionSuccess": "أحسنت!",
+  "sessionGentleCorrection": "تقريباً! ها هي الجملة الصحيحة:",
+
+  "libraryTitle": "جملي",
+  "librarySearchPlaceholder": "ابحث عن جملة أو كلمة...",
+  "libraryFilterAll": "الكل",
+  "libraryFilterNew": "جديدة",
+  "libraryFilterInProgress": "قيد التعلم",
+  "libraryFilterMastered": "متقنة",
+  "libraryFilterWatchlist": "للمتابعة",
+  "libraryUnlockAnyway": "فتح على أي حال",
+
+  "progressTitle": "تقدمي",
+  "progressPhrasesLearned": "جمل تم تعلمها",
+  "progressSessionsCompleted": "جلسات مكتملة",
+  "progressShadowingsDone": "محاكاة صوتية منجزة",
+  "progressListeningTime": "وقت الاستماع",
+  "progressActivity30Days": "النشاط (30 يوماً)",
+  "progressDistribution": "التوزيع",
+  "progressMilestones": "الإنجازات",
+
+  "settingsTitle": "الإعدادات",
+  "settingsGeneral": "عام",
+  "settingsAudio": "الصوت والتحدث",
+  "settingsDailyReminder": "التذكير اليومي",
+  "settingsTheme": "المظهر",
+  "settingsThemeLight": "فاتح",
+  "settingsThemeDark": "داكن",
+  "settingsThemeSystem": "النظام",
+  "settingsBackup": "النسخ الاحتياطي والاستعادة",
+  "settingsExport": "تصدير التقدم (JSON)",
+  "settingsImport": "استعادة النسخة الاحتياطية",
+  "settingsReset": "إعادة تعيين التقدم",
+  "settingsAbout": "حول Deutsch Fast"
+}

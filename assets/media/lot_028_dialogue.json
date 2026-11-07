@@ -1,0 +1,99 @@
+{
+  "lot_id": 28,
+  "type": "dialogue",
+  "title_de": "Übung macht den Meister",
+  "title_ar": "التدريب يصنع الأستاذ",
+  "title_fr": "C'est en forgeant qu'on devient forgeron",
+  "lignes": [
+    {
+      "locuteur": "Conrad",
+      "de": "Ob wir Bus oder Bahn nehmen, ist Jacke wie Hose.",
+      "ar": "سيّان / لا فرق.",
+      "fr": "C'est du pareil au même.",
+      "debut_ms": 0,
+      "fin_ms": 3816,
+      "phrase_id": "phrase_271"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Bei dem Dialekt verstehe ich nur Bahnhof.",
+      "ar": "لا أفهم شيئاً مما يقال.",
+      "fr": "Je n'y comprends rien du tout.",
+      "debut_ms": 3816,
+      "fin_ms": 7152,
+      "phrase_id": "phrase_272"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Da liegt der Hund begraben: Wir haben kein Geld.",
+      "ar": "هنا تكمن المشكلة الحقيقية.",
+      "fr": "Voilà tout le problème.",
+      "debut_ms": 7152,
+      "fin_ms": 10776,
+      "phrase_id": "phrase_273"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Politik ist beim Familienessen ein heißes Eisen.",
+      "ar": "موضوع حساس وشائك.",
+      "fr": "C'est un sujet délicat.",
+      "debut_ms": 10776,
+      "fin_ms": 14976,
+      "phrase_id": "phrase_274"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Ich fahr auf keinen Fall bei dem Regen mit dem Fahrrad.",
+      "ar": "بأي حال من الأحوال لا!",
+      "fr": "En aucun cas !",
+      "debut_ms": 14976,
+      "fin_ms": 18600,
+      "phrase_id": "phrase_275"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Stör ich? – Ganz im Gegenteil!",
+      "ar": "بل على العكس تماماً!",
+      "fr": "Bien au contraire !",
+      "debut_ms": 18600,
+      "fin_ms": 22416,
+      "phrase_id": "phrase_276"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Dass ich dir helfe, versteht sich doch von selbst.",
+      "ar": "هذا بديهي.",
+      "fr": "Ça va de soi.",
+      "debut_ms": 22416,
+      "fin_ms": 25992,
+      "phrase_id": "phrase_277"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Probier's einfach aus, Probieren geht über Studieren.",
+      "ar": "التجربة أفضل من كثرة التفكير.",
+      "fr": "Mieux vaut essayer que trop réfléchir.",
+      "debut_ms": 25992,
+      "fin_ms": 30336,
+      "phrase_id": "phrase_278"
+    },
+    {
+      "locuteur": "Conrad",
+      "de": "Sprich jeden Tag, Übung macht den Meister.",
+      "ar": "بالتمرين تصبح محترفاً.",
+      "fr": "C'est en forgeant qu'on devient forgeron.",
+      "debut_ms": 30336,
+      "fin_ms": 33696,
+      "phrase_id": "phrase_279"
+    },
+    {
+      "locuteur": "Katja",
+      "de": "Keine Sorge, aller Anfang ist schwer.",
+      "ar": "كل بداية صعبة.",
+      "fr": "Tout début est difficile.",
+      "debut_ms": 33696,
+      "fin_ms": 37296,
+      "phrase_id": "phrase_280"
+    }
+  ]
+}
