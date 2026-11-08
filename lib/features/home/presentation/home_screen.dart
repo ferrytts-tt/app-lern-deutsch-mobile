@@ -912,113 +912,119 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            // Sélecteur de Voix Réelle Native (Conrad 👨 / Katja 👩 / Duo 🎙️)
-            Tooltip(
-              message: 'Voix studio native : $voiceLabel (Toucher pour basculer)',
-              child: InkWell(
-                onTap: () async {
-                  final next = voicePref == 'alternate' ? 'male' : (voicePref == 'male' ? 'female' : 'alternate');
-                  await TtsService.instance.setVoiceGenderPreference(next);
-                  if (mounted) setState(() {});
-                },
-                borderRadius: BorderRadius.circular(14),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+        Flexible(
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerRight,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Sélecteur de Voix Réelle Native (Conrad 👨 / Katja 👩 / Duo 🎙️)
+                Tooltip(
+                  message: 'Voix studio native : $voiceLabel (Toucher pour basculer)',
+                  child: InkWell(
+                    onTap: () async {
+                      final next = voicePref == 'alternate' ? 'male' : (voicePref == 'male' ? 'female' : 'alternate');
+                      await TtsService.instance.setVoiceGenderPreference(next);
+                      if (mounted) setState(() {});
+                    },
                     borderRadius: BorderRadius.circular(14),
-                    border: Border.all(
-                      color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
-                    ),
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(voiceIcon, size: 14, color: AppColors.primary),
-                      const SizedBox(width: 4),
-                      Text(
-                        voiceLabel,
-                        style: TextStyle(
-                          fontWeight: FontWeight.w800,
-                          fontSize: 11,
-                          color: isDark ? Colors.white70 : const Color(0xFF334155),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(
+                          color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
                         ),
                       ),
-                    ],
+                      child: Row(
+                        children: [
+                          Icon(voiceIcon, size: 14, color: AppColors.primary),
+                          const SizedBox(width: 4),
+                          Text(
+                            voiceLabel,
+                            style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 11,
+                              color: isDark ? Colors.white70 : const Color(0xFF334155),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
-            const SizedBox(width: 6),
-            // Gemmes (Ouvre la Boutique)
-            Tooltip(
-              message: 'Boutique Hoppla ! (Échanger mes diamants)',
-              child: InkWell(
-                onTap: () => ShopModal.show(context, onPurchased: _loadDashboardData),
-                borderRadius: BorderRadius.circular(14),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 6),
+                const SizedBox(width: 5),
+                // Gemmes (Ouvre la Boutique)
+                Tooltip(
+                  message: 'Boutique Hoppla ! (Échanger mes diamants)',
+                  child: InkWell(
+                    onTap: () => ShopModal.show(context, onPurchased: _loadDashboardData),
+                    borderRadius: BorderRadius.circular(14),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: isDark ? const Color(0xFF0C243B) : const Color(0xFFE0F2FE),
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(
+                          color: const Color(0xFF0284C7).withValues(alpha: 0.45),
+                          width: 1.2,
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          const Icon(Icons.diamond_rounded, size: 15, color: Color(0xFF0284C7)),
+                          const SizedBox(width: 4),
+                          Text(
+                            '$_totalGems',
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w900,
+                              fontSize: 12,
+                              color: Color(0xFF0284C7),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 5),
+                // XP du jour
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 6),
                   decoration: BoxDecoration(
-                    color: isDark ? const Color(0xFF0C243B) : const Color(0xFFE0F2FE),
+                    color: isDark ? const Color(0xFF332005) : const Color(0xFFFEF3C7),
                     borderRadius: BorderRadius.circular(14),
                     border: Border.all(
-                      color: const Color(0xFF0284C7).withValues(alpha: 0.45),
-                      width: 1.2,
+                      color: const Color(0xFFF59E0B).withValues(alpha: 0.3),
                     ),
                   ),
                   child: Row(
                     children: [
-                      const Icon(Icons.diamond_rounded, size: 15, color: Color(0xFF0284C7)),
-                      const SizedBox(width: 4),
+                      const Icon(Icons.bolt_rounded, size: 16, color: Color(0xFFD97706)),
+                      const SizedBox(width: 2),
                       Text(
-                        '$_totalGems',
+                        '$_todayXp XP',
                         style: const TextStyle(
                           fontWeight: FontWeight.w900,
-                          fontSize: 12,
-                          color: Color(0xFF0284C7),
+                          fontSize: 11.5,
+                          color: Color(0xFFD97706),
                         ),
                       ),
                     ],
                   ),
                 ),
-              ),
-            ),
-            const SizedBox(width: 6),
-            // XP du jour
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-              decoration: BoxDecoration(
-                color: isDark ? const Color(0xFF332005) : const Color(0xFFFEF3C7),
-                borderRadius: BorderRadius.circular(14),
-                border: Border.all(
-                  color: const Color(0xFFF59E0B).withValues(alpha: 0.3),
+                const SizedBox(width: 5),
+                // Badge Série de jours animé flamme
+                DuoStreakWidget(
+                  streakDays: _streakDays,
+                  isCompact: true,
+                  hasFreeze: _profile.gelSerieDisponible,
                 ),
-              ),
-              child: Row(
-                children: [
-                  const Icon(Icons.bolt_rounded, size: 16, color: Color(0xFFD97706)),
-                  const SizedBox(width: 2),
-                  Text(
-                    '$_todayXp XP',
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w900,
-                      fontSize: 11.5,
-                      color: Color(0xFFD97706),
-                    ),
-                  ),
-                ],
-              ),
+              ],
             ),
-            const SizedBox(width: 6),
-            // Badge Série de jours animé flamme
-            DuoStreakWidget(
-              streakDays: _streakDays,
-              isCompact: true,
-              hasFreeze: _profile.gelSerieDisponible,
-            ),
-          ],
+          ),
         ),
       ],
     );

@@ -32,13 +32,19 @@ class GermanTextView extends StatelessWidget {
     final defaultStyle = baseStyle ?? AppTextStyles.germanPhrase(isDark: isDark);
 
     if (!enableArticleColoring && !enableVerbColoring) {
-      return Text(text, style: defaultStyle, textAlign: textAlign);
+      return Text(
+        text,
+        style: defaultStyle,
+        textAlign: textAlign,
+        textDirection: TextDirection.ltr,
+      );
     }
 
     final spans = _buildSpans(text, defaultStyle, isDark);
     return Text.rich(
       TextSpan(children: spans),
       textAlign: textAlign,
+      textDirection: TextDirection.ltr,
     );
   }
 

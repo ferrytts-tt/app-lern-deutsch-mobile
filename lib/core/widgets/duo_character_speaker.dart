@@ -125,221 +125,244 @@ class _DuoCharacterSpeakerState extends State<DuoCharacterSpeaker>
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final char = _resolveCharacter();
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          // ── 1. Le Personnage animé Duolingo ────────────────────────
-          AnimatedBuilder(
-            animation: Listenable.merge([_talkingController, _idleController]),
-            builder: (context, child) {
-              final bob = widget.isPlaying ? _bobAnimation.value : 0.0;
-              final mouthOpen = widget.isPlaying ? _mouthAnimation.value : 0.05;
-              return Transform.translate(
-                offset: Offset(0, bob),
-                child: SizedBox(
-                  width: widget.characterHeight * 0.75,
-                  height: widget.characterHeight,
-                  child: CustomPaint(
-                    painter: _DuolingoCharacterPainter(
-                      character: char,
-                      mouthOpen: mouthOpen,
-                      isDark: isDark,
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // ── 1. Le Personnage animé Duolingo (format compact élégant) ──
+            AnimatedBuilder(
+              animation: Listenable.merge([_talkingController, _idleController]),
+              builder: (context, child) {
+                final bob = widget.isPlaying ? _bobAnimation.value : 0.0;
+                final mouthOpen = widget.isPlaying ? _mouthAnimation.value : 0.05;
+                const charH = 92.0;
+                return Transform.translate(
+                  offset: Offset(0, bob),
+                  child: SizedBox(
+                    width: charH * 0.74,
+                    height: charH,
+                    child: CustomPaint(
+                      painter: _DuolingoCharacterPainter(
+                        character: char,
+                        mouthOpen: mouthOpen,
+                        isDark: isDark,
+                      ),
                     ),
                   ),
-                ),
-              );
-            },
-          ),
-
-          const SizedBox(width: 4),
-
-          // ── 2. Flèche de la bulle de parole ────────────────────────
-          CustomPaint(
-            size: const Size(10, 18),
-            painter: _SpeechBubbleArrowPainter(
-              color: isDark ? AppColors.surfaceDark : Colors.white,
-              borderColor: isDark ? AppColors.borderDark : const Color(0xFFE5E7EB),
+                );
+              },
             ),
-          ),
 
-          // ── 3. La Bulle de dialogue style Duolingo ─────────────────
-          Expanded(
-            child: Material(
-              color: Colors.transparent,
-              child: InkWell(
-                onTap: widget.onPlayAudio,
-                borderRadius: BorderRadius.circular(18),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-                  decoration: BoxDecoration(
-                    color: isDark ? AppColors.surfaceDark : Colors.white,
-                    borderRadius: BorderRadius.circular(18),
-                    border: Border.all(
-                      color: widget.isPlaying
-                          ? AppColors.primary
-                          : (isDark ? AppColors.borderDark : const Color(0xFFE5E7EB)),
-                      width: widget.isPlaying ? 2.2 : 1.8,
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withValues(alpha: isDark ? 0.25 : 0.06),
-                        blurRadius: 8,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Row(
-                    children: [
-                      // Bouton Haut-Parleur Duolingo (Bleu vif #1CB0F6)
-                      AnimatedBuilder(
-                        animation: _idleController,
-                        builder: (context, child) {
-                          final scale = widget.isPlaying ? _rippleAnimation.value : 1.0;
-                          return Transform.scale(
-                            scale: scale,
-                            child: Material(
-                              color: Colors.transparent,
-                              child: InkWell(
-                                onTap: widget.onPlayAudio,
-                                customBorder: const CircleBorder(),
-                                child: Container(
-                                  width: 44,
-                                  height: 44,
-                                  decoration: BoxDecoration(
-                                    color: widget.isPlaying
-                                        ? const Color(0xFF1899D6)
-                                        : const Color(0xFF1CB0F6),
-                                    shape: BoxShape.circle,
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: const Color(0xFF1899D6).withValues(alpha: 0.4),
-                                        blurRadius: widget.isPlaying ? 10 : 4,
-                                        offset: const Offset(0, 2),
-                                      ),
-                                    ],
-                                  ),
-                                  child: Icon(
-                                    widget.isPlaying
-                                        ? Icons.volume_up_rounded
-                                        : Icons.volume_up_outlined,
-                                    color: Colors.white,
-                                    size: 24,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          );
-                        },
-                      ),
+            const SizedBox(width: 4),
 
-                      // Bouton vitesse lente (Tortue / 0.65x) si fourni
-                      if (widget.onPlaySlow != null) ...[
-                        const SizedBox(width: 8),
-                        Material(
-                          color: Colors.transparent,
-                          child: InkWell(
-                            onTap: widget.onPlaySlow,
-                            customBorder: const CircleBorder(),
-                            child: Container(
-                              width: 36,
-                              height: 36,
-                              decoration: BoxDecoration(
-                                color: isDark ? const Color(0xFF2C3E50) : const Color(0xFFE5F6FD),
-                                shape: BoxShape.circle,
-                                border: Border.all(
-                                  color: const Color(0xFF1CB0F6).withValues(alpha: 0.5),
-                                  width: 1.5,
-                                ),
-                              ),
-                              child: const Icon(
-                                Icons.slow_motion_video_rounded,
-                                color: Color(0xFF1CB0F6),
-                                size: 20,
-                              ),
-                            ),
-                          ),
+            // ── 2. Flèche de la bulle de parole ────────────────────────
+            Padding(
+              padding: const EdgeInsets.only(top: 24),
+              child: CustomPaint(
+                size: const Size(10, 18),
+                painter: _SpeechBubbleArrowPainter(
+                  color: isDark ? AppColors.surfaceDark : Colors.white,
+                  borderColor: isDark ? AppColors.borderDark : const Color(0xFFE5E7EB),
+                ),
+              ),
+            ),
+
+            // ── 3. La Bulle de dialogue style Duolingo ─────────────────
+            Expanded(
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: widget.onPlayAudio,
+                  borderRadius: BorderRadius.circular(18),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                    decoration: BoxDecoration(
+                      color: isDark ? AppColors.surfaceDark : Colors.white,
+                      borderRadius: BorderRadius.circular(18),
+                      border: Border.all(
+                        color: widget.isPlaying
+                            ? AppColors.primary
+                            : (isDark ? AppColors.borderDark : const Color(0xFFE5E7EB)),
+                        width: widget.isPlaying ? 2.2 : 1.8,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: isDark ? 0.25 : 0.06),
+                          blurRadius: 8,
+                          offset: const Offset(0, 3),
                         ),
                       ],
-
-                      const SizedBox(width: 14),
-
-                      // Texte allemand avec souligné pointillé Duolingo ou prompt audioOnly
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisSize: MainAxisSize.min,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        // Ligne supérieure de la bulle : Boutons audio + indicateur
+                        Row(
                           children: [
-                            if (widget.audioOnly) ...[
-                              Row(
-                                children: [
-                                  Icon(
-                                    widget.isPlaying ? Icons.graphic_eq_rounded : Icons.hearing_rounded,
-                                    size: 18,
-                                    color: widget.isPlaying ? const Color(0xFF1CB0F6) : AppColors.primary,
-                                  ),
-                                  const SizedBox(width: 6),
-                                  Expanded(
-                                    child: Text(
-                                      widget.isPlaying ? 'Écoute attentivement...' : 'Touche pour écouter la voix',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w700,
-                                        color: widget.isPlaying
-                                            ? const Color(0xFF1CB0F6)
-                                            : (isDark ? Colors.white70 : const Color(0xFF4B5563)),
+                            // Bouton Haut-Parleur Duolingo (Bleu vif #1CB0F6)
+                            AnimatedBuilder(
+                              animation: _idleController,
+                              builder: (context, child) {
+                                final scale = widget.isPlaying ? _rippleAnimation.value : 1.0;
+                                return Transform.scale(
+                                  scale: scale,
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    child: InkWell(
+                                      onTap: widget.onPlayAudio,
+                                      customBorder: const CircleBorder(),
+                                      child: Container(
+                                        width: 38,
+                                        height: 38,
+                                        decoration: BoxDecoration(
+                                          color: widget.isPlaying
+                                              ? const Color(0xFF1899D6)
+                                              : const Color(0xFF1CB0F6),
+                                          shape: BoxShape.circle,
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: const Color(0xFF1899D6).withValues(alpha: 0.4),
+                                              blurRadius: widget.isPlaying ? 8 : 4,
+                                              offset: const Offset(0, 2),
+                                            ),
+                                          ],
+                                        ),
+                                        child: Icon(
+                                          widget.isPlaying
+                                              ? Icons.volume_up_rounded
+                                              : Icons.volume_up_outlined,
+                                          color: Colors.white,
+                                          size: 20,
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ],
-                              ),
-                            ] else ...[
-                              GermanTextView(
-                                text: widget.germanText,
-                                textAlign: TextAlign.start,
-                                baseStyle: widget.phraseStyle ??
-                                    TextStyle(
-                                      fontSize: 19,
-                                      fontWeight: FontWeight.w800,
-                                      color: isDark ? Colors.white : const Color(0xFF1F2937),
-                                      height: 1.3,
-                                      letterSpacing: -0.2,
+                                );
+                              },
+                            ),
+
+                            // Bouton vitesse lente (Tortue / 0.65x) si fourni
+                            if (widget.onPlaySlow != null) ...[
+                              const SizedBox(width: 8),
+                              Material(
+                                color: Colors.transparent,
+                                child: InkWell(
+                                  onTap: widget.onPlaySlow,
+                                  customBorder: const CircleBorder(),
+                                  child: Container(
+                                    width: 34,
+                                    height: 34,
+                                    decoration: BoxDecoration(
+                                      color: isDark ? const Color(0xFF2C3E50) : const Color(0xFFE5F6FD),
+                                      shape: BoxShape.circle,
+                                      border: Border.all(
+                                        color: const Color(0xFF1CB0F6).withValues(alpha: 0.5),
+                                        width: 1.5,
+                                      ),
                                     ),
-                              ),
-                            ],
-                            if (widget.showTranslation &&
-                                ((widget.translationText != null && widget.translationText!.isNotEmpty) ||
-                                    (widget.arabicText != null && widget.arabicText!.isNotEmpty))) ...[
-                              const SizedBox(height: 6),
-                              if (widget.arabicText != null && widget.arabicText!.isNotEmpty)
-                                ArabicTextView(
-                                  text: widget.arabicText!,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w700,
-                                  color: isDark ? AppColors.arabicPrimaryDark : AppColors.arabicPrimaryLight,
-                                  textAlign: TextAlign.start,
-                                ),
-                              if (widget.translationText != null && widget.translationText!.isNotEmpty)
-                                Text(
-                                  widget.translationText!,
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w500,
-                                    color: isDark ? Colors.white70 : Colors.black54,
+                                    child: const Icon(
+                                      Icons.slow_motion_video_rounded,
+                                      color: Color(0xFF1CB0F6),
+                                      size: 18,
+                                    ),
                                   ),
                                 ),
+                              ),
                             ],
+
+                            const SizedBox(width: 8),
+
+                            Expanded(
+                              child: Text(
+                                widget.isPlaying ? 'Lecture audio...' : 'Toucher pour écouter',
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w700,
+                                  color: widget.isPlaying
+                                      ? const Color(0xFF1CB0F6)
+                                      : (isDark ? Colors.white60 : const Color(0xFF6B7280)),
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
                           ],
                         ),
-                      ),
-                    ],
+
+                        const SizedBox(height: 10),
+
+                        // Texte allemand sur TOUTE la largeur de la bulle
+                        if (widget.audioOnly) ...[
+                          Row(
+                            children: [
+                              Icon(
+                                widget.isPlaying ? Icons.graphic_eq_rounded : Icons.hearing_rounded,
+                                size: 18,
+                                color: widget.isPlaying ? const Color(0xFF1CB0F6) : AppColors.primary,
+                              ),
+                              const SizedBox(width: 6),
+                              Expanded(
+                                child: Text(
+                                  widget.isPlaying ? 'Écoute attentivement...' : 'Touche pour écouter la voix',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w700,
+                                    color: widget.isPlaying
+                                        ? const Color(0xFF1CB0F6)
+                                        : (isDark ? Colors.white70 : const Color(0xFF4B5563)),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ] else ...[
+                          GermanTextView(
+                            text: widget.germanText,
+                            textAlign: TextAlign.start,
+                            baseStyle: widget.phraseStyle ??
+                                TextStyle(
+                                  fontSize: 19,
+                                  fontWeight: FontWeight.w800,
+                                  color: isDark ? Colors.white : const Color(0xFF1F2937),
+                                  height: 1.35,
+                                  letterSpacing: -0.2,
+                                ),
+                          ),
+                        ],
+                        if (widget.showTranslation &&
+                            ((widget.translationText != null && widget.translationText!.isNotEmpty) ||
+                                (widget.arabicText != null && widget.arabicText!.isNotEmpty))) ...[
+                          const SizedBox(height: 6),
+                          if (widget.arabicText != null && widget.arabicText!.isNotEmpty)
+                            ArabicTextView(
+                              text: widget.arabicText!,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              color: isDark ? AppColors.arabicPrimaryDark : AppColors.arabicPrimaryLight,
+                              textAlign: TextAlign.start,
+                            ),
+                          if (widget.translationText != null && widget.translationText!.isNotEmpty)
+                            Text(
+                              widget.translationText!,
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: isDark ? Colors.white70 : Colors.black54,
+                              ),
+                            ),
+                        ],
+                      ],
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

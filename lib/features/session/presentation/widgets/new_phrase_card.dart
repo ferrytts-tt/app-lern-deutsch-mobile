@@ -557,41 +557,44 @@ class _NewPhraseCardState extends State<NewPhraseCard> {
               onPressed: _goToNextStep,
             )
           else if (_currentStep == 2 || _currentStep == 3)
-            Row(
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: DuoButton(
-                    label: 'Précédent',
-                    icon: Icons.arrow_back_rounded,
-                    variant: DuoButtonVariant.outline,
-                    onPressed: _goToPreviousStep,
+            Directionality(
+              textDirection: TextDirection.ltr,
+              child: Row(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: DuoButton(
+                      label: 'Retour',
+                      icon: Icons.arrow_back_rounded,
+                      variant: DuoButtonVariant.outline,
+                      onPressed: _goToPreviousStep,
+                    ),
                   ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  flex: 3,
-                  child: _currentStep == 2
-                      ? DuoButton(
-                          label: 'Écouter l\'audio (3/4)',
-                          icon: Icons.arrow_forward_rounded,
-                          variant: DuoButtonVariant.primary,
-                          onPressed: _goToNextStep,
-                        )
-                      : DuoButton(
-                          label: _isPronunciationValidated
-                              ? 'Valider & Mini-test (4/4) ➔'
-                              : '🔒 Prononce pour débloquer (3/4)',
-                          icon: _isPronunciationValidated
-                              ? Icons.check_circle_rounded
-                              : Icons.lock_outline_rounded,
-                          variant: _isPronunciationValidated
-                              ? DuoButtonVariant.primary
-                              : DuoButtonVariant.outline,
-                          onPressed: _goToNextStep,
-                        ),
-                ),
-              ],
+                  const SizedBox(width: 12),
+                  Expanded(
+                    flex: 3,
+                    child: _currentStep == 2
+                        ? DuoButton(
+                            label: 'Audio (3/4)',
+                            icon: Icons.arrow_forward_rounded,
+                            variant: DuoButtonVariant.primary,
+                            onPressed: _goToNextStep,
+                          )
+                        : DuoButton(
+                            label: _isPronunciationValidated
+                                ? 'Suivant (4/4)'
+                                : 'Prononcer',
+                            icon: _isPronunciationValidated
+                                ? Icons.arrow_forward_rounded
+                                : Icons.mic_rounded,
+                            variant: _isPronunciationValidated
+                                ? DuoButtonVariant.primary
+                                : DuoButtonVariant.outline,
+                            onPressed: _goToNextStep,
+                          ),
+                  ),
+                ],
+              ),
             )
           else if (_currentStep == 4)
             DuoButton(
@@ -611,97 +614,103 @@ class _NewPhraseCardState extends State<NewPhraseCard> {
   // Stepper visuel 4 étapes interactif (permet de revenir aux étapes précédentes)
   // ─────────────────────────────────────────────────────────────────────────
   Widget _build4StepsIndicator({required bool isDark}) {
-    final titles = ['1. Parlé', '2. Standard', '3. Audio', '4. Test'];
-    return Row(
-      children: [
-        if (_currentStep > 1) ...[
-          IconButton(
-            icon: const Icon(Icons.arrow_back_rounded, size: 20),
-            tooltip: 'Revenir à l\'étape précédente',
-            color: isDark ? Colors.white70 : AppColors.textPrimaryLight,
-            visualDensity: VisualDensity.compact,
-            padding: EdgeInsets.zero,
-            constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
-            onPressed: _goToPreviousStep,
-          ),
-          const SizedBox(width: 4),
-        ],
-        Expanded(
-          child: Row(
-            children: List.generate(4, (index) {
-              final stepNum = index + 1;
-              final isDone = stepNum < _currentStep;
-              final isCurrent = stepNum == _currentStep;
+    final titles = ['Parlé', 'Standard', 'Audio', 'Test'];
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Row(
+        children: [
+          if (_currentStep > 1) ...[
+            IconButton(
+              icon: const Icon(Icons.arrow_back_rounded, size: 20),
+              tooltip: 'Revenir à l\'étape précédente',
+              color: isDark ? Colors.white70 : AppColors.textPrimaryLight,
+              visualDensity: VisualDensity.compact,
+              padding: EdgeInsets.zero,
+              constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
+              onPressed: _goToPreviousStep,
+            ),
+            const SizedBox(width: 4),
+          ],
+          Expanded(
+            child: Row(
+              children: List.generate(4, (index) {
+                final stepNum = index + 1;
+                final isDone = stepNum < _currentStep;
+                final isCurrent = stepNum == _currentStep;
 
-              return Expanded(
-                child: InkWell(
-                  onTap: () => _goToStep(stepNum),
-                  borderRadius: BorderRadius.circular(8),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 2.0),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 6,
-                                decoration: BoxDecoration(
-                                  color: isDone || isCurrent
-                                      ? AppColors.primary
-                                      : (isDark ? AppColors.borderDark : AppColors.borderLight),
-                                  borderRadius: BorderRadius.circular(3),
-                                ),
-                              ),
-                              const SizedBox(height: 4),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  if (isDone) ...[
-                                    const Icon(
-                                      Icons.check_rounded,
-                                      size: 11,
-                                      color: AppColors.primary,
-                                    ),
-                                    const SizedBox(width: 2),
-                                  ] else if (stepNum == 4 && !_isPronunciationValidated) ...[
-                                    const Icon(
-                                      Icons.lock_outline_rounded,
-                                      size: 10,
-                                      color: Colors.grey,
-                                    ),
-                                    const SizedBox(width: 2),
-                                  ],
-                                  Flexible(
-                                    child: Text(
-                                      titles[index],
-                                      style: TextStyle(
-                                        fontSize: 11,
-                                        fontWeight: isCurrent ? FontWeight.bold : FontWeight.w600,
-                                        color: isCurrent
-                                            ? AppColors.primary
-                                            : (isDone
-                                                ? (isDark ? Colors.white70 : Colors.black87)
-                                                : (isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight)),
-                                      ),
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
+                return Expanded(
+                  child: InkWell(
+                    onTap: () => _goToStep(stepNum),
+                    borderRadius: BorderRadius.circular(8),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 2.0),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Container(
+                                  height: 6,
+                                  decoration: BoxDecoration(
+                                    color: isDone || isCurrent
+                                        ? AppColors.primary
+                                        : (isDark ? AppColors.borderDark : AppColors.borderLight),
+                                    borderRadius: BorderRadius.circular(3),
                                   ),
-                                ],
-                              ),
-                            ],
+                                ),
+                                const SizedBox(height: 4),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    if (isDone) ...[
+                                      const Icon(
+                                        Icons.check_rounded,
+                                        size: 11,
+                                        color: AppColors.primary,
+                                      ),
+                                      const SizedBox(width: 2),
+                                    ] else if (stepNum == 4 && !_isPronunciationValidated) ...[
+                                      const Icon(
+                                        Icons.lock_outline_rounded,
+                                        size: 10,
+                                        color: Colors.grey,
+                                      ),
+                                      const SizedBox(width: 2),
+                                    ],
+                                    Flexible(
+                                      child: FittedBox(
+                                        fit: BoxFit.scaleDown,
+                                        child: Text(
+                                          titles[index],
+                                          style: TextStyle(
+                                            fontSize: 11,
+                                            fontWeight: isCurrent ? FontWeight.bold : FontWeight.w600,
+                                            color: isCurrent
+                                                ? AppColors.primary
+                                                : (isDone
+                                                    ? (isDark ? Colors.white70 : Colors.black87)
+                                                    : (isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight)),
+                                          ),
+                                          maxLines: 1,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                        if (index < 3) const SizedBox(width: 6),
-                      ],
+                          if (index < 3) const SizedBox(width: 6),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              );
-            }),
+                );
+              }),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -946,24 +955,31 @@ class _NewPhraseCardState extends State<NewPhraseCard> {
               ],
             ),
             alignment: Alignment.center,
+            padding: const EdgeInsets.symmetric(horizontal: 14),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
                   _isListening ? Icons.graphic_eq_rounded : Icons.mic_rounded,
                   color: _isListening ? Colors.white : const Color(0xFF1CB0F6),
-                  size: 24,
+                  size: 22,
                 ),
-                const SizedBox(width: 10),
-                Text(
-                  _isListening
-                      ? 'ÉCOUTE EN COURS... CLIQUE POUR VALIDER'
-                      : (eval == null ? 'CLIQUE POUR PARLER' : 'RÉESSAYER AU MICRO'),
-                  style: TextStyle(
-                    color: _isListening ? Colors.white : const Color(0xFF1CB0F6),
-                    fontSize: 15,
-                    fontWeight: FontWeight.w900,
-                    letterSpacing: 0.8,
+                const SizedBox(width: 8),
+                Flexible(
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      _isListening
+                          ? 'ÉCOUTE EN COURS... (CLIQUER POUR FINIR)'
+                          : (eval == null ? 'CLIQUER POUR PARLER' : 'RÉESSAYER AU MICRO'),
+                      style: TextStyle(
+                        color: _isListening ? Colors.white : const Color(0xFF1CB0F6),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0.5,
+                      ),
+                      maxLines: 1,
+                    ),
                   ),
                 ),
               ],

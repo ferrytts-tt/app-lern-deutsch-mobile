@@ -165,26 +165,29 @@ class _DuoButtonState extends State<DuoButton> {
                   ),
                 )
               : Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       if (widget.icon != null) ...[
-                        Icon(widget.icon, size: 22, color: textColor),
-                        const SizedBox(width: 8),
+                        Icon(widget.icon, size: 20, color: textColor),
+                        const SizedBox(width: 6),
                       ],
                       Flexible(
-                        child: Text(
-                          widget.label.toUpperCase(),
-                          style: AppTextStyles.buttonPrimary.copyWith(
-                            color: textColor,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 0.8,
-                            fontSize: 15,
+                        child: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text(
+                            widget.label.toUpperCase(),
+                            style: AppTextStyles.buttonPrimary.copyWith(
+                              color: textColor,
+                              fontWeight: FontWeight.w900,
+                              letterSpacing: 0.5,
+                              fontSize: 14,
+                            ),
+                            maxLines: 1,
+                            textAlign: TextAlign.center,
                           ),
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.center,
                         ),
                       ),
                     ],
