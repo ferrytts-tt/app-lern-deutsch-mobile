@@ -225,9 +225,9 @@ class _MasterXpScreenState extends State<MasterXpScreen> {
     }
   }
 
-  Future<void> _speak(String text) async {
+  Future<void> _speak(String text, {String? phraseId}) async {
     try {
-      await TtsService.instance.speak(text);
+      await TtsService.instance.speak(text, phraseId: phraseId);
     } catch (_) {}
   }
 
@@ -284,7 +284,7 @@ class _MasterXpScreenState extends State<MasterXpScreen> {
     });
 
     // Prononce automatiquement la bonne réponse en allemand pour l'oreille
-    _speak(targetDe);
+    _speak(targetDe, phraseId: question.phrase.id);
   }
 
   void _verifyKeyboardInput() {
@@ -324,7 +324,7 @@ class _MasterXpScreenState extends State<MasterXpScreen> {
       }
     });
 
-    _speak(targetDe);
+    _speak(targetDe, phraseId: question.phrase.id);
   }
 
   void _goToNextQuestion() {
@@ -981,7 +981,7 @@ class _MasterXpScreenState extends State<MasterXpScreen> {
               IconButton(
                 icon: const Icon(Icons.volume_up_rounded),
                 color: _isCurrentCorrect ? AppColors.primary : Colors.red,
-                onPressed: () => _speak(targetDe),
+                onPressed: () => _speak(targetDe, phraseId: phrase.id),
                 tooltip: 'Écouter la prononciation',
               ),
             ],

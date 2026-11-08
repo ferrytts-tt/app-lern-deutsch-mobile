@@ -185,9 +185,9 @@ class _PalierExamScreenState extends State<PalierExamScreen> {
     final phrase = _questions[_currentIndex].phrase;
     setState(() => _isAudioPlaying = true);
     if (isSlow) {
-      await TtsService.instance.speak(phrase.deParle, slow: true);
+      await TtsService.instance.speak(phrase.deParle, slow: true, phraseId: phrase.id);
     } else {
-      await TtsService.instance.speak(phrase.deParle);
+      await TtsService.instance.speak(phrase.deParle, phraseId: phrase.id);
     }
     if (mounted) setState(() => _isAudioPlaying = false);
   }
@@ -324,7 +324,7 @@ class _PalierExamScreenState extends State<PalierExamScreen> {
     });
 
     // Prononciation audio naturelle du corrigé
-    TtsService.instance.speak(q.phrase.deParle);
+    TtsService.instance.speak(q.phrase.deParle, phraseId: q.phrase.id);
   }
 
   void _goToNextQuestion() {
@@ -1391,6 +1391,7 @@ class _PalierExamScreenState extends State<PalierExamScreen> {
                     tooltip: 'Réécouter la prononciation',
                     onPressed: () => TtsService.instance.speak(
                       _questions[_currentIndex].phrase.deParle,
+                      phraseId: _questions[_currentIndex].phrase.id,
                     ),
                   ),
                 ],
@@ -1782,7 +1783,7 @@ class _PalierExamScreenState extends State<PalierExamScreen> {
                                 ),
                                 IconButton(
                                   icon: const Icon(Icons.volume_up_rounded, size: 20),
-                                  onPressed: () => TtsService.instance.speak(q.phrase.deParle),
+                                  onPressed: () => TtsService.instance.speak(q.phrase.deParle, phraseId: q.phrase.id),
                                 ),
                               ],
                             ),

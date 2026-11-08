@@ -81,7 +81,7 @@ class TtsService {
 
       if (!kIsWeb) {
         await _flutterTts.setLanguage('de-DE');
-        await _flutterTts.setSpeechRate(AppConstants.defaultTtsSpeedNormal);
+        await _flutterTts.setSpeechRate(_normalizeSpeechRate(AppConstants.defaultTtsSpeedNormal));
         await _flutterTts.setVolume(1.0);
         await _flutterTts.setPitch(1.0);
         await _configureGermanVoice();
@@ -252,7 +252,7 @@ class TtsService {
       }
 
       await _flutterTts.stop();
-      await _flutterTts.setSpeechRate(targetRate.clamp(0.2, 1.0));
+      await _flutterTts.setSpeechRate(_normalizeSpeechRate(targetRate));
       await _flutterTts.setPitch(resolvedGender == 'female' ? 1.05 : 0.92);
       await _flutterTts.speak(cleanText);
     } catch (e) {
@@ -260,6 +260,20 @@ class TtsService {
       isPlayingNotifier.value = false;
       onDone?.call();
     }
+  }
+
+  /// Normalise le débit vocal pour chaque plateforme.
+  /// Sur Android, flutter_tts utilise une échelle native où ~0.42 - 0.45 correspond
+  /// au débit normal d'un locuteur allemand (1.0). Une valeur de 1.0 correspond à 200% (trop rapide).
+  double _normalizeSpeechRate(double rate) {
+    if (kIsWeb) return rate;
+    if (Platform.isAndroid) {
+      return (rate * 0.44).clamp(0.2, 0.85);
+    }
+    if (Platform.isIOS) {
+      return (rate * 0.5).clamp(0.2, 0.9);
+    }
+    return rate.clamp(0.2, 1.0);
   }
 
   /// Vérifie si une voix allemande locale est installée et utilisable hors-ligne.
