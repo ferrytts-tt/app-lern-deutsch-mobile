@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 import '../admin/presentation/admin_categories_screen.dart';
 import '../admin/presentation/admin_dashboard_screen.dart';
 import '../admin/presentation/admin_edit_phrase_screen.dart';
-import '../admin/presentation/admin_pin_screen.dart';
 import '../auth/presentation/auth_screen.dart';
 import '../home/presentation/home_screen.dart';
 import '../library/presentation/library_screen.dart';
@@ -16,6 +15,7 @@ import '../progress/presentation/progress_screen.dart';
 import '../session/presentation/session_screen.dart';
 import '../settings/presentation/settings_screen.dart';
 import '../splash/presentation/splash_screen.dart';
+import '../../core/services/subscription_service.dart';
 import '../../domain/models/media_content.dart';
 import '../../domain/models/phrase.dart';
 import '../media/presentation/media_player_screen.dart';
@@ -118,20 +118,38 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => const MediaSectionScreen(),
     ),
 
-    // 3.5 Espace Administrateur
+    // 3.5 Espace Administrateur (Strictement réservé à l'administrateur connecté)
     GoRoute(
       path: '/admin',
       parentNavigatorKey: _rootNavigatorKey,
-      builder: (context, state) => const AdminPinScreen(),
+      redirect: (context, state) {
+        if (!SubscriptionService.instance.isAdmin) {
+          return '/settings';
+        }
+        return '/admin/dashboard';
+      },
+      builder: (context, state) => const AdminDashboardScreen(),
       routes: [
         GoRoute(
           path: 'dashboard',
           parentNavigatorKey: _rootNavigatorKey,
+          redirect: (context, state) {
+            if (!SubscriptionService.instance.isAdmin) {
+              return '/settings';
+            }
+            return null;
+          },
           builder: (context, state) => const AdminDashboardScreen(),
           routes: [
             GoRoute(
               path: 'edit-phrase',
               parentNavigatorKey: _rootNavigatorKey,
+              redirect: (context, state) {
+                if (!SubscriptionService.instance.isAdmin) {
+                  return '/settings';
+                }
+                return null;
+              },
               builder: (context, state) => AdminEditPhraseScreen(
                 phrase: state.extra as Phrase?,
               ),
@@ -141,6 +159,12 @@ final GoRouter appRouter = GoRouter(
         GoRoute(
           path: 'categories',
           parentNavigatorKey: _rootNavigatorKey,
+          redirect: (context, state) {
+            if (!SubscriptionService.instance.isAdmin) {
+              return '/settings';
+            }
+            return null;
+          },
           builder: (context, state) => const AdminCategoriesScreen(),
         ),
       ],

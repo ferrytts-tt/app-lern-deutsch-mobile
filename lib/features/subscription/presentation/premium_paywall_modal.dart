@@ -396,20 +396,48 @@ class _PremiumPaywallModalState extends State<PremiumPaywallModal> {
                           borderRadius: BorderRadius.circular(16),
                         ),
                       ),
-                      onPressed: () async {
-                        final navigator = Navigator.of(context);
-                        final messenger = ScaffoldMessenger.of(context);
-                        // Activation de test / démo pour le candidat
-                        await SubscriptionService.instance.activatePremium();
-                        if (mounted) {
-                          navigator.pop(true);
-                          messenger.showSnackBar(
-                            const SnackBar(
-                              content: Text('🎉 Bienvenue dans Hoppla Pro ! Tous les lots sont débloqués.'),
-                              backgroundColor: Color(0xFF10B981),
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (dialogCtx) => AlertDialog(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                            title: const Row(
+                              children: [
+                                Icon(Icons.payment_rounded, color: Color(0xFF10B981)),
+                                SizedBox(width: 10),
+                                Text('Paiement Hoppla Pro', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                              ],
                             ),
-                          );
-                        }
+                            content: const Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Le paiement direct Google Play Store sera activé dès la validation finale du store.\n\nPour obtenir votre accès immédiat en Tunisie ou à l\'international (via D17, virement bancaire ou carte) et recevoir votre code d\'activation, contactez le support ou saisissez votre code reçu.',
+                                  style: TextStyle(fontSize: 13.5, height: 1.45),
+                                ),
+                              ],
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.of(dialogCtx).pop(),
+                                child: const Text('Fermer'),
+                              ),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0xFF10B981),
+                                  foregroundColor: Colors.white,
+                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(dialogCtx).pop();
+                                  _showActivationCodeDialog();
+                                },
+                                child: const Text('Saisir un code d\'accès'),
+                              ),
+                            ],
+                          ),
+                        );
                       },
                       child: Text(
                         _selectedPlanIndex == 1

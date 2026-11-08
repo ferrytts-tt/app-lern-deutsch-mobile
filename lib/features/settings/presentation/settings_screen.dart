@@ -685,14 +685,19 @@ class SettingsScreen extends ConsumerWidget {
 
             const SizedBox(height: 24),
 
-            // Espace Administrateur / Formateur
-            _buildSectionTitle('Espace Administrateur', isDark),
+            // Espace Administrateur (Uniquement visible si l'administrateur est connecté)
             ValueListenableBuilder<bool>(
               valueListenable: SubscriptionService.instance.premiumNotifier,
               builder: (context, isPrem, _) {
                 final isAdmin = SubscriptionService.instance.isAdmin;
+                if (!isAdmin) {
+                  return const SizedBox.shrink(); // TOTALEMENT MASQUÉ POUR LE CANDIDAT
+                }
                 return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    const SizedBox(height: 24),
+                    _buildSectionTitle('👑 Espace Administrateur', isDark),
                     CustomCard(
                       padding: const EdgeInsets.all(16),
                       child: ListTile(
@@ -700,52 +705,39 @@ class SettingsScreen extends ConsumerWidget {
                         leading: Container(
                           padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: (isAdmin ? const Color(0xFF10B981) : AppColors.secondary).withValues(alpha: 0.15),
+                            color: const Color(0xFF10B981).withValues(alpha: 0.15),
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          child: Icon(
-                            isAdmin ? Icons.verified_user_rounded : Icons.admin_panel_settings_rounded,
-                            color: isAdmin ? const Color(0xFF10B981) : AppColors.secondary,
+                          child: const Icon(
+                            Icons.verified_user_rounded,
+                            color: Color(0xFF10B981),
                           ),
                         ),
                         title: Text(
-                          isAdmin ? 'Compte Administrateur Connecté' : 'Authentification Administrateur',
+                          'Compte Administrateur Connecté',
                           style: AppTextStyles.bodyLarge(isDark: isDark).copyWith(
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        subtitle: Text(
-                          isAdmin
-                              ? 'Accès illimité actif (Lots 1-30 gratuits, Rätsel illimité et Sans publicité)'
-                              : 'Connectez-vous pour débloquer tout le contenu de l\'application',
+                        subtitle: const Text(
+                          'Accès total actif (Lots 1-30 gratuits, Rätsel illimité, Zéro pub)',
                           style: TextStyle(
                             fontSize: 12.5,
-                            color: isAdmin ? const Color(0xFF10B981) : (isDark ? Colors.white60 : Colors.black54),
-                            fontWeight: isAdmin ? FontWeight.w600 : FontWeight.normal,
+                            color: Color(0xFF10B981),
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
-                        trailing: isAdmin
-                            ? TextButton(
-                                onPressed: () async {
-                                  await SubscriptionService.instance.logoutAdmin();
-                                  if (context.mounted) {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      const SnackBar(content: Text('Déconnexion Administrateur effectuée.')),
-                                    );
-                                  }
-                                },
-                                child: const Text('Déconnexion', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
-                              )
-                            : ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: AppColors.primary,
-                                  foregroundColor: Colors.white,
-                                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                                ),
-                                onPressed: () => _showAdminLoginDialog(context),
-                                child: const Text('Connexion'),
-                              ),
+                        trailing: TextButton(
+                          onPressed: () async {
+                            await SubscriptionService.instance.logoutAdmin();
+                            if (context.mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Déconnexion Administrateur effectuée.')),
+                              );
+                            }
+                          },
+                          child: const Text('Déconnexion', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+                        ),
                       ),
                     ),
                     const SizedBox(height: 12),
@@ -759,17 +751,41 @@ class SettingsScreen extends ConsumerWidget {
                             color: AppColors.primary.withValues(alpha: 0.15),
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          child: const Icon(Icons.tune_rounded, color: AppColors.primary),
+                          child: const Icon(Icons.menu_book_rounded, color: AppColors.primary),
                         ),
                         title: Text(
-                          'Gestion des Phrases & Thèmes',
+                          'Gestion des Phrases & Catalogue',
                           style: AppTextStyles.bodyLarge(isDark: isDark).copyWith(
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        subtitle: const Text('Ajouter, modifier ou supprimer des phrases (Code PIN: 1234)'),
+                        subtitle: const Text('Ajouter, modifier ou supprimer des phrases du catalogue'),
                         trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-                        onTap: () => context.push('/admin'),
+                        onTap: () => context.push('/admin/dashboard'),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    CustomCard(
+                      padding: const EdgeInsets.all(16),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.zero,
+                        leading: Container(
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: AppColors.secondary.withValues(alpha: 0.15),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: const Icon(Icons.category_rounded, color: AppColors.secondary),
+                        ),
+                        title: Text(
+                          'Gestion des Catégories & Thèmes',
+                          style: AppTextStyles.bodyLarge(isDark: isDark).copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        subtitle: const Text('Créer et organiser les thématiques pédagogiques'),
+                        trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+                        onTap: () => context.push('/admin/categories'),
                       ),
                     ),
                   ],
@@ -831,11 +847,18 @@ class SettingsScreen extends ConsumerWidget {
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 6),
-                  Text(
-                    'Version 1.0.0 · Répétition espacée & Ancrage',
-                    style: TextStyle(
-                      fontSize: 11,
-                      color: isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight,
+                  GestureDetector(
+                    onTap: () => _showAdminLoginDialog(context),
+                    behavior: HitTestBehavior.opaque,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 6.0),
+                      child: Text(
+                        'Version 1.0.0 · Répétition espacée & Ancrage',
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight,
+                        ),
+                      ),
                     ),
                   ),
                 ],
