@@ -1,4 +1,8 @@
 import 'dart:math';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'web_speech.dart';
 
 /// Correspondance mot par mot pour l'évaluation de prononciation
@@ -38,6 +42,9 @@ class PronunciationEvaluation {
 /// Service d'écoute micro, reconnaissance vocale et évaluation de la prononciation allemande.
 class PronunciationService {
   static PronunciationService? _instance;
+  final stt.SpeechToText _speechToText = stt.SpeechToText();
+  bool _isMobileSttInitialized = false;
+  bool _isListening = false;
 
   PronunciationService._();
 
@@ -46,16 +53,31 @@ class PronunciationService {
     return _instance!;
   }
 
-  bool get isSpeechRecognitionAvailable => WebSpeechPlatform.isSpeechRecognitionAvailable;
-
-  /// Joue le son de validation (carillon montant joyeux).
-  void playSuccessSound() {
-    WebSpeechPlatform.playSuccessChime();
+  bool get isSpeechRecognitionAvailable {
+    if (kIsWeb) {
+      return WebSpeechPlatform.isSpeechRecognitionAvailable;
+    }
+    return true;
   }
 
-  /// Joue le son d'échec (ton doux descendant).
+  bool get isListening => _isListening;
+
+  /// Joue le son de validation (carillon montant joyeux ou retour haptique sur mobile).
+  void playSuccessSound() {
+    if (kIsWeb) {
+      WebSpeechPlatform.playSuccessChime();
+    } else {
+      HapticFeedback.lightImpact();
+    }
+  }
+
+  /// Joue le son d'échec (ton doux descendant ou retour haptique sur mobile).
   void playFailureSound() {
-    WebSpeechPlatform.playFailureChime();
+    if (kIsWeb) {
+      WebSpeechPlatform.playFailureChime();
+    } else {
+      HapticFeedback.mediumImpact();
+    }
   }
 
   /// Démarre l'écoute et la reconnaissance vocale allemande (de-DE).
@@ -64,16 +86,102 @@ class PronunciationService {
     required Function(String error) onError,
     required Function(String text) onEnd,
   }) {
-    return WebSpeechPlatform.startGermanSpeechRecognition(
+    if (kIsWeb) {
+      return WebSpeechPlatform.startGermanSpeechRecognition(
+        onResult: onResult,
+        onError: onError,
+        onEnd: onEnd,
+      );
+    }
+
+    _startMobileListening(
       onResult: onResult,
       onError: onError,
       onEnd: onEnd,
     );
+    return true;
+  }
+
+  Future<void> _startMobileListening({
+    required Function(String text, bool isFinal) onResult,
+    required Function(String error) onError,
+    required Function(String text) onEnd,
+  }) async {
+    try {
+      // 1. Demande de permission microphone explicite
+      final status = await Permission.microphone.request();
+      if (!status.isGranted) {
+        onError("Permission microphone non accordée. Autorisez le micro pour tester votre prononciation.");
+        return;
+      }
+
+      // 2. Initialisation de SpeechToText si pas encore fait
+      if (!_isMobileSttInitialized) {
+        _isMobileSttInitialized = await _speechToText.initialize(
+          onError: (val) {
+            debugPrint('[SpeechToText] onError: ${val.errorMsg}');
+            onError(val.errorMsg);
+          },
+          onStatus: (val) {
+            debugPrint('[SpeechToText] onStatus: $val');
+            if (val == 'done' || val == 'notListening') {
+              _isListening = false;
+            }
+          },
+        );
+      }
+
+      if (!_isMobileSttInitialized) {
+        onError("La reconnaissance vocale n'est pas disponible sur cet appareil.");
+        return;
+      }
+
+      // 3. Détecter la locale allemande disponible
+      final locales = await _speechToText.locales();
+      String targetLocale = 'de_DE';
+      try {
+        final german = locales.firstWhere(
+          (l) => l.localeId.toLowerCase().startsWith('de'),
+        );
+        targetLocale = german.localeId;
+      } catch (_) {
+        targetLocale = 'de_DE';
+      }
+
+      _isListening = true;
+
+      await _speechToText.listen(
+        onResult: (result) {
+          onResult(result.recognizedWords, result.finalResult);
+          if (result.finalResult) {
+            _isListening = false;
+            onEnd(result.recognizedWords);
+          }
+        },
+        listenOptions: stt.SpeechListenOptions(
+          localeId: targetLocale,
+          listenMode: stt.ListenMode.confirmation,
+          cancelOnError: false,
+          partialResults: true,
+        ),
+      );
+    } catch (e) {
+      debugPrint('[SpeechToText] Erreur startListening: $e');
+      _isListening = false;
+      onError(e.toString());
+    }
   }
 
   /// Arrête la reconnaissance vocale.
   void stopListening() {
-    WebSpeechPlatform.stopGermanSpeechRecognition();
+    if (kIsWeb) {
+      WebSpeechPlatform.stopGermanSpeechRecognition();
+    } else {
+      if (_speechToText.isListening) {
+        _speechToText.stop();
+      }
+      _isListening = false;
+    }
   }
 
   /// Évalue la prononciation du candidat de manière rigoureuse et exigeante.

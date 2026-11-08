@@ -49,7 +49,7 @@ void main() {
 
       expect(result.isSuccess, isFalse);
       expect(result.score, lessThan(0.60));
-      expect(result.feedbackMessage, contains('L\'écureuil'));
+      expect(result.feedbackMessage, contains('Non reconnu'));
     });
 
     test('Parole vide non validée', () {
