@@ -108,13 +108,30 @@ class RaetselVictoryScreen extends StatelessWidget {
 
                   // Titre
                   Center(
-                    child: Text(
-                      'NIVEAU ${level.levelNumber} RÉUSSI !',
-                      style: const TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 0.8,
-                      ),
+                    child: Column(
+                      children: [
+                        Text(
+                          'NIVEAU ${level.levelNumber} TERMINÉ AVEC SUCCÈS ! 🎉',
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: 0.6,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          isArabic
+                              ? 'تهانينا! لقد أنهيت المستوى ${level.levelNumber} بنجاح'
+                              : 'Félicitations ! Vous avez terminé le niveau ${level.levelNumber} avec succès.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                            color: isDark ? Colors.white70 : const Color(0xFF64748B),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(height: 10),

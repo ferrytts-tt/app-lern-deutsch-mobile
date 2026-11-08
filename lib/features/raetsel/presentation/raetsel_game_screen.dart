@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:app_lern_deutsch_mobile/core/theme/app_colors.dart';
 import 'package:app_lern_deutsch_mobile/core/services/tts_service.dart';
+import 'package:app_lern_deutsch_mobile/core/services/pronunciation_service.dart';
 import 'package:app_lern_deutsch_mobile/features/settings/presentation/settings_controller.dart';
 import 'package:app_lern_deutsch_mobile/features/raetsel/domain/models/raetsel_level.dart';
 import 'package:app_lern_deutsch_mobile/features/raetsel/domain/raetsel_constants.dart';
@@ -124,6 +125,21 @@ class _RaetselGameScreenState extends ConsumerState<RaetselGameScreen> {
           _mistakeCount++;
           _wordsWithMistakes.add(clue.word);
           RaetselManager.instance.onWordMistake(phraseId: clue.phraseId);
+          // Effet sonore d'erreur bienveillant
+          PronunciationService.instance.playFailureSound();
+        }
+      }
+    } else if (_selectedLetterNumber != null) {
+      // Dans la phrase secrète
+      for (final word in widget.level.secretWords) {
+        for (final c in word.chars) {
+          if (c.letterNumber == letterNum) {
+            if (char != c.char.toUpperCase()) {
+              _mistakeCount++;
+              PronunciationService.instance.playFailureSound();
+            }
+            return;
+          }
         }
       }
     }
@@ -165,7 +181,7 @@ class _RaetselGameScreenState extends ConsumerState<RaetselGameScreen> {
   void _autoAdvance() {
     if (_selectedClueIndex != null && _selectedCharIndex != null) {
       final clue = widget.level.clues[_selectedClueIndex!];
-      // Chercher une case vide suivante dans le mot courant
+      // 1. Chercher une case vide suivante dans le mot courant (vers l'avant)
       for (int i = _selectedCharIndex! + 1; i < clue.letterNumbers.length; i++) {
         final num = clue.letterNumbers[i];
         if (!_enteredLetters.containsKey(num)) {
@@ -175,7 +191,19 @@ class _RaetselGameScreenState extends ConsumerState<RaetselGameScreen> {
         }
       }
 
-      // Si le mot courant est complet, passer au prochain indice incomplet
+      // 2. Si le mot courant n'est pas encore verrouillé, chercher une case vide antérieure
+      if (!_lockedWords.contains(clue.word)) {
+        for (int i = 0; i < _selectedCharIndex!; i++) {
+          final num = clue.letterNumbers[i];
+          if (!_enteredLetters.containsKey(num)) {
+            _selectedCharIndex = i;
+            _selectedLetterNumber = num;
+            return;
+          }
+        }
+      }
+
+      // 3. Passer au prochain indice incomplet
       for (int c = 0; c < widget.level.clues.length; c++) {
         final nextClue = widget.level.clues[c];
         if (!_lockedWords.contains(nextClue.word)) {
@@ -191,6 +219,20 @@ class _RaetselGameScreenState extends ConsumerState<RaetselGameScreen> {
           }
         }
       }
+
+      // 4. Si tous les indices sont résolus mais la phrase secrète ne l'est pas encore
+      if (!_isSecretSolved) {
+        for (final word in widget.level.secretWords) {
+          for (final c in word.chars) {
+            if (c.isLetter && c.letterNumber != null && !_enteredLetters.containsKey(c.letterNumber!)) {
+              _selectedClueIndex = null;
+              _selectedCharIndex = null;
+              _selectedLetterNumber = c.letterNumber!;
+              return;
+            }
+          }
+        }
+      }
     } else {
       // Dans la phrase secrète : chercher la prochaine case vide
       for (final word in widget.level.secretWords) {
@@ -200,6 +242,23 @@ class _RaetselGameScreenState extends ConsumerState<RaetselGameScreen> {
             _selectedCharIndex = null;
             _selectedLetterNumber = c.letterNumber!;
             return;
+          }
+        }
+      }
+
+      // Si la phrase secrète est remplie, chercher dans les indices incomplets
+      for (int c = 0; c < widget.level.clues.length; c++) {
+        final clue = widget.level.clues[c];
+        if (!_lockedWords.contains(clue.word)) {
+          for (int i = 0; i < clue.letterNumbers.length; i++) {
+            final num = clue.letterNumbers[i];
+            if (!_enteredLetters.containsKey(num)) {
+              _selectedClueIndex = c;
+              _selectedCharIndex = i;
+              _selectedLetterNumber = num;
+              _scrollToClue(c);
+              return;
+            }
           }
         }
       }
@@ -229,6 +288,9 @@ class _RaetselGameScreenState extends ConsumerState<RaetselGameScreen> {
           final candidate = clue.letterNumbers.map((lNum) => _enteredLetters[lNum] ?? '').join();
           if (candidate.toUpperCase() == clue.word.toUpperCase()) {
             _lockedWords.add(clue.word);
+
+            // Effet sonore de bonne réponse
+            PronunciationService.instance.playSuccessSound();
 
             // Intégration répétition espacée (SRS Leitner +1 si sans indice et sans erreur)
             final hadMistake = _wordsWithMistakes.contains(clue.word);
@@ -294,6 +356,9 @@ class _RaetselGameScreenState extends ConsumerState<RaetselGameScreen> {
       if (secretMatch) {
         _isSecretSolved = true;
 
+        // Effet sonore de validation pour la phrase secrète
+        PronunciationService.instance.playSuccessSound();
+
         // Ajouter la phrase secrète en tête des phrases captées
         if (!_capturedPhrases.any((item) => item.isSecret)) {
           _capturedPhrases.insert(0, CapturedPhraseItem(
@@ -315,12 +380,37 @@ class _RaetselGameScreenState extends ConsumerState<RaetselGameScreen> {
     // 3. Vérifier si le niveau entier est achevé
     if (_isSecretSolved && _lockedWords.length == widget.level.clues.length) {
       _isLevelComplete = true;
-      widget.onLevelCompleted?.call();
+      // Note: Ne pas appeler widget.onLevelCompleted ici pour éviter le déphasage
+      // (l'avancement au niveau suivant se fait lors du clic sur 'Niveau suivant' dans le modal de victoire)
       _onLevelFullyCompleted();
     }
   }
 
   Future<void> _onLevelFullyCompleted() async {
+    // Effet sonore de niveau terminé avec succès !
+    PronunciationService.instance.playSuccessSound();
+
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Row(
+            children: [
+              const Icon(Icons.emoji_events_rounded, color: Colors.amber),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  'Niveau ${widget.level.levelNumber} terminé avec succès ! 🎉',
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
+          backgroundColor: const Color(0xFF059669),
+          duration: const Duration(seconds: 3),
+        ),
+      );
+    }
+
     // Appliquer les récompenses d'XP, diamants, plafond quotidien et série
     final rewardResult = await RaetselManager.instance.applyLevelCompletionRewards(
       wordsCount: widget.level.clues.length,

@@ -195,20 +195,24 @@ void main() {
     // Vérifier que les 2 mots sont résolus : 2/2
     expect(find.text('2/2'), findsOneWidget);
     expect(find.text('PHRASE MYSTÈRE RÉSOLUE !'), findsOneWidget);
-    expect(levelCompletedCalled, isTrue);
 
     // Attendre le déclenchement du modal de victoire
     await tester.pump(const Duration(milliseconds: 800));
     await tester.pumpAndSettle();
 
     // Vérifier l'écran de victoire RaetselVictoryScreen
-    expect(find.text('NIVEAU 1 RÉUSSI !'), findsOneWidget);
+    expect(find.text('NIVEAU 1 TERMINÉ AVEC SUCCÈS ! 🎉'), findsOneWidget);
     expect(find.text('Niveau suivant'), findsOneWidget);
     expect(find.textContaining('XP'), findsWidgets);
     expect(find.textContaining('Diamants'), findsWidgets);
     expect(find.text('PHRASE SECRÈTE RÉSOLUE'), findsOneWidget);
     expect(find.text('Adverbe essentiel'), findsOneWidget); // Fait intéressant de la phrase secrète
     expect(find.text('Salutation courante'), findsOneWidget); // Fait intéressant du mot 1
+
+    // Cliquer sur Niveau suivant appelle onLevelCompleted sans déphasage
+    await tester.tap(find.text('Niveau suivant'));
+    await tester.pumpAndSettle();
+    expect(levelCompletedCalled, isTrue);
   });
 
   testWidgets('Un mot trouvé joue l\'audio et s\'affiche dans le bandeau Phrases captées', (tester) async {

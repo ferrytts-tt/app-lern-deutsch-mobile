@@ -589,7 +589,7 @@ class _MediaSectionScreenState extends State<MediaSectionScreen> {
 
     return Container(
       margin: const EdgeInsets.only(bottom: 20),
-      padding: const EdgeInsets.all(18),
+      padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
         color: isDark ? const Color(0xFF161F2E) : Colors.white,
         borderRadius: BorderRadius.circular(22),
@@ -758,7 +758,7 @@ class _MediaSectionScreenState extends State<MediaSectionScreen> {
     final isPlayed = _playedStatus[playedKey] ?? false;
 
     return Container(
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
         borderRadius: BorderRadius.circular(16),
@@ -849,41 +849,48 @@ class _MediaSectionScreenState extends State<MediaSectionScreen> {
           // Pied de tuile
           Row(
             children: [
-              Text(
-                '⏱ ${item.durationSeconds}s • $speakersLabel',
-                style: TextStyle(
-                  fontSize: 11.5,
-                  fontWeight: FontWeight.w500,
-                  color: isDark ? Colors.white54 : Colors.black54,
+              Expanded(
+                child: Text(
+                  '⏱ ${item.durationSeconds}s • $speakersLabel',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 11.5,
+                    fontWeight: FontWeight.w500,
+                    color: isDark ? Colors.white54 : Colors.black54,
+                  ),
                 ),
               ),
-              const Spacer(),
+              const SizedBox(width: 8),
 
               // Bouton Écoute auto
               if (onToggleAutoListening != null) ...[
                 IconButton(
                   onPressed: onToggleAutoListening,
+                  padding: EdgeInsets.zero,
+                  constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
                   tooltip: isInAutoListening ? 'Retirer de l\'Écoute auto' : 'Ajouter à l\'Écoute auto',
                   icon: Icon(
                     isInAutoListening ? Icons.headset_rounded : Icons.headset_off_rounded,
-                    size: 20,
+                    size: 19,
                     color: isInAutoListening ? const Color(0xFF8B5CF6) : Colors.grey,
                   ),
                 ),
-                const SizedBox(width: 4),
+                const SizedBox(width: 6),
               ],
 
               // Bouton Écouter
               ElevatedButton.icon(
                 onPressed: () => _openMediaPlayer(item),
-                icon: const Icon(Icons.play_arrow_rounded, size: 18),
+                icon: const Icon(Icons.play_arrow_rounded, size: 17),
                 label: const Text('Écouter'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: accentColor,
                   foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                  padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 7),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   elevation: 2,
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 ),
               ),
             ],
