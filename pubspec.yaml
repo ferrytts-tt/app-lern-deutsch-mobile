@@ -63,5 +63,6 @@ flutter:
     - assets/animations/
     - assets/audio/male/
     - assets/audio/female/
+    - assets/audio/sfx/
     - assets/media/
     - assets/media/audio/

@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'web_speech.dart';
@@ -43,6 +44,7 @@ class PronunciationEvaluation {
 class PronunciationService {
   static PronunciationService? _instance;
   final stt.SpeechToText _speechToText = stt.SpeechToText();
+  AudioPlayer? _sfxPlayer;
   bool _isMobileSttInitialized = false;
   bool _isListening = false;
 
@@ -51,6 +53,23 @@ class PronunciationService {
   static PronunciationService get instance {
     _instance ??= PronunciationService._();
     return _instance!;
+  }
+
+  AudioPlayer get _getSfxPlayer {
+    _sfxPlayer ??= AudioPlayer();
+    return _sfxPlayer!;
+  }
+
+  Future<void> _playSfxAsset(String assetPath) async {
+    try {
+      final player = _getSfxPlayer;
+      await player.stop();
+      await player.setAsset(assetPath);
+      await player.seek(Duration.zero);
+      await player.play();
+    } catch (e) {
+      debugPrint('[PronunciationService] SFX playback error ($assetPath): $e');
+    }
   }
 
   bool get isSpeechRecognitionAvailable {
@@ -62,21 +81,23 @@ class PronunciationService {
 
   bool get isListening => _isListening;
 
-  /// Joue le son de validation (carillon montant joyeux ou retour haptique sur mobile).
+  /// Joue le son de validation (carillon montant joyeux style Duolingo + retour haptique sur mobile).
   void playSuccessSound() {
+    HapticFeedback.lightImpact();
     if (kIsWeb) {
       WebSpeechPlatform.playSuccessChime();
     } else {
-      HapticFeedback.lightImpact();
+      _playSfxAsset('assets/audio/sfx/correct.wav');
     }
   }
 
-  /// Joue le son d'échec (ton doux descendant ou retour haptique sur mobile).
+  /// Joue le son d'échec (ton doux descendant bienveillant + retour haptique sur mobile).
   void playFailureSound() {
+    HapticFeedback.mediumImpact();
     if (kIsWeb) {
       WebSpeechPlatform.playFailureChime();
     } else {
-      HapticFeedback.mediumImpact();
+      _playSfxAsset('assets/audio/sfx/wrong.wav');
     }
   }
 
