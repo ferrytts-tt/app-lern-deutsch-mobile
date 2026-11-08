@@ -27,6 +27,126 @@ class SettingsScreen extends ConsumerWidget {
     );
   }
 
+  void _showAdminLoginDialog(BuildContext context) {
+    final emailController = TextEditingController();
+    final passwordController = TextEditingController();
+    bool isAuthenticating = false;
+    String? errorMessage;
+
+    showDialog(
+      context: context,
+      builder: (dialogCtx) => StatefulBuilder(
+        builder: (ctx, setDialogState) => AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          title: const Row(
+            children: [
+              Icon(Icons.admin_panel_settings_rounded, color: AppColors.primary, size: 26),
+              SizedBox(width: 10),
+              Text('Connexion Admin', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+            ],
+          ),
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Entrez vos identifiants administrateur pour débloquer l\'accès complet (gratuit à vie, tous les lots et niveaux).',
+                  style: TextStyle(fontSize: 13, color: Colors.grey),
+                ),
+                const SizedBox(height: 16),
+                TextField(
+                  controller: emailController,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    labelText: 'Adresse e-mail',
+                    prefixIcon: const Icon(Icons.email_outlined),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                TextField(
+                  controller: passwordController,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: 'Mot de passe',
+                    prefixIcon: const Icon(Icons.lock_outline_rounded),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                ),
+                if (errorMessage != null) ...[
+                  const SizedBox(height: 10),
+                  Text(
+                    errorMessage!,
+                    style: const TextStyle(color: Colors.red, fontSize: 13, fontWeight: FontWeight.w600),
+                  ),
+                ],
+              ],
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(dialogCtx).pop(),
+              child: const Text('Annuler'),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppColors.primary,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              ),
+              onPressed: isAuthenticating
+                  ? null
+                  : () async {
+                      setDialogState(() {
+                        isAuthenticating = true;
+                        errorMessage = null;
+                      });
+
+                      final success = await SubscriptionService.instance.verifyAndLoginAdmin(
+                        email: emailController.text,
+                        password: passwordController.text,
+                      );
+
+                      if (success) {
+                        if (dialogCtx.mounted) Navigator.of(dialogCtx).pop();
+                        if (context.mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Row(
+                                children: [
+                                  Icon(Icons.verified_rounded, color: Colors.white),
+                                  SizedBox(width: 8),
+                                  Expanded(
+                                    child: Text(
+                                      '👑 Bienvenue Administrateur ! Accès total débloqué à vie.',
+                                      style: TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              backgroundColor: Color(0xFF10B981),
+                              duration: Duration(seconds: 4),
+                            ),
+                          );
+                        }
+                      } else {
+                        setDialogState(() {
+                          isAuthenticating = false;
+                          errorMessage = 'Identifiants incorrects. Accès refusé.';
+                        });
+                      }
+                    },
+              child: isAuthenticating
+                  ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                  : const Text('Se connecter'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   void _confirmReset(BuildContext context, SettingsController controller) {
     showDialog(
       context: context,
@@ -567,28 +687,94 @@ class SettingsScreen extends ConsumerWidget {
 
             // Espace Administrateur / Formateur
             _buildSectionTitle('Espace Administrateur', isDark),
-            CustomCard(
-              padding: const EdgeInsets.all(16),
-              child: ListTile(
-                contentPadding: EdgeInsets.zero,
-                leading: Container(
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: AppColors.secondary.withValues(alpha: 0.15),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: const Icon(Icons.admin_panel_settings_rounded, color: AppColors.secondary),
-                ),
-                title: Text(
-                  'Gestion des Phrases (Admin)',
-                  style: AppTextStyles.bodyLarge(isDark: isDark).copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                subtitle: const Text('Ajouter, modifier ou supprimer des phrases'),
-                trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-                onTap: () => context.push('/admin'),
-              ),
+            ValueListenableBuilder<bool>(
+              valueListenable: SubscriptionService.instance.premiumNotifier,
+              builder: (context, isPrem, _) {
+                final isAdmin = SubscriptionService.instance.isAdmin;
+                return Column(
+                  children: [
+                    CustomCard(
+                      padding: const EdgeInsets.all(16),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.zero,
+                        leading: Container(
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: (isAdmin ? const Color(0xFF10B981) : AppColors.secondary).withValues(alpha: 0.15),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Icon(
+                            isAdmin ? Icons.verified_user_rounded : Icons.admin_panel_settings_rounded,
+                            color: isAdmin ? const Color(0xFF10B981) : AppColors.secondary,
+                          ),
+                        ),
+                        title: Text(
+                          isAdmin ? 'Compte Administrateur Connecté' : 'Authentification Administrateur',
+                          style: AppTextStyles.bodyLarge(isDark: isDark).copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        subtitle: Text(
+                          isAdmin
+                              ? 'Accès illimité actif (Lots 1-30 gratuits, Rätsel illimité et Sans publicité)'
+                              : 'Connectez-vous pour débloquer tout le contenu de l\'application',
+                          style: TextStyle(
+                            fontSize: 12.5,
+                            color: isAdmin ? const Color(0xFF10B981) : (isDark ? Colors.white60 : Colors.black54),
+                            fontWeight: isAdmin ? FontWeight.w600 : FontWeight.normal,
+                          ),
+                        ),
+                        trailing: isAdmin
+                            ? TextButton(
+                                onPressed: () async {
+                                  await SubscriptionService.instance.logoutAdmin();
+                                  if (context.mounted) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(content: Text('Déconnexion Administrateur effectuée.')),
+                                    );
+                                  }
+                                },
+                                child: const Text('Déconnexion', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+                              )
+                            : ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppColors.primary,
+                                  foregroundColor: Colors.white,
+                                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                                ),
+                                onPressed: () => _showAdminLoginDialog(context),
+                                child: const Text('Connexion'),
+                              ),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    CustomCard(
+                      padding: const EdgeInsets.all(16),
+                      child: ListTile(
+                        contentPadding: EdgeInsets.zero,
+                        leading: Container(
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: AppColors.primary.withValues(alpha: 0.15),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: const Icon(Icons.tune_rounded, color: AppColors.primary),
+                        ),
+                        title: Text(
+                          'Gestion des Phrases & Thèmes',
+                          style: AppTextStyles.bodyLarge(isDark: isDark).copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        subtitle: const Text('Ajouter, modifier ou supprimer des phrases (Code PIN: 1234)'),
+                        trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+                        onTap: () => context.push('/admin'),
+                      ),
+                    ),
+                  ],
+                );
+              },
             ),
 
             const SizedBox(height: 24),
