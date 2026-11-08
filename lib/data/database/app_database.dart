@@ -514,6 +514,10 @@ class AppDatabase {
   }) async {
     if (_isInMemory) {
       _webUserProfile = profile;
+      try {
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setString('web_user_profile', jsonEncode(profile.toMap()));
+      } catch (_) {}
       final now = DateTime.now();
       for (final p in demoPhrases) {
         _webPhrases[p.id] = p;

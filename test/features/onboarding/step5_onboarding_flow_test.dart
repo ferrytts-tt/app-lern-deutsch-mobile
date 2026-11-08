@@ -3,9 +3,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:app_lern_deutsch_mobile/core/constants/app_constants.dart';
 import 'package:app_lern_deutsch_mobile/core/services/tts_service.dart';
+import 'package:app_lern_deutsch_mobile/core/widgets/duo_button.dart';
 import 'package:app_lern_deutsch_mobile/core/widgets/duo_confetti.dart';
 import 'package:app_lern_deutsch_mobile/core/widgets/mascot_widget.dart';
 import 'package:app_lern_deutsch_mobile/data/database/app_database.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:app_lern_deutsch_mobile/features/onboarding/presentation/onboarding_screen.dart';
 
 void main() {
@@ -41,8 +43,10 @@ void main() {
       });
 
       await tester.pumpWidget(
-        const MaterialApp(
-          home: OnboardingScreen(),
+        const ProviderScope(
+          child: MaterialApp(
+            home: OnboardingScreen(),
+          ),
         ),
       );
       await tester.pumpAndSettle();
@@ -54,22 +58,19 @@ void main() {
       await tester.pumpAndSettle();
 
       // ── 2. Choix de la langue de traduction (Section 2.2) ────────────────
-      expect(find.text('Langue de traduction'), findsOneWidget);
-      expect(find.text('العربية (Arabe)'), findsOneWidget);
-      expect(find.text('Français'), findsOneWidget);
-      await tester.tap(find.text('CONTINUER'));
+      expect(find.textContaining('Langue principale'), findsOneWidget);
+      expect(find.textContaining('العربية (Arabe)'), findsWidgets);
+      // Sélectionner l'arabe pour correspondre aux réponses de démo attendues
+      await tester.tap(find.textContaining('العربية (Arabe)').first);
+      await tester.pumpAndSettle();
+      final step2Scroll1 = find.byType(SingleChildScrollView).first;
+      final continuerInStep21 = find.descendant(of: step2Scroll1, matching: find.text('CONTINUER'));
+      await tester.dragUntilVisible(continuerInStep21, step2Scroll1, const Offset(0, -300));
+      await tester.pumpAndSettle();
+      await tester.tap(continuerInStep21);
       await tester.pumpAndSettle();
 
-      // ── 3. Question de niveau (Section 2.3) ──────────────────────────────
-      expect(find.text('Quel est ton niveau actuel ?'), findsOneWidget);
-      expect(find.text('B2 ou plus'), findsOneWidget);
-      // Sélectionner B2 ou plus
-      await tester.tap(find.text('B2 ou plus'));
-      await tester.pumpAndSettle();
-      await tester.tap(find.text('CONTINUER'));
-      await tester.pumpAndSettle();
-
-      // ── 4. Choix de l'objectif quotidien (Section 2.4) ────────────────────
+      // ── 3. Choix de l'objectif quotidien (Section 2.4) ────────────────────
       expect(find.text('Choix de l\'objectif quotidien'), findsOneWidget);
       expect(find.text('Normal (10 phrases)'), findsOneWidget);
       await tester.tap(find.text('CONTINUER'));
@@ -133,7 +134,7 @@ void main() {
       final user = await appDb.getUserProfile();
       expect(user.langueTraduction, equals('ar'));
       expect(user.objectifQuotidien, equals(10));
-      expect(user.niveauDeclare, equals('B2 ou plus'));
+      expect(user.niveauDeclare, equals('B2'));
       expect(user.heureRappel, equals('19:00'));
 
       // 2. Progression : Les 3 phrases de la démo sont ajoutées à la file de révision
@@ -162,8 +163,10 @@ void main() {
       });
 
       await tester.pumpWidget(
-        const MaterialApp(
-          home: OnboardingScreen(),
+        const ProviderScope(
+          child: MaterialApp(
+            home: OnboardingScreen(),
+          ),
         ),
       );
       await tester.pumpAndSettle();
@@ -173,24 +176,24 @@ void main() {
       await tester.pumpAndSettle();
 
       // Écran 2 : Choisir le Français
-      await tester.tap(find.text('Français'));
+      await tester.tap(find.textContaining('Français').first);
       await tester.pumpAndSettle();
-      await tester.tap(find.text('CONTINUER'));
+      final step2Scroll2 = find.byType(SingleChildScrollView).first;
+      final continuerInStep22 = find.descendant(of: step2Scroll2, matching: find.text('CONTINUER'));
+      await tester.dragUntilVisible(continuerInStep22, step2Scroll2, const Offset(0, -300));
       await tester.pumpAndSettle();
-
-      // Écran 3 : Choisir A2
-      await tester.tap(find.text('A2'));
-      await tester.pumpAndSettle();
-      await tester.tap(find.text('CONTINUER'));
+      await tester.tap(continuerInStep22);
       await tester.pumpAndSettle();
 
-      // Écran 4 : Choisir Léger (5 phrases)
-      await tester.tap(find.text('Léger (5 phrases)'));
+      // Écran 3 : Choisir Léger (5 phrases)
+      expect(find.text('Choix de l\'objectif quotidien'), findsOneWidget);
+      expect(find.text('Léger (5 phrases)').hitTestable(), findsOneWidget);
+      await tester.tap(find.text('Léger (5 phrases)').hitTestable());
       await tester.pumpAndSettle();
-      await tester.tap(find.text('CONTINUER'));
+      await tester.tap(find.text('CONTINUER').hitTestable());
       await tester.pumpAndSettle();
 
-      // Écran 5 : Passer à la démo
+      // Écran 4 : Passer à la démo
       await tester.tap(find.text('PASSER À LA MINI-DÉMO'));
       await tester.pumpAndSettle();
 
@@ -231,7 +234,7 @@ void main() {
       final user = await appDb.getUserProfile();
       expect(user.langueTraduction, equals('fr'));
       expect(user.objectifQuotidien, equals(5));
-      expect(user.niveauDeclare, equals('A2'));
+      expect(user.niveauDeclare, equals('B2'));
       expect(user.heureRappel, equals('21:00'));
     });
   });

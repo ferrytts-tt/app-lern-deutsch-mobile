@@ -20,13 +20,12 @@ import '../../settings/presentation/settings_controller.dart';
 /// Parcours d'entrée (Onboarding) fluide en moins de 3 minutes (Section 2 du plan) :
 /// 1. Écran d'accueil
 /// 2. Choix de la langue de traduction (multi-langues)
-/// 3. Question de niveau (débutant, A2, B1, B2)
-/// 4. Choix de l'objectif quotidien (5, 10, 20)
-/// 5. Choix des thèmes prioritaires (2 à 4 thèmes)
-/// 6. Mini-démo de 3 phrases avec première victoire
-/// 7. Création de compte (sauvegarde du profil et ajout des 3 phrases à la file)
-/// 8. Autorisation des rappels & heure préférée
-/// 9. Redirection vers l'écran principal
+/// 3. Choix de l'objectif quotidien (5, 10, 20)
+/// 4. Choix des thèmes prioritaires (2 à 4 thèmes)
+/// 5. Mini-démo de 3 phrases avec première victoire
+/// 6. Création de compte (sauvegarde du profil et ajout des 3 phrases à la file)
+/// 7. Autorisation des rappels & heure préférée
+/// 8. Redirection vers l'écran principal
 class OnboardingScreen extends ConsumerStatefulWidget {
   const OnboardingScreen({super.key});
 
@@ -36,12 +35,12 @@ class OnboardingScreen extends ConsumerStatefulWidget {
 
 class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   final PageController _pageController = PageController();
-  int _currentStep = 0; // 0..7
+  int _currentStep = 0; // 0..6
 
   // Réglages choisis par l'utilisateur (Section 2 & 6)
   String _selectedLangue = 'fr';
   String? _selectedSecondaryLangue;
-  String _selectedNiveau = 'B2';
+  final String _selectedNiveau = 'B2';
   int _selectedObjectif = 10;
   final Set<String> _selectedThemes = {'smalltalk', 'travail'};
   String _selectedHeureRappel = '19:00';
@@ -172,7 +171,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   }
 
   void _nextStep() {
-    if (_currentStep < 7) {
+    if (_currentStep < 6) {
       setState(() => _currentStep++);
       _pageController.animateToPage(
         _currentStep,
@@ -275,7 +274,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(4),
                       child: LinearProgressIndicator(
-                        value: (_currentStep + 1) / 8,
+                        value: (_currentStep + 1) / 7,
                         backgroundColor: isDark ? AppColors.borderDark : AppColors.borderLight,
                         color: AppColors.primary,
                         minHeight: 6,
@@ -285,7 +284,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
 
                   const SizedBox(width: 12),
                   Text(
-                    '${_currentStep + 1}/8',
+                    '${_currentStep + 1}/7',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 12,
@@ -296,7 +295,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               ),
             ),
 
-            // Contenu défilant des 8 étapes
+            // Contenu défilant des 7 étapes
             Expanded(
               child: PageView(
                 controller: _pageController,
@@ -304,7 +303,6 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                 children: [
                   _buildStep1Welcome(isDark),
                   _buildStep2Language(isDark),
-                  _buildStep3Level(isDark),
                   _buildStep4Goal(isDark),
                   _buildStep5Themes(isDark),
                   _buildStep6Demo(isDark),
@@ -482,62 +480,6 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
     );
   }
 
-  // ─────────────────────────────────────────────────────────────────────────
-  // 3. Question de niveau (Section 2.3)
-  // ─────────────────────────────────────────────────────────────────────────
-  Widget _buildStep3Level(bool isDark) {
-    final levels = [
-      ('Débutant', 'A1 : Découverte des bases de la langue'),
-      ('A2', 'Connaissances élémentaires du quotidien'),
-      ('B1', 'Autonomie générale en allemand'),
-      ('B2 ou plus', 'Certificat telc / B2 : je comprends les manuels mais pas les natifs'),
-    ];
-
-    return SingleChildScrollView(
-      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          const SizedBox(height: 12),
-          Text(
-            'Quel est ton niveau actuel ?',
-            style: AppTextStyles.titleMedium(isDark: isDark),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 8),
-          Text(
-            'Une seule question pour calibrer tes phrases sans test long.',
-            style: AppTextStyles.caption(isDark: isDark),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 28),
-
-          ...levels.map((lvl) {
-            final isSel = _selectedNiveau == lvl.$1;
-            return Padding(
-              padding: const EdgeInsets.only(bottom: 12.0),
-              child: _buildSelectionCard(
-                title: lvl.$1,
-                subtitle: lvl.$2,
-                isSelected: isSel,
-                isDark: isDark,
-                onTap: () => setState(() => _selectedNiveau = lvl.$1),
-              ),
-            );
-          }),
-
-          const SizedBox(height: 32),
-
-          DuoButton(
-            label: 'Continuer',
-            icon: Icons.arrow_forward_rounded,
-            variant: DuoButtonVariant.primary,
-            onPressed: _nextStep,
-          ),
-        ],
-      ),
-    );
-  }
 
   // ─────────────────────────────────────────────────────────────────────────
   // 4. Choix de l'objectif quotidien (Section 2.4)
