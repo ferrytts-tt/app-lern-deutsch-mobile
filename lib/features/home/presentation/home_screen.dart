@@ -25,6 +25,8 @@ import '../../media/data/media_repository.dart';
 import '../../media/domain/media_unlock_manager.dart';
 import '../../raetsel/domain/raetsel_manager.dart';
 import '../../shop/presentation/shop_modal.dart';
+import '../../../core/services/subscription_service.dart';
+import '../../subscription/presentation/premium_paywall_modal.dart';
 
 class _DailyQuestItem {
   final String id;
@@ -141,6 +143,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _changeBatch(int delta) async {
     if (_allPhrases.isEmpty) return;
+    if (_currentBatchIndex == 2 && delta > 0 && !SubscriptionService.instance.isPremium) {
+      final res = await PremiumPaywallModal.show(
+        context,
+        triggeredFeature: 'Le Lot 4 (Palier 2) et tous les suivants sont réservés aux membres Hoppla Pro.',
+      );
+      if (res == true && mounted) {
+        setState(() {});
+      }
+      return;
+    }
     final maxUnlockedBatch = _calculateUnlockedBatchIndex();
     final newIndex = (_currentBatchIndex + delta).clamp(0, maxUnlockedBatch);
     if (newIndex != _currentBatchIndex) {
@@ -158,6 +170,16 @@ class _HomeScreenState extends State<HomeScreen> {
   /// Sélectionne directement un lot depuis le carrousel interactif du parcours
   void _selectBatch(int targetIndex) async {
     if (_allPhrases.isEmpty) return;
+    if (targetIndex >= 3 && !SubscriptionService.instance.isPremium) {
+      final res = await PremiumPaywallModal.show(
+        context,
+        triggeredFeature: 'Le Lot ${targetIndex + 1} (Palier ${(targetIndex ~/ 3) + 1}) est réservé aux membres Hoppla Pro.',
+      );
+      if (res == true && mounted) {
+        setState(() {});
+      }
+      return;
+    }
     final maxUnlockedBatch = _calculateUnlockedBatchIndex();
     if (targetIndex > maxUnlockedBatch) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -1331,6 +1353,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           if (isCompleted)
                             const Icon(Icons.check_circle_rounded, size: 14, color: AppColors.primary)
+                          else if (index >= 3 && !SubscriptionService.instance.isPremium)
+                            const Icon(Icons.workspace_premium_rounded, size: 14, color: Color(0xFFF59E0B))
                           else if (!isUnlocked)
                             const Icon(Icons.lock_rounded, size: 14, color: Color(0xFF94A3B8))
                           else if (isCurrent)
@@ -1347,26 +1371,30 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ? AppColors.primary
                                   : (isCompleted
                                       ? AppColors.primary
-                                      : (isUnlocked
-                                          ? (isDark ? Colors.white : const Color(0xFF0F172A))
-                                          : const Color(0xFF94A3B8))),
+                                      : ((index >= 3 && !SubscriptionService.instance.isPremium)
+                                          ? const Color(0xFFF59E0B)
+                                          : (isUnlocked
+                                              ? (isDark ? Colors.white : const Color(0xFF0F172A))
+                                              : const Color(0xFF94A3B8)))),
                             ),
                           ),
                         ],
                       ),
                       const SizedBox(height: 3),
                       Text(
-                        '$completedCount/10',
+                        (index >= 3 && !SubscriptionService.instance.isPremium) ? 'PRO' : '$completedCount/10',
                         style: TextStyle(
                           fontSize: 10,
                           fontWeight: FontWeight.w700,
-                          color: isCurrent
-                              ? AppColors.primary
-                              : (isCompleted
-                                  ? AppColors.primary.withValues(alpha: 0.8)
-                                  : (isUnlocked
-                                      ? (isDark ? Colors.white60 : const Color(0xFF64748B))
-                                      : const Color(0xFF94A3B8))),
+                          color: (index >= 3 && !SubscriptionService.instance.isPremium)
+                              ? const Color(0xFFF59E0B)
+                              : (isCurrent
+                                  ? AppColors.primary
+                                  : (isCompleted
+                                      ? AppColors.primary.withValues(alpha: 0.8)
+                                      : (isUnlocked
+                                          ? (isDark ? Colors.white60 : const Color(0xFF64748B))
+                                          : const Color(0xFF94A3B8)))),
                         ),
                       ),
                     ],
@@ -1539,6 +1567,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 if (!mounted) return;
                 setState(() => _isPlayingAudio = false);
 
+                if (_currentBatchIndex >= 3 && !SubscriptionService.instance.isPremium) {
+                  final res = await PremiumPaywallModal.show(
+                    context,
+                    triggeredFeature: 'Le Lot ${_currentBatchIndex + 1} est réservé aux membres Hoppla Pro.',
+                  );
+                  if (res == true && mounted) setState(() {});
+                  return;
+                }
+
                 if (needsPalierExam) {
                   final palierStart = (palierIndex - 1) * 30;
                   final palierEnd = (palierIndex * 30).clamp(0, _allPhrases.length);
@@ -1571,6 +1608,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   iconColor: AppColors.primary,
                   label: 'Apprendre',
                   onTap: () async {
+                    if (_currentBatchIndex >= 3 && !SubscriptionService.instance.isPremium) {
+                      final res = await PremiumPaywallModal.show(
+                        context,
+                        triggeredFeature: 'Le Lot ${_currentBatchIndex + 1} est réservé aux membres Hoppla Pro.',
+                      );
+                      if (res == true && mounted) setState(() {});
+                      return;
+                    }
                     await TtsService.instance.stop();
                     if (!mounted) return;
                     setState(() => _isPlayingAudio = false);
@@ -3262,7 +3307,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     label: 'Démarrer le Lot $batchNum ➔',
                     icon: Icons.play_arrow_rounded,
                     variant: DuoButtonVariant.primary,
-                    onPressed: () {
+                    onPressed: () async {
+                      if (_currentBatchIndex >= 3 && !SubscriptionService.instance.isPremium) {
+                        final res = await PremiumPaywallModal.show(
+                          context,
+                          triggeredFeature: 'Le Lot ${_currentBatchIndex + 1} est réservé aux membres Hoppla Pro.',
+                        );
+                        if (res == true && mounted) setState(() {});
+                        return;
+                      }
                       final ids = _todayTenPhrases.map((p) => p.id).toList();
                       context.push('/session', extra: ids).then((_) => _loadDashboardData());
                     },

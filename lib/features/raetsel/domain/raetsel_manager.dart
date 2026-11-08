@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:app_lern_deutsch_mobile/data/database/app_database.dart';
 import 'package:app_lern_deutsch_mobile/domain/models/phrase.dart';
 import 'package:app_lern_deutsch_mobile/features/media/domain/media_unlock_manager.dart';
+import 'package:app_lern_deutsch_mobile/core/services/subscription_service.dart';
 import '../data/raetsel_generator.dart';
 import 'models/raetsel_level.dart';
 import 'raetsel_constants.dart';
@@ -403,7 +404,11 @@ class RaetselManager {
   }
 
   /// Détermine si une publicité interstitielle doit être affichée (max tous les 3 niveaux complétés)
+  /// Toujours désactivée pour les membres Hoppla Pro et l'Administrateur
   Future<bool> shouldShowInterstitialAd({SharedPreferences? prefs}) async {
+    if (SubscriptionService.instance.isPremium) {
+      return false; // Zéro publicité pour les abonnés et l'administrateur
+    }
     final p = prefs ?? await SharedPreferences.getInstance();
     final levelsSinceLastAd = (p.getInt('raetsel_levels_since_last_ad') ?? 0) + 1;
     if (levelsSinceLastAd >= RaetselConstants.interstitialAdLevelInterval) {

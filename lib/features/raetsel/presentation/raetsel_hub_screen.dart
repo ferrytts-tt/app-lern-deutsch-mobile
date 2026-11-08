@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:app_lern_deutsch_mobile/core/theme/app_colors.dart';
 import 'package:app_lern_deutsch_mobile/data/database/app_database.dart';
+import '../../../core/services/subscription_service.dart';
+import '../../subscription/presentation/premium_paywall_modal.dart';
 import '../domain/models/raetsel_level.dart';
 import '../domain/raetsel_manager.dart';
 import 'raetsel_game_screen.dart';
@@ -209,6 +211,85 @@ class _RaetselHubScreenState extends ConsumerState<RaetselHubScreen> {
                         ),
                       ),
                     ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
+    // Écran d'état verrouillé pour les niveaux 4+ si non-premium
+    if (_currentLevelNum >= 4 && !SubscriptionService.instance.isPremium) {
+      return Scaffold(
+        backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+        appBar: AppBar(
+          backgroundColor: isDark ? const Color(0xFF0F172A) : Colors.white,
+          title: const Text('Hoppla Rätsel 🧩'),
+          elevation: 0,
+        ),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 90,
+                  height: 90,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFF59E0B).withValues(alpha: 0.15),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.workspace_premium_rounded,
+                    size: 50,
+                    color: Color(0xFFF59E0B),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Text(
+                  'Niveau $_currentLevelNum réservé à Hoppla Pro',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  'Bravo d\'avoir terminé les 3 premiers niveaux gratuits ! Passez à Hoppla Pro pour continuer votre aventure de mots croisés sans aucune limite.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: isDark ? Colors.white70 : const Color(0xFF64748B),
+                  ),
+                ),
+                const SizedBox(height: 24),
+                SizedBox(
+                  width: double.infinity,
+                  height: 50,
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF10B981),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                    ),
+                    onPressed: () async {
+                      final res = await PremiumPaywallModal.show(
+                        context,
+                        triggeredFeature: 'Débloquez tous les niveaux de mots croisés Rätsel en illimité !',
+                      );
+                      if (res == true && mounted) {
+                        _initLevel();
+                      }
+                    },
+                    icon: const Icon(Icons.workspace_premium_rounded, size: 20),
+                    label: const Text(
+                      'Débloquer Hoppla Pro',
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    ),
                   ),
                 ),
               ],

@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../core/localization/app_languages.dart';
+import '../../../core/services/subscription_service.dart';
 import '../../../core/services/tts_service.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_text_styles.dart';
 import '../../../core/widgets/custom_card.dart';
 import '../../auth/presentation/auth_controller.dart';
+import '../../subscription/presentation/premium_paywall_modal.dart';
 import 'settings_controller.dart';
 
 /// Écran Réglages complet : Thème (clair/sombre/système), objectifs, vitesse TTS et gestion des données.
@@ -89,6 +91,11 @@ class SettingsScreen extends ConsumerWidget {
             // 0. Espace Candidat & Synchronisation Cloud
             _buildSectionTitle('Compte Candidat & Cloud', isDark),
             _CandidateAccountCard(isDark: isDark),
+            const SizedBox(height: 12),
+
+            // 0.2. Abonnement Hoppla Pro & Accès Admin
+            _buildSectionTitle('Abonnement & Accès', isDark),
+            _SubscriptionSettingsCard(isDark: isDark),
             const SizedBox(height: 12),
 
             // 0.5. Langues & Traductions
@@ -1256,6 +1263,351 @@ class _LanguageSettingsCard extends ConsumerWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _SubscriptionSettingsCard extends StatelessWidget {
+  final bool isDark;
+
+  const _SubscriptionSettingsCard({required this.isDark});
+
+  void _showAdminLoginDialog(BuildContext context) {
+    final emailController = TextEditingController();
+    final passwordController = TextEditingController();
+    bool isAuthenticating = false;
+    String? errorMessage;
+
+    showDialog(
+      context: context,
+      builder: (dialogCtx) => StatefulBuilder(
+        builder: (ctx, setDialogState) => AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          title: const Row(
+            children: [
+              Icon(Icons.admin_panel_settings_rounded, color: AppColors.primary, size: 26),
+              SizedBox(width: 10),
+              Text('Espace Administrateur', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+            ],
+          ),
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Authentification sécurisée réservée à l\'administrateur de l\'application.',
+                  style: TextStyle(fontSize: 13, color: Colors.grey),
+                ),
+                const SizedBox(height: 16),
+                TextField(
+                  controller: emailController,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    labelText: 'Adresse e-mail',
+                    prefixIcon: const Icon(Icons.email_outlined),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                TextField(
+                  controller: passwordController,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: 'Mot de passe',
+                    prefixIcon: const Icon(Icons.lock_outline_rounded),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                ),
+                if (errorMessage != null) ...[
+                  const SizedBox(height: 10),
+                  Text(
+                    errorMessage!,
+                    style: const TextStyle(color: Colors.red, fontSize: 13, fontWeight: FontWeight.w600),
+                  ),
+                ],
+              ],
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(dialogCtx).pop(),
+              child: const Text('Annuler'),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppColors.primary,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              ),
+              onPressed: isAuthenticating
+                  ? null
+                  : () async {
+                      setDialogState(() {
+                        isAuthenticating = true;
+                        errorMessage = null;
+                      });
+
+                      final success = await SubscriptionService.instance.verifyAndLoginAdmin(
+                        email: emailController.text,
+                        password: passwordController.text,
+                      );
+
+                      if (success) {
+                        if (dialogCtx.mounted) Navigator.of(dialogCtx).pop();
+                        if (context.mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Row(
+                                children: [
+                                  Icon(Icons.verified_rounded, color: Colors.white),
+                                  SizedBox(width: 8),
+                                  Expanded(
+                                    child: Text(
+                                      '👑 Mode Administrateur activé avec succès !',
+                                      style: TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              backgroundColor: Color(0xFF10B981),
+                            ),
+                          );
+                        }
+                      } else {
+                        setDialogState(() {
+                          isAuthenticating = false;
+                          errorMessage = 'Identifiants incorrects. Accès refusé.';
+                        });
+                      }
+                    },
+              child: isAuthenticating
+                  ? const SizedBox(
+                      width: 18,
+                      height: 18,
+                      child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                    )
+                  : const Text('Se connecter'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _confirmLogoutAdmin(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        title: const Text('Déconnexion Administrateur'),
+        content: const Text('Voulez-vous quitter le mode Administrateur et revenir au mode standard ?'),
+        actions: [
+          TextButton(onPressed: () => Navigator.of(ctx).pop(), child: const Text('Annuler')),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.gentleError,
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () async {
+              Navigator.of(ctx).pop();
+              await SubscriptionService.instance.logoutAdmin();
+              if (context.mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Déconnexion administrateur effectuée.')),
+                );
+              }
+            },
+            child: const Text('Quitter Admin'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final sub = SubscriptionService.instance;
+
+    return ValueListenableBuilder<bool>(
+      valueListenable: sub.premiumNotifier,
+      builder: (context, isPremium, child) {
+        final isAdmin = sub.isAdmin;
+
+        if (isAdmin) {
+          return CustomCard(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFF59E0B).withValues(alpha: 0.15),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(Icons.workspace_premium_rounded, color: Color(0xFFF59E0B), size: 24),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '👑 Administrateur (Accès Total)',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              color: isDark ? Colors.white : const Color(0xFF0F172A),
+                            ),
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            'Tous les 30 lots, examens et mots croisés débloqués. Sans pub.',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: isDark ? Colors.grey[400] : Colors.grey[600],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                const Divider(height: 1),
+                const SizedBox(height: 10),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton.icon(
+                    onPressed: () => _confirmLogoutAdmin(context),
+                    icon: const Icon(Icons.logout_rounded, size: 16, color: Colors.grey),
+                    label: const Text('Déconnexion Admin', style: TextStyle(color: Colors.grey, fontSize: 13)),
+                  ),
+                ),
+              ],
+            ),
+          );
+        }
+
+        if (isPremium) {
+          return CustomCard(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF10B981).withValues(alpha: 0.15),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(Icons.verified_rounded, color: Color(0xFF10B981), size: 24),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Hoppla Pro Actif ✨',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: isDark ? Colors.white : const Color(0xFF0F172A),
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        'Accès complet aux 30 lots, tous les examens et mots croisés illimités.',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: isDark ? Colors.grey[400] : Colors.grey[600],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          );
+        }
+
+        // Version Gratuite
+        return CustomCard(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.grey.withValues(alpha: 0.15),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(Icons.lock_open_rounded, color: Colors.grey, size: 24),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Version Gratuite (Lots 1 à 3)',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            color: isDark ? Colors.white : const Color(0xFF0F172A),
+                          ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          'Les Lots 4 à 30 et Rätsel 4+ nécessitent Hoppla Pro.',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: isDark ? Colors.grey[400] : Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 14),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF10B981),
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                  onPressed: () => PremiumPaywallModal.show(context),
+                  icon: const Icon(Icons.workspace_premium_rounded, size: 18),
+                  label: const Text('Passer à Hoppla Pro', style: TextStyle(fontWeight: FontWeight.bold)),
+                ),
+              ),
+              const SizedBox(height: 8),
+              Center(
+                child: InkWell(
+                  onTap: () => _showAdminLoginDialog(context),
+                  borderRadius: BorderRadius.circular(8),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    child: Text(
+                      '🔐 Accès Administrateur',
+                      style: TextStyle(fontSize: 12, color: Colors.grey[500], fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }

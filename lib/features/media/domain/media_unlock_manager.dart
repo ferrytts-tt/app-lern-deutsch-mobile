@@ -1,4 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../../core/services/subscription_service.dart';
 import '../../../domain/models/media_content.dart';
 import '../../../domain/models/phrase.dart';
 import '../../../domain/models/user_phrase.dart';
@@ -100,22 +101,26 @@ class MediaUnlockManager {
 
   /// Calcule le numéro du lot débloqué le plus élevé (de 1 à 30).
   /// Règle séquentielle stricte :
-  /// - Lot 1 est ouvert par défaut.
-  /// - Lot 1 fini -> Lot 2 s'ouvre.
-  /// - Lot 2 fini -> Lot 3 s'ouvre.
-  /// - Lot 3 fini (fin Palier 1) -> Examen 1 (20/30 min.) DOIT être réussi pour ouvrir le Lot 4 !
-  /// - Lot 4 fini -> Lot 5 s'ouvre.
-  /// - Lot 5 fini -> Lot 6 s'ouvre.
-  /// - Lot 6 fini (fin Palier 2) -> Examen 2 (20/30 min.) DOIT être réussi pour ouvrir le Lot 7 !
-  /// - Et ainsi de suite pour tous les 10 paliers jusqu'au Lot 30.
+  /// - Admin : Tous les 30 lots immédiatement ouverts et accessibles.
+  /// - Gratuit (Free) : Lots 1 à 3 uniquement (Palier 1).
+  /// - Premium : Lots 4 à 30 s'ouvrent au fur et à mesure des réussites d'examen.
   static int getHighestUnlockedLot({
     Map<String, UserPhrase> progress = const {},
     List<Phrase> allPhrases = const [],
     SharedPreferences? prefs,
   }) {
+    if (SubscriptionService.instance.isAdmin) {
+      return 30; // Accès total immédiat pour l'administrateur
+    }
+
     int highest = 1;
 
     for (int lot = 1; lot < 30; lot++) {
+      // Si le candidat n'est pas premium, il ne peut pas dépasser le Lot 3
+      if (lot >= 3 && !SubscriptionService.instance.isPremium) {
+        break;
+      }
+
       final completed = isLotCompleted(
         lotId: lot,
         progress: progress,

@@ -7,6 +7,7 @@ import 'package:app_lern_deutsch_mobile/features/settings/presentation/settings_
 import 'package:app_lern_deutsch_mobile/features/raetsel/domain/models/raetsel_level.dart';
 import 'package:app_lern_deutsch_mobile/features/raetsel/domain/raetsel_constants.dart';
 import 'package:app_lern_deutsch_mobile/features/raetsel/domain/raetsel_manager.dart';
+import 'package:app_lern_deutsch_mobile/core/services/subscription_service.dart';
 import 'widgets/raetsel_banner_ad_widget.dart';
 import 'widgets/raetsel_captured_sheet.dart';
 import 'widgets/raetsel_clue_item.dart';
@@ -817,8 +818,9 @@ class _RaetselGameScreenState extends ConsumerState<RaetselGameScreen> {
             // Bandeau interactif Phrases captées (n/N)
             _buildCapturedBanner(supportLanguage, isDark),
 
-            // Bannière publicitaire existante
-            RaetselBannerAdWidget(isDark: isDark),
+            // Bannière publicitaire (désactivée pour les membres Pro et Admin)
+            if (!SubscriptionService.instance.isPremium)
+              RaetselBannerAdWidget(isDark: isDark),
 
             // Clavier virtuel spécial allemand en bas
             RaetselKeyboard(
