@@ -131,7 +131,11 @@ class RaetselManager {
   /// Charge le pool de phrases disponibles pour le joueur :
   /// Toutes les phrases terminées (au déblocage : les 30 du palier 1, puis +10 par lot terminé)
   Future<List<Phrase>> loadPhrasesPool(AppDatabase db) async {
-    final allPhrases = await db.getAllPhrases();
+    var allPhrases = await db.getAllPhrases();
+    if (allPhrases.isEmpty) {
+      await db.importPhrasesFromJson();
+      allPhrases = await db.getAllPhrases();
+    }
     if (allPhrases.isEmpty) return [];
 
     final List<Phrase> pool = [];
@@ -146,6 +150,10 @@ class RaetselManager {
     // on inclut les 30 phrases du palier 1 comme pool de départ garanti.
     if (pool.length < 10 && allPhrases.length >= 30) {
       return allPhrases.take(30).toList();
+    }
+
+    if (pool.isEmpty && allPhrases.isNotEmpty) {
+      return allPhrases.take(30.clamp(0, allPhrases.length)).toList();
     }
 
     return pool;

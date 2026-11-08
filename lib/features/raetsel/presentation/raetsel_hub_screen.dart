@@ -38,53 +38,80 @@ class _RaetselHubScreenState extends ConsumerState<RaetselHubScreen> {
   Future<void> _initLevel() async {
     setState(() => _isLoading = true);
 
-    final unlocked = await _manager.isUnlocked();
-    final palier1Count = await _manager.getPalier1LearnedCount(_db);
-    final currentLevel = await _manager.getCurrentLevelNumber();
+    try {
+      // S'assurer que les phrases sont prêtes dans la base locale
+      var allPhrases = await _db.getAllPhrases();
+      if (allPhrases.isEmpty) {
+        await _db.importPhrasesFromJson();
+      }
 
-    if (!unlocked) {
+      final unlocked = await _manager.isUnlocked();
+      final palier1Count = await _manager.getPalier1LearnedCount(_db);
+      final currentLevel = await _manager.getCurrentLevelNumber();
+
+      if (!unlocked) {
+        if (mounted) {
+          setState(() {
+            _isUnlocked = false;
+            _learnedPalier1Count = palier1Count;
+            _isLoading = false;
+          });
+        }
+        return;
+      }
+
+      // Si débloqué : vérifier s'il existe une sauvegarde de niveau en cours
+      final savedData = await _manager.loadInProgressLevel(expectedLevelNumber: currentLevel);
+
+      RaetselLevel activeLevel;
+      Map<int, String>? initialLetters;
+
+      if (savedData != null) {
+        activeLevel = savedData.level;
+        initialLetters = savedData.enteredLetters;
+      } else {
+        // Générer un nouveau niveau à partir du pool
+        final pool = await _manager.loadPhrasesPool(_db);
+        if (pool.isEmpty) {
+          if (mounted) {
+            setState(() {
+              _isUnlocked = false;
+              _learnedPalier1Count = palier1Count;
+              _isLoading = false;
+            });
+          }
+          return;
+        }
+
+        activeLevel = _manager.generateLevel(
+          levelNumber: currentLevel,
+          pool: pool,
+        );
+        // Sauvegarder dès la création
+        await _manager.saveInProgressLevel(
+          level: activeLevel,
+          enteredLetters: {},
+        );
+      }
+
       if (mounted) {
         setState(() {
-          _isUnlocked = false;
+          _isUnlocked = true;
           _learnedPalier1Count = palier1Count;
+          _currentLevelNum = currentLevel;
+          _currentLevel = activeLevel;
+          _restoredEnteredLetters = initialLetters;
           _isLoading = false;
         });
       }
-      return;
-    }
-
-    // Si débloqué : vérifier s'il existe une sauvegarde de niveau en cours
-    final savedData = await _manager.loadInProgressLevel(expectedLevelNumber: currentLevel);
-
-    RaetselLevel activeLevel;
-    Map<int, String>? initialLetters;
-
-    if (savedData != null) {
-      activeLevel = savedData.level;
-      initialLetters = savedData.enteredLetters;
-    } else {
-      // Générer un nouveau niveau à partir du pool
-      final pool = await _manager.loadPhrasesPool(_db);
-      activeLevel = _manager.generateLevel(
-        levelNumber: currentLevel,
-        pool: pool,
-      );
-      // Sauvegarder dès la création
-      await _manager.saveInProgressLevel(
-        level: activeLevel,
-        enteredLetters: {},
-      );
-    }
-
-    if (mounted) {
-      setState(() {
-        _isUnlocked = true;
-        _learnedPalier1Count = palier1Count;
-        _currentLevelNum = currentLevel;
-        _currentLevel = activeLevel;
-        _restoredEnteredLetters = initialLetters;
-        _isLoading = false;
-      });
+    } catch (e, stack) {
+      debugPrint('[RaetselHubScreen] Erreur initLevel: $e\n$stack');
+      if (mounted) {
+        setState(() {
+          _isLoading = false;
+          _isUnlocked = false;
+        });
+      }
     }
   }
 
