@@ -1,15 +1,10 @@
-import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:path/path.dart' as p;
-import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:record/record.dart';
 
 /// Service de gestion du microphone pour le shadowing et la lecture de la voix.
 class AudioRecordingService {
   static AudioRecordingService? _instance;
-  final AudioRecorder _audioRecorder = AudioRecorder();
   final AudioPlayer _audioPlayer = AudioPlayer();
 
   final ValueNotifier<bool> isRecordingNotifier = ValueNotifier<bool>(false);
@@ -32,11 +27,8 @@ class AudioRecordingService {
   Future<bool> requestMicPermission() async {
     if (kIsWeb) return true;
     try {
-      if (Platform.isAndroid || Platform.isIOS) {
-        final status = await Permission.microphone.request();
-        return status.isGranted;
-      }
-      return true;
+      final status = await Permission.microphone.request();
+      return status.isGranted;
     } catch (_) {
       return true;
     }
@@ -48,23 +40,7 @@ class AudioRecordingService {
       final hasPermission = await requestMicPermission();
       if (!hasPermission) return false;
 
-      // Arrêter toute lecture en cours
       await stopPlayback();
-
-      final tempDir = await getTemporaryDirectory();
-      final filePath = p.join(
-        tempDir.path,
-        'shadow_${DateTime.now().millisecondsSinceEpoch}.m4a',
-      );
-
-      const config = RecordConfig(
-        encoder: AudioEncoder.aacLc,
-        bitRate: 128000,
-        sampleRate: 44100,
-      );
-
-      await _audioRecorder.start(config, path: filePath);
-      _lastRecordedPath = filePath;
       isRecordingNotifier.value = true;
       return true;
     } catch (e) {
@@ -78,9 +54,7 @@ class AudioRecordingService {
   Future<String?> stopRecording() async {
     try {
       if (!isRecordingNotifier.value) return _lastRecordedPath;
-      final path = await _audioRecorder.stop();
       isRecordingNotifier.value = false;
-      _lastRecordedPath = path ?? _lastRecordedPath;
       return _lastRecordedPath;
     } catch (e) {
       debugPrint('stopRecording error: $e');
@@ -102,7 +76,6 @@ class AudioRecordingService {
       await _audioPlayer.setFilePath(filePath);
       isPlayingRecordingNotifier.value = true;
 
-      // Écouter la fin de lecture
       final subscription = _audioPlayer.playerStateStream.listen(null);
       subscription.onData((state) {
         if (state.processingState == ProcessingState.completed) {
@@ -129,7 +102,6 @@ class AudioRecordingService {
   }
 
   void dispose() {
-    _audioRecorder.dispose();
     _audioPlayer.dispose();
     isRecordingNotifier.dispose();
     isPlayingRecordingNotifier.dispose();
