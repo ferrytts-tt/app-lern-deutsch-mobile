@@ -1,4 +1,4 @@
-name: Build Android APK
+name: Build Android App (APK & AAB Google Play)
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Build Release APK
+    name: Build Release AAB & APK
     runs-on: ubuntu-latest
 
     steps:
@@ -29,10 +29,33 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Build APK (Release)
+      - name: Configure Keystore Signing
+        env:
+          KEYSTORE_B64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PWD: ${{ secrets.KEYSTORE_PASSWORD }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > android/app/upload-keystore.jks
+            echo "storePassword=$KEYSTORE_PWD" > android/key.properties
+            echo "keyPassword=$KEYSTORE_PWD" >> android/key.properties
+            echo "keyAlias=upload" >> android/key.properties
+            echo "storeFile=upload-keystore.jks" >> android/key.properties
+          fi
+
+      - name: Build Google Play Bundle (AAB)
+        run: flutter build appbundle --release
+
+      - name: Build Standalone APK (Release)
         run: flutter build apk --release
 
-      - name: Upload APK Artifact
+      - name: Upload Google Play Bundle (.aab)
+        uses: actions/upload-artifact@v4
+        with:
+          name: hoppla-google-play-bundle-aab
+          path: build/app/outputs/bundle/release/app-release.aab
+          retention-days: 30
+
+      - name: Upload Test APK (.apk)
         uses: actions/upload-artifact@v4
         with:
           name: hoppla-deutsch-release-apk
