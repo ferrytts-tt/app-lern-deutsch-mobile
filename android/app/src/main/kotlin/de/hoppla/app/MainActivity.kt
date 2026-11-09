@@ -1,4 +1,4 @@
-package com.example.app_lern_deutsch_mobile
+package de.hoppla.app
 
 import io.flutter.embedding.android.FlutterActivity
 
