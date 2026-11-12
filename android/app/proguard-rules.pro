@@ -6,6 +6,9 @@
 -keep class io.flutter.** { *; }
 -keep class io.flutter.plugins.** { *; }
 -keep class com.android.billingclient.** { *; }
+-dontwarn com.google.android.play.core.**
 -dontwarn com.google.errorprone.annotations.**
+-dontwarn com.google.j2objc.annotations.**
 -dontwarn javax.annotation.**
 -dontwarn org.codehaus.mojo.animal_sniffer.**
+-dontwarn org.slf4j.**
