@@ -16,6 +16,10 @@ class LotLockStatus {
   final bool isExamReady; // Vrai si les 3 lots du palier d'examen sont tous achevés
   final int highestUnlockedLot;
 
+  /// La chanson (MP3) d'un lot s'active exactement en même temps que son dialogue,
+  /// dès que les 10 phrases du lot sont terminées.
+  bool get isChansonActive => isDialogueActive;
+
   const LotLockStatus({
     required this.lotId,
     required this.isUnlocked,
@@ -225,6 +229,21 @@ class MediaUnlockManager {
       allPhrases: allPhrases,
       prefs: prefs,
     ).isDialogueActive;
+  }
+
+  /// Détermine si la chanson (MP3) d'un lot est active (écoutable), selon la même règle que le dialogue.
+  static bool isChansonActive({
+    required int lotId,
+    Map<String, UserPhrase> progress = const {},
+    List<Phrase> allPhrases = const [],
+    SharedPreferences? prefs,
+  }) {
+    return getLotStatus(
+      lotId: lotId,
+      progress: progress,
+      allPhrases: allPhrases,
+      prefs: prefs,
+    ).isChansonActive;
   }
 
   /// Enregistre le déblocage forcé (si nécessaire)

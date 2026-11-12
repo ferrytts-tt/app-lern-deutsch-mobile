@@ -1,0 +1,162 @@
+{
+  "lot_id": 5,
+  "type": "chanson",
+  "title_de": "Café & Shopping-Groove",
+  "title_ar": "أجواء المقهى والتسوّق",
+  "title_fr": "Groove au café & shopping",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Ich schau nur mal.",
+      "ar": "أتفرج فقط",
+      "fr": "Je regarde juste, merci.",
+      "debut_ms": 700,
+      "fin_ms": 2150,
+      "phrase_id": "phrase_048"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Haben Sie das auch 'ne Nummer größer?",
+      "ar": "عندكم هذا بمقاس أكبر؟",
+      "fr": "Vous avez la taille au-dessus ?",
+      "debut_ms": 2150,
+      "fin_ms": 4650,
+      "phrase_id": "phrase_047"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Das ist mir echt zu happig.",
+      "ar": "هذا غالٍ عليّ",
+      "fr": "C'est un peu trop salé pour moi.",
+      "debut_ms": 4650,
+      "fin_ms": 6850,
+      "phrase_id": "phrase_046"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Haben Sie 'ne Tüte?",
+      "ar": "عندكم كيس؟",
+      "fr": "Vous avez un sachet ?",
+      "debut_ms": 6850,
+      "fin_ms": 9650,
+      "phrase_id": "phrase_045"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Ich nehm 'nen Kaffee,",
+      "ar": "سآخذ قهوة،",
+      "fr": "Je vais prendre un café,",
+      "debut_ms": 9650,
+      "fin_ms": 11300,
+      "phrase_id": "phrase_041"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "das schmeckt mega lecker.",
+      "ar": "طعمه لذيذ جداً.",
+      "fr": "c'est trop bon !",
+      "debut_ms": 11300,
+      "fin_ms": 13600,
+      "phrase_id": "phrase_049"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Ich bin pappsatt.",
+      "ar": "شبعت تماماً",
+      "fr": "Je suis complètement calé !",
+      "debut_ms": 13600,
+      "fin_ms": 15800,
+      "phrase_id": "phrase_050"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Zusammen oder getrennt?",
+      "ar": "الدفع مشترك أم منفصل؟",
+      "fr": "Ensemble ou séparément ?",
+      "debut_ms": 15800,
+      "fin_ms": 17750,
+      "phrase_id": "phrase_043"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Zahlen, bitte!",
+      "ar": "الحساب من فضلك",
+      "fr": "L'addition, s'il vous plaît !",
+      "debut_ms": 17750,
+      "fin_ms": 18900,
+      "phrase_id": "phrase_042"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Stimmt so!",
+      "ar": "الباقي لك (بقشيش)",
+      "fr": "Gardez la monnaie !",
+      "debut_ms": 18900,
+      "fin_ms": 19650,
+      "phrase_id": "phrase_044"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Ich nehm 'nen Kaffee,",
+      "ar": "سآخذ قهوة،",
+      "fr": "Je vais prendre un café,",
+      "debut_ms": 19650,
+      "fin_ms": 20350,
+      "phrase_id": "phrase_041"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "das schmeckt mega lecker.",
+      "ar": "طعمه لذيذ جداً.",
+      "fr": "c'est trop bon !",
+      "debut_ms": 20350,
+      "fin_ms": 21850,
+      "phrase_id": "phrase_049"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Ich bin pappsatt.",
+      "ar": "شبعت تماماً",
+      "fr": "Je suis complètement calé !",
+      "debut_ms": 21850,
+      "fin_ms": 22550,
+      "phrase_id": "phrase_050"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Zusammen oder getrennt?",
+      "ar": "الدفع مشترك أم منفصل؟",
+      "fr": "Ensemble ou séparément ?",
+      "debut_ms": 22550,
+      "fin_ms": 23950,
+      "phrase_id": "phrase_043"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Zahlen, bitte!",
+      "ar": "الحساب من فضلك",
+      "fr": "L'addition, s'il vous plaît !",
+      "debut_ms": 23950,
+      "fin_ms": 25350,
+      "phrase_id": "phrase_042"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Stimmt so!",
+      "ar": "الباقي لك (بقشيش)",
+      "fr": "Gardez la monnaie !",
+      "debut_ms": 25350,
+      "fin_ms": 27700,
+      "phrase_id": "phrase_044"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Stimmt so.",
+      "ar": "الباقي لك (بقشيش)",
+      "fr": "Gardez la monnaie.",
+      "debut_ms": 27700,
+      "fin_ms": 29231,
+      "phrase_id": "phrase_044"
+    }
+  ]
+}

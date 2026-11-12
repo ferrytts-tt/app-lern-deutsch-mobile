@@ -89,6 +89,22 @@
       "title_fr": "Soirée ciné entre amis"
     },
     {
+      "lot_id": 3,
+      "type": "chanson",
+      "audio_file": "lot_003_chanson.mp3",
+      "content_json_file": "lot_003_chanson.json",
+      "duration_seconds": 35,
+      "size_bytes": 840148,
+      "checksum": "df149cda2f4ea0ab73bb1c65dabd62aeccdd665edd49e7e2a9f23ab091a112c5",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 3",
+      "created_at": "2026-11-10T16:15:00Z",
+      "title_de": "Kinoabend-Vibes",
+      "title_ar": "أجواء سهرة السينما",
+      "title_fr": "Ambiance soirée ciné"
+    },
+    {
       "lot_id": 4,
       "type": "dialogue",
       "audio_file": "lot_004_dialogue.mp3",
@@ -105,6 +121,22 @@
       "title_de": "Gefühlschaos vor dem Auftritt",
       "title_ar": "مشاعر متضاربة قبل العرض",
       "title_fr": "Tourbillon d'émotions avant le direct"
+    },
+    {
+      "lot_id": 4,
+      "type": "chanson",
+      "audio_file": "lot_004_chanson.mp3",
+      "content_json_file": "lot_004_chanson.json",
+      "duration_seconds": 32,
+      "size_bytes": 757392,
+      "checksum": "754345847313b452324ea829146b3385e2b1c8318d8478fbad1787d51df1123a",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 4",
+      "created_at": "2026-11-11T14:18:00Z",
+      "title_de": "Gefühlschaos-Groove",
+      "title_ar": "إيقاع المشاعر المتضاربة",
+      "title_fr": "Le groove des émotions"
     },
     {
       "lot_id": 5,
@@ -125,6 +157,22 @@
       "title_fr": "Au café du coin"
     },
     {
+      "lot_id": 5,
+      "type": "chanson",
+      "audio_file": "lot_005_chanson.mp3",
+      "content_json_file": "lot_005_chanson.json",
+      "duration_seconds": 29,
+      "size_bytes": 701594,
+      "checksum": "16e48d1f4fc517abdc1184aa6a1224e1223916dea06e5d088c5e7cb417292228",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 5",
+      "created_at": "2026-11-11T15:02:00Z",
+      "title_de": "Café & Shopping-Groove",
+      "title_ar": "أجواء المقهى والتسوّق",
+      "title_fr": "Groove au café & shopping"
+    },
+    {
       "lot_id": 6,
       "type": "dialogue",
       "audio_file": "lot_006_dialogue.mp3",
@@ -141,6 +189,22 @@
       "title_de": "Auf dem Bürgeramt",
       "title_ar": "في مكتب الإدارة والمواعيد",
       "title_fr": "Au bureau des formalités"
+    },
+    {
+      "lot_id": 6,
+      "type": "chanson",
+      "audio_file": "lot_006_chanson.mp3",
+      "content_json_file": "lot_006_chanson.json",
+      "duration_seconds": 28,
+      "size_bytes": 665859,
+      "checksum": "0cae6720fd3c5912d01a38e269046a4b5b23b13331bda3a44db4a84c571e8be7",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 6",
+      "created_at": "2026-11-11T21:18:00Z",
+      "title_de": "Bürgeramt-Stempel-Groove",
+      "title_ar": "إيقاع مكتب الإدارة والختم",
+      "title_fr": "Le groove des formalités"
     },
     {
       "lot_id": 7,
@@ -161,6 +225,22 @@
       "title_fr": "Coup de froid au lit"
     },
     {
+      "lot_id": 7,
+      "type": "chanson",
+      "audio_file": "lot_007_chanson.mp3",
+      "content_json_file": "lot_007_chanson.json",
+      "duration_seconds": 29,
+      "size_bytes": 700340,
+      "checksum": "79e3c0bd379d8d22ee3919cd1057e2574281d7e09529b51a50306bbb1a49559c",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 7",
+      "created_at": "2026-11-11T21:35:00Z",
+      "title_de": "Gute-Besserung-Beat",
+      "title_ar": "إيقاع الشفاء العاجل",
+      "title_fr": "Le beat du rétablissement"
+    },
+    {
       "lot_id": 8,
       "type": "dialogue",
       "audio_file": "lot_008_dialogue.mp3",
@@ -177,6 +257,22 @@
       "title_de": "Schlechte Verbindung",
       "title_ar": "اتصال هاتفي مشوش",
       "title_fr": "Mauvaise réception au téléphone"
+    },
+    {
+      "lot_id": 8,
+      "type": "chanson",
+      "audio_file": "lot_008_chanson.mp3",
+      "content_json_file": "lot_008_chanson.json",
+      "duration_seconds": 31,
+      "size_bytes": 744226,
+      "checksum": "9470cf21cbdfd87454a1099a277941a54a3517b7bad9f0754f53eb95ba9454a4",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 8",
+      "created_at": "2026-11-11T21:56:00Z",
+      "title_de": "Kein-Netz-Groove",
+      "title_ar": "أجواء انقطاع الشبكة",
+      "title_fr": "Le groove sans réseau"
     },
     {
       "lot_id": 9,
@@ -197,6 +293,22 @@
       "title_fr": "Pagaille à la gare centrale"
     },
     {
+      "lot_id": 9,
+      "type": "chanson",
+      "audio_file": "lot_009_chanson.mp3",
+      "content_json_file": "lot_009_chanson.json",
+      "duration_seconds": 24,
+      "size_bytes": 566802,
+      "checksum": "22283b9ed457d7ef598e854c485939f191860f72b633c791fde705a36b38c68a",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 9",
+      "created_at": "2026-11-11T23:21:00Z",
+      "title_de": "Bahnhof-Express-Groove",
+      "title_ar": "إيقاع محطة القطار السريع",
+      "title_fr": "Le groove de la gare"
+    },
+    {
       "lot_id": 10,
       "type": "dialogue",
       "audio_file": "lot_010_dialogue.mp3",
@@ -213,6 +325,22 @@
       "title_de": "Diskussion über das Wochenende",
       "title_ar": "نقاش حول عطلة الأسبوع",
       "title_fr": "Débat animé sur le week-end"
+    },
+    {
+      "lot_id": 10,
+      "type": "chanson",
+      "audio_file": "lot_010_chanson.mp3",
+      "content_json_file": "lot_010_chanson.json",
+      "duration_seconds": 35,
+      "size_bytes": 848298,
+      "checksum": "ffdae538b7e04812d09d3fecf4e1a83bf87b8b79d1f4813074566d2e2973a432",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 10",
+      "created_at": "2026-11-11T23:37:00Z",
+      "title_de": "Na-ja-Meinungs-Groove",
+      "title_ar": "إيقاع النقاش والآراء",
+      "title_fr": "Le groove des opinions"
     },
     {
       "lot_id": 11,
@@ -233,6 +361,22 @@
       "title_fr": "Entre quatre yeux"
     },
     {
+      "lot_id": 11,
+      "type": "chanson",
+      "audio_file": "lot_011_chanson.mp3",
+      "content_json_file": "lot_011_chanson.json",
+      "duration_seconds": 33,
+      "size_bytes": 801277,
+      "checksum": "163b6c5b8864f52d7ab8945b17d25854e8299ced9755e621ab00a517d64f7259",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 11",
+      "created_at": "2026-11-12T08:57:00Z",
+      "title_de": "Unter-vier-Augen-Vibes",
+      "title_ar": "أجواء الحديث على انفراد",
+      "title_fr": "Confidences entre quatre yeux"
+    },
+    {
       "lot_id": 12,
       "type": "dialogue",
       "audio_file": "lot_012_dialogue.mp3",
@@ -249,6 +393,22 @@
       "title_de": "Wichtige Aussprache",
       "title_ar": "توضيح هام بين صديقين",
       "title_fr": "Explication franche"
+    },
+    {
+      "lot_id": 12,
+      "type": "chanson",
+      "audio_file": "lot_012_chanson.mp3",
+      "content_json_file": "lot_012_chanson.json",
+      "duration_seconds": 37,
+      "size_bytes": 876510,
+      "checksum": "d8a328e1fa6aaa0763d3c120dc83190397de89aa05f0fdd08a124a06d0c827de",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 12",
+      "created_at": "2026-11-12T09:09:00Z",
+      "title_de": "Mama-Sonntag-Groove",
+      "title_ar": "أجواء العائلة والبيت",
+      "title_fr": "Le groove du dimanche en famille"
     },
     {
       "lot_id": 13,

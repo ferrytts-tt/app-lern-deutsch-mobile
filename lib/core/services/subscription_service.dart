@@ -9,11 +9,9 @@ class SubscriptionService {
   SubscriptionService._();
   static final SubscriptionService instance = SubscriptionService._();
 
-  // Empreintes cryptographiques SHA-256 (Aucun mot de passe ou email sensible en clair)
-  // Email: tahtoouh@gmail.com
+  // Empreintes cryptographiques SHA-256 pour la vérification locale
   static const String _adminEmailHash =
       '9d25cfcb1bf204080da56cbe70e005b9dc85ac9086e90fbd22ab433f56ff621b';
-  // Mot de passe: Drogba123@Takhe25431
   static const String _adminPasswordHash =
       '63c83ef3fe18b821041761fd698ae90699ef83efd346a59796ffe4792e83959b';
 

@@ -678,12 +678,17 @@ class _MediaSectionScreenState extends State<MediaSectionScreen> {
               onToggleAutoListening: () => _toggleAutoListening(lotId),
             )
           else if (dialogue != null && !status.isDialogueActive)
-            _buildInactiveDialogueTile(
+            _buildInactiveMediaTile(
               lotId: lotId,
               isDark: isDark,
               completedCount: completedInLot,
               totalPhrases: lotPhrases.length,
               phraseIds: lotPhrases.map((p) => p.id).toList(),
+              typeLabel: 'Dialogue Allemand Parlé',
+              titleDe: 'Dialogue du Lot $lotId',
+              subtitle: 'Conrad 👨 & Katja 👩 • Voix réelles natives',
+              description:
+                  'Ce dialogue en immersion réelle s\'activera dès que tu auras achevé les 10 phrases de ce lot ($completedInLot / ${lotPhrases.length} terminées).',
             )
           else
             _buildPendingMediaTile(
@@ -707,8 +712,8 @@ class _MediaSectionScreenState extends State<MediaSectionScreen> {
 
           const SizedBox(height: 12),
 
-          // 2. CHANSON
-          if (chanson != null)
+          // 2. CHANSON (MP3 actif uniquement si les 10 phrases du lot sont complétées)
+          if (chanson != null && status.isChansonActive)
             _buildMediaContentTile(
               item: chanson,
               lotId: lotId,
@@ -717,6 +722,19 @@ class _MediaSectionScreenState extends State<MediaSectionScreen> {
               icon: Icons.music_note_rounded,
               typeLabel: 'Chanson & Refrain',
               speakersLabel: 'Refrain mémoriel chanté',
+            )
+          else if (chanson != null && !status.isChansonActive)
+            _buildInactiveMediaTile(
+              lotId: lotId,
+              isDark: isDark,
+              completedCount: completedInLot,
+              totalPhrases: lotPhrases.length,
+              phraseIds: lotPhrases.map((p) => p.id).toList(),
+              typeLabel: 'Chanson & Refrain',
+              titleDe: 'Chanson du Lot $lotId',
+              subtitle: 'Refrain mémoriel chanté • Audio MP3',
+              description:
+                  'Cette chanson MP3 s\'activera dès que tu auras achevé les 10 phrases de ce lot ($completedInLot / ${lotPhrases.length} terminées).',
             )
           else
             _buildPendingMediaTile(
@@ -1026,12 +1044,16 @@ class _MediaSectionScreenState extends State<MediaSectionScreen> {
     );
   }
 
-  Widget _buildInactiveDialogueTile({
+  Widget _buildInactiveMediaTile({
     required int lotId,
     required bool isDark,
     required int completedCount,
     required int totalPhrases,
     required List<String> phraseIds,
+    required String typeLabel,
+    required String titleDe,
+    required String subtitle,
+    required String description,
   }) {
     return Container(
       padding: const EdgeInsets.all(15),
@@ -1063,9 +1085,9 @@ class _MediaSectionScreenState extends State<MediaSectionScreen> {
                   children: [
                     Row(
                       children: [
-                        const Text(
-                          'Dialogue Allemand Parlé',
-                          style: TextStyle(
+                        Text(
+                          typeLabel,
+                          style: const TextStyle(
                             fontSize: 11.5,
                             fontWeight: FontWeight.w900,
                             color: Color(0xFFD97706),
@@ -1091,7 +1113,7 @@ class _MediaSectionScreenState extends State<MediaSectionScreen> {
                     ),
                     const SizedBox(height: 3),
                     Text(
-                      'Dialogue du Lot $lotId',
+                      titleDe,
                       style: AppTextStyles.bodyMedium(isDark: isDark).copyWith(
                         fontWeight: FontWeight.w800,
                         fontSize: 15,
@@ -1099,7 +1121,7 @@ class _MediaSectionScreenState extends State<MediaSectionScreen> {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      'Conrad 👨 & Katja 👩 • Voix réelles natives',
+                      subtitle,
                       style: TextStyle(
                         fontSize: 11.5,
                         color: isDark ? Colors.white54 : Colors.black54,
@@ -1112,7 +1134,7 @@ class _MediaSectionScreenState extends State<MediaSectionScreen> {
           ),
           const SizedBox(height: 12),
           Text(
-            'Ce dialogue en immersion réelle s\'activera dès que tu auras achevé les 10 phrases de ce lot ($completedCount / $totalPhrases terminées).',
+            description,
             style: TextStyle(
               fontSize: 12,
               color: isDark ? Colors.white60 : Colors.black54,

@@ -1,0 +1,99 @@
+{
+  "lot_id": 6,
+  "type": "chanson",
+  "title_de": "Bürgeramt-Stempel-Groove",
+  "title_ar": "إيقاع مكتب الإدارة والختم",
+  "title_fr": "Le groove des formalités",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Ich bräuchte 'nen Termin. (Stempel!)",
+      "ar": "أريد حجز موعد. (ختم!)",
+      "fr": "Il me faudrait un rendez-vous. (Tampon !)",
+      "debut_ms": 200,
+      "fin_ms": 2250,
+      "phrase_id": "phrase_051"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich blick bei dem Formular nicht – (Stempel!)",
+      "ar": "لا أفهم هذه الاستمارة – (ختم!)",
+      "fr": "J'y comprends rien à ce formulaire – (Tampon !)",
+      "debut_ms": 2250,
+      "fin_ms": 4800,
+      "phrase_id": "phrase_055"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Wo muss ich da unterschreiben?",
+      "ar": "أين أوقّع؟",
+      "fr": "Je signe où là ?",
+      "debut_ms": 4800,
+      "fin_ms": 6900,
+      "phrase_id": "phrase_054"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Mir fehlt noch 'n Papier.",
+      "ar": "ينقصني مستند",
+      "fr": "Il me manque encore un papier.",
+      "debut_ms": 6900,
+      "fin_ms": 10000,
+      "phrase_id": "phrase_056"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ist meine Mail bei Ihnen angekommen?",
+      "ar": "هل وصلكم بريدي؟",
+      "fr": "Vous avez bien reçu mon e-mail ?",
+      "debut_ms": 10000,
+      "fin_ms": 12800,
+      "phrase_id": "phrase_053"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Wie lang dauert das so?",
+      "ar": "كم يستغرق هذا تقريباً؟",
+      "fr": "Ça va prendre combien de temps à peu près ?",
+      "debut_ms": 12800,
+      "fin_ms": 15200,
+      "phrase_id": "phrase_057"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich warte schon ewig! (Stempel!)",
+      "ar": "أنتظر منذ زمن طويل! (ختم!)",
+      "fr": "Ça fait une éternité que j'attends ! (Tampon !)",
+      "debut_ms": 15200,
+      "fin_ms": 17200,
+      "phrase_id": "phrase_059"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Da bin ich nicht zuständig.",
+      "ar": "هذا ليس من اختصاصي",
+      "fr": "Ce n'est pas de mon ressort.",
+      "debut_ms": 17200,
+      "fin_ms": 20000,
+      "phrase_id": "phrase_058"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Sorry, kannst du das nochmal sagen?",
+      "ar": "آسف، تعيد هذا؟",
+      "fr": "Pardon, tu peux répéter ça ?",
+      "debut_ms": 20000,
+      "fin_ms": 22800,
+      "phrase_id": "phrase_060"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich muss den Termin leider canceln.",
+      "ar": "للأسف لازم ألغي الموعد",
+      "fr": "Je dois malheureusement annuler le rendez-vous.",
+      "debut_ms": 22800,
+      "fin_ms": 27742,
+      "phrase_id": "phrase_052"
+    }
+  ]
+}

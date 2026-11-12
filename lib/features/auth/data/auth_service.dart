@@ -159,4 +159,37 @@ class AuthService {
       debugPrint('[AuthService] Erreur updateCandidateStats: $e');
     }
   }
+
+  /// Supprime les données cloud et le compte de l'utilisateur connecté (exigence Google Play).
+  Future<void> deleteAccountAndData() async {
+    final user = currentUser;
+    final client = _client;
+    if (user == null || client == null) return;
+
+    try {
+      await client.from('user_phrase_progress').delete().eq('user_id', user.id);
+    } catch (e) {
+      debugPrint('[AuthService] Info suppression user_phrase_progress: $e');
+    }
+
+    try {
+      await client.from('palier_exams').delete().eq('user_id', user.id);
+    } catch (e) {
+      debugPrint('[AuthService] Info suppression palier_exams: $e');
+    }
+
+    try {
+      await client.from('profiles').delete().eq('id', user.id);
+    } catch (e) {
+      debugPrint('[AuthService] Info suppression profiles: $e');
+    }
+
+    try {
+      await client.rpc('delete_user');
+    } catch (e) {
+      debugPrint('[AuthService] Info RPC delete_user: $e');
+    }
+
+    await signOut();
+  }
 }

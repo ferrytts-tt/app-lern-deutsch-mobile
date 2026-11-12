@@ -1,0 +1,153 @@
+{
+  "lot_id": 12,
+  "type": "chanson",
+  "title_de": "Mama-Sonntag-Groove",
+  "title_ar": "أجواء العائلة والبيت",
+  "title_fr": "Le groove du dimanche en famille",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Hörst du mir mal kurz zu? (Mama!)",
+      "ar": "هل تسمعني لحظة؟ (ماما!)",
+      "fr": "Tu m'écoutes un instant ? (Maman !)",
+      "debut_ms": 100,
+      "fin_ms": 2400,
+      "phrase_id": "phrase_111"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Fällt mir nicht leicht, das zu sagen. (Mama!)",
+      "ar": "ليس من السهل عليّ أن أقول هذا. (ماما!)",
+      "fr": "Ce n'est pas facile pour moi de le dire. (Maman !)",
+      "debut_ms": 2400,
+      "fin_ms": 4800,
+      "phrase_id": "phrase_112"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich will das nicht vor allen anderen besprechen.",
+      "ar": "لا أريد أن أناقش هذا أمام الآخرين.",
+      "fr": "Je ne veux pas en parler devant les autres.",
+      "debut_ms": 4800,
+      "fin_ms": 7000,
+      "phrase_id": "phrase_113"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Versprich mir, dass du's keinem erzählst.",
+      "ar": "عدني أنك لن تخبر أحداً.",
+      "fr": "Promets-moi que tu ne le diras à personne.",
+      "debut_ms": 7000,
+      "fin_ms": 9000,
+      "phrase_id": "phrase_114"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Lass uns das in Ruhe besprechen.",
+      "ar": "لنتحدث عن هذا بهدوء.",
+      "fr": "Parlons-en au calme.",
+      "debut_ms": 9000,
+      "fin_ms": 11400,
+      "phrase_id": "phrase_115"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Ich ruf sonntags immer meine Mama an.",
+      "ar": "أتصل بأمي كل يوم أحد.",
+      "fr": "J'appelle ma mère tous les dimanches.",
+      "debut_ms": 11400,
+      "fin_ms": 13800,
+      "phrase_id": "phrase_116"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Meine Eltern wohnen ziemlich weit weg.",
+      "ar": "أهلي يسكنون بعيداً جداً.",
+      "fr": "Mes parents habitent très loin.",
+      "debut_ms": 13800,
+      "fin_ms": 16200,
+      "phrase_id": "phrase_117"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Hast du Geschwister?",
+      "ar": "هل عندك إخوة وأخوات؟",
+      "fr": "Tu as des frères et sœurs ?",
+      "debut_ms": 16200,
+      "fin_ms": 17400,
+      "phrase_id": "phrase_118"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Ich muss noch schnell aufräumen.",
+      "ar": "لازم أرتب قليلاً قبل ذلك.",
+      "fr": "Je dois encore ranger rapidement.",
+      "debut_ms": 17400,
+      "fin_ms": 19600,
+      "phrase_id": "phrase_119"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Wer kocht heute Abend?",
+      "ar": "من سيطبخ الليلة؟",
+      "fr": "Qui fait à manger ce soir ?",
+      "debut_ms": 19600,
+      "fin_ms": 21400,
+      "phrase_id": "phrase_120"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Lass uns das in Ruhe besprechen.",
+      "ar": "لنتحدث عن هذا بهدوء.",
+      "fr": "Parlons-en au calme.",
+      "debut_ms": 21400,
+      "fin_ms": 23700,
+      "phrase_id": "phrase_115"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Ich ruf sonntags immer meine Mama an.",
+      "ar": "أتصل بأمي كل يوم أحد.",
+      "fr": "J'appelle ma mère tous les dimanches.",
+      "debut_ms": 23700,
+      "fin_ms": 26100,
+      "phrase_id": "phrase_116"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Meine Eltern wohnen ziemlich weit weg.",
+      "ar": "أهلي يسكنون بعيداً جداً.",
+      "fr": "Mes parents habitent très loin.",
+      "debut_ms": 26100,
+      "fin_ms": 28400,
+      "phrase_id": "phrase_117"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Hast du Geschwister?",
+      "ar": "هل عندك إخوة وأخوات؟",
+      "fr": "Tu as des frères et sœurs ?",
+      "debut_ms": 28400,
+      "fin_ms": 29400,
+      "phrase_id": "phrase_118"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Ich muss noch schnell aufräumen.",
+      "ar": "لازم أرتب قليلاً قبل ذلك.",
+      "fr": "Je dois encore ranger rapidement.",
+      "debut_ms": 29400,
+      "fin_ms": 31800,
+      "phrase_id": "phrase_119"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Wer kocht heute Abend?",
+      "ar": "من سيطبخ الليلة؟",
+      "fr": "Qui fait à manger ce soir ?",
+      "debut_ms": 31800,
+      "fin_ms": 36519,
+      "phrase_id": "phrase_120"
+    }
+  ]
+}

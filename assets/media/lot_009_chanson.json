@@ -1,0 +1,99 @@
+{
+  "lot_id": 9,
+  "type": "chanson",
+  "title_de": "Bahnhof-Express-Groove",
+  "title_ar": "إيقاع محطة القطار السريع",
+  "title_fr": "Le groove de la gare",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Der Zug hat mal wieder Verspätung. (Tschu-tschu!)",
+      "ar": "القطار متأخر مرة أخرى. (تشو تشو!)",
+      "fr": "Le train est encore en retard... (Tchou-tchou !)",
+      "debut_ms": 900,
+      "fin_ms": 2800,
+      "phrase_id": "phrase_081"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich hab meinen Bus knapp verpasst. (Tschu-tschu!)",
+      "ar": "فاتتني الحافلة بدقيقة. (تشو تشو!)",
+      "fr": "J'ai loupé mon bus de justesse. (Tchou-tchou !)",
+      "debut_ms": 2800,
+      "fin_ms": 4800,
+      "phrase_id": "phrase_082"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich steck im Stau fest.",
+      "ar": "أنا عالق في الازدحام",
+      "fr": "Je suis coincé dans les bouchons.",
+      "debut_ms": 4800,
+      "fin_ms": 6900,
+      "phrase_id": "phrase_085"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich hab den Anschluss nicht gekriegt.",
+      "ar": "فاتني القطار التالي (الوصل)",
+      "fr": "J'ai raté ma correspondance.",
+      "debut_ms": 6900,
+      "fin_ms": 10400,
+      "phrase_id": "phrase_089"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Wie komm ich am besten zum Bahnhof?",
+      "ar": "ما أفضل طريق للمحطة؟",
+      "fr": "C'est quoi le meilleur chemin pour la gare ?",
+      "debut_ms": 10400,
+      "fin_ms": 13000,
+      "phrase_id": "phrase_084"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Wo krieg ich 'n Ticket her?",
+      "ar": "من أين أحصل على تذكرة؟",
+      "fr": "Où est-ce que je peux choper un ticket ?",
+      "debut_ms": 13000,
+      "fin_ms": 15100,
+      "phrase_id": "phrase_088"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Is' hier noch frei?",
+      "ar": "هل المقعد هنا فارغ؟",
+      "fr": "C'est libre ici ?",
+      "debut_ms": 15100,
+      "fin_ms": 16400,
+      "phrase_id": "phrase_083"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich muss hier raus!",
+      "ar": "لازم أنزل هنا!",
+      "fr": "Faut que je descende là !",
+      "debut_ms": 16400,
+      "fin_ms": 17500,
+      "phrase_id": "phrase_086"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Kannst du mich heimfahren?",
+      "ar": "توصلني للبيت؟",
+      "fr": "Tu peux me déposer chez moi ?",
+      "debut_ms": 17500,
+      "fin_ms": 19600,
+      "phrase_id": "phrase_087"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Das dauert ja ewig!",
+      "ar": "هذا يأخذ وقتاً طويلاً!",
+      "fr": "Mais ça prend une éternité !",
+      "debut_ms": 19600,
+      "fin_ms": 23615,
+      "phrase_id": "phrase_090"
+    }
+  ]
+}

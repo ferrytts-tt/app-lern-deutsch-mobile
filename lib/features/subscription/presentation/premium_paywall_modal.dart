@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:in_app_purchase/in_app_purchase.dart';
+import '../../../core/services/billing_service.dart';
 import '../../../core/services/subscription_service.dart';
 import '../../../core/theme/app_colors.dart';
 
@@ -26,10 +28,53 @@ class PremiumPaywallModal extends StatefulWidget {
 
 class _PremiumPaywallModalState extends State<PremiumPaywallModal> {
   int _selectedPlanIndex = 1; // 0 = Mensuel, 1 = Annuel
+  bool _isProcessingPurchase = false;
+  Map<String, ProductDetails> _storeProducts = {};
   final TextEditingController _codeController = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+    _initBilling();
+  }
+
+  Future<void> _initBilling() async {
+    BillingService.instance.onPurchaseUpdate = (status, errorMessage) {
+      if (!mounted) return;
+      setState(() => _isProcessingPurchase = status == PurchaseStatus.pending);
+
+      if (status == PurchaseStatus.purchased || status == PurchaseStatus.restored) {
+        Navigator.of(context).pop(true);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              status == PurchaseStatus.restored
+                  ? '✅ Abonnement restauré avec succès !'
+                  : '🎉 Abonnement Hoppla Pro activé !',
+            ),
+            backgroundColor: const Color(0xFF10B981),
+          ),
+        );
+      } else if (status == PurchaseStatus.error) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('❌ ${errorMessage ?? "Achat impossible."}'),
+            backgroundColor: Colors.redAccent,
+          ),
+        );
+      }
+    };
+
+    await BillingService.instance.initialize();
+    final products = await BillingService.instance.loadProducts();
+    if (mounted) {
+      setState(() => _storeProducts = products);
+    }
+  }
+
+  @override
   void dispose() {
+    BillingService.instance.onPurchaseUpdate = null;
     _codeController.dispose();
     super.dispose();
   }
@@ -176,7 +221,7 @@ class _PremiumPaywallModalState extends State<PremiumPaywallModal> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Entrez votre code d\'activation fourni lors de votre paiement (D17, virement ou promo) :',
+              'Entrez votre code promotionnel :',
               style: TextStyle(fontSize: 13, color: Colors.grey),
             ),
             const SizedBox(height: 14),
@@ -360,7 +405,7 @@ class _PremiumPaywallModalState extends State<PremiumPaywallModal> {
                         child: _buildPlanCard(
                           index: 0,
                           title: 'Mensuel',
-                          price: '4,99 €',
+                          price: _storeProducts[BillingProductIds.monthly]?.price ?? '4,99 €',
                           period: '/ mois',
                           badge: null,
                           isDark: isDark,
@@ -372,7 +417,7 @@ class _PremiumPaywallModalState extends State<PremiumPaywallModal> {
                         child: _buildPlanCard(
                           index: 1,
                           title: 'Annuel',
-                          price: '29,99 €',
+                          price: _storeProducts[BillingProductIds.annual]?.price ?? '29,99 €',
                           period: '/ an',
                           badge: '-50% ÉCONOMIE',
                           isDark: isDark,
@@ -383,7 +428,7 @@ class _PremiumPaywallModalState extends State<PremiumPaywallModal> {
 
                   const SizedBox(height: 22),
 
-                  // Bouton Principal d'action
+                  // Bouton Principal d'action (Google Play Billing)
                   SizedBox(
                     width: double.infinity,
                     height: 52,
@@ -396,71 +441,81 @@ class _PremiumPaywallModalState extends State<PremiumPaywallModal> {
                           borderRadius: BorderRadius.circular(16),
                         ),
                       ),
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (dialogCtx) => AlertDialog(
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                            title: const Row(
-                              children: [
-                                Icon(Icons.payment_rounded, color: Color(0xFF10B981)),
-                                SizedBox(width: 10),
-                                Text('Paiement Hoppla Pro', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-                              ],
-                            ),
-                            content: const Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Le paiement direct Google Play Store sera activé dès la validation finale du store.\n\nPour obtenir votre accès immédiat en Tunisie ou à l\'international (via D17, virement bancaire ou carte) et recevoir votre code d\'activation, contactez le support ou saisissez votre code reçu.',
-                                  style: TextStyle(fontSize: 13.5, height: 1.45),
-                                ),
-                              ],
-                            ),
-                            actions: [
-                              TextButton(
-                                onPressed: () => Navigator.of(dialogCtx).pop(),
-                                child: const Text('Fermer'),
+                      onPressed: _isProcessingPurchase
+                          ? null
+                          : () async {
+                              final productId = _selectedPlanIndex == 1
+                                  ? BillingProductIds.annual
+                                  : BillingProductIds.monthly;
+                              setState(() => _isProcessingPurchase = true);
+                              final error = await BillingService.instance.buySubscription(productId);
+                              if (!context.mounted) return;
+                              if (error != null) {
+                                setState(() => _isProcessingPurchase = false);
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(error),
+                                    backgroundColor: Colors.orange.shade800,
+                                  ),
+                                );
+                              }
+                            },
+                      child: _isProcessingPurchase
+                          ? const SizedBox(
+                              width: 22,
+                              height: 22,
+                              child: CircularProgressIndicator(strokeWidth: 2.5, color: Colors.white),
+                            )
+                          : Text(
+                              _selectedPlanIndex == 1
+                                  ? 'S\'abonner (${_storeProducts[BillingProductIds.annual]?.price ?? "29,99 €"}/an)'
+                                  : 'S\'abonner (${_storeProducts[BillingProductIds.monthly]?.price ?? "4,99 €"}/mois)',
+                              style: const TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
                               ),
-                              ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color(0xFF10B981),
-                                  foregroundColor: Colors.white,
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                                ),
-                                onPressed: () {
-                                  Navigator.of(dialogCtx).pop();
-                                  _showActivationCodeDialog();
-                                },
-                                child: const Text('Saisir un code d\'accès'),
-                              ),
-                            ],
-                          ),
-                        );
-                      },
-                      child: Text(
-                        _selectedPlanIndex == 1
-                            ? 'Commencer l\'abonnement (29,99 €/an)'
-                            : 'Commencer l\'abonnement (4,99 €/mois)',
-                        style: const TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                            ),
                     ),
                   ),
 
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 8),
 
-                  // Bouton Activer un code
-                  TextButton.icon(
-                    onPressed: _showActivationCodeDialog,
-                    icon: const Icon(Icons.vpn_key_rounded, size: 18, color: Color(0xFFF59E0B)),
-                    label: const Text(
-                      'Vous avez un code d\'accès ?',
-                      style: TextStyle(fontWeight: FontWeight.w600, color: Color(0xFFF59E0B)),
-                    ),
+                  // Restaurer les achats Google Play + Code promo
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextButton.icon(
+                        onPressed: _isProcessingPurchase
+                            ? null
+                            : () async {
+                                final error = await BillingService.instance.restorePurchases();
+                                if (!context.mounted) return;
+                                if (error != null) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(content: Text(error)),
+                                  );
+                                } else {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text('Vérification des achats Google Play en cours...')),
+                                  );
+                                }
+                              },
+                        icon: const Icon(Icons.restore_rounded, size: 17, color: AppColors.primary),
+                        label: const Text(
+                          'Restaurer',
+                          style: TextStyle(fontWeight: FontWeight.w600, color: AppColors.primary, fontSize: 13),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      TextButton.icon(
+                        onPressed: _showActivationCodeDialog,
+                        icon: const Icon(Icons.vpn_key_rounded, size: 17, color: Color(0xFFF59E0B)),
+                        label: const Text(
+                          'Code promo',
+                          style: TextStyle(fontWeight: FontWeight.w600, color: Color(0xFFF59E0B), fontSize: 13),
+                        ),
+                      ),
+                    ],
                   ),
 
                   const Divider(height: 24),

@@ -184,5 +184,94 @@ void main() {
       // Vérifier que Chansons & Dialogues n'est PAS affiché sur l'accueil
       expect(find.text('Chansons & Dialogues'), findsNothing);
     });
+
+    testWidgets('6. MediaSectionScreen : la chanson MP3 suit la même règle de déblocage que le dialogue', (tester) async {
+      final db = AppDatabase.instance;
+      for (int i = 1; i <= 10; i++) {
+        await db.savePhrase(Phrase(
+          id: 'phrase_${i.toString().padLeft(3, '0')}',
+          de: 'Satz $i',
+          ar: 'جملة $i',
+          fr: 'Phrase $i',
+        ));
+      }
+
+      const testManifest = MediaManifest(
+        version: 1,
+        updatedAt: '2026-11-11',
+        contents: [
+          MediaItem(
+            lotId: 1,
+            type: MediaType.dialogue,
+            audioFile: 'lot_001_dialogue.mp3',
+            contentJsonFile: 'lot_001_dialogue.json',
+            durationSeconds: 28,
+            sizeBytes: 446607,
+            checksum: 'abc',
+            version: 1,
+            statutLicence: MediaLicenseStatus.approuve,
+            source: 'test',
+            createdAt: '2026-11-11',
+            titleDe: 'Dialogue Test',
+          ),
+          MediaItem(
+            lotId: 1,
+            type: MediaType.chanson,
+            audioFile: 'lot_001_chanson.mp3',
+            contentJsonFile: 'lot_001_chanson.json',
+            durationSeconds: 27,
+            sizeBytes: 658962,
+            checksum: 'def',
+            version: 1,
+            statutLicence: MediaLicenseStatus.approuve,
+            source: 'test',
+            createdAt: '2026-11-11',
+            titleDe: 'Chanson Test',
+          ),
+        ],
+      );
+
+      tester.view.physicalSize = const Size(800, 2000);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(() {
+        tester.view.resetPhysicalSize();
+        tester.view.resetDevicePixelRatio();
+      });
+
+      // Lot 1 non terminé -> Dialogue ET Chanson doivent être en attente (aucun bouton Écouter)
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: MediaSectionScreen(initialManifest: testManifest),
+        ),
+      );
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 200));
+
+      expect(find.text('🔒 En attente'), findsNWidgets(2));
+      expect(find.text('Écouter'), findsNothing);
+
+      // Terminer les 10 phrases du Lot 1 -> Dialogue ET Chanson s'ouvrent ensemble
+      final now = DateTime.now();
+      for (int i = 1; i <= 10; i++) {
+        await db.saveProgression(UserPhrase(
+          phraseId: 'phrase_${i.toString().padLeft(3, '0')}',
+          level: 1,
+          reps: 1,
+          dueAt: now,
+        ));
+      }
+
+      await tester.pumpWidget(
+        const MaterialApp(
+          key: ValueKey('completed'),
+          home: MediaSectionScreen(initialManifest: testManifest),
+        ),
+      );
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 200));
+
+      expect(find.text('🔒 En attente'), findsNothing);
+      expect(find.text('Écouter'), findsNWidgets(2));
+    });
   });
 }

@@ -1,0 +1,99 @@
+{
+  "lot_id": 3,
+  "type": "chanson",
+  "title_de": "Kinoabend-Vibes",
+  "title_ar": "أجواء سهرة السينما",
+  "title_fr": "Ambiance soirée ciné",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Hast du Bock auf Kino?",
+      "ar": "عندك رغبة نروح السينما؟",
+      "fr": "Ça te dit un ciné ?",
+      "debut_ms": 1500,
+      "fin_ms": 3400,
+      "phrase_id": "phrase_021"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Kommst du mit? Na klar!",
+      "ar": "تجي معنا؟ بالتأكيد!",
+      "fr": "Tu viens avec nous ? Bien sûr !",
+      "debut_ms": 3400,
+      "fin_ms": 5000,
+      "phrase_id": "phrase_025"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich bleib heut lieber daheim, doch wir sehen uns bald, ja!",
+      "ar": "أفضّل أن أبقى في البيت اليوم، لكننا سنلتقي قريباً، اتفقنا!",
+      "fr": "Je préfère rester chez moi aujourd'hui, mais on se voit bientôt, d'accord !",
+      "debut_ms": 5000,
+      "fin_ms": 9200,
+      "phrase_id": "phrase_027"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Das meinst du jetzt nicht ernst, oder?",
+      "ar": "ما تقصد هذا فعلاً، صح؟",
+      "fr": "Tu déconnes là, j'espère ?",
+      "debut_ms": 9200,
+      "fin_ms": 11000,
+      "phrase_id": "phrase_026"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Tust du mir mal 'nen Gefallen?",
+      "ar": "تعمل لي معروفاً؟",
+      "fr": "Tu peux me rendre un service ?",
+      "debut_ms": 11000,
+      "fin_ms": 12900,
+      "phrase_id": "phrase_028"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich bin gleich da!",
+      "ar": "أنا قادم بعد قليل!",
+      "fr": "J'arrive tout de suite !",
+      "debut_ms": 12900,
+      "fin_ms": 14400,
+      "phrase_id": "phrase_022"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich bin ein bisschen spät dran!",
+      "ar": "أنا متأخر قليلاً!",
+      "fr": "Je suis un peu à la bourre !",
+      "debut_ms": 14400,
+      "fin_ms": 17000,
+      "phrase_id": "phrase_023"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Das war ein mega Abend!",
+      "ar": "كانت أمسية رائعة!",
+      "fr": "C'était une soirée trop géniale !",
+      "debut_ms": 17000,
+      "fin_ms": 19700,
+      "phrase_id": "phrase_024"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Geht auf mich! Hey, hey!",
+      "ar": "عليّ الحساب! هيا، هيا!",
+      "fr": "C'est pour moi ! Hé, hé !",
+      "debut_ms": 19700,
+      "fin_ms": 22100,
+      "phrase_id": "phrase_029"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Wir telefonieren später, ja? Bis bald!",
+      "ar": "نتكلم بالهاتف لاحقاً، اتفقنا؟ إلى اللقاء!",
+      "fr": "On s'appelle plus tard, ça marche ? À bientôt !",
+      "debut_ms": 22100,
+      "fin_ms": 34500,
+      "phrase_id": "phrase_030"
+    }
+  ]
+}

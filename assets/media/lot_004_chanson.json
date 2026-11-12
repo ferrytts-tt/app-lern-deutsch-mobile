@@ -1,0 +1,99 @@
+{
+  "lot_id": 4,
+  "type": "chanson",
+  "title_de": "Gefühlschaos-Groove",
+  "title_ar": "إيقاع المشاعر المتضاربة",
+  "title_fr": "Le groove des émotions",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Ich bin total aufgeregt.",
+      "ar": "أنا متحمس/متوتر جداً",
+      "fr": "Je suis super excité / hyper tendu.",
+      "debut_ms": 1400,
+      "fin_ms": 4300,
+      "phrase_id": "phrase_031"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich hab richtig Muffensausen vor der Prüfung.",
+      "ar": "أنا خائف من الامتحان",
+      "fr": "J'ai trop la trouille de l'examen.",
+      "debut_ms": 4300,
+      "fin_ms": 10700,
+      "phrase_id": "phrase_034"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Mir geht's nicht so gut.",
+      "ar": "لست على ما يرام",
+      "fr": "Je ne me sens pas très bien.",
+      "debut_ms": 10700,
+      "fin_ms": 12400,
+      "phrase_id": "phrase_036"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich hab die Nase gestrichen voll!",
+      "ar": "طفح الكيل عندي",
+      "fr": "J'en ai ras-le-bol !",
+      "debut_ms": 12400,
+      "fin_ms": 14700,
+      "phrase_id": "phrase_032"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Das macht mich echt sauer!",
+      "ar": "هذا يغضبني",
+      "fr": "Ça me fout les nerfs / Ça m'énerve trop.",
+      "debut_ms": 14700,
+      "fin_ms": 19100,
+      "phrase_id": "phrase_033"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Tut mir echt leid.",
+      "ar": "آسف حقاً",
+      "fr": "Vraiment désolé.",
+      "debut_ms": 19100,
+      "fin_ms": 21100,
+      "phrase_id": "phrase_037"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Mach dir keinen Kopf!",
+      "ar": "لا تشغل بالك",
+      "fr": "Ne te prends pas la tête !",
+      "debut_ms": 21100,
+      "fin_ms": 23400,
+      "phrase_id": "phrase_038"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Das ist mir voll peinlich.",
+      "ar": "أشعر بإحراج شديد",
+      "fr": "J'ai trop honte / La honte !",
+      "debut_ms": 23400,
+      "fin_ms": 25400,
+      "phrase_id": "phrase_039"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Bin ich stolz auf dich!",
+      "ar": "أنا فخور بك!",
+      "fr": "Je suis fier de toi !",
+      "debut_ms": 25400,
+      "fin_ms": 27600,
+      "phrase_id": "phrase_040"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich bin mega happy.",
+      "ar": "أنا سعيد جداً",
+      "fr": "Je suis trop content !",
+      "debut_ms": 27600,
+      "fin_ms": 31556,
+      "phrase_id": "phrase_035"
+    }
+  ]
+}

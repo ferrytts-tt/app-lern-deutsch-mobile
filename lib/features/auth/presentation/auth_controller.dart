@@ -253,6 +253,19 @@ class AuthController extends StateNotifier<CandidateAuthState> {
     }
   }
 
+  /// Suppression complète du compte et de toutes les données associées
+  Future<bool> deleteAccountAndData() async {
+    try {
+      await _authService.deleteAccountAndData();
+      await AppDatabase.instance.resetUserProgress(resetPreferences: true);
+      state = const CandidateAuthState(status: AuthStatus.unauthenticated);
+      return true;
+    } catch (e) {
+      state = state.copyWith(errorMessage: e.toString());
+      return false;
+    }
+  }
+
   /// Réinitialiser mot de passe
   Future<bool> resetPassword(String email) async {
     try {

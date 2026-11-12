@@ -1,0 +1,99 @@
+{
+  "lot_id": 7,
+  "type": "chanson",
+  "title_de": "Gute-Besserung-Beat",
+  "title_ar": "إيقاع الشفاء العاجل",
+  "title_fr": "Le beat du rétablissement",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Mir brummt der Schädel. (Hatschi!)",
+      "ar": "رأسي يطنّ من الألم. (أتشي!)",
+      "fr": "J'ai un mal de crâne pas possible. (Atchoum !)",
+      "debut_ms": 1700,
+      "fin_ms": 4100,
+      "phrase_id": "phrase_061"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich hab mir was eingefangen. (Hatschi!)",
+      "ar": "أصبت بعدوى (برد أو فيروس). (أتشي!)",
+      "fr": "J'ai attrapé un coup de froid. (Atchoum !)",
+      "debut_ms": 4100,
+      "fin_ms": 6600,
+      "phrase_id": "phrase_062"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Mir ist total schlecht.",
+      "ar": "أشعر بغثيان شديد",
+      "fr": "J'ai vraiment la nausée.",
+      "debut_ms": 6600,
+      "fin_ms": 8700,
+      "phrase_id": "phrase_063"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich hab kaum ein Auge zugetan.",
+      "ar": "بالكاد نمت",
+      "fr": "J'ai presque pas fermé l'œil de la nuit.",
+      "debut_ms": 8700,
+      "fin_ms": 10900,
+      "phrase_id": "phrase_064"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Au, das tut echt weh!",
+      "ar": "آه، هذا يؤلم فعلاً!",
+      "fr": "Aïe, ça fait super mal !",
+      "debut_ms": 10900,
+      "fin_ms": 13400,
+      "phrase_id": "phrase_070"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich hab mir wehgetan.",
+      "ar": "آذيت نفسي",
+      "fr": "Je me suis fait mal.",
+      "debut_ms": 13400,
+      "fin_ms": 16400,
+      "phrase_id": "phrase_065"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich muss mich mal hinlegen,",
+      "ar": "لازم أستلقي قليلاً،",
+      "fr": "Faut que j'aille m'allonger un peu,",
+      "debut_ms": 16400,
+      "fin_ms": 18900,
+      "phrase_id": "phrase_067"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "ich bin völlig durch.",
+      "ar": "أنا منهك تماماً.",
+      "fr": "je suis complètement au bout du rouleau.",
+      "debut_ms": 18900,
+      "fin_ms": 21400,
+      "phrase_id": "phrase_069"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ey, ich brauch 'n Rezept!",
+      "ar": "هيي، أحتاج وصفة طبية!",
+      "fr": "Hé, il me faut une ordonnance !",
+      "debut_ms": 21400,
+      "fin_ms": 23200,
+      "phrase_id": "phrase_066"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Gute Besserung! Werd schnell wieder fit!",
+      "ar": "شفاك الله! أتمنى لك تعافياً سريعاً",
+      "fr": "Bon rétablissement ! Remets-toi vite sur pied !",
+      "debut_ms": 23200,
+      "fin_ms": 29179,
+      "phrase_id": "phrase_068"
+    }
+  ]
+}

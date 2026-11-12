@@ -1,0 +1,99 @@
+{
+  "lot_id": 8,
+  "type": "chanson",
+  "title_de": "Kein-Netz-Groove",
+  "title_ar": "أجواء انقطاع الشبكة",
+  "title_fr": "Le groove sans réseau",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Ich versteh dich ganz schlecht, die Leitung ist mies. (Hallo?)",
+      "ar": "لا أسمعك جيداً، الخط سيئ. (ألو؟)",
+      "fr": "Je te capte très mal, la ligne est pourrie. (Allô ?)",
+      "debut_ms": 200,
+      "fin_ms": 4700,
+      "phrase_id": "phrase_071"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Mein Akku is' gleich leer. (Hallo?)",
+      "ar": "بطاريتي ستنفد قريباً. (ألو؟)",
+      "fr": "J'ai presque plus de batterie. (Allô ?)",
+      "debut_ms": 4700,
+      "fin_ms": 7100,
+      "phrase_id": "phrase_074"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich hatte kein Netz.",
+      "ar": "ما كان عندي شبكة",
+      "fr": "J'avais pas de réseau.",
+      "debut_ms": 7100,
+      "fin_ms": 9300,
+      "phrase_id": "phrase_079"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Du hast mich angerufen? Hab ich nicht gehört.",
+      "ar": "اتصلت بي؟ ما سمعت",
+      "fr": "Tu m'as appelé ? J'ai pas entendu.",
+      "debut_ms": 9300,
+      "fin_ms": 13700,
+      "phrase_id": "phrase_075"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Dich erreicht man ja nie!",
+      "ar": "ما أحد يقدر يوصلك أبداً!",
+      "fr": "On n'arrive jamais à te joindre !",
+      "debut_ms": 13700,
+      "fin_ms": 17100,
+      "phrase_id": "phrase_078"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich hab dir geschrieben.",
+      "ar": "أرسلت لك رسالة",
+      "fr": "Je t'ai envoyé un message.",
+      "debut_ms": 17100,
+      "fin_ms": 18900,
+      "phrase_id": "phrase_073"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Check mal kurz meine Nachricht.",
+      "ar": "اطلع على رسالتي",
+      "fr": "Regarde vite mon message.",
+      "debut_ms": 18900,
+      "fin_ms": 20800,
+      "phrase_id": "phrase_080"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Schick mir mal den Standort.",
+      "ar": "أرسل لي الموقع",
+      "fr": "Envoie-moi ta position.",
+      "debut_ms": 20800,
+      "fin_ms": 23800,
+      "phrase_id": "phrase_076"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich ruf dich gleich zurück.",
+      "ar": "سأتصل بك بعد قليل",
+      "fr": "Je te rappelle tout de suite.",
+      "debut_ms": 23800,
+      "fin_ms": 27100,
+      "phrase_id": "phrase_072"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich schreib dir gleich.",
+      "ar": "سأكتب لك حالاً",
+      "fr": "Je t'écris dans un instant.",
+      "debut_ms": 27100,
+      "fin_ms": 31007,
+      "phrase_id": "phrase_077"
+    }
+  ]
+}

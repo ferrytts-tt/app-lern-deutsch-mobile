@@ -1,0 +1,99 @@
+{
+  "lot_id": 11,
+  "type": "chanson",
+  "title_de": "Unter-vier-Augen-Vibes",
+  "title_ar": "أجواء الحديث على انفراد",
+  "title_fr": "Confidences entre quatre yeux",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Kann ich dich mal unter vier Augen sprechen? (Pst!)",
+      "ar": "أريد أن أتحدث معك على انفراد. (هس!)",
+      "fr": "Je voudrais te parler en tête-à-tête. (Chut !)",
+      "debut_ms": 600,
+      "fin_ms": 3300,
+      "phrase_id": "phrase_101"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Hast du mal kurz Zeit zum Reden? (Pst!)",
+      "ar": "هل عندك وقت قصير لنتحدث؟ (هس!)",
+      "fr": "Tu as un moment pour qu'on parle ? (Chut !)",
+      "debut_ms": 3300,
+      "fin_ms": 5700,
+      "phrase_id": "phrase_102"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich muss dir was Wichtiges sagen.",
+      "ar": "لازم أقول لك شيئاً مهماً.",
+      "fr": "Je dois te dire quelque chose d'important.",
+      "debut_ms": 5700,
+      "fin_ms": 7600,
+      "phrase_id": "phrase_105"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Wir müssen dringend reden.",
+      "ar": "لازم نتكلم بشكل عاجل.",
+      "fr": "Il faut qu'on parle, c'est urgent.",
+      "debut_ms": 7600,
+      "fin_ms": 9600,
+      "phrase_id": "phrase_108"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Es ist was Persönliches.",
+      "ar": "الأمر شخصي.",
+      "fr": "C'est quelque chose de personnel.",
+      "debut_ms": 9600,
+      "fin_ms": 11700,
+      "phrase_id": "phrase_109"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Können wir das unter uns klären?",
+      "ar": "هل نحل هذا بيننا فقط؟",
+      "fr": "On peut régler ça entre nous ?",
+      "debut_ms": 11700,
+      "fin_ms": 13700,
+      "phrase_id": "phrase_103"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Bleibt unter uns, ja?",
+      "ar": "هذا يبقى بيننا.",
+      "fr": "Ça reste entre nous.",
+      "debut_ms": 13700,
+      "fin_ms": 16000,
+      "phrase_id": "phrase_104"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich will ehrlich zu dir sein.",
+      "ar": "أريد أن أكون صريحاً معك.",
+      "fr": "Je veux être honnête avec toi.",
+      "debut_ms": 16000,
+      "fin_ms": 18400,
+      "phrase_id": "phrase_106"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Darf ich dich was Persönliches fragen?",
+      "ar": "هل يمكنني أن أسألك سؤالاً شخصياً؟",
+      "fr": "Je peux te poser une question personnelle ?",
+      "debut_ms": 18400,
+      "fin_ms": 20800,
+      "phrase_id": "phrase_107"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich bräuchte mal deinen Rat.",
+      "ar": "أحتاج نصيحتك.",
+      "fr": "J'aurais besoin de ton avis.",
+      "debut_ms": 20800,
+      "fin_ms": 33384,
+      "phrase_id": "phrase_110"
+    }
+  ]
+}

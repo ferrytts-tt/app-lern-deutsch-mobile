@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../core/localization/app_languages.dart';
 import '../../../core/services/subscription_service.dart';
 import '../../../core/services/tts_service.dart';
@@ -14,6 +15,83 @@ import 'settings_controller.dart';
 /// Écran Réglages complet : Thème (clair/sombre/système), objectifs, vitesse TTS et gestion des données.
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
+
+  /// URL officielle de la politique de confidentialité (doit correspondre à la fiche Play Console).
+  static const String privacyPolicyUrl =
+      'https://ferrytts-tt.github.io/app-lern-deutsch-mobile/privacy.html';
+
+  Future<void> _openPrivacyPolicy(BuildContext context) async {
+    final uri = Uri.parse(privacyPolicyUrl);
+    final launched = await launchUrl(uri, mode: LaunchMode.externalApplication);
+    if (!launched && context.mounted) {
+      showDialog(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          title: const Text('Politique de confidentialité'),
+          content: const Text(
+            'Hoppla! collecte uniquement les données nécessaires à votre progression (profil, scores et synchronisation cloud via Supabase). '
+            'L\'accès au microphone est utilisé uniquement pour l\'entraînement à la prononciation et n\'est jamais partagé avec des tiers.\n\n'
+            'URL : $privacyPolicyUrl',
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(ctx).pop(),
+              child: const Text('Fermer'),
+            ),
+          ],
+        ),
+      );
+    }
+  }
+
+  void _confirmDeleteAccount(BuildContext context, WidgetRef ref) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        title: const Row(
+          children: [
+            Icon(Icons.delete_forever_rounded, color: AppColors.gentleError),
+            SizedBox(width: 8),
+            Expanded(child: Text('Supprimer mon compte ?')),
+          ],
+        ),
+        content: const Text(
+          'Cette action est irréversible. Votre compte ainsi que toutes vos données cloud et locales (progression, examens, préférences) seront définitivement supprimés.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(),
+            child: const Text('Annuler'),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.gentleError,
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () async {
+              Navigator.of(ctx).pop();
+              final ok = await ref.read(authControllerProvider.notifier).deleteAccountAndData();
+              await SubscriptionService.instance.logoutAdmin();
+              if (context.mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(
+                      ok
+                          ? 'Compte et données supprimés définitivement.'
+                          : 'Données locales supprimées. Vérifiez votre connexion pour la suppression cloud.',
+                    ),
+                  ),
+                );
+              }
+            },
+            child: const Text('Supprimer définitivement'),
+          ),
+        ],
+      ),
+    );
+  }
 
   void _testVoice(double speed, {String? gender}) {
     TtsService.instance.speak(
@@ -795,13 +873,25 @@ class SettingsScreen extends ConsumerWidget {
 
             const SizedBox(height: 24),
 
-            // 5. Gestion des données
-            _buildSectionTitle('Données & Réinitialisation', isDark),
+            // 5. Confidentialité & Données
+            _buildSectionTitle('Confidentialité & Données', isDark),
             CustomCard(
               padding: const EdgeInsets.all(18),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    leading: const Icon(Icons.privacy_tip_outlined, color: AppColors.primary),
+                    title: Text(
+                      'Politique de confidentialité',
+                      style: AppTextStyles.bodyMedium(isDark: isDark).copyWith(fontWeight: FontWeight.w700),
+                    ),
+                    subtitle: const Text(privacyPolicyUrl, style: TextStyle(fontSize: 12)),
+                    trailing: const Icon(Icons.open_in_new_rounded, size: 18),
+                    onTap: () => _openPrivacyPolicy(context),
+                  ),
+                  const Divider(height: 20),
                   Text(
                     'Tu souhaites repartir sur de nouvelles bases ?',
                     style: AppTextStyles.bodyMedium(isDark: isDark),
@@ -817,6 +907,18 @@ class SettingsScreen extends ConsumerWidget {
                     onPressed: () => _confirmReset(context, controller),
                     icon: const Icon(Icons.restart_alt_rounded),
                     label: const Text('Réinitialiser ma progression'),
+                  ),
+                  const SizedBox(height: 10),
+                  OutlinedButton.icon(
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: AppColors.gentleError,
+                      side: const BorderSide(color: AppColors.gentleError),
+                      shape: const StadiumBorder(),
+                      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+                    ),
+                    onPressed: () => _confirmDeleteAccount(context, ref),
+                    icon: const Icon(Icons.delete_forever_rounded),
+                    label: const Text('Supprimer mon compte et mes données'),
                   ),
                 ],
               ),

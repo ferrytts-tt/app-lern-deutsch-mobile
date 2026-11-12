@@ -1,0 +1,107 @@
+{
+  "lot_id": 10,
+  "type": "chanson",
+  "title_de": "Na-ja-Meinungs-Groove",
+  "title_ar": "إيقاع النقاش والآراء",
+  "title_fr": "Le groove des opinions",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Na ja, na ja... (Intro)",
+      "ar": "يعني، يعني... (مقدمة)",
+      "fr": "Mouais, mouais... (Intro)",
+      "debut_ms": 0,
+      "fin_ms": 9200
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Das überzeugt mich jetzt nicht so. (Na ja!)",
+      "ar": "هذا لا يقنعني كثيراً. (يعني!)",
+      "fr": "Ça ne me convainc pas trop. (Mouais !)",
+      "debut_ms": 9200,
+      "fin_ms": 11400,
+      "phrase_id": "phrase_091"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Seh ich anders. (Na ja!)",
+      "ar": "أراه بشكل مختلف. (يعني!)",
+      "fr": "Je vois pas les choses comme ça. (Mouais !)",
+      "debut_ms": 11400,
+      "fin_ms": 12900,
+      "phrase_id": "phrase_092"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Wie meinst du das jetzt?",
+      "ar": "ماذا تقصد بذلك؟",
+      "fr": "Tu veux dire quoi par là ?",
+      "debut_ms": 12900,
+      "fin_ms": 14000,
+      "phrase_id": "phrase_098"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Jetzt übertreib mal nicht!",
+      "ar": "لا تبالغ الآن",
+      "fr": "N'exagère pas non plus !",
+      "debut_ms": 14000,
+      "fin_ms": 15500,
+      "phrase_id": "phrase_095"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Da ist was dran.",
+      "ar": "فيه شيء من الصحة",
+      "fr": "Y a du vrai là-dedans.",
+      "debut_ms": 15500,
+      "fin_ms": 16700,
+      "phrase_id": "phrase_093"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Hab ich mir schon gedacht.",
+      "ar": "توقعت ذلك فعلاً",
+      "fr": "Je m'en doutais bien.",
+      "debut_ms": 16700,
+      "fin_ms": 18200,
+      "phrase_id": "phrase_094"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Damit hätte ich nie gerechnet!",
+      "ar": "ما توقعت هذا أبداً!",
+      "fr": "Je m'attendais vraiment pas à ça !",
+      "debut_ms": 18200,
+      "fin_ms": 19900,
+      "phrase_id": "phrase_097"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Voll schade, ey.",
+      "ar": "يا للأسف!",
+      "fr": "Trop dommage, franchement !",
+      "debut_ms": 19900,
+      "fin_ms": 21100,
+      "phrase_id": "phrase_096"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Da hab ich ja nochmal Glück gehabt.",
+      "ar": "كنت محظوظاً هذه المرة",
+      "fr": "J'ai eu un sacré coup de bol là !",
+      "debut_ms": 21100,
+      "fin_ms": 22900,
+      "phrase_id": "phrase_099"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Das bringt doch nichts.",
+      "ar": "لا فائدة من هذا",
+      "fr": "Ça sert à rien de toute façon.",
+      "debut_ms": 22900,
+      "fin_ms": 35344,
+      "phrase_id": "phrase_100"
+    }
+  ]
+}
