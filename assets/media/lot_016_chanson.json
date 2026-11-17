@@ -1,0 +1,99 @@
+{
+  "lot_id": 16,
+  "type": "chanson",
+  "title_de": "Kragen-Platzen- und Versöhnungs-Groove",
+  "title_ar": "إيقاع الغضب والصلح",
+  "title_fr": "Le groove du coup de gueule et de la réconciliation",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Mir platzt gleich der Kragen!",
+      "ar": "سأنفجر غضباً بعد قليل!",
+      "fr": "Je vais exploser de colère !",
+      "debut_ms": 700,
+      "fin_ms": 2700,
+      "phrase_id": "phrase_151"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich hab keinen Bock mehr auf Streit.",
+      "ar": "لم أعد أرغب في الشجار.",
+      "fr": "Je n'ai plus envie de me disputer.",
+      "debut_ms": 2700,
+      "fin_ms": 5400,
+      "phrase_id": "phrase_152"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Reg dich mal ab,",
+      "ar": "اهدأ،",
+      "fr": "Calme-toi,",
+      "debut_ms": 5500,
+      "fin_ms": 7300,
+      "phrase_id": "phrase_154"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "war nicht so gemeint.",
+      "ar": "لم أقصد ذلك.",
+      "fr": "ce n'était pas voulu ainsi.",
+      "debut_ms": 7300,
+      "fin_ms": 9600,
+      "phrase_id": "phrase_153"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Schwamm drüber...",
+      "ar": "لننسَ الأمر...",
+      "fr": "On passe l'éponge...",
+      "debut_ms": 9600,
+      "fin_ms": 11500,
+      "phrase_id": "phrase_155"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Du hast mir echt gefehlt.",
+      "ar": "اشتقت لك فعلاً.",
+      "fr": "Tu m'as vraiment manqué.",
+      "debut_ms": 11500,
+      "fin_ms": 14400,
+      "phrase_id": "phrase_156"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Seh ich genauso!",
+      "ar": "أراه كذلك تماماً!",
+      "fr": "Je vois ça tout à fait pareil !",
+      "debut_ms": 14400,
+      "fin_ms": 16600,
+      "phrase_id": "phrase_157"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Weiß nicht so recht.",
+      "ar": "لست متأكداً تماماً.",
+      "fr": "Je ne sais pas trop.",
+      "debut_ms": 16600,
+      "fin_ms": 18300,
+      "phrase_id": "phrase_158"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Kommt drauf an,",
+      "ar": "هذا يعتمد،",
+      "fr": "Ça dépend,",
+      "debut_ms": 18300,
+      "fin_ms": 19600,
+      "phrase_id": "phrase_159"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "wie du meinst!",
+      "ar": "كما تراه وتريد!",
+      "fr": "comme tu veux !",
+      "debut_ms": 19600,
+      "fin_ms": 23353,
+      "phrase_id": "phrase_160"
+    }
+  ]
+}

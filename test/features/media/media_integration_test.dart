@@ -30,34 +30,27 @@ void main() {
     test('1. MediaUnlockManager : règles de déblocage et écoute auto', () async {
       final prefs = await SharedPreferences.getInstance();
 
-      // Au départ, le lot 1 n'est pas explicitement débloqué
+      // Au départ, le lot 2 n'est pas débloqué (seul le lot 1 est ouvert)
       final isUnlockedInitial = MediaUnlockManager.isLotUnlocked(
-        lotId: 1,
+        lotId: 2,
         progress: {},
-        lotPhraseIds: ['phrase_001', 'phrase_002'],
+        lotPhraseIds: ['phrase_011', 'phrase_012'],
         maxUnlockedBatchIndex: 0,
         prefs: prefs,
       );
       expect(isUnlockedInitial, isFalse);
 
-      // Si le candidat a terminé le lot 1 (toutes les phrases ont level > 0)
-      final now = DateTime.now();
-      final Map<String, UserPhrase> progressMap = {
-        'phrase_001': UserPhrase(phraseId: 'phrase_001', level: 1, dueAt: now),
-        'phrase_002': UserPhrase(phraseId: 'phrase_002', level: 2, dueAt: now),
-      };
+      // Dès que le candidat a terminé le lot 1 (batch_0_completed), le lot 2 se débloque
+      await prefs.setBool('batch_0_completed', true);
       final isUnlockedCompleted = MediaUnlockManager.isLotUnlocked(
-        lotId: 1,
-        progress: progressMap,
-        lotPhraseIds: ['phrase_001', 'phrase_002'],
-        maxUnlockedBatchIndex: 0,
+        lotId: 2,
         prefs: prefs,
       );
       expect(isUnlockedCompleted, isTrue);
 
-      // Déblocage explicite via unlockLot
-      await MediaUnlockManager.unlockLot(1, prefs: prefs);
-      expect(MediaUnlockManager.isLotUnlocked(lotId: 1, prefs: prefs), isTrue);
+      // Déblocage explicite via unlockLot (ex: lot 3)
+      await MediaUnlockManager.unlockLot(3, prefs: prefs);
+      expect(MediaUnlockManager.isLotUnlocked(lotId: 3, prefs: prefs), isTrue);
 
       // Gestion de l'Écoute auto 🎧
       expect(await MediaUnlockManager.isDialogueInAutoListening(1, prefs: prefs), isFalse);
@@ -149,13 +142,24 @@ void main() {
     });
 
     testWidgets('4. LibraryScreen : affiche directement la rubrique Chansons & Dialogues dédiée', (tester) async {
-      await tester.pumpWidget(
-        const ProviderScope(
-          child: MaterialApp(
-            home: LibraryScreen(),
+      tester.view.physicalSize = const Size(800, 2000);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(() {
+        tester.view.resetPhysicalSize();
+        tester.view.resetDevicePixelRatio();
+      });
+
+      await tester.runAsync(() async {
+        await tester.pumpWidget(
+          const ProviderScope(
+            child: MaterialApp(
+              home: LibraryScreen(),
+            ),
           ),
-        ),
-      );
+        );
+
+        await Future.delayed(const Duration(milliseconds: 300));
+      });
 
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 200));

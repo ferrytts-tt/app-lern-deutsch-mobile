@@ -1,0 +1,135 @@
+{
+  "lot_id": 20,
+  "type": "chanson",
+  "title_de": "Heimweh- und Deutsch-Lern-Ballade",
+  "title_ar": "أغنية الشوق وتعلم الألمانية",
+  "title_fr": "La ballade du mal du pays et de l'apprentissage",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Ich hab Heimweh.",
+      "ar": "أشتاق إلى وطني.",
+      "fr": "Le pays me manque.",
+      "debut_ms": 12200,
+      "fin_ms": 15200,
+      "phrase_id": "phrase_194"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Meine Familie fehlt mir.",
+      "ar": "أشتاق إلى عائلتي.",
+      "fr": "Ma famille me manque.",
+      "debut_ms": 15500,
+      "fin_ms": 20000,
+      "phrase_id": "phrase_195"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich muss los, sonst verpass ich den Bus.",
+      "ar": "لازم أذهب وإلا فاتتني الحافلة.",
+      "fr": "Je dois y aller, sinon je rate le bus.",
+      "debut_ms": 21200,
+      "fin_ms": 28500,
+      "phrase_id": "phrase_193"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Kannst du bitte etwas langsamer reden?",
+      "ar": "هل تتكلم أبطأ من فضلك؟",
+      "fr": "Tu peux parler un peu plus lentement ?",
+      "debut_ms": 30500,
+      "fin_ms": 35500,
+      "phrase_id": "phrase_197"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich versteh nicht alles,",
+      "ar": "لا أفهم كل شيء،",
+      "fr": "Je ne comprends pas tout,",
+      "debut_ms": 36500,
+      "fin_ms": 40000,
+      "phrase_id": "phrase_198"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "aber ich geb mir Mühe.",
+      "ar": "لكني أبذل جهدي.",
+      "fr": "mais je fais de mon mieux.",
+      "debut_ms": 40500,
+      "fin_ms": 44500,
+      "phrase_id": "phrase_198"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich lern grad Deutsch.",
+      "ar": "أتعلم الألمانية الآن.",
+      "fr": "J'apprends l'allemand en ce moment.",
+      "debut_ms": 45500,
+      "fin_ms": 48500,
+      "phrase_id": "phrase_196"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Wie heißt das auf Deutsch?",
+      "ar": "كيف يقال هذا بالألمانية؟",
+      "fr": "Comment on dit ça en allemand ?",
+      "debut_ms": 48500,
+      "fin_ms": 54000,
+      "phrase_id": "phrase_199"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich lern grad Deutsch.",
+      "ar": "أتعلم الألمانية الآن.",
+      "fr": "J'apprends l'allemand en ce moment.",
+      "debut_ms": 54500,
+      "fin_ms": 57500,
+      "phrase_id": "phrase_196"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Guter Tipp, danke dir!",
+      "ar": "نصيحة ممتازة، شكراً!",
+      "fr": "Bon conseil, merci !",
+      "debut_ms": 57500,
+      "fin_ms": 62500,
+      "phrase_id": "phrase_200"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich lad dich ein.",
+      "ar": "أنت ضيفي (أنا أدفع).",
+      "fr": "C'est moi qui t'invite.",
+      "debut_ms": 64200,
+      "fin_ms": 65400,
+      "phrase_id": "phrase_191"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Prost!",
+      "ar": "في صحتك!",
+      "fr": "Santé !",
+      "debut_ms": 66000,
+      "fin_ms": 67000,
+      "phrase_id": "phrase_192"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich lad dich ein.",
+      "ar": "أنت ضيفي (أنا أدفع).",
+      "fr": "C'est moi qui t'invite.",
+      "debut_ms": 74600,
+      "fin_ms": 77200,
+      "phrase_id": "phrase_191"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Prost!",
+      "ar": "في صحتك!",
+      "fr": "Santé !",
+      "debut_ms": 77400,
+      "fin_ms": 80822,
+      "phrase_id": "phrase_192"
+    }
+  ]
+}

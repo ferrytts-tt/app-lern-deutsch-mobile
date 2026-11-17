@@ -1,0 +1,108 @@
+{
+  "lot_id": 14,
+  "type": "chanson",
+  "title_de": "Pleite- und Freizeit-Vibes",
+  "title_ar": "أجواء الإفلاس والوقت الحر",
+  "title_fr": "Le groove fauché et temps libre",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Bei mir ist das Geld knapp.",
+      "ar": "وضعي المالي ضيق الآن.",
+      "fr": "Je suis un peu juste en ce moment.",
+      "debut_ms": 1480,
+      "fin_ms": 3450,
+      "phrase_id": "phrase_131"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Geht da noch was am Preis?",
+      "ar": "هل يمكن تخفيض السعر؟",
+      "fr": "On peut négocier le prix ?",
+      "debut_ms": 4200,
+      "fin_ms": 5450,
+      "phrase_id": "phrase_132"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich würd das gerne umtauschen,",
+      "ar": "أريد استبدال هذا،",
+      "fr": "Je voudrais bien échanger ça,",
+      "debut_ms": 5600,
+      "fin_ms": 7250,
+      "phrase_id": "phrase_133"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "ich hab den Bon verloren!",
+      "ar": "أضعت إيصال الشراء!",
+      "fr": "j'ai perdu le ticket de caisse !",
+      "debut_ms": 7400,
+      "fin_ms": 10700,
+      "phrase_id": "phrase_134"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich bin total pleite!",
+      "ar": "أنا مفلس تماماً!",
+      "fr": "Je suis complètement fauché !",
+      "debut_ms": 11200,
+      "fin_ms": 12700,
+      "phrase_id": "phrase_135"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Lass uns, lass uns was unternehmen!",
+      "ar": "هيا نفعل شيئاً معاً!",
+      "fr": "Faisons, faisons quelque chose ensemble !",
+      "debut_ms": 13200,
+      "fin_ms": 15200,
+      "phrase_id": "phrase_139"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Wollen wir 'ne Runde spazieren gehen?",
+      "ar": "هل نذهب في نزهة مشياً على الأقدام؟",
+      "fr": "On va faire un tour à pied ?",
+      "debut_ms": 15200,
+      "fin_ms": 17700,
+      "phrase_id": "phrase_136"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Ich geh zweimal die Woche ins Gym,",
+      "ar": "أذهب مرتين في الأسبوع للنادي الرياضي،",
+      "fr": "Je vais à la salle deux fois par semaine,",
+      "debut_ms": 17700,
+      "fin_ms": 20600,
+      "phrase_id": "phrase_137"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "ich hab voll Muskelkater!",
+      "ar": "عضلاتي تؤلمني جداً بعد التمرين!",
+      "fr": "j'ai de sacrées courbatures !",
+      "debut_ms": 20600,
+      "fin_ms": 22500,
+      "phrase_id": "phrase_138"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Lass uns was unternehmen,",
+      "ar": "هيا نفعل شيئاً معاً،",
+      "fr": "Faisons quelque chose ensemble,",
+      "debut_ms": 22500,
+      "fin_ms": 24500,
+      "phrase_id": "phrase_139"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "ich guck grad 'ne Serie...",
+      "ar": "أنا أشاهد مسلسلاً الآن...",
+      "fr": "je regarde une série en ce moment...",
+      "debut_ms": 24500,
+      "fin_ms": 30328,
+      "phrase_id": "phrase_140"
+    }
+  ]
+}

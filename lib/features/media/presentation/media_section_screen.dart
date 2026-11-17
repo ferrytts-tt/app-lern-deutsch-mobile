@@ -294,6 +294,22 @@ class _MediaSectionScreenState extends State<MediaSectionScreen> {
             );
           }
         }),
+        const SizedBox(height: 20),
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: Text(
+              '© 2026 Hoppla! · Tous droits réservés\nChansons & Dialogues originaux exclusifs',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 11,
+                color: isDark ? Colors.white38 : Colors.black38,
+                fontWeight: FontWeight.w600,
+                height: 1.5,
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }

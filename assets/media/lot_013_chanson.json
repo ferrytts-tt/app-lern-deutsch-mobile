@@ -1,0 +1,135 @@
+{
+  "lot_id": 13,
+  "type": "chanson",
+  "title_de": "Einkaufs- und Haushalts-Groove",
+  "title_ar": "إيقاع التسوق وأشغال البيت",
+  "title_fr": "Le groove des courses et du quotidien",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Die Nachbarn sind echt laut...",
+      "ar": "الجيران صوتهم عالٍ جداً...",
+      "fr": "Les voisins sont vraiment bruyants...",
+      "debut_ms": 8000,
+      "fin_ms": 10800,
+      "phrase_id": "phrase_124"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Es zieht hier ganz schön,",
+      "ar": "هنا تيار هواء،",
+      "fr": "Il y a un fort courant d'air ici,",
+      "debut_ms": 10800,
+      "fin_ms": 13000,
+      "phrase_id": "phrase_125"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "mach mal die Tür zu!",
+      "ar": "أغلق الباب من فضلك!",
+      "fr": "ferme la porte !",
+      "debut_ms": 13000,
+      "fin_ms": 15200,
+      "phrase_id": "phrase_122"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Oh nein! Ich hab mich ausgesperrt! Aaaaah!",
+      "ar": "يا إلهي! أغلقت الباب وبقيت بالخارج! آآآه!",
+      "fr": "Oh non ! Je me suis enfermé dehors ! Aaaaah !",
+      "debut_ms": 15200,
+      "fin_ms": 18200,
+      "phrase_id": "phrase_123"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Wir müssen noch einkaufen!",
+      "ar": "لازم نتسوق قبل ذلك!",
+      "fr": "Il faut encore faire les courses !",
+      "debut_ms": 18200,
+      "fin_ms": 20000,
+      "phrase_id": "phrase_121"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Was kostet das?",
+      "ar": "كم سعر هذا؟",
+      "fr": "Combien ça coûte ?",
+      "debut_ms": 20000,
+      "fin_ms": 21400,
+      "phrase_id": "phrase_126"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Das ist grad im Angebot!",
+      "ar": "هذا عليه عرض الآن!",
+      "fr": "C'est en promotion en ce moment !",
+      "debut_ms": 21400,
+      "fin_ms": 23200,
+      "phrase_id": "phrase_127"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Wir müssen noch einkaufen!",
+      "ar": "لازم نتسوق قبل ذلك!",
+      "fr": "Il faut encore faire les courses !",
+      "debut_ms": 23200,
+      "fin_ms": 25000,
+      "phrase_id": "phrase_121"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Was kostet das?",
+      "ar": "كم سعر هذا؟",
+      "fr": "Combien ça coûte ?",
+      "debut_ms": 25000,
+      "fin_ms": 26400,
+      "phrase_id": "phrase_126"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Das ist grad im Angebot!",
+      "ar": "هذا عليه عرض الآن!",
+      "fr": "C'est en promotion en ce moment !",
+      "debut_ms": 26400,
+      "fin_ms": 28200,
+      "phrase_id": "phrase_127"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Geht Karte?",
+      "ar": "هل يمكن الدفع بالبطاقة؟",
+      "fr": "Je peux payer par carte ?",
+      "debut_ms": 28200,
+      "fin_ms": 29500,
+      "phrase_id": "phrase_128"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich hab kein Bargeld dabei! Aaaaah!",
+      "ar": "ما معي أي نقود كاش! آآآه!",
+      "fr": "Je n'ai pas d'espèces sur moi ! Aaaaah !",
+      "debut_ms": 29500,
+      "fin_ms": 32200,
+      "phrase_id": "phrase_129"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Das ist ein echtes Schnäppchen!",
+      "ar": "هذه صفقة رابحة حقيقية!",
+      "fr": "C'est une vraie bonne affaire !",
+      "debut_ms": 32200,
+      "fin_ms": 34600,
+      "phrase_id": "phrase_130"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Ein echtes Schnäppchen! O-o-o-oh!",
+      "ar": "صفقة رابحة حقيقية! أو-أو-أوه!",
+      "fr": "Une super bonne affaire ! O-o-o-oh !",
+      "debut_ms": 34600,
+      "fin_ms": 44538,
+      "phrase_id": "phrase_130"
+    }
+  ]
+}

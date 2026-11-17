@@ -1,6 +1,8 @@
 {
   "version": 1,
-  "updated_at": "2026-11-01T12:00:00Z",
+  "updated_at": "2026-11-17T14:10:00Z",
+  "copyright": "© 2026 Hoppla! - Tous droits réservés. Propriété exclusive.",
+  "licence": "Proprietary - Exclusive to Hoppla! app (de.hoppla.app)",
   "contents": [
     {
       "lot_id": 1,
@@ -429,6 +431,22 @@
       "title_fr": "Ménage et corvées à la maison"
     },
     {
+      "lot_id": 13,
+      "type": "chanson",
+      "audio_file": "lot_013_chanson.mp3",
+      "content_json_file": "lot_013_chanson.json",
+      "duration_seconds": 45,
+      "size_bytes": 1068980,
+      "checksum": "d78c5c408fee9dcec1c4c2254f6c8af8627eda647e70725574b77091dd3d00ef",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 13",
+      "created_at": "2026-11-12T23:25:00Z",
+      "title_de": "Einkaufs- und Haushalts-Groove",
+      "title_ar": "إيقاع التسوق وأشغال البيت",
+      "title_fr": "Le groove des courses et du quotidien"
+    },
+    {
       "lot_id": 14,
       "type": "dialogue",
       "audio_file": "lot_014_dialogue.mp3",
@@ -445,6 +463,22 @@
       "title_de": "Finanzen am Monatsende",
       "title_ar": "نهاية الشهر والميزانية",
       "title_fr": "Fin de mois difficile"
+    },
+    {
+      "lot_id": 14,
+      "type": "chanson",
+      "audio_file": "lot_014_chanson.mp3",
+      "content_json_file": "lot_014_chanson.json",
+      "duration_seconds": 30,
+      "size_bytes": 727925,
+      "checksum": "998d5bc8da269858c03386c739aad23ce1b2019d994801c44396df48bb5a9bda",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 14",
+      "created_at": "2026-11-13T15:51:00Z",
+      "title_de": "Pleite- und Freizeit-Vibes",
+      "title_ar": "أجواء الإفلاس والوقت الحر",
+      "title_fr": "Le groove fauché et temps libre"
     },
     {
       "lot_id": 15,
@@ -465,6 +499,22 @@
       "title_fr": "Garder la forme après le boulot"
     },
     {
+      "lot_id": 15,
+      "type": "chanson",
+      "audio_file": "lot_015_chanson.mp3",
+      "content_json_file": "lot_015_chanson.json",
+      "duration_seconds": 30,
+      "size_bytes": 712879,
+      "checksum": "a4eefff506d89fd77103832048dfcbb0b680437bd4ca092e0bb4c786c44d29c8",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 15",
+      "created_at": "2026-11-13T21:26:00Z",
+      "title_de": "Training- und Ausschlaf-Vibes",
+      "title_ar": "أجواء التمرين والنوم الطويل",
+      "title_fr": "Le groove de l'entraînement et du repos"
+    },
+    {
       "lot_id": 16,
       "type": "dialogue",
       "audio_file": "lot_016_dialogue.mp3",
@@ -481,6 +531,22 @@
       "title_de": "Aufgebrachte Reaktionen",
       "title_ar": "انفعالات يومية",
       "title_fr": "Coups de gueule du quotidien"
+    },
+    {
+      "lot_id": 16,
+      "type": "chanson",
+      "audio_file": "lot_016_chanson.mp3",
+      "content_json_file": "lot_016_chanson.json",
+      "duration_seconds": 23,
+      "size_bytes": 560533,
+      "checksum": "39707af0619610072a74ff95ebb8e86fde8a11ae8ff0a1411e6119d872ebaae7",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 16",
+      "created_at": "2026-11-15T13:41:00Z",
+      "title_de": "Kragen-Platzen- und Versöhnungs-Groove",
+      "title_ar": "إيقاع الغضب والصلح",
+      "title_fr": "Le groove du coup de gueule et de la réconciliation"
     },
     {
       "lot_id": 17,
@@ -501,6 +567,22 @@
       "title_fr": "Formalités administratives au bureau"
     },
     {
+      "lot_id": 17,
+      "type": "chanson",
+      "audio_file": "lot_017_chanson.mp3",
+      "content_json_file": "lot_017_chanson.json",
+      "duration_seconds": 34,
+      "size_bytes": 826982,
+      "checksum": "7ffd4ac693599b584b4415bb13dc85e0e3fac0acd3b3402a132e699a595db88f",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 17",
+      "created_at": "2026-11-16T16:09:00Z",
+      "title_de": "Büro-Stress- und Feierabend-Groove",
+      "title_ar": "إيقاع ضغط العمل ونهاية الدوام",
+      "title_fr": "Le groove du bureau et de la fin de journée"
+    },
+    {
       "lot_id": 18,
       "type": "dialogue",
       "audio_file": "lot_018_dialogue.mp3",
@@ -517,6 +599,22 @@
       "title_de": "Ein harter Arbeitstag",
       "title_ar": "يوم عمل شاق",
       "title_fr": "Une rude journée de travail"
+    },
+    {
+      "lot_id": 18,
+      "type": "chanson",
+      "audio_file": "lot_018_chanson.mp3",
+      "content_json_file": "lot_018_chanson.json",
+      "duration_seconds": 31,
+      "size_bytes": 737956,
+      "checksum": "b385cacb24a1dd34cc948035f7d8b0c3c2acca068fbea63ef451dc8996d59733",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 18",
+      "created_at": "2026-11-16T21:55:00Z",
+      "title_de": "Feierabend- und Durchgang-Groove",
+      "title_ar": "إيقاع نهاية الدوام والمرور",
+      "title_fr": "Le groove de la fin de journée et de l'entraide"
     },
     {
       "lot_id": 19,
@@ -537,6 +635,22 @@
       "title_fr": "Le rythme de tous les jours"
     },
     {
+      "lot_id": 19,
+      "type": "chanson",
+      "audio_file": "lot_019_chanson.mp3",
+      "content_json_file": "lot_019_chanson.json",
+      "duration_seconds": 37,
+      "size_bytes": 885914,
+      "checksum": "781949f4c58100cfe9d14c209b1d26851cfeec74d893c49380f520c3c998ec0b",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 19",
+      "created_at": "2026-11-17T10:14:00Z",
+      "title_de": "Alltags-Hektik- und Pizza-Groove",
+      "title_ar": "إيقاع عجلة اليوم والبيتزا",
+      "title_fr": "Le groove de la course quotidienne et de la pizza"
+    },
+    {
       "lot_id": 20,
       "type": "dialogue",
       "audio_file": "lot_020_dialogue.mp3",
@@ -553,6 +667,22 @@
       "title_de": "Kaffee und Kuchen geht auf mich",
       "title_ar": "حسابك علي اليوم",
       "title_fr": "C'est ma tournée !"
+    },
+    {
+      "lot_id": 20,
+      "type": "chanson",
+      "audio_file": "lot_020_chanson.mp3",
+      "content_json_file": "lot_020_chanson.json",
+      "duration_seconds": 81,
+      "size_bytes": 1939798,
+      "checksum": "9fddfb94f7bff02478133d81582456890e0bf87fa2107e338a94889e96b6477f",
+      "version": 1,
+      "statut_licence": "approuve",
+      "source": "Production originale avec les 10 phrases du Lot 20",
+      "created_at": "2026-11-17T14:20:00Z",
+      "title_de": "Heimweh- und Deutsch-Lern-Ballade",
+      "title_ar": "أغنية الشوق وتعلم الألمانية",
+      "title_fr": "La ballade du mal du pays et de l'apprentissage"
     },
     {
       "lot_id": 21,

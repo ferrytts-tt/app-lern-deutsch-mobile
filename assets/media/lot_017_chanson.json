@@ -1,0 +1,117 @@
+{
+  "lot_id": 17,
+  "type": "chanson",
+  "title_de": "Büro-Stress- und Feierabend-Groove",
+  "title_ar": "إيقاع ضغط العمل ونهاية الدوام",
+  "title_fr": "Le groove du bureau et de la fin de journée",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Ich bin neu hier in der Stadt,",
+      "ar": "أنا جديد في المدينة،",
+      "fr": "Je suis nouveau en ville,",
+      "debut_ms": 1300,
+      "fin_ms": 3400,
+      "phrase_id": "phrase_162"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "ich bin heute im Homeoffice.",
+      "ar": "أعمل اليوم من البيت.",
+      "fr": "je travaille de chez moi aujourd'hui.",
+      "debut_ms": 3400,
+      "fin_ms": 5200,
+      "phrase_id": "phrase_167"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Bei mir ist nichts angekommen,",
+      "ar": "لم يصلني شيء،",
+      "fr": "Je n'ai rien reçu,",
+      "debut_ms": 5200,
+      "fin_ms": 7300,
+      "phrase_id": "phrase_164"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "schick mir das bitte per Mail!",
+      "ar": "أرسل لي هذا بالبريد الإلكتروني!",
+      "fr": "envoie-moi ça par mail, s'il te plaît !",
+      "debut_ms": 7300,
+      "fin_ms": 9300,
+      "phrase_id": "phrase_165"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Bei uns ist grad voll der Stress,",
+      "ar": "عندنا ضغط كبير الآن،",
+      "fr": "On est en plein stress en ce moment,",
+      "debut_ms": 9300,
+      "fin_ms": 11200,
+      "phrase_id": "phrase_166"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "ich hab gleich ein Meeting!",
+      "ar": "عندي اجتماع بعد قليل!",
+      "fr": "j'ai une réunion dans un instant !",
+      "debut_ms": 11200,
+      "fin_ms": 13200,
+      "phrase_id": "phrase_168"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich hätte da mal 'ne Frage zur Rechnung...",
+      "ar": "عندي سؤال عن الفاتورة...",
+      "fr": "J'aurais une question sur la facture...",
+      "debut_ms": 13200,
+      "fin_ms": 15200,
+      "phrase_id": "phrase_161"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Können Sie mir da weiterhelfen?",
+      "ar": "هل يمكنكم مساعدتي في هذا؟",
+      "fr": "Pourriez-vous m'aider là-dessus ?",
+      "debut_ms": 15200,
+      "fin_ms": 17200,
+      "phrase_id": "phrase_163"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich mach heut früher Schluss.",
+      "ar": "سأنهي عملي مبكراً اليوم.",
+      "fr": "Je finis plus tôt aujourd'hui.",
+      "debut_ms": 17200,
+      "fin_ms": 20600,
+      "phrase_id": "phrase_169"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Gehn wir zusammen Mittagessen? Mmm...",
+      "ar": "هل نتناول الغداء معاً؟ ممم...",
+      "fr": "On va déjeuner ensemble ? Mmm...",
+      "debut_ms": 20600,
+      "fin_ms": 24300,
+      "phrase_id": "phrase_170"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Gehn wir zusammen Mittagessen? Hey hey...",
+      "ar": "هل نتناول الغداء معاً؟ هي هي...",
+      "fr": "On va déjeuner ensemble ? Hey hey...",
+      "debut_ms": 24300,
+      "fin_ms": 28200,
+      "phrase_id": "phrase_170"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Ich mach heut früher Schluss... Schluss...",
+      "ar": "سأنهي عملي مبكراً اليوم... مبكراً...",
+      "fr": "Je finis plus tôt aujourd'hui... plus tôt...",
+      "debut_ms": 28200,
+      "fin_ms": 34455,
+      "phrase_id": "phrase_169"
+    }
+  ]
+}

@@ -209,6 +209,9 @@ class MediaUnlockManager {
     List<String> lotPhraseIds = const [],
     int maxUnlockedBatchIndex = 0,
   }) {
+    if (prefs != null && prefs.getBool('$_unlockedPrefix$lotId') == true) {
+      return true;
+    }
     return lotId <= getHighestUnlockedLot(
       progress: progress,
       allPhrases: allPhrases,

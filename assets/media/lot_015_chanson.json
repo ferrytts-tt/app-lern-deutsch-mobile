@@ -1,0 +1,108 @@
+{
+  "lot_id": 15,
+  "type": "chanson",
+  "title_de": "Training- und Ausschlaf-Vibes",
+  "title_ar": "أجواء التمرين والنوم الطويل",
+  "title_fr": "Le groove de l'entraînement et du repos",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Hast du zuletzt was Gutes geguckt? (Nicht jetzt!)",
+      "ar": "هل شاهدت شيئاً جيداً مؤخراً؟ (ليس الآن!)",
+      "fr": "Tu as vu quelque chose de bien dernièrement ? (Pas maintenant !)",
+      "debut_ms": 1200,
+      "fin_ms": 4400,
+      "phrase_id": "phrase_141"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich war gestern ewig wach!",
+      "ar": "سهرت طويلاً أمس!",
+      "fr": "Je suis resté éveillé très tard hier !",
+      "debut_ms": 4400,
+      "fin_ms": 6300,
+      "phrase_id": "phrase_142"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "So! Morgen wird ausgeschlafen, jawoll!",
+      "ar": "حسناً! غداً سأنعم بنوم طويل!",
+      "fr": "Demain, je fais la grasse matinée, carrément !",
+      "debut_ms": 6300,
+      "fin_ms": 8400,
+      "phrase_id": "phrase_143"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Hab das Spiel verpasst. Oh nein!",
+      "ar": "فاتتني المباراة. يا للأسف!",
+      "fr": "J'ai raté le match. Oh non !",
+      "debut_ms": 8400,
+      "fin_ms": 11200,
+      "phrase_id": "phrase_144"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Wir sehen uns beim Training!",
+      "ar": "نلتقي في التمرين!",
+      "fr": "On se voit à l'entraînement !",
+      "debut_ms": 11200,
+      "fin_ms": 13400,
+      "phrase_id": "phrase_145"
+    },
+    {
+      "locuteur": "Refrain",
+      "de": "Wir sehen uns beim Training!",
+      "ar": "نلتقي في التمرين!",
+      "fr": "On se voit à l'entraînement !",
+      "debut_ms": 13400,
+      "fin_ms": 16400,
+      "phrase_id": "phrase_145"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Das ist doch nicht dein Ernst!",
+      "ar": "لا يمكن أن تكون جاداً!",
+      "fr": "Tu n'es pas sérieux !",
+      "debut_ms": 16400,
+      "fin_ms": 18700,
+      "phrase_id": "phrase_146"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Du willst mich wohl veräppeln!",
+      "ar": "أنت تمزح معي وتستهزئ بي!",
+      "fr": "Tu te moques de moi !",
+      "debut_ms": 18700,
+      "fin_ms": 21100,
+      "phrase_id": "phrase_147"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Das war ein Missverständnis,",
+      "ar": "كان هذا سوء فهم،",
+      "fr": "C'était un malentendu,",
+      "debut_ms": 21100,
+      "fin_ms": 23300,
+      "phrase_id": "phrase_148"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "hab mich wohl verhört...",
+      "ar": "يبدو أنني أخطأت السمع...",
+      "fr": "j'ai dû mal entendre...",
+      "debut_ms": 23300,
+      "fin_ms": 26600,
+      "phrase_id": "phrase_149"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Das darf doch nicht wahr sein!",
+      "ar": "لا يعقل أن يكون هذا صحيحاً!",
+      "fr": "Ce n'est pas possible !",
+      "debut_ms": 26600,
+      "fin_ms": 29701,
+      "phrase_id": "phrase_150"
+    }
+  ]
+}

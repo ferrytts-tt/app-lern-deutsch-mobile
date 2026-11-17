@@ -1,0 +1,126 @@
+{
+  "lot_id": 18,
+  "type": "chanson",
+  "title_de": "Feierabend- und Durchgang-Groove",
+  "title_ar": "إيقاع نهاية الدوام والمرور",
+  "title_fr": "Le groove de la fin de journée et de l'entraide",
+  "lignes": [
+    {
+      "locuteur": "Chant",
+      "de": "Das war echt ein anstrengender Tag.",
+      "ar": "كان يوماً متعباً فعلاً.",
+      "fr": "Ça a été une journée vraiment épuisante.",
+      "debut_ms": 2600,
+      "fin_ms": 5300,
+      "phrase_id": "phrase_171"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Auf der Arbeit ist grad echt viel los.",
+      "ar": "العمل مزدحم جداً الآن.",
+      "fr": "Il y a beaucoup de boulot en ce moment.",
+      "debut_ms": 5300,
+      "fin_ms": 8500,
+      "phrase_id": "phrase_172"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Ich brauch dringend Urlaub!",
+      "ar": "أحتاج إجازة بشكل عاجل!",
+      "fr": "J'ai vraiment besoin de vacances !",
+      "debut_ms": 8500,
+      "fin_ms": 10500,
+      "phrase_id": "phrase_173"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Wann machst du Feierabend?",
+      "ar": "متى ينتهي دوامك؟",
+      "fr": "Tu finis à quelle heure ?",
+      "debut_ms": 10500,
+      "fin_ms": 12400,
+      "phrase_id": "phrase_174"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Hab dich nicht verstanden.",
+      "ar": "لم أفهمك.",
+      "fr": "Je ne t'ai pas compris.",
+      "debut_ms": 12400,
+      "fin_ms": 14800,
+      "phrase_id": "phrase_175"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Wann machst du Feierabend?",
+      "ar": "متى ينتهي دوامك؟",
+      "fr": "Tu finis à quelle heure ?",
+      "debut_ms": 14800,
+      "fin_ms": 17300,
+      "phrase_id": "phrase_174"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Darf ich mal kurz durch?",
+      "ar": "عفواً، هل تسمح لي بالمرور؟",
+      "fr": "Pardon, je peux passer ?",
+      "debut_ms": 17300,
+      "fin_ms": 18900,
+      "phrase_id": "phrase_176"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Kein Ding!",
+      "ar": "لا مشكلة!",
+      "fr": "Pas de souci !",
+      "debut_ms": 18900,
+      "fin_ms": 20100,
+      "phrase_id": "phrase_177"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Danke dir für deine Hilfe, echt nett!",
+      "ar": "شكراً لك على مساعدتك، لطف منك!",
+      "fr": "Merci pour ton aide, c'est vraiment gentil !",
+      "debut_ms": 20100,
+      "fin_ms": 22300,
+      "phrase_id": "phrase_179"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Immer gerne!",
+      "ar": "على الرحب والسعة!",
+      "fr": "Avec plaisir !",
+      "debut_ms": 22300,
+      "fin_ms": 23400,
+      "phrase_id": "phrase_178"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Darf ich mal kurz durch?",
+      "ar": "عفواً، هل تسمح لي بالمرور؟",
+      "fr": "Pardon, je peux passer ?",
+      "debut_ms": 23400,
+      "fin_ms": 24900,
+      "phrase_id": "phrase_176"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Kein Ding!",
+      "ar": "لا مشكلة!",
+      "fr": "Pas de souci !",
+      "debut_ms": 24900,
+      "fin_ms": 26000,
+      "phrase_id": "phrase_177"
+    },
+    {
+      "locuteur": "Chant",
+      "de": "Schönen Tag noch!",
+      "ar": "أتمنى لك يوماً جميلاً!",
+      "fr": "Bonne journée !",
+      "debut_ms": 26000,
+      "fin_ms": 30746,
+      "phrase_id": "phrase_180"
+    }
+  ]
+}
