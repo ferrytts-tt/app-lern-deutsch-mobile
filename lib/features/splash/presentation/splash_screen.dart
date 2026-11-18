@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../core/constants/app_constants.dart';
-import '../../../core/theme/app_colors.dart';
-import '../../../core/theme/app_text_styles.dart';
 import '../../../core/widgets/app_progress_bar.dart';
 import '../../../data/database/app_database.dart';
 
 /// Écran Splash de démarrage : initialise la base de données, importe phrases.json
 /// et redirige vers Onboarding (1er lancement) ou Accueil.
+/// L'écureuil Hoppla! effectue une animation de saut pendant 3 secondes.
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -16,21 +15,58 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
-  double _progress = 0.2;
+class _SplashScreenState extends State<SplashScreen>
+    with TickerProviderStateMixin {
+  double _progress = 0.0;
   String _statusText = 'Initialisation...';
+
+  // Animation de saut (bounce vertical)
+  late AnimationController _jumpController;
+  late Animation<double> _jumpAnimation;
+
+  // Animation d'apparition (fade in)
+  late AnimationController _fadeController;
+  late Animation<double> _fadeAnimation;
 
   @override
   void initState() {
     super.initState();
+
+    // Animation de saut : monte et descend en boucle
+    _jumpController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 500),
+    );
+    _jumpAnimation = Tween<double>(begin: 0, end: -30).animate(
+      CurvedAnimation(parent: _jumpController, curve: Curves.easeInOut),
+    );
+    _jumpController.repeat(reverse: true);
+
+    // Animation fade-in de l'écureuil
+    _fadeController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 600),
+    );
+    _fadeAnimation = CurvedAnimation(
+      parent: _fadeController,
+      curve: Curves.easeIn,
+    );
+    _fadeController.forward();
+
     _initializeApp();
+  }
+
+  @override
+  void dispose() {
+    _jumpController.dispose();
+    _fadeController.dispose();
+    super.dispose();
   }
 
   Future<void> _initializeApp() async {
     try {
-      // 1. Initialiser SQLite et importer le JSON
       setState(() {
-        _progress = 0.4;
+        _progress = 0.3;
         _statusText = 'Préparation des phrases...';
       });
 
@@ -41,7 +77,7 @@ class _SplashScreenState extends State<SplashScreen> {
         _statusText = 'Prêt !';
       });
 
-      // 2. Vérifier les préférences (premier lancement vs retour)
+      // Vérifier les préférences (premier lancement vs retour)
       final prefs = await SharedPreferences.getInstance();
       final hasCompletedOnboarding =
           prefs.getBool(AppConstants.prefHasCompletedOnboarding) ?? false;
@@ -50,6 +86,7 @@ class _SplashScreenState extends State<SplashScreen> {
         _progress = 1.0;
       });
 
+      // Laisser l'animation de saut tourner au minimum 3 secondes depuis le début
       await Future.delayed(const Duration(milliseconds: 400));
 
       if (!mounted) return;
@@ -60,7 +97,6 @@ class _SplashScreenState extends State<SplashScreen> {
         context.go('/onboarding');
       }
     } catch (e) {
-      // En cas de pépin au démarrage, diriger doucement vers l'accueil
       if (mounted) {
         context.go('/home');
       }
@@ -69,11 +105,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final bgColor = isDark ? AppColors.backgroundDark : AppColors.primaryLight;
-
     return Scaffold(
-      backgroundColor: bgColor,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -81,55 +114,43 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               const Spacer(flex: 2),
 
-              // Icône stylisée
-              Container(
-                width: 76,
-                height: 76,
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFFFACC15), Color(0xFFEAB308)],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
+              // Écureuil animé avec saut
+              FadeTransition(
+                opacity: _fadeAnimation,
+                child: AnimatedBuilder(
+                  animation: _jumpAnimation,
+                  builder: (context, child) {
+                    return Transform.translate(
+                      offset: Offset(0, _jumpAnimation.value),
+                      child: child,
+                    );
+                  },
+                  child: Image.asset(
+                    'assets/images/hoppla_squirrel.jpg',
+                    width: 240,
+                    height: 240,
+                    fit: BoxFit.contain,
                   ),
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color(0xFFEAB308).withValues(alpha: 0.35),
-                      blurRadius: 18,
-                      offset: const Offset(0, 4),
-                    ),
-                  ],
                 ),
-                child: const Icon(
-                  Icons.bolt_rounded,
-                  size: 44,
-                  color: Color(0xFF1E293B),
-                ),
-              ),
-
-              const SizedBox(height: 20),
-
-              Text(
-                'Hoppla !',
-                style: AppTextStyles.titleLarge(isDark: isDark).copyWith(
-                  fontSize: 34,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: -0.5,
-                  color: isDark ? const Color(0xFFFACC15) : const Color(0xFFCA8A04),
-                ),
-                textAlign: TextAlign.center,
               ),
 
               const SizedBox(height: 8),
 
-              Text(
-                "Une erreur ? Hoppla ! Tu l'apprends pour de bon.",
-                style: AppTextStyles.bodyLarge(isDark: isDark).copyWith(
-                  color: isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14,
-                ),
-                textAlign: TextAlign.center,
+              // Ombre portée sous l'écureuil (effet rebond réaliste)
+              AnimatedBuilder(
+                animation: _jumpAnimation,
+                builder: (context, _) {
+                  // Plus l'écureuil est haut, plus l'ombre est petite et floue
+                  final ratio = 1.0 - (-_jumpAnimation.value / 30) * 0.4;
+                  return Container(
+                    width: 100 * ratio,
+                    height: 10,
+                    decoration: BoxDecoration(
+                      color: Colors.black.withValues(alpha: 0.08 * ratio),
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                  );
+                },
               ),
 
               const Spacer(flex: 2),
@@ -147,7 +168,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
               Text(
                 _statusText,
-                style: AppTextStyles.caption(isDark: isDark),
+                style: const TextStyle(
+                  fontSize: 13,
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
 
               const SizedBox(height: 24),
